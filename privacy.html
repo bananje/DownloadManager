@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Privacy Policy — Download Manager</title>
+  <meta name="description" content="Privacy Policy for the Download Manager Chrome extension. Learn what data is collected, how it is used, and what is never sent anywhere." />
+  <link rel="icon" type="image/png" href="assets/Frame 11.png" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #111833;
+      --card: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e6e9f2;
+      --text-soft: #a8b0c4;
+      --text-dim: #7a8299;
+      --accent: #6c8cff;
+      --accent-2: #8a6cff;
+      --good: #4ade80;
+      --warn: #fbbf24;
+      --bad: #f87171;
+      --radius: 16px;
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    html[data-theme="light"] {
+      --bg: #f6f7fb;
+      --bg-soft: #ffffff;
+      --card: #ffffff;
+      --border: #e6e8ef;
+      --text: #1a1f2e;
+      --text-soft: #475067;
+      --text-dim: #6b7388;
+      --shadow: 0 8px 30px rgba(20, 25, 50, 0.08);
+    }
+
+    html[data-theme="light"] .perm code { color: #4f6cf0; }
+    html[data-theme="light"] body {
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(108, 140, 255, 0.10), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(138, 108, 255, 0.10), transparent 60%),
+        var(--bg);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      caret-color: transparent;
+    }
+
+    *, *::before, *::after { caret-color: transparent; }
+    *::selection { background: transparent; }
+    *::-moz-selection { background: transparent; }
+
+    body {
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(108, 140, 255, 0.18), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(138, 108, 255, 0.16), transparent 60%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    header.top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-logo svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .lang-select {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .lang-select::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c8cff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M2 12h20'/><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/></svg>");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.85;
+    }
+
+    .lang-select::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translateY(-65%) rotate(45deg);
+      border-right: 2px solid var(--text-soft);
+      border-bottom: 2px solid var(--text-soft);
+      pointer-events: none;
+    }
+
+    .lang-select select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 8px 32px 8px 34px;
+      border-radius: 999px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.15s ease;
+      min-width: 132px;
+    }
+
+    .lang-select select:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .lang-select select:focus-visible {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.25);
+    }
+
+    .lang-select select option {
+      background: var(--bg-soft);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .top-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text-soft);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    html[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+    html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      font-weight: 800;
+    }
+
+    .lead {
+      color: var(--text-soft);
+      font-size: 17px;
+      margin: 0 0 8px;
+      max-width: 60ch;
+    }
+
+    .meta {
+      color: var(--text-dim);
+      font-size: 14px;
+      margin: 0 0 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 16px 0;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .card.highlight {
+      border-color: rgba(74, 222, 128, 0.35);
+      background: linear-gradient(135deg, rgba(74, 222, 128, 0.08), rgba(74, 222, 128, 0.02));
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h3 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--text-soft);
+    }
+
+    .card ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      color: var(--text-soft);
+    }
+
+    .card ul li { margin: 6px 0; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(74, 222, 128, 0.15);
+      color: var(--good);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    .badge.no {
+      background: rgba(248, 113, 113, 0.12);
+      color: var(--bad);
+      border-color: rgba(248, 113, 113, 0.3);
+    }
+
+    .perm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .perm {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .perm code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .perm small {
+      display: block;
+      color: var(--text-dim);
+      margin-top: 4px;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .check-list { list-style: none; padding: 0; margin: 0; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      color: var(--text-soft);
+    }
+    .check-list li::before {
+      content: "";
+      flex: 0 0 18px;
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      border-radius: 50%;
+      background: rgba(74, 222, 128, 0.15);
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234ade80' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+    }
+
+    .x-list { list-style: none; padding: 0; margin: 0; }
+    .x-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      color: var(--text-soft);
+    }
+    .x-list li::before {
+      content: "";
+      flex: 0 0 18px;
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      border-radius: 50%;
+      background: rgba(248, 113, 113, 0.15);
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg>");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--text-soft); }
+
+    [data-en], [data-ru], [data-de], [data-zh] { display: none; }
+    html[data-lang="en"] [data-en] { display: revert; }
+    html[data-lang="ru"] [data-ru] { display: revert; }
+    html[data-lang="de"] [data-de] { display: revert; }
+    html[data-lang="zh"] [data-zh] { display: revert; }
+
+    @media (max-width: 540px) {
+      .container { padding: 28px 18px 60px; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12" />
+            <path d="m7 10 5 5 5-5" />
+            <path d="M5 21h14" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Download Manager</span>
+          <span class="brand-sub" data-en>Chrome Extension</span>
+          <span class="brand-sub" data-ru>Расширение Chrome</span>
+          <span class="brand-sub" data-de>Chrome-Erweiterung</span>
+          <span class="brand-sub" data-zh>Chrome 扩展程序</span>
+        </div>
+      </div>
+
+      <div class="top-controls">
+        <div class="lang-select">
+          <select id="langSelect" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m4.93 19.07 1.41-1.41" />
+            <path d="m17.66 6.34 1.41-1.41" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============== ENGLISH ============== -->
+    <section data-en>
+      <h1>Privacy Policy</h1>
+      <p class="lead">This page explains what information the <strong>Download Manager</strong> Chrome extension uses, how it is processed, and what is never collected, sold, or shared.</p>
+      <p class="meta">Last updated: April 27, 2026</p>
+
+      <div class="card highlight">
+        <h2>
+          <span class="badge">In short</span>
+        </h2>
+        <ul class="check-list">
+          <li>The extension does <strong>not</strong> collect, store, or transmit your personal information.</li>
+          <li>It does <strong>not</strong> use analytics, telemetry, tracking pixels, or third‑party services.</li>
+          <li>All data (settings, download history filters) stays <strong>locally on your device</strong>.</li>
+          <li>There is <strong>no remote server</strong>; the extension does not "phone home".</li>
+          <li>Your downloads, browsing activity, and files are never sold or shared.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>1. Who we are</h2>
+        <p>"Download Manager" (the "Extension") is a browser extension that helps you organize transfers, search files, filter results, and keep your download history clean and easy to manage. This document is the privacy policy of the Extension's developer ("we", "us").</p>
+      </div>
+
+      <div class="card">
+        <h2>2. What data the Extension accesses</h2>
+        <p>To work, the Extension uses Chrome APIs that, by their nature, expose certain information <em>locally inside your browser</em>. None of this information leaves your device.</p>
+
+        <div class="perm-grid">
+          <div class="perm">
+            <code>downloads</code>
+            <small>Read your local download history (file name, URL, status, size, progress) to display and manage it inside the popup.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.open</code>
+            <small>Open a finished file when you click it in the list.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.ui</code>
+            <small>Show the file in the system file manager ("Show in Explorer").</small>
+          </div>
+          <div class="perm">
+            <code>tabs</code>
+            <small>Detect the current tab so the in‑page download notification can be displayed in the right place.</small>
+          </div>
+          <div class="perm">
+            <code>scripting</code>
+            <small>Inject the lightweight in‑page toast that confirms a download has started.</small>
+          </div>
+          <div class="perm">
+            <code>storage</code>
+            <small>Save your settings (such as preferred filters and UI options) locally via <code>chrome.storage.local</code>.</small>
+          </div>
+          <div class="perm">
+            <code>alarms</code>
+            <small>Schedule lightweight background tasks (e.g. periodic UI refresh of in‑progress downloads).</small>
+          </div>
+          <div class="perm">
+            <code>host_permissions: &lt;all_urls&gt;</code>
+            <small>Required so the in‑page download notification can appear on any site where you initiate a download. The Extension does <strong>not</strong> read page content.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3. What we do <em>not</em> do</h2>
+        <ul class="x-list">
+          <li>We do not collect personally identifiable information (name, email, phone, address).</li>
+          <li>We do not collect health, financial, authentication, personal communications, or location data.</li>
+          <li>We do not read, store, or transmit the content of web pages you visit.</li>
+          <li>We do not track your browsing activity or build any profile of you.</li>
+          <li>We do not use cookies, fingerprinting, or third‑party trackers.</li>
+          <li>We do not sell, rent, or share data with third parties — there is no data to share.</li>
+          <li>We do not use your data for advertising or for purposes unrelated to the Extension's single core feature (download management).</li>
+          <li>We do not use your data to determine creditworthiness or for lending.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Local storage</h2>
+        <p>The Extension stores small pieces of information using Chrome's built‑in <code>chrome.storage.local</code> API. This data lives only in your browser profile on your computer. Examples:</p>
+        <ul>
+          <li>UI preferences (selected filter, sort order, theme);</li>
+          <li>Cached metadata about downloads already known to Chrome (so the list can render quickly).</li>
+        </ul>
+        <p>You can erase this data at any time by removing the Extension or by clearing the extension's storage in Chrome.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Network usage</h2>
+        <p>The Extension itself does not contact any server. The only network activity that may be triggered through it is the actual file download, which is performed by Chrome to the URL <em>you</em> chose. We have no servers, no backend, and no analytics endpoints.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Permissions justification (Chrome Web Store)</h2>
+        <p>Each requested permission is used <strong>exclusively</strong> for the single purpose of managing downloads inside the user's browser. No permission is used to gather data for any other purpose.</p>
+      </div>
+
+      <div class="card">
+        <h2>7. Children's privacy</h2>
+        <p>The Extension is a general‑purpose tool and is not directed at children. Because no personal data is collected, no information about children is collected either.</p>
+      </div>
+
+      <div class="card">
+        <h2>8. Changes to this policy</h2>
+        <p>If this policy changes, the updated version will be published at the same URL with a new "Last updated" date. Significant changes may also be reflected in the Extension's listing on the Chrome Web Store.</p>
+      </div>
+
+      <div class="card">
+        <h2>9. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please open an issue in the project's GitHub repository or contact the developer through the support channel listed on the Chrome Web Store page.</p>
+      </div>
+    </section>
+
+    <!-- ============== РУССКИЙ ============== -->
+    <section data-ru>
+      <h1>Политика конфиденциальности</h1>
+      <p class="lead">Эта страница объясняет, какую информацию использует расширение <strong>Download Manager</strong>, как она обрабатывается и что мы <strong>никогда</strong> не собираем, не продаём и не передаём третьим лицам.</p>
+      <p class="meta">Последнее обновление: 27 апреля 2026 г.</p>
+
+      <div class="card highlight">
+        <h2>
+          <span class="badge">Кратко</span>
+        </h2>
+        <ul class="check-list">
+          <li>Расширение <strong>не</strong> собирает, не хранит и не передаёт ваши персональные данные.</li>
+          <li>Не используется аналитика, телеметрия, пиксели и сторонние сервисы.</li>
+          <li>Все данные (настройки, фильтры) хранятся <strong>локально на вашем устройстве</strong>.</li>
+          <li><strong>Нет удалённого сервера</strong> — расширение никуда ничего не отправляет.</li>
+          <li>Информация о загрузках, посещениях и файлах не продаётся и не передаётся.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>1. Кто мы</h2>
+        <p>«Download Manager» (далее — «Расширение») — это расширение для браузера, которое помогает упорядочивать загрузки, искать файлы, фильтровать результаты и поддерживать историю загрузок в чистом и удобном виде. Этот документ — политика конфиденциальности разработчика Расширения («мы»).</p>
+      </div>
+
+      <div class="card">
+        <h2>2. К каким данным обращается Расширение</h2>
+        <p>Для работы Расширение использует API Chrome, которые по своей природе предоставляют доступ к некоторой информации <em>локально внутри браузера</em>. Эта информация не покидает ваше устройство.</p>
+
+        <div class="perm-grid">
+          <div class="perm">
+            <code>downloads</code>
+            <small>Чтение локальной истории загрузок (имя файла, URL, статус, размер, прогресс) для отображения и управления списком в окне расширения.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.open</code>
+            <small>Открытие готового файла по клику в списке.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.ui</code>
+            <small>Показ файла в системном файловом менеджере («Показать в Проводнике»).</small>
+          </div>
+          <div class="perm">
+            <code>tabs</code>
+            <small>Определение активной вкладки, чтобы уведомление о начале загрузки появилось в нужном месте.</small>
+          </div>
+          <div class="perm">
+            <code>scripting</code>
+            <small>Внедрение лёгкого всплывающего уведомления на странице о начавшейся загрузке.</small>
+          </div>
+          <div class="perm">
+            <code>storage</code>
+            <small>Сохранение ваших настроек (фильтры, параметры интерфейса) локально через <code>chrome.storage.local</code>.</small>
+          </div>
+          <div class="perm">
+            <code>alarms</code>
+            <small>Запуск лёгких фоновых задач (например, периодическое обновление активных загрузок).</small>
+          </div>
+          <div class="perm">
+            <code>host_permissions: &lt;all_urls&gt;</code>
+            <small>Нужно для отображения уведомления о загрузке на любом сайте, где вы её начали. Содержимое страниц <strong>не</strong> читается.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3. Что мы <em>не</em> делаем</h2>
+        <ul class="x-list">
+          <li>Не собираем персональные данные (имя, e‑mail, телефон, адрес).</li>
+          <li>Не собираем медицинские, финансовые, аутентификационные данные, личную переписку и геолокацию.</li>
+          <li>Не читаем, не храним и не передаём содержимое посещаемых вами веб‑страниц.</li>
+          <li>Не отслеживаем вашу активность и не строим никаких профилей пользователя.</li>
+          <li>Не используем cookies, fingerprinting и сторонние трекеры.</li>
+          <li>Не продаём, не сдаём в аренду и не передаём данные третьим лицам — передавать просто нечего.</li>
+          <li>Не используем ваши данные для рекламы или целей, не связанных с основной функцией Расширения (управление загрузками).</li>
+          <li>Не используем ваши данные для оценки кредитоспособности или кредитования.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Локальное хранилище</h2>
+        <p>Расширение сохраняет небольшие данные через встроенный API Chrome <code>chrome.storage.local</code>. Эти данные остаются только в вашем профиле браузера на вашем компьютере. Примеры:</p>
+        <ul>
+          <li>настройки интерфейса (выбранный фильтр, сортировка, тема);</li>
+          <li>кэш метаданных о загрузках, уже известных Chrome (чтобы список открывался быстро).</li>
+        </ul>
+        <p>Эти данные можно удалить в любой момент: удалите Расширение или очистите его хранилище в настройках Chrome.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Сетевая активность</h2>
+        <p>Само Расширение не обращается ни к каким серверам. Единственная сетевая активность, которая может произойти через него, — это фактическая загрузка файла, инициированная Chrome по URL, который выбрали <em>вы</em>. У нас нет ни серверов, ни бэкенда, ни эндпоинтов аналитики.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Обоснование разрешений (Chrome Web Store)</h2>
+        <p>Каждое запрошенное разрешение используется <strong>исключительно</strong> для одной цели — управления загрузками внутри браузера пользователя. Ни одно разрешение не используется для сбора данных в других целях.</p>
+      </div>
+
+      <div class="card">
+        <h2>7. Конфиденциальность детей</h2>
+        <p>Расширение — это инструмент общего назначения и не предназначено специально для детей. Так как никакие персональные данные не собираются, информация о детях также не собирается.</p>
+      </div>
+
+      <div class="card">
+        <h2>8. Изменения политики</h2>
+        <p>Если эта политика изменится, обновлённая версия будет опубликована по тому же адресу с новой датой «Последнее обновление». О существенных изменениях может сообщаться также на странице Расширения в Chrome Web Store.</p>
+      </div>
+
+      <div class="card">
+        <h2>9. Контакты</h2>
+        <p>Если у вас есть вопросы по этой политике конфиденциальности, создайте issue в GitHub‑репозитории проекта или напишите разработчику через канал поддержки, указанный на странице расширения в Chrome Web Store.</p>
+      </div>
+    </section>
+
+    <!-- ============== DEUTSCH ============== -->
+    <section data-de>
+      <h1>Datenschutzerklärung</h1>
+      <p class="lead">Diese Seite erklärt, welche Informationen die Chrome-Erweiterung <strong>Download Manager</strong> verwendet, wie sie verarbeitet werden und was niemals erfasst, verkauft oder weitergegeben wird.</p>
+      <p class="meta">Letzte Aktualisierung: 27. April 2026</p>
+
+      <div class="card highlight">
+        <h2>
+          <span class="badge">Kurz gesagt</span>
+        </h2>
+        <ul class="check-list">
+          <li>Die Erweiterung erfasst, speichert oder übermittelt <strong>keine</strong> personenbezogenen Daten.</li>
+          <li>Sie verwendet <strong>keine</strong> Analysen, Telemetrie, Tracking-Pixel oder Drittanbieterdienste.</li>
+          <li>Alle Daten (Einstellungen, Filter des Download-Verlaufs) verbleiben <strong>lokal auf Ihrem Gerät</strong>.</li>
+          <li>Es gibt <strong>keinen Remote-Server</strong>; die Erweiterung „telefoniert nicht nach Hause".</li>
+          <li>Ihre Downloads, Browseraktivitäten und Dateien werden niemals verkauft oder weitergegeben.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>1. Wer wir sind</h2>
+        <p>„Download Manager" (die „Erweiterung") ist eine Browser-Erweiterung, die Ihnen hilft, Übertragungen zu organisieren, Dateien zu suchen, Ergebnisse zu filtern und Ihren Download-Verlauf sauber und übersichtlich zu halten. Dieses Dokument ist die Datenschutzerklärung des Entwicklers der Erweiterung („wir", „uns").</p>
+      </div>
+
+      <div class="card">
+        <h2>2. Worauf die Erweiterung zugreift</h2>
+        <p>Damit die Erweiterung funktioniert, verwendet sie Chrome-APIs, die naturgemäß bestimmte Informationen <em>lokal in Ihrem Browser</em> bereitstellen. Keine dieser Informationen verlässt Ihr Gerät.</p>
+
+        <div class="perm-grid">
+          <div class="perm">
+            <code>downloads</code>
+            <small>Lesen Ihres lokalen Download-Verlaufs (Dateiname, URL, Status, Größe, Fortschritt) zur Anzeige und Verwaltung im Popup.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.open</code>
+            <small>Öffnen einer fertigen Datei beim Klick in der Liste.</small>
+          </div>
+          <div class="perm">
+            <code>downloads.ui</code>
+            <small>Datei im System-Dateimanager anzeigen („Im Explorer anzeigen").</small>
+          </div>
+          <div class="perm">
+            <code>tabs</code>
+            <small>Erkennen des aktuellen Tabs, damit die Download-Benachrichtigung an der richtigen Stelle angezeigt werden kann.</small>
+          </div>
+          <div class="perm">
+            <code>scripting</code>
+            <small>Einfügen des leichten In-Page-Toasts, der den Beginn eines Downloads bestätigt.</small>
+          </div>
+          <div class="perm">
+            <code>storage</code>
+            <small>Speichern Ihrer Einstellungen (z. B. Filter und Oberflächenoptionen) lokal über <code>chrome.storage.local</code>.</small>
+          </div>
+          <div class="perm">
+            <code>alarms</code>
+            <small>Planen leichter Hintergrundaufgaben (z. B. periodische Aktualisierung laufender Downloads).</small>
+          </div>
+          <div class="perm">
+            <code>host_permissions: &lt;all_urls&gt;</code>
+            <small>Erforderlich, damit die Download-Benachrichtigung auf jeder Website angezeigt werden kann, auf der Sie einen Download starten. Die Erweiterung liest <strong>keine</strong> Seiteninhalte.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3. Was wir <em>nicht</em> tun</h2>
+        <ul class="x-list">
+          <li>Wir erfassen keine personenbezogenen Daten (Name, E-Mail, Telefon, Adresse).</li>
+          <li>Wir erfassen keine Gesundheits-, Finanz-, Authentifizierungs-, persönlichen Kommunikations- oder Standortdaten.</li>
+          <li>Wir lesen, speichern oder übermitteln keine Inhalte der von Ihnen besuchten Webseiten.</li>
+          <li>Wir verfolgen Ihre Browsing-Aktivitäten nicht und erstellen kein Profil von Ihnen.</li>
+          <li>Wir verwenden keine Cookies, kein Fingerprinting und keine Drittanbieter-Tracker.</li>
+          <li>Wir verkaufen, vermieten oder teilen keine Daten mit Dritten – es gibt nichts zu teilen.</li>
+          <li>Wir verwenden Ihre Daten nicht für Werbung oder Zwecke, die nicht mit der Kernfunktion der Erweiterung (Download-Verwaltung) zusammenhängen.</li>
+          <li>Wir verwenden Ihre Daten nicht zur Bonitätsbeurteilung oder Kreditvergabe.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Lokaler Speicher</h2>
+        <p>Die Erweiterung speichert kleine Informationen über die in Chrome integrierte API <code>chrome.storage.local</code>. Diese Daten verbleiben nur in Ihrem Browser-Profil auf Ihrem Computer. Beispiele:</p>
+        <ul>
+          <li>Oberflächeneinstellungen (gewählter Filter, Sortierreihenfolge, Theme);</li>
+          <li>Zwischengespeicherte Metadaten zu bereits in Chrome bekannten Downloads (damit die Liste schnell gerendert wird).</li>
+        </ul>
+        <p>Sie können diese Daten jederzeit löschen, indem Sie die Erweiterung entfernen oder den Speicher der Erweiterung in Chrome löschen.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Netzwerknutzung</h2>
+        <p>Die Erweiterung selbst kontaktiert keinen Server. Die einzige Netzwerkaktivität, die durch sie ausgelöst werden kann, ist der eigentliche Datei-Download, der von Chrome an die von <em>Ihnen</em> gewählte URL durchgeführt wird. Wir haben keine Server, kein Backend und keine Analyse-Endpunkte.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Begründung der Berechtigungen (Chrome Web Store)</h2>
+        <p>Jede angeforderte Berechtigung wird <strong>ausschließlich</strong> für den einen Zweck verwendet, Downloads im Browser des Nutzers zu verwalten. Keine Berechtigung wird für andere Zwecke verwendet.</p>
+      </div>
+
+      <div class="card">
+        <h2>7. Datenschutz von Kindern</h2>
+        <p>Die Erweiterung ist ein Allzweck-Werkzeug und richtet sich nicht an Kinder. Da keine personenbezogenen Daten erfasst werden, werden auch keine Informationen über Kinder erfasst.</p>
+      </div>
+
+      <div class="card">
+        <h2>8. Änderungen dieser Richtlinie</h2>
+        <p>Bei Änderungen dieser Richtlinie wird die aktualisierte Version unter derselben URL mit einem neuen „Letzte Aktualisierung"-Datum veröffentlicht. Wesentliche Änderungen können auch im Eintrag der Erweiterung im Chrome Web Store widergespiegelt werden.</p>
+      </div>
+
+      <div class="card">
+        <h2>9. Kontakt</h2>
+        <p>Wenn Sie Fragen zu dieser Datenschutzerklärung haben, öffnen Sie bitte ein Issue im GitHub-Repository des Projekts oder kontaktieren Sie den Entwickler über den auf der Chrome Web Store-Seite angegebenen Support-Kanal.</p>
+      </div>
+    </section>
+
+    <!-- ============== 中文 ============== -->
+    <section data-zh>
+      <h1>隐私政策</h1>
+      <p class="lead">本页说明 Chrome 扩展程序 <strong>Download Manager</strong> 使用哪些信息、如何处理这些信息，以及哪些内容绝不会被收集、出售或共享。</p>
+      <p class="meta">最后更新：2026 年 4 月 27 日</p>
+
+      <div class="card highlight">
+        <h2>
+          <span class="badge">简而言之</span>
+        </h2>
+        <ul class="check-list">
+          <li>本扩展程序<strong>不会</strong>收集、存储或传输您的个人信息。</li>
+          <li><strong>不</strong>使用任何分析、遥测、追踪像素或第三方服务。</li>
+          <li>所有数据（设置、下载历史筛选条件）都<strong>保存在您的设备本地</strong>。</li>
+          <li><strong>没有远程服务器</strong>；本扩展程序不会"回拨主控"。</li>
+          <li>您的下载、浏览活动和文件绝不会被出售或共享。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>1. 我们是谁</h2>
+        <p>"Download Manager"（"本扩展程序"）是一款浏览器扩展程序，可帮助您整理传输、搜索文件、筛选结果，并保持下载历史记录干净且易于管理。本文档是本扩展程序开发者（"我们"）的隐私政策。</p>
+      </div>
+
+      <div class="card">
+        <h2>2. 本扩展程序访问哪些数据</h2>
+        <p>为了正常工作，本扩展程序使用 Chrome API，这些 API 本身会在<em>您的浏览器内本地</em>公开某些信息。这些信息不会离开您的设备。</p>
+
+        <div class="perm-grid">
+          <div class="perm">
+            <code>downloads</code>
+            <small>读取您本地的下载历史（文件名、URL、状态、大小、进度），以便在弹出窗口中显示和管理。</small>
+          </div>
+          <div class="perm">
+            <code>downloads.open</code>
+            <small>在您单击列表中已完成的文件时打开它。</small>
+          </div>
+          <div class="perm">
+            <code>downloads.ui</code>
+            <small>在系统文件管理器中显示文件（"在资源管理器中显示"）。</small>
+          </div>
+          <div class="perm">
+            <code>tabs</code>
+            <small>检测当前标签页，以便页面内的下载通知能够显示在正确的位置。</small>
+          </div>
+          <div class="perm">
+            <code>scripting</code>
+            <small>注入轻量级页面内提示，确认下载已开始。</small>
+          </div>
+          <div class="perm">
+            <code>storage</code>
+            <small>通过 <code>chrome.storage.local</code> 在本地保存您的设置（例如首选筛选条件和界面选项）。</small>
+          </div>
+          <div class="perm">
+            <code>alarms</code>
+            <small>安排轻量级后台任务（例如定期刷新进行中的下载界面）。</small>
+          </div>
+          <div class="perm">
+            <code>host_permissions: &lt;all_urls&gt;</code>
+            <small>必需的，以便在您启动下载的任何网站上显示页面内下载通知。本扩展程序<strong>不会</strong>读取页面内容。</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3. 我们<em>不</em>做的事情</h2>
+        <ul class="x-list">
+          <li>我们不收集任何个人身份信息（姓名、电子邮件、电话、地址）。</li>
+          <li>我们不收集健康、财务、身份验证、个人通信或位置数据。</li>
+          <li>我们不读取、存储或传输您访问的网页内容。</li>
+          <li>我们不追踪您的浏览活动，也不为您建立任何档案。</li>
+          <li>我们不使用 Cookie、指纹识别或第三方追踪器。</li>
+          <li>我们不向第三方出售、出租或共享数据——根本没有数据可共享。</li>
+          <li>我们不将您的数据用于广告或与本扩展程序唯一核心功能（下载管理）无关的任何目的。</li>
+          <li>我们不将您的数据用于评估信用或贷款。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. 本地存储</h2>
+        <p>本扩展程序使用 Chrome 内置的 <code>chrome.storage.local</code> API 存储少量信息。这些数据仅存在于您计算机上的浏览器配置文件中。示例：</p>
+        <ul>
+          <li>界面偏好（所选筛选条件、排序方式、主题）；</li>
+          <li>已知下载的缓存元数据（以便列表能够快速渲染）。</li>
+        </ul>
+        <p>您可以随时删除这些数据：删除本扩展程序，或在 Chrome 中清除扩展程序的存储。</p>
+      </div>
+
+      <div class="card">
+        <h2>5. 网络使用</h2>
+        <p>本扩展程序本身不会联系任何服务器。通过它可能触发的唯一网络活动是实际的文件下载，该下载由 Chrome 执行到<em>您</em>选择的 URL。我们没有服务器、没有后端，也没有任何分析端点。</p>
+      </div>
+
+      <div class="card">
+        <h2>6. 权限说明（Chrome 网上应用店）</h2>
+        <p>所请求的每项权限都<strong>仅</strong>用于在用户浏览器内管理下载这一单一目的。任何权限都不会被用于为其他目的收集数据。</p>
+      </div>
+
+      <div class="card">
+        <h2>7. 儿童隐私</h2>
+        <p>本扩展程序是通用工具，并非专门面向儿童。由于不收集任何个人数据，因此也不会收集儿童的任何信息。</p>
+      </div>
+
+      <div class="card">
+        <h2>8. 政策变更</h2>
+        <p>如果本政策发生变更，将在同一 URL 发布更新版本，并附有新的"最后更新"日期。重大变更也可能反映在 Chrome 网上应用店的扩展程序详情页中。</p>
+      </div>
+
+      <div class="card">
+        <h2>9. 联系方式</h2>
+        <p>如果您对本隐私政策有任何疑问，请在项目的 GitHub 存储库中开启 issue，或通过 Chrome 网上应用店页面上列出的支持渠道联系开发者。</p>
+      </div>
+    </section>
+
+    <footer>
+      <span data-en>© 2026 Download Manager — Privacy Policy</span>
+      <span data-ru>© 2026 Download Manager — Политика конфиденциальности</span>
+      <span data-de>© 2026 Download Manager — Datenschutzerklärung</span>
+      <span data-zh>© 2026 Download Manager — 隐私政策</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const SUPPORTED = ['en', 'ru', 'de', 'zh'];
+      const TITLES = {
+        en: 'Privacy Policy — Download Manager',
+        ru: 'Политика конфиденциальности — Download Manager',
+        de: 'Datenschutzerklärung — Download Manager',
+        zh: '隐私政策 — Download Manager'
+      };
+      const langSelect = document.getElementById('langSelect');
+      const themeToggle = document.getElementById('themeToggle');
+
+      function setLang(lang) {
+        if (!SUPPORTED.includes(lang)) lang = 'en';
+        html.setAttribute('data-lang', lang);
+        html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : lang);
+        document.title = TITLES[lang];
+        if (langSelect && langSelect.value !== lang) langSelect.value = lang;
+        try { localStorage.setItem('dm_privacy_lang', lang); } catch (e) {}
+      }
+
+      function setTheme(theme) {
+        if (theme !== 'light' && theme !== 'dark') theme = 'dark';
+        html.setAttribute('data-theme', theme);
+        if (themeToggle) {
+          themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+        }
+        try { localStorage.setItem('dm_privacy_theme', theme); } catch (e) {}
+      }
+
+      if (langSelect) {
+        langSelect.addEventListener('change', () => setLang(langSelect.value));
+      }
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const current = html.getAttribute('data-theme') || 'dark';
+          setTheme(current === 'light' ? 'dark' : 'light');
+        });
+      }
+
+      let initialLang = 'en';
+      try {
+        const saved = localStorage.getItem('dm_privacy_lang');
+        if (saved && SUPPORTED.includes(saved)) {
+          initialLang = saved;
+        } else {
+          const nav = (navigator.language || '').toLowerCase();
+          if (nav.startsWith('ru')) initialLang = 'ru';
+          else if (nav.startsWith('de')) initialLang = 'de';
+          else if (nav.startsWith('zh')) initialLang = 'zh';
+        }
+      } catch (e) {}
+      setLang(initialLang);
+
+      let initialTheme = 'dark';
+      try {
+        const savedTheme = localStorage.getItem('dm_privacy_theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          initialTheme = savedTheme;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          initialTheme = 'light';
+        }
+      } catch (e) {}
+      setTheme(initialTheme);
+
+      try {
+        const mq = window.matchMedia('(prefers-color-scheme: light)');
+        mq.addEventListener && mq.addEventListener('change', e => {
+          if (!localStorage.getItem('dm_privacy_theme')) {
+            setTheme(e.matches ? 'light' : 'dark');
+            try { localStorage.removeItem('dm_privacy_theme'); } catch (_) {}
+          }
+        });
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
