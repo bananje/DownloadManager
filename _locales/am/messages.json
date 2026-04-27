@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "የማውረድ አስተዳዳሪ",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "ማስተላለፊያዎችን ለማደራጀት፣ ፋይሎችን በፍጥነት ለመፈለግ፣ ውጤቶችን ለማጣራት እና የማውረድ ታሪክዎን ንጹህ እና በቀላሉ የሚተዳደር ለማድረግ የማውረድ አስተዳዳሪን ይጠቀሙ።",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ማውረድን ለአንዳንድ ጊዜ አቁም",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ማውረድን ቀጥል",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "እንደገና አውርድ",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "በExplorer ውስጥ አሳይ",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "እንደገና ለማውረድ አድራሻ የለም።",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "ከዝርዝሩ የሚመለሱት HTTP(S) ማያያዣዎች ብቻ ናቸው። ይህን ዕቃ እንደገና ለመሞከር ገጹን ወይም «ውርዶች» ይጠቀሙ።",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "በማውረድ ላይ…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ማውረዱ ተቋረጠ",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ማውረዱ አልተጠናቀቀም",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "ዛሬ",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "ትናንት",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "ይህ ሳምንት ቀድሞ",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "ቀድሞ",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "በአሁኑ ጊዜ ፋይሎች የሉም",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "የማውረድ ታሪክ",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ውርዶች",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "በፋይል ስም ይፈልጉ",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "በፋይል ስም ይፈልጉ…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "ስም",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "መጠን",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "ቀን",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "ቀን: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "የቀን አጣሪ",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "ዛሬ",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "ሳምንት",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "ወር",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "ያለፈ ወር",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "የሚቀጥል ወር",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "ዳግም አስጀምር",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "እሺ",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "ዓይነት",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "የዓይነት አጣሪ",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "ሁሉንም ምረጥ",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "ምስሎች",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "ቪዲዮ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "ማህደሮች (ZIP፣ RAR፣ 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "ፕሮግራሞች (EXE፣ MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "ሰነዶች",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "ማህደሮች",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "ፕሮግራሞች",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "ዝጋ",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "አጣሪውን አስወግድ",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "ስም A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "መጠን ተጨማሪ",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "ተጨማሪ",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "ተቀናሽ",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "አጣሪዎች",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "የማውረድ መሣሪያ ንጣፍ",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "የውርዶች ዝርዝር",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "ማሳወቂያዎች በርተዋል",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "ማሳወቂያዎች ጠፍተዋል",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ማውረድ ተጠናቅቋል",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "ተቀምጧል: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "የወረደ ፋይል",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ማውረድ አልተሳካም",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ማውረድ አልተቻለም: $FILE$። ምክንያት: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ማውረድ አልተቻለም: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "ገጽታ: የሲስተም",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "ገጽታ: ብርሃን",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "ገጽታ: ጨለማ",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "ገጽታ ቀይር። አሁን: የሲስተም",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "ገጽታ ቀይር። አሁን: ብርሃን",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "ገጽታ ቀይር። አሁን: ጨለማ",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "የፋይል እርምጃዎች",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ፋይል ክፈት: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ማውረድ አልተጠናቀቀም: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ማውረዱ ተቋረጠ: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "መጠን የማይታወቅ",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "ርዕስ አልባ",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "የፋይሉን አቃፊ ይክፈቱ። ፋይሎችን በቀጥታ ለመክፈት ለተጨማሪው መዳረሻ ይፈቅዱ።",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "ተጨማሪው «downloads.open» ፈቃድ ያስፈልገዋል።",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ፋይሉን መክፈት አልተቻለም፤ አቃፊው በፋይል አስተዳዳሪ ተከፈተ።",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "ከዝርዝሩ አስወግድ",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ፋይል ሰርዝ",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "ጊዜ የማይታወቅ",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "አሁን",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ፋይሉን በፋይል አስተዳዳሪ ማሳየት አልተቻለም።",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ማውረዱ ተቋርጧል፤ ፋይሉን መክፈት አይቻልም።",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "የፋይል ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "መዳረሻ ተከልክሏል",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "በዲስክ በቂ ቦታ የለም",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "የፋይል ስም በጣም ረጅም ነው",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ፋይሉ በጣም ትልቅ ነው",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ቫይረስ ተገኝቷል",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "ጊዜያዊ የፋይል ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ፋይሉ ታግዷል",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "የደህንነት ፍተሻ አልተሳካም",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ፋይሉ በጣም አጭር ነው",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "ቼክሰም አይመሳሰልም",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ፋይሉ ከመነሻው ጋር ተመሳሳይ ነው",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "የኔትወርክ ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "የኔትወርክ ጊዜ አልቋል",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "ኔትወርኩ ተቋርጧል",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "ሰርቨሩ አይገኝም",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "ትክክል ያልሆነ የኔትወርክ ጥያቄ",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "አሳሹ ተሰብሯል",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "ተሰርዟል",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "አሳሹ ተዘግቷል",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "የሰርቨር ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "ሰርቨሩ እንደገና ማስጀመርን አይደግፍም",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "ትክክል ያልሆነ ይዘት",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "ያልተፈቀደ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "የሰርተፊኬት ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "መዳረሻ ተከልክሏል",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "ሰርቨሩ አይገኝም",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "የፋይል መጠን አይመሳሰልም",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "ከምንጭ ወደ ምንጭ አዘዋውር",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "የማይታወቅ ስህተት",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "ማህደረ ትውስታ አልቋል",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ወርዷል",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "ስህተት",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "ማሳወቂያ ዝጋ",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager-ን ይተዋወቁ — እንደ ዝውውሮችና የታሪክ አስተዳዳሪ የሚሠራ ኃያል ቅጥያ ነው። ይህ ቅጥያ የ Chrome ነባር የማውረጃ ስርዓት ቦታን ለመተካትና በሚያወርዱት እያንዳንዱ ሰነድ ላይ ሙሉ ቁጥጥር እንዲኖርዎ ለማረጋገጥ የተነደፈ ነው። ሰፋ ያሉና ንቁ የማውረድ ሥራ-ፈቃዶች ላሏቸው ተጠቃሚዎች የተዘጋጀ ነው\n\n🚀 ለምን Download Manager ይምረጡ?\nይህ ከነፃ ማውረጃ አስተዳዳሪ በላይ የሆነ ነገር ነው። የተበታተኑ የዝውውር ዝርዝሮችን በሥርዓት ወደ ተደራጀና በቀላሉ ሊፈለግ ወደሚችል ስርዓት የሚቀይር፣ የተራቀቁ የቁጥጥር ባህሪያትን የተላበሰ ብልህ የማውረጃ አደራጅና መከታተያ መሣሪያ ነው።\nከ Chrome መደበኛ የማውረጃ ታሪክ በተቃራኒ ይህ ቅጥያ ብርሃንነትን፣ ፍጥነትንና ለፋይሎችዎ ሙሉ መዳረሻን በአንድ ቦታ ያቀርባል።\n\n🔑 ዋና ዋና ባህሪያት:\n1️⃣ መላውን የዝውውር ታሪክ የሚሸፍን ፈጣን ፍለጋ\n2️⃣ በዓይነት ማጣራት (ቪዲዮ፣ ሰነድ፣ ምስል፣ ማህደር)\n3️⃣ በመጠን፣ በስም ወይም በማውረድ ቀን ማደራጀት\n4️⃣ በክፍሎች መቧደን (ዛሬ፣ ትናንት፣ በዚህ ሳምንት፣ ቀደም ብሎ)\n5️⃣ የፋይል ቦታን በቀጥታ በስርዓት ፋይል አሳሽ ውስጥ መክፈት\n6️⃣ ፈጣን ስረዛ\n\n📂 ብልህ የማውረጃ አደራጅ\n➤ ለሁሉም ማውረዶች ግልጽ የሆነ የጊዜ ቅደም ተከተል ዕይታ\n➤ በደቂቃዎች ውስጥ ወደማንኛውም ሰነድ ፈጣን መድረሻ\n➤ ከ Chrome መደበኛ የማውረጃ ዝርዝር ይልቅ የተደራጀ አወቃቀር\n\n🧠 ብልህ የዝውውር አስተዳዳሪ\n➤ ማውረዶችን በጊዜ መሰረት በራስ-ሰር መቧደን\n➤ ሰፋ ያሉ የፋይል ምድቦችን በግልጽ የሚያቀርብ ንጹሕ በይነ-ገጽ\n➤ ከ Chrome መደበኛ ማውረዶች የሚመጣን ግራ-መጋባት ይቀንሳል\n\n🗂️ በፋይሎች ላይ ሙሉ ቁጥጥር\nከኮምፒውተርዎ ላይ ፋይሎችን በቅጽበት ያስወግዱ\nቦታውን በአንድ ጠቅታ ይክፈቱ\nከአሳሹ ሳይወጡ ዝውውሮችን ያስተዳድሩ\n\n⚡ የምርታማነት መሻሻል\n➤ ቀላልና ተግባራዊ የማውረጃ ዳሽቦርድ ልምድ\n➤ ለዕለታዊ የፋይል አያያዝ የተሻሻለ የሥራ ፍሰት\n➤ ንጹሕና ቀልጣፋ የዝውውር አደራጅ ስርዓት\n➤ ከ Chrome መሠረታዊ ማውረዶች የተሻለ አማራጭ\n\n💡 ለሚከተሉት የሚያስፈልጋቸው ተጠቃሚዎች በጣም ተስማሚ ነው:\nታማኝ የማውረጃ አያያዝ መሣሪያ\nበማውረጃ ታሪክ አስተዳዳሪ ላይ የተራቀቀ ቁጥጥር\nየወረዱ ፋይሎች አስተዳዳሪ ሙሉ ብቃት\nዝውውሮችን የሚያደራጅ ብልህ ስርዓት\n\n🎯 Download Manager የ Chrome መደበኛ ማውረዶችን ወደ የተደራጀ የማውረጃ ፋይልና ታሪክ አስተዳዳሪ ይቀይራል። በአንድ ቅጥያ ውስጥ ፈጣን ፍለጋ፣ ሙሉ ቁጥጥርና የተደራጀ የሥራ ፍሰት ያቀርብልዎታል።\n\n🌙 የበለጠ ምቹ የማሰስ ልምድ ለማግኘት በቅጥያው ውስጥ ጥቁር ሁነታ (Dark Mode) ይገኛል። በይነ-ገጹ የስርዓት ጭብጥን በራሱ እንዲከተል ማድረግ ይችላሉ — በዚህም ጊዜ መሣሪያዎ ቅንብር መሠረት በብርሃንና በጥቁር ሁነታ መካከል በራሱ ይቀያየራል — ወይም በማንኛውም ጊዜ ጥቁር ጭብጥን በእጅ ማብራት ይችላሉ። በዚህ መንገድ በመልካቸው ላይ ሙሉ ቁጥጥር ይኖርዎታል፤ በተለይ ለረጅም ሰዓታት በኮምፒውተር ሲሠሩ የዓይን ድካምን ይቀንሳል።",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

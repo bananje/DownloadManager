@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Управљач преузимањима",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Користите Управљача преузимањима да организујете преносе, брзо претражујете датотеке, филтрирате резултате и одржавате историју преузимања уредном и лаком за управљање.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Паузирај преузимање",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Настави преузимање",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Поново преузми",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Прикажи у Истраживачу",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Нема адресе за поновно преузимање.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Са листе се могу поново покренути само HTTP(S) везе. За поновни покушај отворите страницу или Преузимања.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Преузимање…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Преузимање прекинуто",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Преузимање није завршено",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Данас",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Јуче",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Раније ове недеље",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Раније",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Тренутно нема датотека",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Историја преузимања",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Преузимања",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Претрага по називу датотеке",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Претрага по називу датотеке…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Назив",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Величина",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Датум",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Датум: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Филтер по датуму",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Данас",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Недеља",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Месец",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Претходни месец",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Следећи месец",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Ресетуј",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "У реду",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Тип",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Филтер по типу",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Изабери све",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Слике",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Видео",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Архиве (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Програми (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Документи",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Архиве",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Програми",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Затвори",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Уклони филтер",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Назив А–Ш",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "А–Ш",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Ш–А",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Величина раст.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "раст.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "опад.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Филтери",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Трака преузимања",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Листа преузимања",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Обавештења су укључена",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Обавештења су искључена",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Преузимање завршено",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Сачувано: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Преузета датотека",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Преузимање није успело",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Није могуће преузети: $FILE$. Разлог: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Није могуће преузети: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Тема: системска",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Тема: светла",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Тема: тамна",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Промени тему. Тренутно: системска",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Промени тему. Тренутно: светла",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Промени тему. Тренутно: тамна",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Радње над датотеком",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Отвори датотеку: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Преузимање није завршено: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Преузимање прекинуто: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Непозната величина",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Без наслова",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Отворите фасциклу датотеке. Да бисте директно отварали датотеке, дозволите приступ проширењу.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Проширењу је потребна дозвола „downloads.open“.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Датотеку није било могуће отворити; фасцикла је отворена у управљачу датотека.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Уклони са листе",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Избриши датотеку",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Непознато време",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "управо сада",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Датотека се не може приказати у управљачу датотека.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Преузимање прекинуто — датотека се не може отворити.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Грешка датотеке",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Приступ одбијен",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Нема довољно простора на диску",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Назив датотеке предугачак",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Датотека превелика",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Откривен вирус",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Привремена грешка датотеке",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Датотека блокирана",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Безбедносна провера није успела",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Датотека прекратка",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Контролна сума се не подудара",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Датотека идентична извору",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Грешка мреже",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Истекло време мреже",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Мрежа искључена",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Сервер је недоступан",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Неважећи мрежни захтев",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Прегледач се срушио",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Отказано",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Прегледач затворен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Грешка сервера",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Сервер не подржава наставак",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Неважећи садржај",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Није овлашћено",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Грешка сертификата",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Приступ забрањен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Сервер је недоступан",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Величина датотеке се не подудара",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Преусмеравање између извора",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Непозната грешка",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Недовољно меморије",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Преузето",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Грешка",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Затвори обавештење",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Упознајте Download Manager — моћну екстензију која ради као менаџер преноса и историје. Осмишљена је да замени подразумевани систем преузимања у Chrome-у и да вам пружи потпуну контролу над сваким документом који преузимате. Намењена корисницима са обимним и активним токовима преузимања\n\n🚀 Зашто изабрати Download Manager?\nОво је много више од обичног бесплатног менаџера преузимања. Реч је о паметном алату за организовање и праћење преузимања, који неуредне листе преноса претвара у структуиран и претражив систем с напредним опцијама контроле.\nЗа разлику од стандардне историје преузимања у Chrome-у, ова екстензија вам пружа прегледност, брзину и пун приступ датотекама на једном месту.\n\n🔑 Кључне могућности:\n1️⃣ Тренутна претрага кроз целокупну историју преноса\n2️⃣ Филтрирање по типу (видео, документ, слика, архива)\n3️⃣ Сортирање по величини, називу или датуму преузимања\n4️⃣ Груписање у одељке (Данас, Јуче, Ове недеље, Раније)\n5️⃣ Отварање локације директно у систему за претраживање датотека\n6️⃣ Тренутно брисање\n\n📂 Паметан организатор преузимања\n➤ Прегледан хронолошки приказ свих преузимања\n➤ Брз приступ било ком документу за неколико секунди\n➤ Уређена структура уместо подразумеване листе преузимања у Chrome-у\n\n🧠 Интелигентан менаџер преноса\n➤ Аутоматско груписање преузимања по временском периоду\n➤ Чист интерфејс са јасно сврстаним категоријама датотека\n➤ Смањује нагомиланост подразумеваних преузимања у Chrome-у\n\n🗂️ Потпуна контрола над датотекама\nОдмах уклоните датотеке са рачунара\nОтворите локацију једним кликом\nУправљајте преносима а да не напустите прегледач\n\n⚡ Повећајте продуктивност\n➤ Лак и једноставан панел за преузимања\n➤ Унапређен ток рада за свакодневно руковање датотекама\n➤ Прегледан и ефикасан систем за организацију преноса\n➤ Бољи избор од основних преузимања у Chrome-у\n\n💡 Идеално за кориснике којима је потребно:\nПоуздан алат за управљање преузимањима\nНапредна контрола над менаџером историје преузимања\nПуна функционалност менаџера преузетих датотека\nПаметан систем за организацију преноса\n\n🎯 Download Manager претвара уобичајена преузимања из Chrome-а у структуиран менаџер датотека и историје преузимања. Пружа вам брзу претрагу, потпуну контролу и уређен ток рада у једној екстензији.\n\n🌙 Тамни режим (Dark Mode) доступан је у екстензији ради удобнијег прегледања. Можете изабрати да аутоматски прати тему система, при чему ће се интерфејс смењивати између светлог и тамног режима у складу са подешавањима уређаја, или ручно укључити тамну тему у било ком тренутку. Тако имате потпуну контролу над изгледом и смањујете напор за очи, нарочито током дугих сати рада за рачунаром.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

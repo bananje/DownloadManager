@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ডাউনলোড ম্যানেজার",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "স্থানান্তর সাজাতে, দ্রুত ফাইল খুঁজতে, ফলাফল ফিল্টার করতে এবং আপনার ডাউনলোড ইতিহাসকে পরিষ্কার ও সহজে পরিচালনাযোগ্য রাখতে ডাউনলোড ম্যানেজার ব্যবহার করুন।",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ডাউনলোড সাময়িকভাবে বন্ধ করুন",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ডাউনলোড আবার শুরু করুন",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "আবার ডাউনলোড চেষ্টা করুন",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "File Explorer-এ দেখান",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "পুনরায় ডাউনলোডের জন্য কোনো ঠিকানা নেই।",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "তালিকা থেকে শুধু HTTP(S) লিঙ্ক পুনরায় শুরু করা যায়। এই আইটেম আবার চেষ্টা করতে পৃষ্ঠা বা “ডাউনলোডস” ব্যবহার করুন।",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "ডাউনলোড হচ্ছে…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ডাউনলোড থেমে গেছে",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ডাউনলোড সম্পূর্ণ হয়নি",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "আজ",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "গতকাল",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "এই সপ্তাহে এর আগে",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "আগে",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "এখন কোনো ফাইল নেই",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ডাউনলোড ইতিহাস",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ডাউনলোড",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ফাইলের নাম দিয়ে খুঁজুন",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ফাইলের নাম দিয়ে খুঁজুন…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "নাম",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "আকার",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "তারিখ",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "তারিখ: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "তারিখ ফিল্টার",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "আজ",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "সপ্তাহ",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "মাস",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "আগের মাস",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "পরের মাস",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "রিসেট",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ঠিক আছে",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "ধরন",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "ধরন ফিল্টার",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "সব নির্বাচন করুন",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "ছবি",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "ভিডিও",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "আর্কাইভ (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "প্রোগ্রাম (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "নথি",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "আর্কাইভ",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "প্রোগ্রাম",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "বন্ধ করুন",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ফিল্টার সরান",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "নাম A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "আকার ঊর্ধ্ব.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "ঊর্ধ্ব.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "অধঃ.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "ফিল্টার",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "ডাউনলোড টুলবার",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "ডাউনলোড তালিকা",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "বিজ্ঞপ্তি চালু আছে",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "বিজ্ঞপ্তি বন্ধ আছে",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ডাউনলোড সম্পন্ন",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "সংরক্ষিত হয়েছে: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ডাউনলোড করা ফাইল",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ডাউনলোড ব্যর্থ",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ডাউনলোড করা যায়নি: $FILE$। কারণ: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ডাউনলোড করা যায়নি: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "থিম: সিস্টেম",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "থিম: হালকা",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "থিম: গাঢ়",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "থিম পরিবর্তন করুন। বর্তমান: সিস্টেম",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "থিম পরিবর্তন করুন। বর্তমান: হালকা",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "থিম পরিবর্তন করুন। বর্তমান: গাঢ়",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "ফাইল ক্রিয়া",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ফাইল খুলুন: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ডাউনলোড সম্পূর্ণ হয়নি: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ডাউনলোড থেমে গেছে: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "আকার অজানা",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "শিরোনামহীন",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "ফাইলের ফোল্ডার খুলুন। ফাইল সরাসরি খুলতে এক্সটেনশনকে অ্যাক্সেস দিন।",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "এক্সটেনশনের জন্য “downloads.open” অনুমতি প্রয়োজন।",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ফাইল খোলা যায়নি; ফাইল ম্যানেজারে ফোল্ডার খোলা হয়েছে।",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "তালিকা থেকে সরান",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ফাইল মুছুন",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "সময় অজানা",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "এইমাত্র",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ফাইল ম্যানেজারে ফাইল দেখানো যায়নি।",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ডাউনলোড থেমে গেছে, ফাইল খোলা যাচ্ছে না।",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ফাইল ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "অ্যাক্সেস অস্বীকৃত",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "ডিস্কে পর্যাপ্ত জায়গা নেই",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ফাইলের নাম খুব লম্বা",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ফাইল খুব বড়",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ভাইরাস শনাক্ত হয়েছে",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "ক্ষণস্থায়ী ফাইল ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ফাইল অবরুদ্ধ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "নিরাপত্তা পরীক্ষায় ব্যর্থ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ফাইল খুব ছোট",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "চেকসাম মিলছে না",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ফাইল উৎসের সাথে অভিন্ন",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "নেটওয়ার্ক ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "নেটওয়ার্কের সময় শেষ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "নেটওয়ার্ক বিচ্ছিন্ন",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "সার্ভারে পৌঁছানো যাচ্ছে না",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "অবৈধ নেটওয়ার্ক অনুরোধ",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "ব্রাউজার ক্র্যাশ করেছে",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "বাতিল করা হয়েছে",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "ব্রাউজার বন্ধ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "সার্ভার ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "সার্ভার পুনরায় শুরু সমর্থন করে না",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "অবৈধ বিষয়বস্তু",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "অনুমোদনহীন",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "সার্টিফিকেট ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "অ্যাক্সেস নিষিদ্ধ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "সার্ভারে পৌঁছানো যাচ্ছে না",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ফাইলের আকার মিলছে না",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "ক্রস-অরিজিন রিডাইরেক্ট",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "অজানা ত্রুটি",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "মেমরি শেষ",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ডাউনলোড হয়েছে",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "ত্রুটি",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "বিজ্ঞপ্তি বন্ধ করুন",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 পরিচয় করিয়ে দিচ্ছি Download Manager — একটি শক্তিশালী এক্সটেনশন, যা ডাউনলোড স্থানান্তর ও ইতিহাস ব্যবস্থাপকের ভূমিকা পালন করে। এটি Chrome–এর মূল ডাউনলোড পদ্ধতির বিকল্প হিসেবে গড়ে তোলা হয়েছে, যাতে আপনি প্রতিটি ডাউনলোড করা নথির উপর সম্পূর্ণ নিয়ন্ত্রণ লাভ করতে পারেন। বিপুল ও সক্রিয় ডাউনলোড কর্মপ্রবাহযুক্ত ব্যবহারকারীদের কথা ভেবেই এটি নির্মিত\n\n🚀 কেন Download Manager বেছে নেবেন?\nএটি স্রেফ একটি বিনামূল্যের ডাউনলোড ব্যবস্থাপকের চেয়ে অনেক বেশি। এটি একটি মেধাবী ডাউনলোড সংগঠক ও পর্যবেক্ষণ যন্ত্র, যা এলোমেলো স্থানানান্তর তালিকাকে সুসংগঠিত, অনুসন্ধানযোগ্য ব্যবস্থায় পরিণত করে এবং তাতে যুক্ত করে উন্নত নিয়ন্ত্রণের সুবিধা।\nChrome–এর সাধারণ ডাউনলোড ইতিহাসের বিপরীতে, এই এক্সটেনশন আপনাকে স্পষ্টতা, গতি এবং নিজস্ব ফাইলের উপর পূর্ণ অভিগম্যতা একই স্থানে এনে দেয়।\n\n🔑 প্রধান বৈশিষ্ট্যসমূহ:\n1️⃣ পুরো স্থানান্তর ইতিহাসে তাৎক্ষণিক অনুসন্ধান\n2️⃣ ধরন অনুসারে ছাঁকন (ভিডিও, নথি, ছবি, সংরক্ষণাগার)\n3️⃣ আকার, নাম অথবা ডাউনলোডের তারিখ অনুসারে সাজানো\n4️⃣ বিভাগে বিন্যাস (আজ, গতকাল, এই সপ্তাহ, তার পূর্বে)\n5️⃣ সিস্টেমের ফাইল এক্সপ্লোরারে সরাসরি অবস্থানটি খোলা\n6️⃣ মুহূর্তের মধ্যে মুছে ফেলা\n\n📂 মেধাবী ডাউনলোড সংগঠক\n➤ সমস্ত ডাউনলোডের পরিচ্ছন্ন কালক্রমিক উপস্থাপনা\n➤ মাত্র কয়েক মুহূর্তে যে কোনো নথিতে দ্রুত প্রবেশাধিকার\n➤ Chrome–এর সাধারণ ডাউনলোড তালিকার বদলে সুবিন্যস্ত কাঠামো\n\n🧠 বুদ্ধিদীপ্ত স্থানান্তর ব্যবস্থাপক\n➤ সময় অনুযায়ী ডাউনলোডসমূহের স্বয়ংক্রিয় শ্রেণিবিন্যাস\n➤ সুসংগঠিত ফাইল-শ্রেণি সমেত পরিপাটি ইন্টারফেস\n➤ Chrome–এর সাধারণ ডাউনলোডের অগোছালো ভাব হ্রাস করে\n\n🗂️ ফাইলের উপর সম্পূর্ণ নিয়ন্ত্রণ\nচোখের পলকে নিজের কম্পিউটার থেকে ফাইল মুছে ফেলুন\nএক ক্লিকেই ফাইলের অবস্থান খুলুন\nব্রাউজার ত্যাগ না করেই স্থানান্তর পরিচালনা করুন\n\n⚡ উৎপাদনশীলতার সঞ্চার\n➤ হালকা ও স্বচ্ছন্দ ডাউনলোড ড্যাশবোর্ড অভিজ্ঞতা\n➤ দৈনন্দিন ফাইল ব্যবস্থাপনার জন্য পরিশীলিত কর্মপ্রবাহ\n➤ স্থানান্তর সংগঠনের পরিচ্ছন্ন ও কার্যকর পদ্ধতি\n➤ Chrome–এর সাধারণ ডাউনলোডের তুলনায় শ্রেয় বিকল্প\n\n💡 সেই ব্যবহারকারীদের জন্য আদর্শ, যাঁদের প্রয়োজন:\nডাউনলোড পরিচালনার নির্ভরযোগ্য সরঞ্জাম\nডাউনলোড ইতিহাস ব্যবস্থাপকের উপর উন্নত নিয়ন্ত্রণ\nডাউনলোডকৃত ফাইলের পরিপূর্ণ ব্যবস্থাপনা সুবিধা\nস্থানান্তর সাজানোর মেধাবী ব্যবস্থা\n\n🎯 Download Manager Chrome–এর সাধারণ ডাউনলোডকে রূপান্তরিত করে একটি সুসংগঠিত ফাইল ও ইতিহাস ব্যবস্থাপকে। এটি আপনাকে একটি মাত্র এক্সটেনশনের মধ্যেই দ্রুত অনুসন্ধান, সম্পূর্ণ নিয়ন্ত্রণ এবং সুশৃঙ্খল কর্মপ্রবাহ এনে দেয়।\n\n🌙 আরও আরামদায়ক ব্রাউজিং অভিজ্ঞতার জন্য এক্সটেনশনে ডার্ক মোড (Dark Mode) সংযোজিত আছে। আপনি ইন্টারফেসকে সিস্টেমের থিম স্বয়ংক্রিয়ভাবে অনুসরণ করতে দিতে পারেন, যাতে আপনার ডিভাইসের সেটিং অনুসারে এটি আলো এবং অন্ধকার মোডের মধ্যে নিজে থেকেই পরিবর্তিত হয়; অথবা যে কোনো মুহূর্তে নিজে হাতে ডার্ক থিম চালু করতে পারেন। এর ফলে অবয়বের উপর পূর্ণ নিয়ন্ত্রণ আপনার হাতে থাকে এবং বিশেষত দীর্ঘ সময় কম্পিউটারে কাজ করার সময় চোখের ক্লান্তি লাঘব হয়।",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

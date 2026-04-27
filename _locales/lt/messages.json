@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Atsisiuntimų tvarkytuvė",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Naudokite Atsisiuntimų tvarkytuvę, kad tvarkytumėte perdavimus, greitai rastumėte failus, filtruotumėte rezultatus ir išlaikytumėte atsisiuntimų istoriją švarią bei lengvai valdomą.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Pristabdyti atsisiuntimą",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Tęsti atsisiuntimą",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Atsisiųsti dar kartą",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Rodyti „Explorer“",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Nėra adreso pakartotinam atsisiuntimui.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Iš sąrašo galima iš naujo paleisti tik HTTP(S) nuorodas. Šio elemento pakartoti galite iš puslapio arba „Atsisiuntimų“.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Atsisiunčiama…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Atsisiuntimas nutrauktas",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Atsisiuntimas nebaigtas",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Šiandien",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Vakar",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Anksčiau šią savaitę",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Anksčiau",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Šiuo metu failų nėra",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Atsisiuntimų istorija",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Atsisiuntimai",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Ieškoti pagal failo pavadinimą",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Ieškoti pagal failo pavadinimą…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Pavadinimas",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Dydis",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Data",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Data: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Datos filtras",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Šiandien",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Savaitė",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Mėnuo",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Ankstesnis mėnuo",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Kitas mėnuo",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Atstatyti",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "Gerai",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tipas",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Tipo filtras",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Pasirinkti viską",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Paveikslėliai",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Vaizdo įrašai",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Archyvai (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programos (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumentai",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Archyvai",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programos",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Uždaryti",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Pašalinti filtrą",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Pavadinimas A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Dydis did.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "did.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "maž.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtrai",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Atsisiuntimų įrankių juosta",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Atsisiuntimų sąrašas",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Pranešimai įjungti",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Pranešimai išjungti",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Atsisiuntimas baigtas",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Įrašyta: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Atsisiųstas failas",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Atsisiuntimas nepavyko",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Nepavyko atsisiųsti: $FILE$. Priežastis: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Nepavyko atsisiųsti: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: sistemos",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: šviesi",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: tamsi",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Pakeisti temą. Dabartinė: sistemos",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Pakeisti temą. Dabartinė: šviesi",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Pakeisti temą. Dabartinė: tamsi",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Failo veiksmai",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Atidaryti failą: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Atsisiuntimas nebaigtas: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Atsisiuntimas nutrauktas: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Dydis nežinomas",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Be pavadinimo",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Atidarykite failo aplanką. Kad failus būtų galima atidaryti tiesiogiai, suteikite plėtiniui prieigą.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Plėtiniui reikia leidimo „downloads.open“.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Failo atidaryti nepavyko; aplankas atidarytas failų tvarkytuvėje.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Šalinti iš sąrašo",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Ištrinti failą",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Laikas nežinomas",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "ką tik",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Nepavyko parodyti failo failų tvarkytuvėje.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Atsisiuntimas nutrauktas, failo atidaryti negalima.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Failo klaida",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Prieiga uždrausta",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Nepakanka vietos diske",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Failo pavadinimas per ilgas",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Failas per didelis",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Aptikta virusų",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Laikina failo klaida",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Failas užblokuotas",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Saugos patikra nepavyko",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Failas per trumpas",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Kontrolinė suma nesutampa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Failas sutampa su šaltiniu",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Tinklo klaida",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Baigėsi tinklo laikas",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Tinklas atjungtas",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Serveris nepasiekiamas",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Netinkama tinklo užklausa",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Naršyklė sugedo",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Atšaukta",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Naršyklė uždaryta",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Serverio klaida",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Serveris nepalaiko tęsimo",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Netinkamas turinys",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Be autorizacijos",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifikato klaida",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Prieiga uždrausta",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Serveris nepasiekiamas",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Failo dydis nesutampa",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Kryžminės kilmės nukreipimas",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Nežinoma klaida",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Nepakanka atminties",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Atsisiųsta",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Klaida",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Uždaryti pranešimą",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Susipažinkite su „Download Manager“ — galingu plėtiniu, kuris veikia kaip perdavimų ir istorijos tvarkyklė. Jis sukurtas tam, kad pakeistų numatytąją „Chrome“ atsisiuntimų sistemą ir suteiktų jums visišką kiekvieno atsisiunčiamo dokumento kontrolę. Skirtas naudotojams, kurių atsisiuntimų srautai yra dideli ir intensyvūs\n\n🚀 Kodėl verta rinktis „Download Manager“?\nTai kur kas daugiau nei vien nemokama atsisiuntimų tvarkyklė. Tai sumanus atsisiuntimų organizatorius ir sekiklis, paverčiantis netvarkingus perdavimų sąrašus struktūruota, lengvai naršoma sistema su pažangiomis valdymo galimybėmis.\nSkirtingai nei įprasta „Chrome“ atsisiuntimų istorija, šis plėtinys suteikia aiškumo, spartos ir visapusišką prieigą prie jūsų failų vienoje vietoje.\n\n🔑 Pagrindinės funkcijos:\n1️⃣ Žaibiška paieška visoje perdavimų istorijoje\n2️⃣ Filtravimas pagal tipą (vaizdo įrašas, dokumentas, paveikslas, archyvas)\n3️⃣ Rūšiavimas pagal dydį, pavadinimą arba atsisiuntimo datą\n4️⃣ Grupavimas į skiltis (Šiandien, Vakar, Šią savaitę, Anksčiau)\n5️⃣ Vietos atvėrimas tiesiai sistemos failų naršyklėje\n6️⃣ Akimirksniu atliekamas šalinimas\n\n📂 Sumanus atsisiuntimų organizatorius\n➤ Aiškus chronologinis visų atsisiuntimų vaizdas\n➤ Greita prieiga prie bet kurio dokumento per kelias sekundes\n➤ Tvarkinga struktūra vietoj numatytojo „Chrome“ atsisiuntimų sąrašo\n\n🧠 Pažangi perdavimų tvarkyklė\n➤ Automatinis atsisiuntimų grupavimas pagal laiką\n➤ Švari sąsaja su aiškiai sutvarkytomis failų kategorijomis\n➤ Sumažina sąmyšį, būdingą įprastiems „Chrome“ atsisiuntimams\n\n🗂️ Visapusiška failų kontrolė\nIš karto pašalinkite failus iš savo kompiuterio\nAtverkite vietą vienu spustelėjimu\nValdykite perdavimus neišeidami iš naršyklės\n\n⚡ Didesnis darbo našumas\n➤ Lengvas ir patogus atsisiuntimų skydelis\n➤ Patobulinta darbo eiga kasdieniam failų tvarkymui\n➤ Aiški ir efektyvi perdavimų organizavimo sistema\n➤ Geresnė alternatyva paprastiems „Chrome“ atsisiuntimams\n\n💡 Puikiai tinka naudotojams, kuriems reikia:\nPatikimo įrankio atsisiuntimams tvarkyti\nIšsamesnės atsisiuntimų istorijos tvarkyklės kontrolės\nVisavertės atsisiųstų failų tvarkyklės funkcionalumo\nSumanios perdavimų organizavimo sistemos\n\n🎯 „Download Manager“ įprastus „Chrome“ atsisiuntimus paverčia struktūruota failų ir istorijos tvarkykle. Jis suteikia jums greitą paiešką, visišką kontrolę ir tvarkingą darbo eigą viename plėtinyje.\n\n🌙 Tamsiojo režimo (Dark Mode) galimybė yra integruota į plėtinį, kad naršymas būtų patogesnis. Galite pasirinkti, kad sąsaja automatiškai sektų sistemos temą — tuomet ji tarp šviesaus ir tamsaus režimų persijungia pagal įrenginio nuostatas — arba bet kada įjungti tamsiąją temą rankiniu būdu. Taip turėsite visišką išvaizdos kontrolę ir sumažinsite akių nuovargį, ypač ilgai dirbdami prie kompiuterio.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

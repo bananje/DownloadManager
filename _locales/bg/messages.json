@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Мениджър за изтегляния",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Използвайте Мениджъра за изтегляния, за да организирате прехвърлянията, да търсите файлове бързо, да филтрирате резултатите и да поддържате историята си на изтегляния подредена и лесна за управление.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Пауза на изтеглянето",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Възобнови изтеглянето",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Опитай изтеглянето отново",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Покажи в Файлов мениджър",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Няма адрес за повторно изтегляне.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "От списъка могат да се рестартират само HTTP(S) връзки. За повторен опит отворете страницата или „Изтегляния“.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Изтегляне…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Изтеглянето е прекъснато",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Изтеглянето не е завършено",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Днес",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Вчера",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "По-рано тази седмица",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "По-рано",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "В момента няма файлове",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "История на изтеглянията",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Изтегляния",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Търсене по име на файл",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Търсене по име на файл…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Име",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Размер",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Дата",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Дата: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Филтър по дата",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Днес",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Седмица",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Месец",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Предходен месец",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Следващ месец",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Нулирай",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ОК",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Тип",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Филтър по тип",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Избери всички",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Изображения",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Видео",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Архиви (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Програми (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Документи",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Архиви",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Програми",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Затвори",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Премахни филтъра",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Име А–Я",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "А–Я",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Я–А",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Размер възх.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "възх.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "низх.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Филтри",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Лента за изтегляния",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Списък с изтегляния",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Известията са включени",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Известията са изключени",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Изтеглянето завърши",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Записано: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Изтеглен файл",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Грешка при изтеглянето",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Неуспешно изтегляне: $FILE$. Причина: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Неуспешно изтегляне: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Тема: системна",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Тема: светла",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Тема: тъмна",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Смени темата. Текуща: системна",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Смени темата. Текуща: светла",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Смени темата. Текуща: тъмна",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Действия с файла",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Отвори файла: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Изтеглянето не е завършено: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Изтеглянето е прекъснато: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Неизвестен размер",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Без заглавие",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Отворете папката на файла. За да отваряте файлове директно, разрешете достъп на разширението.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Разширението изисква разрешение „downloads.open“.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Файлът не можа да бъде отворен; папката беше отворена във файловия мениджър.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Премахни от списъка",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Изтрий файла",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Неизвестно време",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "току-що",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Файлът не може да бъде показан във файловия мениджър.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Изтеглянето е прекъснато — файлът не може да бъде отворен.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Грешка във файла",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Отказан достъп",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Недостатъчно място на диска",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Твърде дълго име на файл",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Файлът е твърде голям",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Открит е вирус",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Временна грешка във файла",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Файлът е блокиран",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Проверката на сигурността е неуспешна",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Файлът е твърде кратък",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Контролната сума не съвпада",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Файлът съвпада с източника",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Грешка в мрежата",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Изтекло време за мрежата",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Мрежата е изключена",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Сървърът е недостъпен",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Невалидна мрежова заявка",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Браузърът се срина",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Отменено",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Браузърът е затворен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Грешка на сървъра",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Сървърът не поддържа продължаване",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Невалидно съдържание",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Неоторизиран",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Грешка със сертификата",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Достъпът е забранен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Сървърът е недостъпен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Размерът на файла не съвпада",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Пренасочване между източници",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Неизвестна грешка",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Недостатъчна памет",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Изтеглено",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Грешка",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Затвори известието",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Запознайте се с Download Manager — мощно разширение, което работи като мениджър на прехвърляния и история. Създадено е, за да замени стандартната система за изтегляния в Chrome и да ви предостави пълен контрол над всеки изтеглен документ. Предназначено за потребители с обемни и активни процеси на изтегляне\n\n🚀 Защо да изберете Download Manager?\nТова е много повече от обикновен безплатен мениджър за изтегляния. Това е интелигентен инструмент за организиране и проследяване, който превръща хаотичните списъци с прехвърляния в структурирана и лесна за претърсване система с разширени възможности за контрол.\nЗа разлика от стандартната история на изтеглянията в Chrome, това разширение ви осигурява яснота, бързина и пълен достъп до файловете ви на едно-единствено място.\n\n🔑 Основни възможности:\n1️⃣ Незабавно търсене в цялата история на прехвърлянията\n2️⃣ Филтриране по вид (видео, документ, изображение, архив)\n3️⃣ Подреждане по размер, име или дата на изтегляне\n4️⃣ Групиране в раздели (Днес, Вчера, Тази седмица, По-рано)\n5️⃣ Отваряне на местоположението директно в системния файлов мениджър\n6️⃣ Незабавно изтриване\n\n📂 Интелигентен организатор на изтеглянията\n➤ Прегледен хронологичен изглед на всички изтегляния\n➤ Бърз достъп до всеки документ за секунди\n➤ Подреден ред вместо стандартния списък с изтегляния на Chrome\n\n🧠 Интелигентен мениджър на прехвърлянията\n➤ Автоматично групиране на изтеглянията по време\n➤ Изчистен интерфейс с ясно структурирани категории файлове\n➤ Намалява безпорядъка, типичен за стандартните изтегляния в Chrome\n\n🗂️ Пълен контрол върху файловете\nПремахвайте файлове от компютъра си мигновено\nОтваряйте местоположението с едно кликване\nУправлявайте прехвърлянията, без да напускате браузъра\n\n⚡ Повишена производителност\n➤ Олекотено и удобно табло за изтеглянията\n➤ Подобрен работен поток за ежедневната работа с файлове\n➤ Прегледна и ефективна система за организиране на прехвърлянията\n➤ По-добра алтернатива на основните изтегляния в Chrome\n\n💡 Идеален за потребители, които се нуждаят от:\nНадежден инструмент за работа с изтегляния\nРазширен контрол над мениджъра на историята на изтеглянията\nПълноценна функционалност на мениджър на изтеглените файлове\nИнтелигентна система за организиране на прехвърлянията\n\n🎯 Download Manager превръща обичайните изтегляния в Chrome в истински структуриран мениджър на файлове и история. Предлага ви бързо търсене, пълен контрол и подреден работен поток в едно-единствено разширение.\n\n🌙 Тъмният режим (Dark Mode) е достъпен в разширението за по-приятно сърфиране. Можете да изберете автоматично следване на системната тема, така че интерфейсът да превключва между светъл и тъмен режим според настройките на устройството ви, или да включите тъмната тема ръчно по всяко време. Така получавате пълен контрол над външния вид и намалявате умората на очите, особено при продължителна работа пред компютъра.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

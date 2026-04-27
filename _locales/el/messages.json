@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Διαχείριση λήψεων",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Χρησιμοποιήστε τη Διαχείριση λήψεων για να οργανώνετε τις μεταφορές, να αναζητάτε αρχεία γρήγορα, να φιλτράρετε τα αποτελέσματα και να διατηρείτε το ιστορικό λήψεων τακτοποιημένο και εύκολο στη διαχείριση.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Παύση λήψης",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Συνέχιση λήψης",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Επανάληψη λήψης",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Εμφάνιση στην Εξερεύνηση",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Δεν υπάρχει διεύθυνση για νέα λήψη.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Από τη λίστα μπορούν να ξαναξεκινήσουν μόνο σύνδεσμοι HTTP(S). Για νέα προσπάθεια χρησιμοποιήστε τη σελίδα ή τις Λήψεις.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Λήψη…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Η λήψη διακόπηκε",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Η λήψη δεν ολοκληρώθηκε",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Σήμερα",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Χθες",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Νωρίτερα αυτή την εβδομάδα",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Παλαιότερα",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Δεν υπάρχουν αρχεία προς το παρόν",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Ιστορικό λήψεων",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Λήψεις",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Αναζήτηση ανά όνομα αρχείου",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Αναζήτηση ανά όνομα αρχείου…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Όνομα",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Μέγεθος",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Ημερομηνία",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Ημερομηνία: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Φίλτρο ημερομηνίας",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Σήμερα",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Εβδομάδα",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Μήνας",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Προηγούμενος μήνας",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Επόμενος μήνας",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Επαναφορά",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ΟΚ",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Τύπος",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Φίλτρο τύπου",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Επιλογή όλων",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Εικόνες",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Βίντεο",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Αρχεία (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Προγράμματα (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Έγγραφα",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Αρχεία",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Προγράμματα",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Κλείσιμο",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Κατάργηση φίλτρου",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Όνομα Α–Ω",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "Α–Ω",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Ω–Α",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Μέγεθος αύξ.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "αύξ.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "φθίν.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Φίλτρα",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Γραμμή λήψεων",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Λίστα λήψεων",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Οι ειδοποιήσεις είναι ενεργές",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Οι ειδοποιήσεις είναι ανενεργές",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Η λήψη ολοκληρώθηκε",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Αποθηκεύτηκε: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Ληφθέν αρχείο",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Αποτυχία λήψης",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Δεν ήταν δυνατή η λήψη: $FILE$. Αιτία: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Δεν ήταν δυνατή η λήψη: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Θέμα: του συστήματος",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Θέμα: ανοιχτό",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Θέμα: σκοτεινό",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Αλλαγή θέματος. Τρέχον: του συστήματος",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Αλλαγή θέματος. Τρέχον: ανοιχτό",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Αλλαγή θέματος. Τρέχον: σκοτεινό",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Ενέργειες αρχείου",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Άνοιγμα αρχείου: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Η λήψη δεν ολοκληρώθηκε: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Η λήψη διακόπηκε: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Άγνωστο μέγεθος",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Χωρίς τίτλο",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Ανοίξτε τον φάκελο του αρχείου. Για απευθείας άνοιγμα αρχείων, επιτρέψτε την πρόσβαση της επέκτασης.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Η επέκταση απαιτεί την άδεια «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Δεν ήταν δυνατό το άνοιγμα του αρχείου· ο φάκελος άνοιξε στη διαχείριση αρχείων.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Αφαίρεση από τη λίστα",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Διαγραφή αρχείου",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Άγνωστη ώρα",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "μόλις τώρα",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Δεν ήταν δυνατή η εμφάνιση του αρχείου στη διαχείριση αρχείων.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Η λήψη διακόπηκε, δεν είναι δυνατό το άνοιγμα του αρχείου.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Σφάλμα αρχείου",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Άρνηση πρόσβασης",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Ανεπαρκής χώρος στον δίσκο",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Πολύ μεγάλο όνομα αρχείου",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Πολύ μεγάλο αρχείο",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Εντοπίστηκε ιός",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Προσωρινό σφάλμα αρχείου",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Το αρχείο αποκλείστηκε",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Αποτυχία ελέγχου ασφαλείας",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Πολύ σύντομο αρχείο",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Αναντιστοιχία αθροίσματος ελέγχου",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Το αρχείο είναι ίδιο με την πηγή",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Σφάλμα δικτύου",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Λήξη χρονικού ορίου δικτύου",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Το δίκτυο αποσυνδέθηκε",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Αδύνατη η πρόσβαση στον διακομιστή",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Μη έγκυρο αίτημα δικτύου",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Το πρόγραμμα περιήγησης κατέρρευσε",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Ακυρώθηκε",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Το πρόγραμμα περιήγησης έκλεισε",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Σφάλμα διακομιστή",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Ο διακομιστής δεν υποστηρίζει συνέχιση",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Μη έγκυρο περιεχόμενο",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Μη εξουσιοδοτημένο",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Σφάλμα πιστοποιητικού",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Η πρόσβαση απαγορεύεται",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Αδύνατη η πρόσβαση στον διακομιστή",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Το μέγεθος του αρχείου δεν ταιριάζει",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Ανακατεύθυνση μεταξύ προελεύσεων",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Άγνωστο σφάλμα",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Εξάντληση μνήμης",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Λήφθηκε",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Σφάλμα",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Κλείσιμο ειδοποίησης",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Γνωρίστε τον Download Manager — μια ισχυρή επέκταση που λειτουργεί ως διαχειριστής μεταφορών και ιστορικού. Δημιουργήθηκε για να αντικαταστήσει το προεπιλεγμένο σύστημα λήψεων του Chrome και να σας προσφέρει πλήρη έλεγχο σε κάθε έγγραφο που κατεβάζετε. Σχεδιασμένος για χρήστες με μεγάλο όγκο και ενεργό ρυθμό λήψεων\n\n🚀 Γιατί να επιλέξετε τον Download Manager;\nΕίναι κάτι περισσότερο από έναν απλό δωρεάν διαχειριστή λήψεων. Πρόκειται για ένα ευφυές εργαλείο οργάνωσης και παρακολούθησης λήψεων, το οποίο μετατρέπει τις ακατάστατες λίστες μεταφορών σε ένα δομημένο σύστημα με δυνατότητα αναζήτησης και προηγμένα χαρακτηριστικά ελέγχου.\nΣε αντίθεση με το τυπικό ιστορικό λήψεων του Chrome, η επέκταση αυτή σας προσφέρει διαύγεια, ταχύτητα και πλήρη πρόσβαση στα αρχεία σας σε ένα ενιαίο σημείο.\n\n🔑 Βασικές δυνατότητες:\n1️⃣ Άμεση αναζήτηση σε ολόκληρο το ιστορικό μεταφορών\n2️⃣ Φιλτράρισμα ανά τύπο (βίντεο, έγγραφο, εικόνα, αρχειοθήκη)\n3️⃣ Ταξινόμηση κατά μέγεθος, όνομα ή ημερομηνία λήψης\n4️⃣ Ομαδοποίηση σε ενότητες (Σήμερα, Χθες, Αυτή την εβδομάδα, Παλαιότερα)\n5️⃣ Άνοιγμα της τοποθεσίας απευθείας στην εξερεύνηση του συστήματος\n6️⃣ Άμεση διαγραφή\n\n📂 Έξυπνος οργανωτής λήψεων\n➤ Καθαρή χρονολογική προβολή όλων των λήψεων\n➤ Γρήγορη πρόσβαση σε οποιοδήποτε έγγραφο μέσα σε δευτερόλεπτα\n➤ Οργανωμένη δομή αντί για την προεπιλεγμένη λίστα λήψεων του Chrome\n\n🧠 Ευφυής διαχειριστής μεταφορών\n➤ Αυτόματη ομαδοποίηση των λήψεων ανά χρόνο\n➤ Λιτό περιβάλλον με δομημένες κατηγορίες αρχείων\n➤ Μειώνει την ακαταστασία των τυπικών λήψεων του Chrome\n\n🗂️ Πλήρης έλεγχος αρχείων\nΑφαιρέστε αρχεία από τον υπολογιστή σας ακαριαία\nΑνοίξτε την τοποθεσία με ένα κλικ\nΔιαχειριστείτε τις μεταφορές χωρίς να εγκαταλείψετε το πρόγραμμα περιήγησης\n\n⚡ Ενίσχυση παραγωγικότητας\n➤ Ελαφριά εμπειρία πίνακα ελέγχου λήψεων\n➤ Βελτιωμένη ροή εργασιών για την καθημερινή διαχείριση αρχείων\n➤ Καθαρό και αποδοτικό σύστημα οργάνωσης μεταφορών\n➤ Καλύτερη εναλλακτική από τις βασικές λήψεις του Chrome\n\n💡 Ιδανικός για χρήστες που χρειάζονται:\nΈνα αξιόπιστο εργαλείο διαχείρισης λήψεων\nΠροηγμένο έλεγχο πάνω στον διαχειριστή ιστορικού λήψεων\nΠλήρη λειτουργικότητα διαχειριστή αρχείων λήψης\nΈξυπνο σύστημα οργάνωσης μεταφορών\n\n🎯 Ο Download Manager μετατρέπει τις τυπικές λήψεις του Chrome σε έναν δομημένο διαχειριστή αρχείων και ιστορικού λήψεων. Σας προσφέρει γρήγορη αναζήτηση, πλήρη έλεγχο και οργανωμένη ροή εργασιών μέσα σε μία και μοναδική επέκταση.\n\n🌙 Η σκοτεινή λειτουργία (Dark Mode) είναι διαθέσιμη στην επέκταση, χαρίζοντας μια πιο ευχάριστη εμπειρία περιήγησης. Μπορείτε να επιλέξετε αυτόματη προσαρμογή στο θέμα του συστήματός σας, ώστε η διεπαφή να εναλλάσσεται μεταξύ φωτεινής και σκοτεινής λειτουργίας ανάλογα με τις ρυθμίσεις της συσκευής σας, ή να ενεργοποιήσετε το σκοτεινό θέμα χειροκίνητα ανά πάσα στιγμή. Έτσι αποκτάτε πλήρη έλεγχο της εμφάνισης και μειώνετε την κόπωση των ματιών, ιδίως κατά τις παρατεταμένες ώρες εργασίας στον υπολογιστή.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

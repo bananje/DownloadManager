@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Pengelola Unduhan",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Gunakan Pengelola Unduhan untuk menata transfer, mencari berkas dengan cepat, memfilter hasil, dan menjaga riwayat unduhan tetap rapi serta mudah dikelola.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Jeda unduhan",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Lanjutkan unduhan",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Coba unduh lagi",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Tampilkan di File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Tidak ada alamat untuk mengunduh lagi.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Dari daftar hanya tautan HTTP(S) yang dapat dimulai ulang. Gunakan halaman atau Unduhan untuk mencoba ulang item ini.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Mengunduh…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Unduhan terhenti",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Unduhan belum selesai",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Hari ini",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Kemarin",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Lebih awal minggu ini",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Sebelumnya",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Belum ada berkas saat ini",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Riwayat Unduhan",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Unduhan",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Cari berdasarkan nama berkas",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Cari berdasarkan nama berkas…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nama",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Ukuran",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Tanggal",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Tanggal: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Filter tanggal",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Hari ini",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Minggu",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Bulan",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Bulan sebelumnya",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Bulan berikutnya",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Setel ulang",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Jenis",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Filter jenis",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Pilih semua",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Gambar",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arsip (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Program (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumen",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arsip",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Program",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Tutup",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Hapus filter",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nama A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Ukuran naik",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "naik",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "turun",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filter",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Bilah unduhan",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Daftar unduhan",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Notifikasi aktif",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Notifikasi nonaktif",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Unduhan selesai",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Tersimpan: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Berkas yang diunduh",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Unduhan gagal",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Tidak dapat mengunduh: $FILE$. Alasan: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Tidak dapat mengunduh: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: sistem",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: terang",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: gelap",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Ganti tema. Saat ini: sistem",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Ganti tema. Saat ini: terang",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Ganti tema. Saat ini: gelap",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Tindakan berkas",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Buka berkas: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Unduhan belum selesai: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Unduhan terhenti: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Ukuran tidak diketahui",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Tanpa nama",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Buka folder berkas. Untuk membuka berkas langsung, izinkan ekstensi mengakses.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Ekstensi memerlukan izin “downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Berkas tidak dapat dibuka; folder dibuka di pengelola berkas.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Hapus dari daftar",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Hapus berkas",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Waktu tidak diketahui",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "baru saja",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Berkas tidak dapat ditampilkan di pengelola berkas.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Unduhan terhenti, berkas tidak dapat dibuka.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Kesalahan berkas",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Akses ditolak",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Ruang disk tidak cukup",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Nama berkas terlalu panjang",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Berkas terlalu besar",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus terdeteksi",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Kesalahan berkas sementara",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Berkas diblokir",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Pemeriksaan keamanan gagal",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Berkas terlalu pendek",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Checksum tidak cocok",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Berkas sama dengan sumber",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Kesalahan jaringan",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Waktu jaringan habis",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Jaringan terputus",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Server tidak dapat dijangkau",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Permintaan jaringan tidak valid",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Browser mogok",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Dibatalkan",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Browser ditutup",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Kesalahan server",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Server tidak mendukung pelanjutan",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Konten tidak valid",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Tidak berwenang",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Kesalahan sertifikat",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Akses dilarang",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Server tidak dapat dijangkau",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Ukuran berkas tidak cocok",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Pengalihan lintas asal",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Kesalahan tidak diketahui",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Kehabisan memori",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Terunduh",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Kesalahan",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Tutup notifikasi",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Perkenalkan Download Manager — sebuah ekstensi tangguh yang berperan sebagai pengelola transfer sekaligus riwayat unduhan. Ekstensi ini dirancang untuk menggantikan sistem unduhan bawaan Chrome dan memberikan Anda kendali penuh atas setiap dokumen yang Anda unduh. Diciptakan bagi pengguna dengan alur unduhan yang besar dan aktif\n\n🚀 Mengapa memilih Download Manager?\nIni jauh lebih dari sekadar pengelola unduhan gratis. Ini adalah perangkat cerdas untuk menata dan melacak unduhan, yang menyulap daftar transfer yang berantakan menjadi sistem terstruktur dan mudah ditelusuri, dilengkapi fitur pengendalian yang lebih canggih.\nBerbeda dengan riwayat unduhan baku Chrome, ekstensi ini menghadirkan kejelasan, kecepatan, dan akses penuh terhadap berkas Anda dalam satu tempat.\n\n🔑 Fitur-fitur utama:\n1️⃣ Pencarian seketika di seluruh riwayat transfer\n2️⃣ Penyaringan berdasarkan jenis (video, dokumen, gambar, arsip)\n3️⃣ Pengurutan berdasarkan ukuran, nama, atau tanggal unduh\n4️⃣ Pengelompokan ke dalam bagian (Hari ini, Kemarin, Pekan ini, Sebelumnya)\n5️⃣ Membuka lokasi berkas langsung di penjelajah sistem\n6️⃣ Penghapusan seketika\n\n📂 Penata unduhan yang cerdas\n➤ Tampilan kronologis yang bersih untuk seluruh unduhan\n➤ Akses cepat ke dokumen apa pun dalam hitungan detik\n➤ Struktur yang tertata, menggantikan daftar unduhan baku Chrome\n\n🧠 Pengelola transfer yang cerdas\n➤ Pengelompokan otomatis unduhan berdasarkan waktu\n➤ Antarmuka rapi dengan kategori berkas yang terstruktur jelas\n➤ Mengurangi kekisruhan akibat unduhan baku Chrome\n\n🗂️ Kendali penuh atas berkas\nHapus berkas dari komputer Anda dalam sekejap\nBuka lokasi berkas hanya dengan satu klik\nKelola transfer tanpa perlu meninggalkan peramban\n\n⚡ Tingkatkan produktivitas\n➤ Pengalaman dasbor unduhan yang ringan\n➤ Alur kerja yang lebih baik untuk pengelolaan berkas sehari-hari\n➤ Sistem penataan transfer yang rapi dan efisien\n➤ Alternatif yang lebih unggul dibanding unduhan dasar Chrome\n\n💡 Sangat cocok bagi pengguna yang membutuhkan:\nPerangkat penanganan unduhan yang andal\nKendali tingkat lanjut atas pengelola riwayat unduhan\nFungsi lengkap dari pengelola berkas unduhan\nSistem cerdas untuk menata transfer\n\n🎯 Download Manager menjelmakan unduhan baku Chrome menjadi pengelola berkas dan riwayat unduhan yang terstruktur. Ia menghadirkan pencarian cepat, kendali penuh, dan alur kerja yang teratur dalam satu ekstensi.\n\n🌙 Mode Gelap (Dark Mode) tersedia di dalam ekstensi demi pengalaman menjelajah yang lebih nyaman. Anda dapat memilih untuk secara otomatis mengikuti tema sistem, sehingga antarmuka beralih antara mode terang dan gelap sesuai pengaturan perangkat Anda, atau mengaktifkan tema gelap secara manual kapan saja. Dengan demikian, Anda memegang kendali penuh atas tampilan dan dapat mengurangi kelelahan mata, terutama saat berlama-lama bekerja di depan komputer.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

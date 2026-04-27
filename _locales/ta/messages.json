@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "பதிவிறக்க மேலாளர்",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "இடமாற்றங்களை ஒழுங்கமைக்க, கோப்புகளை விரைவாகத் தேட, முடிவுகளை வடிகட்ட மற்றும் உங்கள் பதிவிறக்க வரலாற்றை சுத்தமாகவும் எளிதாக நிர்வகிக்கக்கூடியதாகவும் வைத்திருக்க பதிவிறக்க மேலாளரைப் பயன்படுத்துங்கள்.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "பதிவிறக்கத்தை இடைநிறுத்து",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "பதிவிறக்கத்தைத் தொடர்",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "மீண்டும் பதிவிறக்கு",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "File Explorer-இல் காட்டு",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "மீண்டும் பதிவிறக்க முகவரி இல்லை.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "பட்டியலிலிருந்து HTTP(S) இணைப்புகளை மட்டுமே மீண்டும் தொடங்க முடியும். இந்த உருப்படியை மீண்டும் முயற்சிக்க பக்கத்தையோ “பதிவிறக்கங்களையோ” பயன்படுத்துக.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "பதிவிறக்கப்படுகிறது…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "பதிவிறக்கம் முடியவில்லை",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "பதிவிறக்கம் முழுமையாகவில்லை",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "இன்று",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "நேற்று",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "இந்த வாரத்தில் முந்தைய",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "முந்தைய",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "தற்போது கோப்புகள் எதுவும் இல்லை",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "பதிவிறக்க வரலாறு",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "பதிவிறக்கங்கள்",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "கோப்பு பெயரால் தேடு",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "கோப்பு பெயரால் தேடு…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "பெயர்",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "அளவு",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "தேதி",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "தேதி: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "தேதி வடிகட்டி",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "இன்று",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "வாரம்",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "மாதம்",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "முந்தைய மாதம்",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "அடுத்த மாதம்",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "மீட்டமை",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "சரி",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "வகை",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "வகை வடிகட்டி",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "அனைத்தும் தேர்ந்தெடு",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "படங்கள்",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "வீடியோ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "காப்பகங்கள் (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "நிரல்கள் (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "ஆவணங்கள்",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "காப்பகங்கள்",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "நிரல்கள்",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "மூடு",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "வடிகட்டியை அகற்று",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "பெயர் A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "அளவு ஏறு",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "ஏறு",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "இறங்கு",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "வடிகட்டிகள்",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "பதிவிறக்க கருவிப்பட்டை",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "பதிவிறக்கப் பட்டியல்",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "அறிவிப்புகள் இயக்கப்பட்டுள்ளன",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "அறிவிப்புகள் முடக்கப்பட்டுள்ளன",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "பதிவிறக்கம் முடிந்தது",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "சேமிக்கப்பட்டது: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "பதிவிறக்கப்பட்ட கோப்பு",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "பதிவிறக்கம் தோல்வி",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "பதிவிறக்க முடியவில்லை: $FILE$. காரணம்: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "பதிவிறக்க முடியவில்லை: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "தீம்: கணினி",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "தீம்: இளம்",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "தீம்: இருண்ட",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "தீமை மாற்று. தற்போது: கணினி",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "தீமை மாற்று. தற்போது: இளம்",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "தீமை மாற்று. தற்போது: இருண்ட",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "கோப்பு செயல்கள்",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "கோப்பைத் திற: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "பதிவிறக்கம் முழுமையாகவில்லை: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "பதிவிறக்கம் முடியவில்லை: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "அளவு தெரியவில்லை",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "தலைப்பு இல்லை",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "கோப்பின் கோப்புறையைத் திறக்கவும். கோப்புகளை நேரடியாகத் திறக்க நீட்டிப்புக்கு அனுமதி கொடுக்கவும்.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "நீட்டிப்புக்கு “downloads.open” அனுமதி தேவை.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "கோப்பைத் திறக்க முடியவில்லை; கோப்பு மேலாளரில் கோப்புறை திறக்கப்பட்டது.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "பட்டியலிலிருந்து அகற்று",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "கோப்பை நீக்கு",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "நேரம் தெரியவில்லை",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "இப்போதே",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "கோப்பு மேலாளரில் கோப்பைக் காட்ட முடியவில்லை.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "பதிவிறக்கம் முடியவில்லை, கோப்பைத் திறக்க முடியாது.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "கோப்பு பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "அணுகல் மறுக்கப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "வட்டில் போதிய இடம் இல்லை",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "கோப்பு பெயர் மிக நீளமாக உள்ளது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "கோப்பு மிகப் பெரியது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "வைரஸ் கண்டறியப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "தற்காலிக கோப்பு பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "கோப்பு தடுக்கப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "பாதுகாப்புச் சோதனை தோல்வி",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "கோப்பு மிகக் குறுகியது",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "செக்சம் பொருந்தவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "கோப்பு மூலத்துக்குச் சமம்",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "வலைப்பின்னல் பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "வலைப்பின்னல் காலாவதி",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "வலைப்பின்னல் துண்டிக்கப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "சேவையகத்தை அணுக முடியவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "தவறான வலைப்பின்னல் கோரிக்கை",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "உலாவி செயலிழந்தது",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "ரத்து செய்யப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "உலாவி மூடப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "சேவையக பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "சேவையகம் தொடர்தலை ஆதரிக்கவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "தவறான உள்ளடக்கம்",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "அங்கீகரிக்கப்படவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "சான்றிதழ் பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "அணுகல் தடைசெய்யப்பட்டது",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "சேவையகத்தை அணுக முடியவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "கோப்பு அளவு பொருந்தவில்லை",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "குறுக்கு-மூலத் திருப்புதல்",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "அறியப்படாத பிழை",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "நினைவகம் போதவில்லை",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "பதிவிறக்கப்பட்டது",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "பிழை",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "அறிவிப்பை மூடு",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager-ஐ அறிமுகம் செய்து கொள்ளுங்கள் — பரிமாற்றம் மற்றும் வரலாற்று மேலாளராகச் செயல்படும் வலிமை மிகுந்த ஓர் நீட்சி. Chrome-இன் இயல்பான பதிவிறக்கப் பணித்தளத்திற்குப் பதிலாகத் திகழவும், நீங்கள் பதிவிறக்கும் ஒவ்வொரு ஆவணத்தின் மீதும் உங்களுக்கு முழுமையான கட்டுப்பாட்டை வழங்கவும் இது வடிவமைக்கப்பட்டுள்ளது. பெரிய அளவிலும், செழிப்பான வேக நிலையிலும் பதிவிறக்கப் பணிகளைக் கையாளும் பயனர்களை மனதில் கொண்டே உருவாக்கப்பட்டது\n\n🚀 ஏன் Download Manager-ஐத் தேர்ந்தெடுக்க வேண்டும்?\nஇது வெறும் இலவசப் பதிவிறக்க மேலாளரை மீறி நின்றுள்ளது. இது குழப்பமான பரிமாற்றப் பட்டியல்களை ஒழுங்கான, தேடுதலுக்கு ஏற்ற அமைப்பாக மாற்றி, மேம்பட்ட கட்டுப்பாட்டு அம்சங்களையும் சேர்த்து வழங்கும் ஓர் கூரறிவு கொண்ட பதிவிறக்க ஒழுங்கமைப்பாளரும், கண்காணிப்புக் கருவியும் ஆகும்.\nChrome-இன் வழக்கமான பதிவிறக்க வரலாற்றுக்கு மாறாக, இந்த நீட்சி உங்களுக்குத் தெளிவையும், விரைவையும், உங்கள் கோப்புகளுக்கான முழு அணுகலையும் ஓரே இடத்தில் வழங்குகிறது.\n\n🔑 முக்கிய சிறப்பம்சங்கள்:\n1️⃣ முழுப் பரிமாற்ற வரலாற்றிலும் உடனடித் தேடல்\n2️⃣ வகையின் அடிப்படையில் வடிகட்டல் (வீடியோ, ஆவணம், படம், காப்பகம்)\n3️⃣ அளவு, பெயர் அல்லது பதிவிறக்கத் தேதி அடிப்படையில் வரிசைப்படுத்தல்\n4️⃣ பிரிவுகளாகப் பகுத்தல் (இன்று, நேற்று, இந்த வாரம், அதற்கு முன்)\n5️⃣ அமைவிடத்தை நேரடியாகக் கணினியின் கோப்பு எக்ஸ்ப்ளோரரில் திறத்தல்\n6️⃣ கணப்பொழுதில் அழித்தல்\n\n📂 கூரறிவுடைய பதிவிறக்க ஒழுங்கமைப்பாளர்\n➤ அனைத்துப் பதிவிறக்கங்களின் தெளிவான கால வரிசைக் காட்சி\n➤ எந்த ஆவணத்தையும் சில நொடிகளில் விரைவாக அணுகும் வசதி\n➤ Chrome-இன் வழக்கமான பதிவிறக்கப் பட்டியலுக்குப் பதிலாக ஒழுங்கான அமைப்பு\n\n🧠 அறிவார்ந்த பரிமாற்ற மேலாளர்\n➤ காலத்தின் அடிப்படையில் பதிவிறக்கங்களை தானாகவே தொகுத்தல்\n➤ தெளிவாகத் துறைப்படுத்தப்பட்ட கோப்பு வகைகள் அடங்கிய தூய்மையான இடைமுகம்\n➤ Chrome-இன் வழக்கமான பதிவிறக்கங்களால் ஏற்படும் குழப்பத்தைக் குறைக்கிறது\n\n🗂️ கோப்புகளின் மீது முழுக் கட்டுப்பாடு\nஉங்கள் கணினியிலிருந்து கோப்புகளை ஒரு கணத்தில் அகற்றுங்கள்\nஒரே சொடுக்கில் கோப்பின் அமைவிடத்தைத் திறக்கவும்\nஉலாவியை விட்டு வெளியேறாமலேயே பரிமாற்றங்களை நிர்வகிக்கவும்\n\n⚡ உற்பத்தித்திறனில் உயர்வு\n➤ இலகுவான பதிவிறக்க டாஷ்போர்டு அனுபவம்\n➤ அன்றாடக் கோப்பு கையாளுதலுக்கான மேம்படுத்தப்பட்ட பணிப்பாதை\n➤ பரிமாற்ற ஒழுங்கமைப்பின் தூய்மையான, திறமையான அமைப்பு\n➤ Chrome-இன் சாதாரணப் பதிவிறக்கங்களைக் காட்டிலும் சிறந்த மாற்றுவழி\n\n💡 பின்வருவன தேவைப்படும் பயனர்களுக்கு உகந்தது:\nநம்பகமான பதிவிறக்கக் கையாளுதல் கருவி\nபதிவிறக்க வரலாற்று மேலாளரின் மீது உயர்நிலைக் கட்டுப்பாடு\nபதிவிறக்கிய கோப்பு மேலாளரின் முழுச் செயல்திறன்\nபரிமாற்றங்களை ஒழுங்கமைக்கும் கூரறிவுடைய அமைப்பு\n\n🎯 Download Manager Chrome-இன் வழக்கமான பதிவிறக்கங்களை ஒழுங்கான பதிவிறக்க கோப்பு மற்றும் வரலாற்று மேலாளராக மாற்றுகிறது. ஒற்றை நீட்சியில் விரைவான தேடல், முழு கட்டுப்பாடு மற்றும் ஒழுங்கான பணிப்பாதை — அனைத்தையும் வழங்குகிறது.\n\n🌙 மேலும் சுகமான உலாவல் அனுபவத்திற்காக நீட்சியில் இருண்ட பயன்முறை (Dark Mode) வசதி உள்ளது. இடைமுகம் தானாகவே சாதனத்தின் தீம்மை பின்தொடர விரும்பினால் — உங்கள் சாதனத்தின் அமைவின்படி அது வெளிச்சம் மற்றும் இருளுக்கிடையே தானாக மாறும் — அல்லது எந்த நேரத்திலும் கையேடாகவே இருண்ட தீம்மை இயக்கலாம். இதனால் தோற்றத்தின் மீது முழுக் கட்டுப்பாடு உங்களிடமே இருக்கும்; குறிப்பாக நீண்ட நேரம் கணினி முன் வேலை செய்யும் போது கண் சோர்வையும் குறைக்கும்.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Správce stahování",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Pomocí Správce stahování přehledně organizujte přenosy, rychle vyhledávejte soubory, filtrujte výsledky a udržujte historii stahování čistou a snadno spravovatelnou.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Pozastavit stahování",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Pokračovat ve stahování",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Stáhnout znovu",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Zobrazit v Průzkumníku",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Pro opětovné stažení není k dispozici adresa.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Ze seznamu lze znovu spustit pouze odkazy HTTP(S). K opětovnému pokusu o tuto položku použijte stránku nebo Stažené soubory.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Stahování…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Stahování přerušeno",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Stahování nedokončeno",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Dnes",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Včera",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Dříve tento týden",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Dříve",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Momentálně zde nejsou žádné soubory",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Historie stahování",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Stažené",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Hledat podle názvu souboru",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Hledat podle názvu souboru…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Název",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Velikost",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Datum",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Datum: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Filtr podle data",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Dnes",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Týden",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Měsíc",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Předchozí měsíc",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Další měsíc",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Obnovit",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Typ",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Filtr podle typu",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Vybrat vše",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Obrázky",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Archivy (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programy (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumenty",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Archivy",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programy",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Zavřít",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Zrušit filtr",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Název A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Velikost vzest.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "vzest.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "sest.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtry",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Panel stahování",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Seznam stahování",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Oznámení jsou zapnutá",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Oznámení jsou vypnutá",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Stahování dokončeno",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Uloženo: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Stažený soubor",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Stahování selhalo",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Nelze stáhnout: $FILE$. Důvod: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Nelze stáhnout: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Motiv: systémový",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Motiv: světlý",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Motiv: tmavý",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Přepnout motiv. Aktuální: systémový",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Přepnout motiv. Aktuální: světlý",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Přepnout motiv. Aktuální: tmavý",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Akce se souborem",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Otevřít soubor: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Stahování nedokončeno: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Stahování přerušeno: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Neznámá velikost",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Bez názvu",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Otevřete složku souboru. Aby bylo možné otevírat soubory přímo, povolte rozšíření přístup.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Rozšíření potřebuje oprávnění „downloads.open“.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Soubor nelze otevřít; ve správci souborů byla otevřena složka.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Odebrat ze seznamu",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Smazat soubor",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Neznámý čas",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "právě teď",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Soubor nelze zobrazit ve správci souborů.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Stahování přerušeno, soubor nelze otevřít.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Chyba souboru",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Přístup odepřen",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Nedostatek místa na disku",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Název souboru je příliš dlouhý",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Soubor je příliš velký",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Zjištěn virus",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Dočasná chyba souboru",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Soubor je blokován",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Bezpečnostní kontrola selhala",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Soubor je příliš krátký",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Kontrolní součet nesouhlasí",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Soubor shodný se zdrojem",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Chyba sítě",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Vypršel časový limit sítě",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Síť odpojena",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Server není dostupný",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Neplatný síťový požadavek",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Prohlížeč havaroval",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Zrušeno",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Prohlížeč byl zavřen",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Chyba serveru",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Server nepodporuje pokračování",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Neplatný obsah",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Neautorizováno",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Chyba certifikátu",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Přístup zamítnut",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Server není dostupný",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Velikost souboru se neshoduje",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Přesměrování mezi zdroji",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Neznámá chyba",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Nedostatek paměti",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Staženo",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Chyba",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Zavřít oznámení",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Seznamte se s rozšířením Download Manager — výkonným nástrojem, který funguje jako správce přenosů a historie. Bylo vytvořeno proto, aby nahradilo výchozí systém stahování v Chromu a poskytlo vám naprostou kontrolu nad každým staženým dokumentem. Určeno pro uživatele s rozsáhlými a aktivními stahovacími toky\n\n🚀 Proč zvolit Download Manager?\nJedná se o mnohem víc než jen o bezplatného správce stahování. Je to chytrý nástroj pro organizaci a sledování stahování, který přemění chaotické seznamy přenosů v přehledný, snadno prohledávatelný systém s pokročilými možnostmi kontroly.\nNa rozdíl od běžné historie stahování v Chromu vám toto rozšíření přináší přehlednost, rychlost a plný přístup ke všem souborům na jediném místě.\n\n🔑 Klíčové funkce:\n1️⃣ Okamžité vyhledávání v celé historii přenosů\n2️⃣ Filtrování podle typu (video, dokument, obrázek, archiv)\n3️⃣ Řazení podle velikosti, názvu nebo data stažení\n4️⃣ Seskupování do oddílů (Dnes, Včera, Tento týden, Dříve)\n5️⃣ Otevření umístění přímo v průzkumníku systému\n6️⃣ Okamžité mazání\n\n📂 Chytrý organizátor stahování\n➤ Přehledné chronologické zobrazení všech stažených souborů\n➤ Rychlý přístup k libovolnému dokumentu během několika sekund\n➤ Uspořádaná struktura namísto výchozího seznamu stahování v Chromu\n\n🧠 Inteligentní správce přenosů\n➤ Automatické seskupování stahování podle času\n➤ Čisté rozhraní se srozumitelně členěnými kategoriemi souborů\n➤ Snižuje nepřehlednost typickou pro výchozí stahování v Chromu\n\n🗂️ Plná kontrola nad soubory\nMažte soubory z počítače okamžitě\nOtevřete umístění jediným kliknutím\nSpravujte přenosy, aniž byste opustili prohlížeč\n\n⚡ Vyšší produktivita\n➤ Odlehčený panel pro stahování\n➤ Vylepšený pracovní postup při každodenní práci se soubory\n➤ Přehledný a efektivní systém pro organizaci přenosů\n➤ Lepší alternativa k základnímu stahování v Chromu\n\n💡 Ideální pro uživatele, kteří potřebují:\nSpolehlivý nástroj pro správu stahování\nPokročilou kontrolu nad správcem historie stahování\nPlnou funkčnost správce stažených souborů\nChytrý systém pro organizaci přenosů\n\n🎯 Download Manager promění běžné stahování v Chromu ve skutečně strukturovaného správce souborů a historie stahování. Nabízí vám rychlé vyhledávání, plnou kontrolu a uspořádaný pracovní postup v jediném rozšíření.\n\n🌙 Tmavý režim (Dark Mode) je v rozšíření k dispozici a přináší vám pohodlnější prostředí pro prohlížení. Můžete zvolit automatické sledování systémového motivu, díky čemuž se rozhraní přepíná mezi světlým a tmavým režimem podle nastavení vašeho zařízení, nebo si tmavý motiv kdykoli zapnout ručně. Získáváte tak plnou kontrolu nad vzhledem a snižujete únavu očí, zejména při dlouhé práci u počítače.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

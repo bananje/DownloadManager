@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Meneja wa Vipakuliwa",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Tumia Meneja wa Vipakuliwa kupanga uhamishaji, kutafuta faili kwa haraka, kuchuja matokeo na kuweka historia yako ya vipakuliwa ikiwa safi na rahisi kudhibiti.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Simamisha upakuaji",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Endelea upakuaji",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Jaribu kupakua tena",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Onyesha katika File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Hakuna anwani ya kupakua tena.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Kutoka kwenye orodha, viungo vya HTTP(S) pekee vinaweza kuanzishwa tena. Tumia ukurasa au Vipakuliwa kujaribu kipengee hiki tena.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Inapakua…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Upakuaji umekatizwa",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Upakuaji haujakamilika",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Leo",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Jana",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Mapema wiki hii",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Mapema",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Hakuna faili kwa sasa",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Historia ya upakuaji",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Upakuaji",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Tafuta kwa jina la faili",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Tafuta kwa jina la faili…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Jina",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Ukubwa",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Tarehe",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Tarehe: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Kichujio cha tarehe",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Leo",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Wiki",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Mwezi",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Mwezi uliopita",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Mwezi unaofuata",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Weka upya",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "Sawa",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Aina",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Kichujio cha aina",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Chagua zote",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Picha",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Kumbukumbu (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programu (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Hati",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Kumbukumbu",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programu",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Funga",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Ondoa kichujio",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Jina A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Ukubwa kupanda",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "kupanda",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "kushuka",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Vichujio",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Upauzana wa upakuaji",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Orodha ya upakuaji",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Arifa zimewashwa",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Arifa zimezimwa",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Upakuaji umekamilika",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Imehifadhiwa: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Faili lililopakuliwa",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Upakuaji umeshindwa",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Imeshindikana kupakua: $FILE$. Sababu: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Imeshindikana kupakua: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Mandhari: mfumo",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Mandhari: nyepesi",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Mandhari: giza",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Badilisha mandhari. Sasa: mfumo",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Badilisha mandhari. Sasa: nyepesi",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Badilisha mandhari. Sasa: giza",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Vitendo vya faili",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Fungua faili: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Upakuaji haujakamilika: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Upakuaji umekatizwa: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Ukubwa haujulikani",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Bila jina",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Fungua folda ya faili. Ili kufungua faili moja kwa moja, ruhusu ugani ufikie.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Ugani unahitaji idhini ya “downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Faili haikuweza kufunguliwa; folda ilifunguliwa kwenye kidhibiti faili.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Ondoa kwenye orodha",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Futa faili",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Muda haujulikani",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "sasa hivi",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Haikuweza kuonyesha faili kwenye kidhibiti faili.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Upakuaji umekatizwa, faili haiwezi kufunguliwa.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Hitilafu ya faili",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Ufikiaji umekataliwa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Hakuna nafasi ya kutosha kwenye diski",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Jina la faili ni refu mno",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Faili ni kubwa mno",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virusi imegunduliwa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Hitilafu ya muda ya faili",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Faili imezuiwa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Ukaguzi wa usalama umeshindwa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Faili ni fupi mno",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Jumla ya ukaguzi hailingani",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Faili ni sawa na chanzo",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Hitilafu ya mtandao",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Muda wa mtandao umekwisha",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Mtandao umekatika",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Seva haipatikani",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Ombi batili la mtandao",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Kivinjari kimeanguka",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Imeghairiwa",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Kivinjari kimefungwa",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Hitilafu ya seva",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Seva haisaidii kuendelea",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Maudhui batili",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Bila idhini",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Hitilafu ya cheti",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Ufikiaji umekatazwa",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Seva haipatikani",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Ukubwa wa faili hailingani",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Uelekezaji kati ya vyanzo",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Hitilafu isiyojulikana",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Kumbukumbu imeisha",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Imepakuliwa",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Hitilafu",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Funga arifa",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Karibu kwa Download Manager — kiendelezi chenye nguvu kinachofanya kazi kama msimamizi wa upakuaji na historia. Kimebuniwa ili kuchukua nafasi ya mfumo wa kawaida wa upakuaji wa Chrome na kukupa udhibiti kamili juu ya kila hati unayopakua. Kimeundwa mahususi kwa watumiaji wenye mitiririko mikubwa na inayoendelea ya upakuaji\n\n🚀 Kwa nini uchague Download Manager?\nHiki ni zaidi ya kiendesha pakuaji bila malipo tu. Ni chombo cha akili cha kupanga na kufuatilia upakuaji, kinachoyageuza marundo ya orodha za uhamishaji yasiyo na mpangilio kuwa mfumo ulioratibiwa, unaorahisisha utafutaji na wenye vipengele vya kisasa vya udhibiti.\nTofauti na historia ya kawaida ya upakuaji ya Chrome, kiendelezi hiki kinakupa uwazi, kasi na ufikiaji kamili wa faili zako mahali pamoja.\n\n🔑 Vipengele vikuu:\n1️⃣ Utafutaji wa papo hapo katika historia yote ya uhamishaji\n2️⃣ Kuchuja kwa aina (video, hati, picha, kumbukumbu)\n3️⃣ Kupanga kwa ukubwa, jina au tarehe ya upakuaji\n4️⃣ Kupanga katika sehemu (Leo, Jana, Wiki hii, Awali)\n5️⃣ Kufungua mahali pa faili moja kwa moja katika kichunguzi cha mfumo\n6️⃣ Kufuta papo hapo\n\n📂 Mratibu wa upakuaji wenye akili\n➤ Mwonekano safi wa mpangilio wa wakati wa upakuaji wote\n➤ Ufikiaji wa haraka wa hati yoyote ndani ya sekunde chache\n➤ Muundo uliopangwa badala ya orodha ya kawaida ya upakuaji ya Chrome\n\n🧠 Msimamizi wa uhamishaji wenye akili\n➤ Kupanga upakuaji moja kwa moja kulingana na muda\n➤ Kiolesura nadhifu chenye makundi ya faili yaliyopangwa kwa uwazi\n➤ Hupunguza fujo zinazoletwa na upakuaji wa kawaida wa Chrome\n\n🗂️ Udhibiti kamili juu ya faili\nFuta faili kutoka kwenye kompyuta yako papo hapo\nFungua mahali pa faili kwa mbofyo mmoja\nDhibiti uhamishaji bila kuondoka kwenye kivinjari\n\n⚡ Ongezeko la tija\n➤ Uzoefu mwepesi na wa hali ya juu wa dashibodi ya upakuaji\n➤ Mtiririko bora wa kazi kwa ushughulikiaji wa kila siku wa faili\n➤ Mfumo nadhifu na wenye ufanisi wa kupanga uhamishaji\n➤ Mbadala bora kuliko upakuaji wa msingi wa Chrome\n\n💡 Inafaa sana kwa watumiaji wanaohitaji:\nChombo cha kuaminika cha kushughulikia upakuaji\nUdhibiti wa hali ya juu juu ya msimamizi wa historia ya upakuaji\nUtendaji kamili wa msimamizi wa faili za upakuaji\nMfumo wenye akili wa kupanga uhamishaji\n\n🎯 Download Manager hubadilisha upakuaji wa kawaida wa Chrome kuwa msimamizi wa faili na historia ya upakuaji ulioratibiwa vyema. Inakupa utafutaji wa haraka, udhibiti kamili na mtiririko wa kazi uliopangwa katika kiendelezi kimoja.\n\n🌙 Hali ya Giza (Dark Mode) inapatikana ndani ya kiendelezi kwa ajili ya tajriba nzuri zaidi ya kuvinjari. Unaweza kuchagua kiolesura kifuate kiotomatiki mandhari ya mfumo ili kibadilike kati ya hali ya mwanga na ya giza kulingana na mipangilio ya kifaa chako, au washa mandhari ya giza kwa mkono wakati wowote. Kwa njia hii unabaki na udhibiti kamili wa muonekano na unapunguza uchovu wa macho, hasa unapofanya kazi kwenye kompyuta kwa muda mrefu.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

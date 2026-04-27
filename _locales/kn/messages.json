@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "ವರ್ಗಾವಣೆಗಳನ್ನು ವ್ಯವಸ್ಥೆಗೊಳಿಸಲು, ಫೈಲ್‌ಗಳನ್ನು ತ್ವರಿತವಾಗಿ ಹುಡುಕಲು, ಫಲಿತಾಂಶಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಲು ಮತ್ತು ನಿಮ್ಮ ಡೌನ್‌ಲೋಡ್ ಇತಿಹಾಸವನ್ನು ಸ್ವಚ್ಛ ಹಾಗೂ ಸುಲಭವಾಗಿ ನಿರ್ವಹಿಸಬಹುದಾದಂತೆ ಇರಿಸಲು ಡೌನ್‌ಲೋಡ್ ಮ್ಯಾನೇಜರ್ ಬಳಸಿ.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ವಿರಾಮಗೊಳಿಸಿ",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಮುಂದುವರಿಸಿ",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "ಮತ್ತೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "File Explorer-ನಲ್ಲಿ ತೋರಿಸಿ",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "ಮತ್ತೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ವಿಳಾಸವಿಲ್ಲ.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "ಪಟ್ಟಿಯಿಂದ ಕೇವಲ HTTP(S) ಲಿಂಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಮರುಪ್ರಾರಂಭಿಸಬಹುದು. ಈ ಐಟಂ ಮರುಪ್ರಯತ್ನಕ್ಕೆ ಪುಟ ಅಥವಾ “ಡೌನ್‌ಲೋಡ್‌ಗಳು” ಬಳಸಿ.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಅಡಚಣೆಯಾಗಿದೆ",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣವಾಗಿಲ್ಲ",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "ಇಂದು",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "ನಿನ್ನೆ",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "ಈ ವಾರದ ಮೊದಲು",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "ಹಿಂದೆ",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "ಈಗ ಯಾವುದೇ ಫೈಲ್‌ಗಳಿಲ್ಲ",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಇತಿಹಾಸ",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ಡೌನ್‌ಲೋಡ್‌ಗಳು",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ಫೈಲ್ ಹೆಸರಿನಿಂದ ಹುಡುಕಿ",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ಫೈಲ್ ಹೆಸರಿನಿಂದ ಹುಡುಕಿ…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "ಹೆಸರು",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "ಗಾತ್ರ",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "ದಿನಾಂಕ",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "ದಿನಾಂಕ: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "ದಿನಾಂಕ ಫಿಲ್ಟರ್",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "ಇಂದು",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "ವಾರ",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "ತಿಂಗಳು",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "ಹಿಂದಿನ ತಿಂಗಳು",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "ಮುಂದಿನ ತಿಂಗಳು",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "ಮರುಹೊಂದಿಸಿ",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ಸರಿ",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "ಪ್ರಕಾರ",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "ಪ್ರಕಾರ ಫಿಲ್ಟರ್",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "ಚಿತ್ರಗಳು",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "ವೀಡಿಯೊ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "ಆರ್ಕೈವ್‌ಗಳು (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "ಪ್ರೋಗ್ರಾಂಗಳು (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "ದಾಖಲೆಗಳು",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "ಆರ್ಕೈವ್",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "ಪ್ರೋಗ್ರಾಂ",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "ಮುಚ್ಚಿ",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ಫಿಲ್ಟರ್ ತೆಗೆದುಹಾಕಿ",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "ಹೆಸರು A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "ಗಾತ್ರ ಏರಿಕೆ",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "ಏರಿಕೆ",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "ಇಳಿತ",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "ಫಿಲ್ಟರ್‌ಗಳು",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಟೂಲ್‌ಬಾರ್",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಪಟ್ಟಿ",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "ಸೂಚನೆಗಳು ಆನ್ ಆಗಿವೆ",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "ಸೂಚನೆಗಳು ಆಫ್ ಆಗಿವೆ",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ವಿಫಲ",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: $FILE$. ಕಾರಣ: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "ಥೀಮ್: ಸಿಸ್ಟಂ",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "ಥೀಮ್: ತಿಳಿ",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "ಥೀಮ್: ಗಾಢ",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "ಥೀಮ್ ಬದಲಿಸಿ. ಪ್ರಸ್ತುತ: ಸಿಸ್ಟಂ",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "ಥೀಮ್ ಬದಲಿಸಿ. ಪ್ರಸ್ತುತ: ತಿಳಿ",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "ಥೀಮ್ ಬದಲಿಸಿ. ಪ್ರಸ್ತುತ: ಗಾಢ",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "ಫೈಲ್ ಕ್ರಮಗಳು",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ಫೈಲ್ ತೆರೆಯಿರಿ: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣವಾಗಿಲ್ಲ: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಅಡಚಣೆಯಾಗಿದೆ: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "ಗಾತ್ರ ತಿಳಿದಿಲ್ಲ",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "ಶೀರ್ಷಿಕೆ ಇಲ್ಲದ",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "ಫೈಲ್‌ನ ಫೋಲ್ಡರ್ ತೆರೆಯಿರಿ. ಫೈಲ್‌ಗಳನ್ನು ನೇರವಾಗಿ ತೆರೆಯಲು ಎಕ್ಸ್‌ಟೆನ್ಷನ್‌ಗೆ ಅನುಮತಿ ನೀಡಿ.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "ಎಕ್ಸ್‌ಟೆನ್ಷನ್‌ಗೆ “downloads.open” ಅನುಮತಿಯ ಅಗತ್ಯವಿದೆ.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ಫೈಲ್ ತೆರೆಯಲು ಆಗಲಿಲ್ಲ; ಫೈಲ್ ಮ್ಯಾನೇಜರ್‌ನಲ್ಲಿ ಫೋಲ್ಡರ್ ತೆರೆಯಲಾಗಿದೆ.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "ಪಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕಿ",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ಫೈಲ್ ಅಳಿಸಿ",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "ಸಮಯ ತಿಳಿದಿಲ್ಲ",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "ಈಗಷ್ಟೇ",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ಫೈಲ್ ಮ್ಯಾನೇಜರ್‌ನಲ್ಲಿ ಫೈಲ್ ತೋರಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಅಡಚಣೆಯಾಗಿದೆ, ಫೈಲ್ ತೆರೆಯಲಾಗದು.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ಫೈಲ್ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಸಾಕಷ್ಟು ಸ್ಥಳವಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ಫೈಲ್ ಹೆಸರು ಬಹಳ ಉದ್ದವಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ಫೈಲ್ ಬಹಳ ದೊಡ್ಡದಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ವೈರಸ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "ತಾತ್ಕಾಲಿಕ ಫೈಲ್ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ಫೈಲ್ ಬ್ಲಾಕ್ ಆಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "ಭದ್ರತಾ ಪರಿಶೀಲನೆ ವಿಫಲ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ಫೈಲ್ ಬಹಳ ಚಿಕ್ಕದಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "ಚೆಕ್‌ಸಮ್ ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ಫೈಲ್ ಮೂಲದ ಸಮಾನ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "ನೆಟ್‌ವರ್ಕ್ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "ನೆಟ್‌ವರ್ಕ್ ಸಮಯ ಮೀರಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕ ಕಡಿತ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "ಸರ್ವರ್ ತಲುಪಲಾಗುತ್ತಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "ಅಮಾನ್ಯ ನೆಟ್‌ವರ್ಕ್ ವಿನಂತಿ",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "ಬ್ರೌಸರ್ ಕ್ರ್ಯಾಶ್ ಆಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "ರದ್ದು ಮಾಡಲಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "ಬ್ರೌಸರ್ ಮುಚ್ಚಲಾಗಿದೆ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "ಸರ್ವರ್ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "ಸರ್ವರ್ ಮುಂದುವರಿಸುವಿಕೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "ಅಮಾನ್ಯ ವಿಷಯ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "ಅನಧಿಕೃತ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "ಪ್ರಮಾಣಪತ್ರ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "ಪ್ರವೇಶ ನಿಷೇಧಿತ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "ಸರ್ವರ್ ತಲುಪಲಾಗುತ್ತಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ಫೈಲ್ ಗಾತ್ರ ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "ಕ್ರಾಸ್-ಆರಿಜಿನ್ ರೀಡೈರೆಕ್ಟ್",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "ಅಪರಿಚಿತ ದೋಷ",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "ಸ್ಮೃತಿ ಮುಗಿದಿದೆ",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಆಗಿದೆ",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "ದೋಷ",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "ಸೂಚನೆ ಮುಚ್ಚಿ",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager-ಅನ್ನು ಪರಿಚಯಿಸುತ್ತಿದ್ದೇವೆ — ವರ್ಗಾವಣೆ ಮತ್ತು ಇತಿಹಾಸ ನಿರ್ವಾಹಕನಂತೆ ಕಾರ್ಯ ನಿರ್ವಹಿಸುವ ಶಕ್ತಿಶಾಲಿ ವಿಸ್ತರಣೆ. ಇದನ್ನು Chrome-ನ ಮೂಲ ಡೌನ್‌ಲೋಡ್ ವ್ಯವಸ್ಥೆಯ ಸ್ಥಾನವನ್ನು ಪಡೆದು ನೀವು ಡೌನ್‌ಲೋಡ್ ಮಾಡುವ ಪ್ರತಿಯೊಂದು ದಾಖಲೆಯ ಮೇಲೆ ಪೂರ್ಣ ನಿಯಂತ್ರಣ ನೀಡಲು ರೂಪಿಸಲಾಗಿದೆ. ಬೃಹತ್ ಮತ್ತು ಸಕ್ರಿಯ ಡೌನ್‌ಲೋಡ್ ಕಾರ್ಯ-ಪ್ರವಾಹಗಳನ್ನು ಹೊಂದಿರುವ ಬಳಕೆದಾರರಿಗಾಗಿ ವಿಶೇಷವಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ\n\n🚀 ಏಕೆ Download Manager-ಅನ್ನು ಆಯ್ದುಕೊಳ್ಳಬೇಕು?\nಇದು ಕೇವಲ ಒಂದು ಉಚಿತ ಡೌನ್‌ಲೋಡ್ ನಿರ್ವಾಹಕಕ್ಕಿಂತ ಬಹಳಷ್ಟು ಮೀರಿದೆ. ಇದು ಗೊಂದಲಮಯವಾದ ವರ್ಗಾವಣೆ ಪಟ್ಟಿಗಳನ್ನು ಒಂದು ಸುವ್ಯವಸ್ಥಿತ, ಶೋಧಿಸಬಹುದಾದ ವ್ಯವಸ್ಥೆಯಾಗಿ ರೂಪಾಂತರಗೊಳಿಸುವ, ಪ್ರಗತಿಪರ ನಿಯಂತ್ರಣ ಲಕ್ಷಣಗಳನ್ನು ಹೊಂದಿರುವ ಜಾಣ ಡೌನ್‌ಲೋಡ್ ಸಂಯೋಜಕ ಮತ್ತು ಪತ್ತೆಹಚ್ಚುವ ಸಾಧನವಾಗಿದೆ.\nChrome-ನ ಸಾಮಾನ್ಯ ಡೌನ್‌ಲೋಡ್ ಇತಿಹಾಸಕ್ಕಿಂತ ಭಿನ್ನವಾಗಿ ಈ ವಿಸ್ತರಣೆ ನಿಮಗೆ ಸ್ಪಷ್ಟತೆ, ವೇಗ ಮತ್ತು ನಿಮ್ಮ ಫೈಲ್‌ಗಳಿಗೆ ಪೂರ್ಣ ಪ್ರವೇಶವನ್ನು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ನೀಡುತ್ತದೆ.\n\n🔑 ಮುಖ್ಯ ಲಕ್ಷಣಗಳು:\n1️⃣ ಸಮಗ್ರ ವರ್ಗಾವಣೆ ಇತಿಹಾಸದಲ್ಲಿ ಕ್ಷಣಮಾತ್ರದ ಶೋಧ\n2️⃣ ಪ್ರಕಾರಕ್ಕೆ ತಕ್ಕಂತೆ ಶೋಧಿಸುವಿಕೆ (ವೀಡಿಯೋ, ದಾಖಲೆ, ಚಿತ್ರ, ಸಂಗ್ರಹ)\n3️⃣ ಗಾತ್ರ, ಹೆಸರು ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ದಿನಾಂಕದ ಆಧಾರದಲ್ಲಿ ಕ್ರಮಪಡಿಸುವಿಕೆ\n4️⃣ ವಿಭಾಗಗಳ ರೂಪದಲ್ಲಿ ಗುಂಪು ಮಾಡುವಿಕೆ (ಇಂದು, ನಿನ್ನೆ, ಈ ವಾರ, ಅದಕ್ಕೂ ಮುಂಚೆ)\n5️⃣ ಸ್ಥಾನವನ್ನು ನೇರವಾಗಿ ಕಂಪ್ಯೂಟರ್‌ನ ಫೈಲ್ ಎಕ್ಸ್‌ಪ್ಲೋರರ್‌ನಲ್ಲಿ ತೆರೆಯುವಿಕೆ\n6️⃣ ತಕ್ಷಣದ ಅಳಿಸುವಿಕೆ\n\n📂 ಜಾಣ ಡೌನ್‌ಲೋಡ್ ಸಂಯೋಜಕ\n➤ ಎಲ್ಲ ಡೌನ್‌ಲೋಡ್‌ಗಳ ಶುದ್ಧ ಕಾಲಾನುಕ್ರಮ ದೃಶ್ಯ\n➤ ಯಾವುದೇ ದಾಖಲೆಗೆ ಕೆಲವೇ ಕ್ಷಣಗಳಲ್ಲಿ ಶೀಘ್ರ ಪ್ರವೇಶ\n➤ Chrome-ನ ಮೂಲ ಡೌನ್‌ಲೋಡ್ ಪಟ್ಟಿಯ ಬದಲು ಸುಸಂಗತ ರಚನೆ\n\n🧠 ಬುದ್ಧಿಮತ್ತೆಯ ವರ್ಗಾವಣೆ ನಿರ್ವಾಹಕ\n➤ ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಸಮಯದ ಆಧಾರದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತ ಗುಂಪು ಮಾಡುವಿಕೆ\n➤ ಸ್ಪಷ್ಟವಾಗಿ ವರ್ಗೀಕರಿಸಿದ ಫೈಲ್ ಗುಂಪುಗಳಿರುವ ಸ್ವಚ್ಛ ಇಂಟರ್‌ಫೇಸ್\n➤ Chrome-ನ ಮೂಲ ಡೌನ್‌ಲೋಡ್‌ಗಳಿಂದ ಉಂಟಾಗುವ ಗೊಂದಲವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತದೆ\n\n🗂️ ಫೈಲ್‌ಗಳ ಮೇಲೆ ಸಂಪೂರ್ಣ ನಿಯಂತ್ರಣ\nನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ನಿಂದ ಫೈಲ್‌ಗಳನ್ನು ಕ್ಷಣಮಾತ್ರದಲ್ಲಿ ತೆಗೆದುಹಾಕಿ\nಒಂದೇ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ಫೈಲ್ ಸ್ಥಾನವನ್ನು ತೆರೆಯಿರಿ\nಬ್ರೌಸರ್‌ನಿಂದ ಹೊರಬರಬೇಕಾಗಿಲ್ಲದೆ ವರ್ಗಾವಣೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ\n\n⚡ ಉತ್ಪಾದಕತೆಯಲ್ಲಿ ಹೆಚ್ಚಳ\n➤ ಲಘು ಮತ್ತು ಸುಲಭ ಡೌನ್‌ಲೋಡ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಅನುಭವ\n➤ ದೈನಂದಿನ ಫೈಲ್ ನಿರ್ವಹಣೆಗಾಗಿ ಸುಧಾರಿತ ಕಾರ್ಯ-ಪ್ರವಾಹ\n➤ ಶುದ್ಧ ಮತ್ತು ಪ್ರಭಾವಶಾಲಿ ವರ್ಗಾವಣೆ ಸಂಯೋಜನಾ ವ್ಯವಸ್ಥೆ\n➤ Chrome-ನ ಸಾಮಾನ್ಯ ಡೌನ್‌ಲೋಡ್‌ಗಳಿಗಿಂತ ಹೆಚ್ಚಿನ ಪರ್ಯಾಯ\n\n💡 ಈ ಕೆಳಗಿನ ಅಗತ್ಯಗಳಿರುವ ಬಳಕೆದಾರರಿಗೆ ಸೂಕ್ತ:\nಭರವಸೆಯ ಡೌನ್‌ಲೋಡ್ ನಿರ್ವಹಣಾ ಸಾಧನ\nಡೌನ್‌ಲೋಡ್ ಇತಿಹಾಸ ನಿರ್ವಾಹಕದ ಮೇಲೆ ಪ್ರಗತಿಪರ ನಿಯಂತ್ರಣ\nಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್ ನಿರ್ವಾಹಕದ ಸಂಪೂರ್ಣ ಸಾಮರ್ಥ್ಯ\nವರ್ಗಾವಣೆಗಳನ್ನು ಸಂಯೋಜಿಸುವ ಜಾಣ ವ್ಯವಸ್ಥೆ\n\n🎯 Download Manager Chrome-ನ ಸಾಮಾನ್ಯ ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಸುವ್ಯವಸ್ಥಿತ ಡೌನ್‌ಲೋಡ್ ಫೈಲ್ ಮತ್ತು ಇತಿಹಾಸ ನಿರ್ವಾಹಕವನ್ನಾಗಿ ರೂಪಾಂತರಗೊಳಿಸುತ್ತದೆ. ಒಂದೇ ವಿಸ್ತರಣೆಯಲ್ಲೇ ತ್ವರಿತ ಶೋಧ, ಪೂರ್ಣ ನಿಯಂತ್ರಣ ಮತ್ತು ಸುಸಂಯೋಜಿತ ಕಾರ್ಯ-ಪ್ರವಾಹವನ್ನು ನೀಡುತ್ತದೆ.\n\n🌙 ಹೆಚ್ಚಿನ ಆರಾಮದಾಯಕ ಬ್ರೌಸಿಂಗ್ ಅನುಭವಕ್ಕಾಗಿ ವಿಸ್ತರಣೆಯಲ್ಲಿ ಡಾರ್ಕ್ ಮೋಡ್ (Dark Mode) ಲಭ್ಯವಿದೆ. ಇಂಟರ್‌ಫೇಸ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಿಸ್ಟಂ ಥೀಮ್ ಅನ್ನು ಅನುಸರಿಸುವಂತೆ ಆಯ್ದುಕೊಳ್ಳಬಹುದು — ಆಗ ಅದು ನಿಮ್ಮ ಸಾಧನದ ಸೆಟ್ಟಿಂಗ್‌ಗೆ ತಕ್ಕಂತೆ ಬೆಳಕಿನ ಮತ್ತು ಕತ್ತಲಿನ ವಿಧಾನಗಳ ನಡುವೆ ಬದಲಾಗುತ್ತದೆ — ಅಥವಾ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ನೀವು ಸ್ವತಃ ಡಾರ್ಕ್ ಥೀಮ್ ಆನ್ ಮಾಡಬಹುದು. ಇದರಿಂದ ರೂಪದ ಮೇಲಿನ ಪೂರ್ಣ ನಿಯಂತ್ರಣ ನಿಮ್ಮ ಕೈಯಲ್ಲಿಯೇ ಇರುತ್ತದೆ ಮತ್ತು ವಿಶೇಷವಾಗಿ ಕಂಪ್ಯೂಟರ್ ಮುಂದೆ ದೀರ್ಘಕಾಲ ಕೆಲಸ ಮಾಡುವಾಗ ಕಣ್ಣಿನ ಆಯಾಸವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಹಾಯವಾಗುತ್ತದೆ.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

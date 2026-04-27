@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Letöltéskezelő",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "A Letöltéskezelővel rendszerezheti az átviteleket, gyorsan kereshet a fájlok között, szűrheti a találatokat, és tisztán, könnyen kezelhetően tarthatja letöltési előzményeit.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Letöltés szüneteltetése",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Letöltés folytatása",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Letöltés újrapróbálása",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Megjelenítés az Intézőben",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Nincs cím az újbóli letöltéshez.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "A listából csak HTTP(S)-hivatkozások indíthatók újra. Az elem újrapróbálásához nyissa meg az oldalt vagy a Letöltéseket.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Letöltés…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Letöltés megszakadt",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "A letöltés nem fejeződött be",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Ma",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Tegnap",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "A hét korábbi részében",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Korábban",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Jelenleg nincsenek fájlok",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Letöltési előzmények",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Letöltések",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Keresés fájlnév szerint",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Keresés fájlnév szerint…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Név",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Méret",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Dátum",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Dátum: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Dátumszűrő",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Ma",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Hét",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Hónap",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Előző hónap",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Következő hónap",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Alaphelyzet",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Típus",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Típusszűrő",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Összes kijelölése",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Képek",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Videó",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Archívumok (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programok (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumentumok",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Archívumok",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programok",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Bezárás",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Szűrő eltávolítása",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Név A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Méret növ.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "növ.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "csökk.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Szűrők",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Letöltések eszköztár",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Letöltési lista",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Az értesítések be vannak kapcsolva",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Az értesítések ki vannak kapcsolva",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "A letöltés befejeződött",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Mentve: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Letöltött fájl",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "A letöltés sikertelen",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Nem sikerült letölteni: $FILE$. Ok: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Nem sikerült letölteni: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Téma: rendszer",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Téma: világos",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Téma: sötét",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Téma váltása. Jelenlegi: rendszer",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Téma váltása. Jelenlegi: világos",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Téma váltása. Jelenlegi: sötét",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Fájlműveletek",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Fájl megnyitása: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "A letöltés nem fejeződött be: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "A letöltés megszakadt: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Ismeretlen méret",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Cím nélküli",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Nyissa meg a fájl mappáját. A fájlok közvetlen megnyitásához engedélyezze a bővítmény hozzáférését.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "A bővítménynek szüksége van a „downloads.open” engedélyre.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "A fájl nem nyitható meg; a mappa megnyílt a fájlkezelőben.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Eltávolítás a listából",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Fájl törlése",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Ismeretlen idő",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "az imént",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "A fájl nem jeleníthető meg a fájlkezelőben.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "A letöltés megszakadt, a fájl nem nyitható meg.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Fájlhiba",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Hozzáférés megtagadva",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Nincs elég lemezterület",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "A fájlnév túl hosszú",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "A fájl túl nagy",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Vírust észleltünk",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Átmeneti fájlhiba",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "A fájl blokkolva",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "A biztonsági ellenőrzés sikertelen",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "A fájl túl rövid",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Az ellenőrző összeg nem egyezik",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "A fájl azonos a forrással",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Hálózati hiba",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Lejárt a hálózati időkorlát",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "A hálózat lecsatlakozott",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "A kiszolgáló nem érhető el",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Érvénytelen hálózati kérelem",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "A böngésző lefagyott",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Megszakítva",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "A böngésző bezárult",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Kiszolgálóhiba",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "A kiszolgáló nem támogatja a folytatást",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Érvénytelen tartalom",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Nincs hitelesítve",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Tanúsítványhiba",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Tiltott hozzáférés",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "A kiszolgáló nem érhető el",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "A fájlméret nem egyezik",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Különböző eredetű átirányítás",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Ismeretlen hiba",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Elfogyott a memória",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Letöltve",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Hiba",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Értesítés bezárása",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Ismerje meg a Download Managert — egy nagy teljesítményű bővítményt, amely átviteli és előzménykezelőként működik. Arra hivatott, hogy a Chrome alapértelmezett letöltési rendszerének helyébe lépjen, és teljes körű felügyeletet biztosítson minden letöltött dokumentum felett. Olyan felhasználóknak készült, akiknek nagy mennyiségű és intenzív letöltési munkafolyamataik vannak\n\n🚀 Miért érdemes a Download Managert választani?\nEz jóval több, mint egy egyszerű, ingyenes letöltéskezelő. Egy intelligens rendszerező és követő eszköz, amely a kusza átviteli listákat áttekinthető, kereshető rendszerré alakítja, fejlett vezérlési lehetőségekkel.\nA Chrome szokványos letöltési előzményeivel ellentétben ez a bővítmény átláthatóságot, gyorsaságot és teljes hozzáférést biztosít a fájljaihoz egyetlen helyen.\n\n🔑 Főbb funkciók:\n1️⃣ Azonnali keresés a teljes átviteli előzményben\n2️⃣ Szűrés típus szerint (videó, dokumentum, kép, archívum)\n3️⃣ Rendezés méret, név vagy a letöltés dátuma szerint\n4️⃣ Csoportosítás szakaszokba (Ma, Tegnap, Ezen a héten, Korábban)\n5️⃣ A hely megnyitása közvetlenül a rendszer fájlkezelőjében\n6️⃣ Azonnali törlés\n\n📂 Intelligens letöltésrendezés\n➤ Áttekinthető, időrendi nézet az összes letöltésről\n➤ Gyors hozzáférés bármely dokumentumhoz pillanatok alatt\n➤ Rendezett szerkezet a Chrome alapértelmezett letöltési listája helyett\n\n🧠 Intelligens átvitelkezelő\n➤ A letöltések automatikus csoportosítása időszak szerint\n➤ Letisztult felület világosan rendszerezett fájlkategóriákkal\n➤ Csökkenti a Chrome alap letöltéseinek zsúfoltságát\n\n🗂️ Teljes körű fájlkezelés\nTávolítsa el a fájlokat a számítógépéről egyetlen pillanat alatt\nNyissa meg a helyet egyetlen kattintással\nKezelje az átviteleket anélkül, hogy elhagyná a böngészőt\n\n⚡ Növelje a hatékonyságát\n➤ Könnyű, gördülékeny letöltési műszerfal-élmény\n➤ Javított munkafolyamat a mindennapi fájlkezeléshez\n➤ Áttekinthető és hatékony átviteli rendszerezőrendszer\n➤ Jobb alternatíva a Chrome egyszerű letöltéseivel szemben\n\n💡 Tökéletes választás azoknak, akiknek szükségük van:\nMegbízható letöltéskezelő eszközre\nFejlett vezérlésre a letöltési előzménykezelő felett\nTeljes funkcionalitású letöltésifájl-kezelőre\nIntelligens átviteli rendszerezőrendszerre\n\n🎯 A Download Manager a Chrome szokványos letöltéseit valódi, jól strukturált fájl- és letöltési előzménykezelővé alakítja. Gyors keresést, teljes körű felügyeletet és rendezett munkafolyamatot kínál egyetlen bővítményben.\n\n🌙 A bővítményben elérhető a sötét mód (Dark Mode), amely kényelmesebb böngészési élményt nyújt. Választhat, hogy a felület automatikusan kövesse a rendszer témáját — így a készülék beállításai alapján vált a világos és a sötét mód között —, vagy bármikor manuálisan bekapcsolhatja a sötét témát. Ezzel teljes mértékben Ön irányítja a megjelenést, és csökkentheti a szemfáradtságot, különösen hosszú számítógép előtt töltött munka során.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

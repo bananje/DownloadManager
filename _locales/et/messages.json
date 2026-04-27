@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Allalaadimiste haldur",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Kasutage Allalaadimiste haldurit, et korraldada ülekandeid, leida faile kiiresti, filtreerida tulemusi ning hoida allalaadimiste ajalugu puhtana ja hõlpsasti hallatavana.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Peata allalaadimine",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Jätka allalaadimist",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Proovi uuesti alla laadida",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Kuva Explorer’is",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Pole aadressi uuesti alla laadimiseks.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Loendist saab uuesti käivitada ainult HTTP(S) lingid. Selle üksuse kordamiseks kasuta lehte või kausta „Allalaadimised“.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Laadimine …",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Allalaadimine katkestati",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Allalaadimine pole lõpule jõudnud",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Täna",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Eile",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Varem sellel nädalal",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Varem",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Praegu pole ühtki faili",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Allalaadimiste ajalugu",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Allalaadimised",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Otsi failinime järgi",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Otsi failinime järgi…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nimi",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Suurus",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Kuupäev",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Kuupäev: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Kuupäevafilter",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Täna",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Nädal",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Kuu",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Eelmine kuu",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Järgmine kuu",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Lähtesta",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tüüp",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Tüübifilter",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Vali kõik",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Pildid",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arhiivid (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programmid (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumendid",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arhiivid",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programmid",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Sulge",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Eemalda filter",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nimi A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Suurus kasvav",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "kasvav",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "kahanev",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtrid",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Allalaadimiste riba",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Allalaadimiste loend",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Teatised on sisse lülitatud",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Teatised on välja lülitatud",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Allalaadimine on lõpetatud",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Salvestatud: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Alla laaditud fail",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Allalaadimine ebaõnnestus",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Allalaadimine ebaõnnestus: $FILE$. Põhjus: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Allalaadimine ebaõnnestus: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Teema: süsteem",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Teema: hele",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Teema: tume",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Vaheta teemat. Praegune: süsteem",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Vaheta teemat. Praegune: hele",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Vaheta teemat. Praegune: tume",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Failitegevused",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Ava fail: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Allalaadimine pole lõpule jõudnud: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Allalaadimine katkestati: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Suurus teadmata",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Pealkirjata",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Avage faili kaust. Failide otseseks avamiseks lubage laiendusele juurdepääs.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Laiendus vajab luba „downloads.open“.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Faili ei saanud avada; kaust avati failihalduris.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Eemalda loendist",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Kustuta fail",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Teadmata aeg",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "just praegu",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Faili ei õnnestu failihalduris kuvada.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Allalaadimine katkestati, faili ei saa avada.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Failiviga",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Juurdepääs keelatud",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Kettaruum napib",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Failinimi on liiga pikk",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Fail on liiga suur",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Tuvastati viirus",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Ajutine failiviga",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Fail on blokeeritud",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Turvakontroll ebaõnnestus",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Fail on liiga lühike",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Kontrollsumma ei ühti",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Fail on allikaga identne",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Võrguviga",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Võrgu aegumine",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Võrgu ühendus katkes",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Server pole kättesaadav",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Vigane võrgupäring",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Brauser jooksis kokku",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Tühistatud",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Brauser suleti",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Serveri viga",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Server ei toeta jätkamist",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Kehtetu sisu",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Volitamata",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifikaadi viga",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Juurdepääs keelatud",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Server pole kättesaadav",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Faili suurus ei ühti",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Ristpäritoluline ümbersuunamine",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Teadmata viga",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Mälu napib",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Alla laaditud",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Viga",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Sulge teatis",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Tutvuge laiendusega Download Manager — võimsa laiendusega, mis täidab edastuste ja ajaloo halduri rolli. See on loodud asendama Chrome'i tavalist allalaadimissüsteemi ning andma teile täieliku kontrolli iga allalaaditud dokumendi üle. Mõeldud kasutajatele, kel on mahukad ja aktiivsed allalaadimisvood\n\n🚀 Miks valida Download Manager?\nSee on palju enam kui pelgalt tasuta allalaadimishaldur. See on nutikas allalaadimiste korraldaja ja jälgija, mis muudab segased edastusloendid struktureeritud ja hõlpsasti otsitavaks süsteemiks koos täiustatud juhtimisvõimalustega.\nErinevalt Chrome'i tavalisest allalaadimisajaloost pakub see laiendus teile selgust, kiirust ja täielikku ligipääsu failidele ühes kohas.\n\n🔑 Põhifunktsioonid:\n1️⃣ Kohene otsing kogu edastusajaloos\n2️⃣ Filtreerimine tüübi järgi (video, dokument, pilt, arhiiv)\n3️⃣ Sortimine suuruse, nime või allalaadimise kuupäeva järgi\n4️⃣ Rühmitamine osadeks (Täna, Eile, Sel nädalal, Varem)\n5️⃣ Asukoha avamine otse süsteemi failihalduris\n6️⃣ Kohene kustutamine\n\n📂 Nutikas allalaadimiste korraldaja\n➤ Ülevaatlik kronoloogiline vaade kõikidele allalaadimistele\n➤ Kiire juurdepääs ükskõik millisele dokumendile sekunditega\n➤ Korrastatud struktuur Chrome'i tavalise allalaadimisloendi asemel\n\n🧠 Intelligentne edastushaldur\n➤ Allalaadimiste automaatne rühmitamine ajavahemike kaupa\n➤ Selge liides, kus failid on jagatud loogilistesse kategooriatesse\n➤ Vähendab Chrome'i vaikimisi allalaadimiste tekitatud segadust\n\n🗂️ Täielik kontroll failide üle\nKustutage failid arvutist hetkega\nAvage asukoht ühe klõpsuga\nHaldake edastusi brauserist lahkumata\n\n⚡ Suurem tootlikkus\n➤ Kerge ja sujuv allalaadimiste juhtpaneel\n➤ Parem töövoog igapäevaseks failide haldamiseks\n➤ Selge ja tõhus edastuste korraldamise süsteem\n➤ Parem alternatiiv Chrome'i tavalistele allalaadimistele\n\n💡 Sobib suurepäraselt kasutajatele, kes vajavad:\nUsaldusväärset tööriista allalaadimiste käsitlemiseks\nTäpsemat juhtimist allalaadimiste ajaloo halduri üle\nAllalaaditud failide täisfunktsionaalset failihaldurit\nNutikat edastuste korraldamise süsteemi\n\n🎯 Download Manager muudab Chrome'i tavalised allalaadimised struktureeritud failide ja ajaloo halduriks. See pakub teile kiiret otsingut, täielikku kontrolli ja organiseeritud töövoogu ühes laienduses.\n\n🌙 Tume režiim (Dark Mode) on laienduses saadaval mugavamaks veebikasutuseks. Saate valida süsteemi teema automaatse järgimise, et liides lülituks heleda ja tumeda režiimi vahel vastavalt seadme seadetele, või aktiveerida tumeda teema käsitsi mis tahes ajal. Nii on välimus täielikult teie kontrolli all ja vähendate silmade väsimust, eelkõige pikkade arvuti taga veedetud tundide jooksul.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

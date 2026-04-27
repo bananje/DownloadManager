@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Lejupielāžu pārvaldnieks",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Izmantojiet Lejupielāžu pārvaldnieku, lai sakārtotu pārsūtījumus, ātri atrastu failus, filtrētu rezultātus un uzturētu lejupielāžu vēsturi tīru un viegli pārvaldāmu.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Apturēt lejupielādi",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Atsākt lejupielādi",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Mēģināt vēlreiz lejupielādēt",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Rādīt pārlūkā",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Nav adreses, lai lejupielādētu atkārtoti.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "No saraksta var atsākt tikai HTTP(S) saites. Šim vienumam izmantojiet lapu vai „Lejupielādes”.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Notiek lejupielāde…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Lejupielāde pārtraukta",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Lejupielāde nav pabeigta",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Šodien",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Vakar",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Agrāk šonedēļ",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Agrāk",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Pašlaik nav nevienas datnes",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Lejupielāžu vēsture",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Lejupielādes",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Meklēt pēc datnes nosaukuma",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Meklēt pēc datnes nosaukuma…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nosaukums",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Lielums",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Datums",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Datums: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Datuma filtrs",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Šodien",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Nedēļa",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Mēnesis",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Iepriekšējais mēnesis",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Nākamais mēnesis",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Atiestatīt",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "Labi",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tips",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Tipa filtrs",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Atlasīt visu",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Attēli",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arhīvi (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programmas (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumenti",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arhīvi",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programmas",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Aizvērt",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Noņemt filtru",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nosaukums A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Lielums aug.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "aug.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "dil.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtri",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Lejupielāžu rīkjosla",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Lejupielāžu saraksts",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Paziņojumi ir ieslēgti",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Paziņojumi ir izslēgti",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Lejupielāde pabeigta",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Saglabāts: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Lejupielādēta datne",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Lejupielāde neizdevās",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Nevarēja lejupielādēt: $FILE$. Iemesls: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Nevarēja lejupielādēt: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Motīvs: sistēmas",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Motīvs: gaišs",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Motīvs: tumšs",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Pārslēgt motīvu. Pašreizējais: sistēmas",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Pārslēgt motīvu. Pašreizējais: gaišs",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Pārslēgt motīvu. Pašreizējais: tumšs",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Darbības ar datni",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Atvērt datni: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Lejupielāde nav pabeigta: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Lejupielāde pārtraukta: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Lielums nav zināms",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Bez nosaukuma",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Atveriet datnes mapi. Lai atvērtu datnes tieši, ļaujiet paplašinājumam piekļūt.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Paplašinājumam vajadzīga atļauja „downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Datni nevarēja atvērt; mape tika atvērta datņu pārvaldniekā.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Noņemt no saraksta",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Dzēst datni",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Laiks nav zināms",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "tikko",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Datni nevar parādīt datņu pārvaldniekā.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Lejupielāde pārtraukta, datni nevar atvērt.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Datnes kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Piekļuve liegta",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Nepietiek vietas diskā",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Datnes nosaukums pārāk garš",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Datne pārāk liela",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Atklāts vīruss",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Pagaidu datnes kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Datne bloķēta",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Drošības pārbaude neizdevās",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Datne pārāk īsa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Kontrolsumma nesakrīt",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Datne atbilst avotam",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Tīkla kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Tīkla noildze",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Tīkls atvienots",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Serveris nav pieejams",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Nederīgs tīkla pieprasījums",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Pārlūks avarēja",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Atcelts",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Pārlūks aizvērts",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Servera kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Serveris neatbalsta atsākšanu",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Nederīgs saturs",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Bez autorizācijas",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifikāta kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Piekļuve aizliegta",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Serveris nav pieejams",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Datnes lielums nesakrīt",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Starpizcelsmes novirzīšana",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Nezināma kļūda",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Nepietiek atmiņas",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Lejupielādēts",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Kļūda",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Aizvērt paziņojumu",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Iepazīstieties ar Download Manager — jaudīgu paplašinājumu, kas darbojas kā pārsūtīšanu un vēstures pārvaldnieks. Tas ir izstrādāts, lai aizstātu Chrome noklusējuma lejupielāžu sistēmu un piešķirtu jums pilnu kontroli pār katru lejupielādēto dokumentu. Veidots lietotājiem ar plašām un aktīvām lejupielāžu plūsmām\n\n🚀 Kāpēc izvēlēties Download Manager?\nŠis ir daudz vairāk nekā vienkāršs bezmaksas lejupielāžu pārvaldnieks. Tas ir gudrs lejupielāžu organizators un izsekošanas rīks, kas haotiskus pārsūtīšanu sarakstus pārvērš par strukturētu un viegli pārmeklējamu sistēmu ar paplašinātām vadības iespējām.\nAtšķirībā no Chrome standarta lejupielāžu vēstures šis paplašinājums sniedz jums skaidrību, ātrumu un pilnu piekļuvi failiem vienuviet.\n\n🔑 Galvenās funkcijas:\n1️⃣ Tūlītēja meklēšana visā pārsūtīšanu vēsturē\n2️⃣ Filtrēšana pēc veida (video, dokuments, attēls, arhīvs)\n3️⃣ Kārtošana pēc lieluma, nosaukuma vai lejupielādes datuma\n4️⃣ Grupēšana iedaļās (Šodien, Vakar, Šajā nedēļā, Agrāk)\n5️⃣ Atrašanās vietas atvēršana tieši sistēmas pārlūkā\n6️⃣ Tūlītēja dzēšana\n\n📂 Gudrs lejupielāžu organizators\n➤ Pārskatāms hronoloģiskais skats uz visām lejupielādēm\n➤ Ātra piekļuve jebkuram dokumentam dažu sekunžu laikā\n➤ Sakārtota struktūra Chrome noklusējuma lejupielāžu saraksta vietā\n\n🧠 Inteliģents pārsūtīšanu pārvaldnieks\n➤ Automātiska lejupielāžu grupēšana pēc laika perioda\n➤ Tīrs interfeiss ar skaidri sakārtotām failu kategorijām\n➤ Mazina Chrome noklusējuma lejupielādēm raksturīgo nekārtību\n\n🗂️ Pilna kontrole pār failiem\nIzdzēsiet failus no datora vienā mirklī\nAtveriet atrašanās vietu ar vienu klikšķi\nPārvaldiet pārsūtīšanas, neatstājot pārlūku\n\n⚡ Augstāka produktivitāte\n➤ Viegla un ērta lejupielāžu vadības pieredze\n➤ Uzlabota darba plūsma ikdienas darbā ar failiem\n➤ Pārskatāma un efektīva pārsūtīšanu organizēšanas sistēma\n➤ Labāka alternatīva Chrome pamata lejupielādēm\n\n💡 Lieliski piemērots lietotājiem, kuriem nepieciešams:\nUzticams lejupielāžu apstrādes rīks\nPaplašināta kontrole pār lejupielāžu vēstures pārvaldnieku\nPilnvērtīga lejupielādētu failu pārvaldnieka funkcionalitāte\nGudra pārsūtīšanu organizēšanas sistēma\n\n🎯 Download Manager parastās Chrome lejupielādes pārvērš par strukturētu failu un lejupielāžu vēstures pārvaldnieku. Tas piedāvā jums ātru meklēšanu, pilnu kontroli un sakārtotu darba plūsmu vienā paplašinājumā.\n\n🌙 Tumšais režīms (Dark Mode) ir pieejams paplašinājumā ērtākai pārlūkošanas pieredzei. Jūs varat izvēlēties automātiski sekot sistēmas tēmai, lai interfeiss pārslēgtos starp gaišo un tumšo režīmu atbilstoši ierīces iestatījumiem, vai jebkurā brīdī manuāli ieslēgt tumšo tēmu. Tādējādi jums ir pilna kontrole pār izskatu un mazinās acu nogurums, īpaši ilgu darba stundu laikā pie datora.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

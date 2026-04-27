@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Менеджер завантажень",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Використовуйте Менеджер завантажень, щоб упорядковувати передавання, швидко шукати файли, фільтрувати результати та підтримувати історію завантажень чистою і зручною для керування.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Призупинити завантаження",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Продовжити завантаження",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Повторити завантаження",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Показати в Провіднику",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Немає адреси для повторного завантаження.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Зі списку можна перезапускати лише HTTP(S)-посилання. Щоб повторити цей елемент, відкрийте сторінку або «Завантаження».",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Завантаження…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Завантаження перервано",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Завантаження не завершено",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Сьогодні",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Учора",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Раніше цього тижня",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Раніше",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Наразі немає жодного файлу",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Історія завантажень",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Завантаження",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Пошук за назвою файлу",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Пошук за назвою файлу…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Назва",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Розмір",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Дата",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Дата: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Фільтр за датою",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Сьогодні",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Тиждень",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Місяць",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Попередній місяць",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Наступний місяць",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Скинути",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Тип",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Фільтр за типом",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Вибрати все",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Зображення",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Відео",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Архіви (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Програми (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Документи",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Архіви",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Програми",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Закрити",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Очистити фільтр",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Назва А–Я",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "А–Я",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Я–А",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Розмір за зрост.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "за зрост.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "за спад.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Фільтри",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Панель завантажень",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Список завантажень",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Сповіщення ввімкнено",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Сповіщення вимкнено",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Завантаження завершено",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Збережено: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Завантажений файл",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Помилка завантаження",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Не вдалося завантажити: $FILE$. Причина: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Не вдалося завантажити: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Тема: системна",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Тема: світла",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Тема: темна",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Змінити тему. Зараз: системна",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Змінити тему. Зараз: світла",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Змінити тему. Зараз: темна",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Дії з файлом",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Відкрити файл: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Завантаження не завершено: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Завантаження перервано: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Невідомий розмір",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Без назви",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Відкрийте папку з файлом. Щоб відкривати файли безпосередньо, надайте розширенню доступ.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Розширенню потрібен дозвіл «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Не вдалося відкрити файл — папку відкрито у провіднику.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Видалити зі списку",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Видалити файл",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Час невідомий",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "щойно",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Не вдалося показати файл у провіднику.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Завантаження перервано — файл не можна відкрити.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Помилка файлу",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Доступ заборонено",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Недостатньо місця на диску",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Надто довга назва файлу",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Файл надто великий",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Виявлено вірус",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Тимчасова помилка файлу",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Файл заблоковано",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Перевірку безпеки не пройдено",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Файл надто короткий",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Контрольна сума не збігається",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Файл збігається з джерелом",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Помилка мережі",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Перевищено час очікування мережі",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Мережу від’єднано",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Сервер недоступний",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Неприпустимий мережевий запит",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Збій браузера",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Скасовано",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Браузер закрито",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Помилка сервера",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Сервер не підтримує відновлення",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Неприпустимий вміст",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Немає авторизації",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Помилка сертифіката",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Доступ заборонено",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Сервер недоступний",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Розмір файлу не збігається",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Перенаправлення між доменами",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Невідома помилка",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Бракує пам’яті",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Завантажено",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Помилка",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Закрити сповіщення",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Знайомтеся — Менеджер завантажень: потужне розширення, що виконує роль менеджера передач і історії. Його створено, щоб замінити стандартну систему завантажень у Chrome і надати вам повний контроль над кожним документом, який ви завантажуєте. Розраховано на користувачів з великими та активними потоками завантажень\n\n🚀 Чому варто обрати Менеджер завантажень?\nЦе значно більше, ніж просто безкоштовний менеджер завантажень. Це розумний інструмент для впорядкування та відстеження, який перетворює безладні списки передач на структуровану й зручну для пошуку систему з розширеними засобами контролю.\nНа відміну від стандартної історії завантажень Chrome, це розширення дарує вам ясність, швидкість і повний доступ до ваших файлів в одному місці.\n\n🔑 Основні можливості:\n1️⃣ Миттєвий пошук по всій історії передач\n2️⃣ Фільтрування за типом (відео, документ, зображення, архів)\n3️⃣ Сортування за розміром, назвою або датою завантаження\n4️⃣ Групування за розділами (Сьогодні, Вчора, Цього тижня, Раніше)\n5️⃣ Відкриття розташування безпосередньо у провіднику системи\n6️⃣ Миттєве видалення\n\n📂 Розумний органайзер завантажень\n➤ Зрозумілий хронологічний перегляд усіх завантажень\n➤ Швидкий доступ до будь-якого документа за лічені секунди\n➤ Упорядкована структура замість стандартного списку завантажень Chrome\n\n🧠 Інтелектуальний менеджер передач\n➤ Автоматичне групування завантажень за часом\n➤ Чистий інтерфейс зі структурованими категоріями файлів\n➤ Зменшує безлад, властивий стандартним завантаженням Chrome\n\n🗂️ Повний контроль над файлами\nВидаляйте файли з комп'ютера миттєво\nВідкривайте розташування одним кліком\nКеруйте передачами, не залишаючи браузер\n\n⚡ Підвищення продуктивності\n➤ Легка панель керування завантаженнями\n➤ Покращений робочий процес для щоденного поводження з файлами\n➤ Чітка та ефективна система впорядкування передач\n➤ Краща альтернатива базовим завантаженням Chrome\n\n💡 Ідеально підходить користувачам, яким потрібні:\nНадійний інструмент для роботи із завантаженнями\nРозширений контроль над менеджером історії завантажень\nПовноцінна функціональність менеджера завантажених файлів\nРозумна система впорядкування передач\n\n🎯 Менеджер завантажень перетворює стандартні завантаження Chrome на справжній структурований менеджер файлів та історії. Він дарує швидкий пошук, повний контроль і впорядкований робочий процес у єдиному розширенні.\n\n🌙 Темний режим (Dark Mode) доступний у розширенні для зручнішого перегляду. Ви можете обрати автоматичне відстеження системної теми — і інтерфейс буде перемикатися між світлим і темним режимом залежно від налаштувань пристрою — або в будь-який момент увімкнути темну тему вручну. Так ви отримуєте повний контроль над оформленням і зменшуєте втому очей, особливо під час тривалої роботи за комп'ютером.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

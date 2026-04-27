@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Latausten hallinta",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Latausten hallinnalla järjestät siirrot, löydät tiedostot nopeasti, suodatat tulokset ja pidät lataushistoriasi siistinä sekä helposti hallittavana.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Keskeytä lataus",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Jatka latausta",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Lataa uudelleen",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Näytä Resurssienhallinnassa",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Ei osoitetta uudelleenlatausta varten.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Listalta voi käynnistää uudelleen vain HTTP(S)-linkit. Yritä kohdetta uudelleen sivulta tai Lataukset-kohdasta.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Ladataan…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Lataus keskeytyi",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Latausta ei suoritettu loppuun",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Tänään",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Eilen",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Aiemmin tällä viikolla",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Aiemmin",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Tiedostoja ei ole juuri nyt",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Latausten historia",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Lataukset",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Hae tiedoston nimellä",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Hae tiedoston nimellä…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nimi",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Koko",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Päivämäärä",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Päivämäärä: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Päivämääräsuodatin",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Tänään",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Viikko",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Kuukausi",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Edellinen kuukausi",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Seuraava kuukausi",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Nollaa",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tyyppi",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Tyyppisuodatin",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Valitse kaikki",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Kuvat",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arkistot (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Ohjelmat (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Asiakirjat",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arkistot",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Ohjelmat",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Sulje",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Poista suodatin",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nimi A–Ö",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Ö",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Ö–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Koko nouseva",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "nouseva",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "laskeva",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Suodattimet",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Lataustyökalurivi",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Latauslista",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Ilmoitukset ovat käytössä",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Ilmoitukset eivät ole käytössä",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Lataus valmis",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Tallennettu: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Ladattu tiedosto",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Lataus epäonnistui",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Lataus ei onnistunut: $FILE$. Syy: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Lataus ei onnistunut: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Teema: järjestelmä",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Teema: vaalea",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Teema: tumma",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Vaihda teemaa. Nykyinen: järjestelmä",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Vaihda teemaa. Nykyinen: vaalea",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Vaihda teemaa. Nykyinen: tumma",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Tiedoston toiminnot",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Avaa tiedosto: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Latausta ei ole suoritettu loppuun: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Lataus keskeytyi: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Kokoa ei tiedetä",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Nimetön",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Avaa tiedoston kansio. Salli laajennukselle pääsy avataksesi tiedostot suoraan.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Laajennus tarvitsee oikeuden ”downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Tiedostoa ei voitu avata; kansio avattiin tiedostohallinnassa.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Poista listalta",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Poista tiedosto",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Aikaa ei tiedetä",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "juuri nyt",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Tiedostoa ei voitu näyttää tiedostohallinnassa.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Lataus keskeytyi, tiedostoa ei voi avata.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Tiedostovirhe",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Pääsy estetty",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Levytilaa ei ole riittävästi",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Tiedoston nimi on liian pitkä",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Tiedosto on liian suuri",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus havaittu",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Tilapäinen tiedostovirhe",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Tiedosto on estetty",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Turvatarkistus epäonnistui",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Tiedosto on liian lyhyt",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Tarkistussumma ei täsmää",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Tiedosto on sama kuin lähde",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Verkkovirhe",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Verkon aikakatkaisu",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Yhteys katkesi",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Palvelimeen ei saada yhteyttä",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Virheellinen verkkopyyntö",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Selain kaatui",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Peruutettu",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Selain suljettu",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Palvelinvirhe",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Palvelin ei tue jatkamista",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Virheellinen sisältö",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Ei valtuutusta",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifikaattivirhe",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Pääsy kielletty",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Palvelimeen ei saada yhteyttä",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Tiedoston koko ei täsmää",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Lähteiden välinen uudelleenohjaus",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Tuntematon virhe",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Muisti on lopussa",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Ladattu",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Virhe",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Sulje ilmoitus",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Tutustu Download Manageriin — tehokkaaseen laajennukseen, joka toimii siirtojen ja historian hallintatyökaluna. Se on suunniteltu korvaamaan Chromen oletuslataustoiminto ja antamaan sinulle täyden hallinnan jokaisesta lataamastasi tiedostosta. Kehitetty käyttäjille, joilla on laaja ja vilkas latausvirta\n\n🚀 Miksi valita Download Manager?\nTämä on paljon enemmän kuin pelkkä ilmainen latausten hallintaohjelma. Se on älykäs työkalu latausten järjestämiseen ja seurantaan, joka muuttaa sekavat siirtoluettelot jäsennellyksi ja helposti haettavaksi järjestelmäksi monipuolisin hallintaominaisuuksin.\nToisin kuin Chromen tavallinen lataushistoria, tämä laajennus tuo selkeyttä, nopeutta ja täyden pääsyn tiedostoihisi yhdessä paikassa.\n\n🔑 Keskeiset ominaisuudet:\n1️⃣ Välitön haku koko siirtohistoriasta\n2️⃣ Suodatus tyypin mukaan (video, asiakirja, kuva, arkisto)\n3️⃣ Lajittelu koon, nimen tai latauspäivämäärän mukaan\n4️⃣ Ryhmittely osioihin (Tänään, Eilen, Tällä viikolla, Aiemmin)\n5️⃣ Sijainnin avaaminen suoraan järjestelmän resurssienhallinnassa\n6️⃣ Välitön poistaminen\n\n📂 Älykäs latausten järjestäjä\n➤ Selkeä aikajananäkymä kaikista latauksista\n➤ Nopea pääsy mihin tahansa asiakirjaan sekunneissa\n➤ Hyvin järjestetty rakenne Chromen oletuslatausluettelon sijaan\n\n🧠 Älykäs siirtojen hallinta\n➤ Latausten automaattinen ryhmittely ajankohdan mukaan\n➤ Selkeä käyttöliittymä jäsennellyin tiedostokategorioin\n➤ Vähentää Chromen oletuslatausten aiheuttamaa sotkua\n\n🗂️ Täysi hallinta tiedostoihin\nPoista tiedostot tietokoneeltasi hetkessä\nAvaa sijainti yhdellä napsautuksella\nHallinnoi siirtoja poistumatta selaimesta\n\n⚡ Lisää tuottavuutta\n➤ Kevyt ja sujuva latauspaneelikokemus\n➤ Tehostettu työnkulku päivittäiseen tiedostojen käsittelyyn\n➤ Selkeä ja tehokas siirtojen järjestämisjärjestelmä\n➤ Parempi vaihtoehto Chromen tavallisille latauksille\n\n💡 Sopii erinomaisesti käyttäjille, jotka tarvitsevat:\nLuotettavan työkalun latausten käsittelyyn\nKehittyneen hallinnan lataushistorian hallintaan\nTäysimittaisen ladattujen tiedostojen tiedostonhallinnan\nÄlykkään järjestelmän siirtojen organisoimiseen\n\n🎯 Download Manager muuttaa Chromen tavalliset lataukset jäsennellyksi tiedostojen ja lataushistorian hallintaohjelmaksi. Se tarjoaa nopean haun, täyden hallinnan ja organisoidun työnkulun yhden laajennuksen sisällä.\n\n🌙 Tumma tila (Dark Mode) on käytettävissä laajennuksessa miellyttävämpää selailukokemusta varten. Voit halutessasi seurata järjestelmän teemaa automaattisesti, jolloin käyttöliittymä vaihtuu vaalean ja tumman tilan välillä laitteen asetusten mukaan, tai ottaa tumman teeman käyttöön manuaalisesti milloin tahansa. Näin sinulla on täysi hallinta ulkoasusta ja voit vähentää silmien rasitusta erityisesti pitkien tietokonetyöskentelyjen aikana.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

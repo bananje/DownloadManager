@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en" data-theme="system" class="popup-preview-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup preview</title>
+    <link rel="stylesheet" href="../popup.css" />
+    <style>
+      /* Compact preview inside welcome wizard */
+      html.popup-preview-root body {
+        width: 380px;
+        height: 440px;
+        min-height: 440px;
+        max-height: 440px;
+      }
+      html.popup-preview-root .app {
+        height: 440px;
+        max-height: 440px;
+      }
+
+      /* Курсор-подсказка, указывающая на активную кнопку превью */
+      .icon-btn--preview-hint {
+        position: relative;
+      }
+      .preview-cursor-hint {
+        position: absolute;
+        right: -6px;
+        bottom: -6px;
+        width: 18px;
+        height: 18px;
+        pointer-events: none;
+        filter: drop-shadow(0 1px 2px rgba(15, 23, 42, 0.35));
+        animation: preview-cursor-bob 1.6s ease-in-out infinite;
+        transform-origin: 30% 20%;
+        color: #000000;
+      }
+      .preview-cursor-hint path {
+        fill: currentColor;
+        stroke: currentColor;
+      }
+      html[data-theme="dark"] .preview-cursor-hint {
+        color: #ffffff;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+      }
+      @media (prefers-color-scheme: dark) {
+        html[data-theme="system"] .preview-cursor-hint {
+          color: #ffffff;
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+        }
+      }
+      @keyframes preview-cursor-bob {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(-2px, -2px) scale(1.08);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .preview-cursor-hint {
+          animation: none;
+        }
+      }
+
+      /* ===== Filters demo animation ===== */
+      html.popup-preview-root.is-filters-demo body {
+        overflow: hidden;
+      }
+
+      html.popup-preview-root.is-filters-demo .downloads-list {
+        pointer-events: none;
+      }
+
+      .demo-cursor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        z-index: 1400;
+        pointer-events: none;
+        --demo-cursor-x: -100px;
+        --demo-cursor-y: -100px;
+        transform: translate3d(var(--demo-cursor-x), var(--demo-cursor-y), 0) scale(1);
+        transition: transform 520ms cubic-bezier(0.45, 0, 0.25, 1),
+          opacity 220ms ease;
+        color: #0f172a;
+        filter: drop-shadow(0 1px 2px rgba(15, 23, 42, 0.45));
+        opacity: 0;
+        will-change: transform;
+      }
+
+      .demo-cursor.is-visible {
+        opacity: 1;
+      }
+
+      .demo-cursor.is-pressing {
+        transform: translate3d(var(--demo-cursor-x), var(--demo-cursor-y), 0) scale(0.85);
+        transition: transform 120ms ease-out;
+      }
+
+      .demo-cursor path {
+        fill: currentColor;
+        stroke: #ffffff;
+        stroke-width: 1.2;
+        stroke-linejoin: round;
+      }
+
+      html[data-theme="dark"] .demo-cursor {
+        color: #f8fafc;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.65));
+      }
+
+      html[data-theme="dark"] .demo-cursor path {
+        stroke: #0f172a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html[data-theme="system"] .demo-cursor {
+          color: #f8fafc;
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.65));
+        }
+        html[data-theme="system"] .demo-cursor path {
+          stroke: #0f172a;
+        }
+      }
+
+      .demo-click-ripple {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        margin: -9px 0 0 -9px;
+        border-radius: 999px;
+        background: rgba(59, 130, 246, 0.35);
+        z-index: 1399;
+        pointer-events: none;
+        transform: translate3d(0, 0, 0) scale(0.4);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .demo-click-ripple.is-active {
+        animation: demo-ripple 480ms ease-out forwards;
+      }
+
+      @keyframes demo-ripple {
+        0% {
+          opacity: 0.7;
+          transform: translate3d(var(--demo-ripple-x, 0px), var(--demo-ripple-y, 0px), 0) scale(0.4);
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(var(--demo-ripple-x, 0px), var(--demo-ripple-y, 0px), 0) scale(2.6);
+        }
+      }
+
+      /* Anchor dynamically-inserted menu to the preview instead of viewport. */
+      html.popup-preview-root.is-filters-demo .toolbar-filter-menu.demo-filter-menu {
+        position: absolute;
+        min-width: 160px;
+        background: var(--menu-bg);
+        border: 1px solid var(--menu-border);
+        border-radius: 8px;
+        box-shadow: var(--menu-shadow);
+        padding: 4px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-4px) scale(0.98);
+        transform-origin: top left;
+        transition: opacity 180ms ease, transform 180ms ease;
+        z-index: 1300;
+      }
+
+      html.popup-preview-root.is-filters-demo .toolbar-filter-menu.demo-filter-menu.is-open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      html.popup-preview-root.is-filters-demo .toolbar-filter-menu.demo-filter-menu[hidden] {
+        display: none !important;
+      }
+
+      html.popup-preview-root.is-filters-demo .demo-filter-menu .toolbar-filter-menu__item {
+        border-radius: 6px;
+        border-color: transparent;
+        padding: 7px 10px;
+      }
+
+      html.popup-preview-root.is-filters-demo .active-filters-bar.demo-active-filters-bar {
+        padding: 0 12px 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 240ms ease;
+      }
+
+      html.popup-preview-root.is-filters-demo .active-filters-bar.demo-active-filters-bar.is-visible {
+        max-height: 64px;
+      }
+
+      html.popup-preview-root.is-filters-demo .active-filter-chip {
+        opacity: 0;
+        transform: translateY(-4px) scale(0.96);
+        transition: opacity 200ms ease, transform 200ms ease;
+      }
+
+      html.popup-preview-root.is-filters-demo .active-filter-chip.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Downloads list collapses as filters narrow the result set. */
+      html.popup-preview-root.is-filters-demo .download-item {
+        max-height: 80px;
+        overflow: hidden;
+        transition:
+          opacity 260ms ease,
+          transform 260ms ease,
+          max-height 340ms ease,
+          margin 340ms ease,
+          padding 340ms ease,
+          border-width 340ms ease;
+      }
+
+      html.popup-preview-root.is-filters-demo .download-item.is-filtered-out {
+        opacity: 0;
+        max-height: 0;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        border-top-width: 0 !important;
+        border-bottom-width: 0 !important;
+        transform: translateY(-6px);
+        pointer-events: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .demo-cursor,
+        .demo-click-ripple,
+        .demo-filter-menu,
+        .active-filter-chip,
+        .active-filters-bar.demo-active-filters-bar {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div class="toolbar" role="toolbar" aria-label="Preview toolbar">
+          <button type="button" class="icon-btn" tabindex="-1" aria-hidden="true" disabled data-hint-target="filters">
+            <svg class="icon-btn__svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+            </svg>
+          </button>
+          <label class="search-field" aria-hidden="true">
+            <span class="search-field__icon" aria-hidden="true">
+              <svg class="search-field__icon-svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+            </span>
+            <input
+              type="search"
+              class="search-field__input"
+              value=""
+              placeholder="Search"
+              autocomplete="off"
+              tabindex="-1"
+              readonly
+            />
+          </label>
+          <button type="button" class="icon-btn notifications-toggle" tabindex="-1" aria-hidden="true" disabled data-hint-target="notifications">
+            <svg class="icon-btn__svg notifications-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6V11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5S10.5 3.17 10.5 4v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn theme-toggle theme-toggle--system"
+            tabindex="-1"
+            aria-hidden="true"
+            disabled
+            data-hint-target="theme"
+          >
+            <svg class="icon-btn__svg theme-toggle__icon theme-toggle__icon--system" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"
+              />
+            </svg>
+            <svg class="icon-btn__svg theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 5V3c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1s-1-.45-1-1zm0 16v-2c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1s-1-.45-1-1zm5.66-12.95l1.41-1.41c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0zM7.05 18.36l-1.41 1.41c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm11.31-1.41c.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41zM6.36 7.05l1.41-1.41c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0z"
+              />
+            </svg>
+            <svg class="icon-btn__svg theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <ul class="downloads-list" aria-label="Downloads preview">
+        <li class="download-item download-item--complete">
+          <img
+            class="download-item__icon"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23D1D5DB'/><path d='M22 16h14l10 10v22a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z' fill='%239CA3AF'/><path d='M36 16v10h10' fill='none' stroke='%23E5E7EB' stroke-width='3'/></svg>"
+            alt=""
+            draggable="false"
+          />
+          <div class="download-item__body" tabindex="-1" aria-hidden="true">
+            <div class="download-item__content">
+              <p class="download-item__title">quarterly-summary.pdf</p>
+              <div class="download-item__meta">842 KB • 2 min ago</div>
+            </div>
+          </div>
+          <div class="download-item__actions">
+            <button type="button" class="download-item__menu-btn" tabindex="-1" disabled aria-hidden="true">
+              <svg class="download-item__menu-btn-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="download-item download-item--complete">
+          <img
+            class="download-item__icon"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23D1D5DB'/><path d='M22 16h14l10 10v22a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z' fill='%239CA3AF'/><path d='M36 16v10h10' fill='none' stroke='%23E5E7EB' stroke-width='3'/></svg>"
+            alt=""
+            draggable="false"
+          />
+          <div class="download-item__body" tabindex="-1" aria-hidden="true">
+            <div class="download-item__content">
+              <p class="download-item__title">installer-setup.exe</p>
+              <div class="download-item__meta">48.1 MB • 18 min ago</div>
+            </div>
+          </div>
+          <div class="download-item__actions">
+            <button type="button" class="download-item__menu-btn" tabindex="-1" disabled aria-hidden="true">
+              <svg class="download-item__menu-btn-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="download-item download-item--complete">
+          <img
+            class="download-item__icon"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23D1D5DB'/><path d='M22 16h14l10 10v22a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z' fill='%239CA3AF'/><path d='M36 16v10h10' fill='none' stroke='%23E5E7EB' stroke-width='3'/></svg>"
+            alt=""
+            draggable="false"
+          />
+          <div class="download-item__body" tabindex="-1" aria-hidden="true">
+            <div class="download-item__content">
+              <p class="download-item__title">vacation-photo.jpg</p>
+              <div class="download-item__meta">3.4 MB • Yesterday</div>
+            </div>
+          </div>
+          <div class="download-item__actions">
+            <button type="button" class="download-item__menu-btn" tabindex="-1" disabled aria-hidden="true">
+              <svg class="download-item__menu-btn-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="download-item download-item--complete">
+          <img
+            class="download-item__icon"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23D1D5DB'/><path d='M22 16h14l10 10v22a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z' fill='%239CA3AF'/><path d='M36 16v10h10' fill='none' stroke='%23E5E7EB' stroke-width='3'/></svg>"
+            alt=""
+            draggable="false"
+          />
+          <div class="download-item__body" tabindex="-1" aria-hidden="true">
+            <div class="download-item__content">
+              <p class="download-item__title">notes-archive.zip</p>
+              <div class="download-item__meta">12.0 MB • 3 days ago</div>
+            </div>
+          </div>
+          <div class="download-item__actions">
+            <button type="button" class="download-item__menu-btn" tabindex="-1" disabled aria-hidden="true">
+              <svg class="download-item__menu-btn-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script src="popup-preview.js"></script>
+  </body>
+</html>

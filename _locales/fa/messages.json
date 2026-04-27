@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "مدیر دانلود",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "با «مدیر دانلود» انتقال‌ها را سازمان‌دهی کنید، فایل‌ها را سریع جست‌وجو کنید، نتایج را فیلتر کنید و تاریخچهٔ دانلود خود را مرتب و آسان برای مدیریت نگه دارید.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "توقف موقت دانلود",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ازسرگیری دانلود",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "تلاش مجدد برای دانلود",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "نمایش در File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "نشانی‌ای برای دانلود مجدد وجود ندارد.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "از فهرست فقط پیوندهای HTTP(S) را می‌توان از نو آغاز کرد. برای تلاش مجدد این مورد از صفحه یا «دانلودها» استفاده کنید.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "در حال دانلود…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "دانلود متوقف شد",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "دانلود کامل نشده است",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "امروز",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "دیروز",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "اوایل این هفته",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "پیش‌تر",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "در حال حاضر هیچ فایلی وجود ندارد",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "تاریخچهٔ دانلود",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "دانلودها",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "جست‌وجو بر اساس نام فایل",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "جست‌وجو بر اساس نام فایل…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "نام",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "اندازه",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "تاریخ",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "تاریخ: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "فیلتر تاریخ",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "امروز",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "هفته",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "ماه",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "ماه قبل",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "ماه بعد",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "بازنشانی",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "باشد",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "نوع",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "فیلتر نوع",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "انتخاب همه",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "تصاویر",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "ویدئو",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "آرشیوها (ZIP، RAR، 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "برنامه‌ها (EXE، MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "اسناد",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "آرشیوها",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "برنامه‌ها",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "بستن",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "حذف فیلتر",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "نام A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "اندازه صعودی",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "صعودی",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "نزولی",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "فیلترها",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "نوار ابزار دانلودها",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "فهرست دانلودها",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "اعلان‌ها روشن است",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "اعلان‌ها خاموش است",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "دانلود پایان یافت",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "ذخیره شد: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "فایل دانلودشده",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "دانلود ناموفق",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "دانلود ممکن نشد: $FILE$. دلیل: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "دانلود ممکن نشد: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "قالب: سیستم",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "قالب: روشن",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "قالب: تیره",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "تغییر قالب. فعلی: سیستم",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "تغییر قالب. فعلی: روشن",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "تغییر قالب. فعلی: تیره",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "کنش‌های فایل",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "باز کردن فایل: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "دانلود کامل نشده است: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "دانلود متوقف شد: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "اندازه ناشناخته",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "بدون عنوان",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "پوشهٔ فایل را باز کنید. برای باز کردن مستقیم فایل‌ها، به افزونه دسترسی بدهید.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "افزونه به اجازهٔ «downloads.open» نیاز دارد.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "باز کردن فایل ممکن نشد؛ پوشه در مدیر فایل باز شد.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "حذف از فهرست",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "حذف فایل",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "زمان ناشناخته",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "همین الان",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "نمایش فایل در مدیر فایل ممکن نشد.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "دانلود متوقف شده است و فایل باز نمی‌شود.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "خطای فایل",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "دسترسی رد شد",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "فضای دیسک کافی نیست",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "نام فایل بیش‌ازحد طولانی است",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "فایل بیش‌ازحد بزرگ است",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ویروس شناسایی شد",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "خطای موقت فایل",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "فایل مسدود شده است",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "بررسی امنیتی ناموفق",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "فایل بیش‌ازحد کوتاه است",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "مجموع کنترلی مطابقت ندارد",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "فایل با منبع یکسان است",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "خطای شبکه",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "زمان شبکه به پایان رسید",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "ارتباط شبکه قطع شد",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "سرور در دسترس نیست",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "درخواست شبکه نامعتبر",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "مرورگر متوقف شد",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "لغو شد",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "مرورگر بسته شد",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "خطای سرور",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "سرور از ازسرگیری پشتیبانی نمی‌کند",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "محتوای نامعتبر",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "بدون مجوز",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "خطای گواهی",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "دسترسی ممنوع",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "سرور در دسترس نیست",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "اندازهٔ فایل مطابقت ندارد",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "هدایت میان‌مبدأ",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "خطای ناشناخته",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "حافظه کافی نیست",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "دانلود شد",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "خطا",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "بستن اعلان",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 با Download Manager آشنا شوید — افزونه‌ای قدرتمند که در حکم مدیر انتقال‌ها و تاریخچهٔ دانلود عمل می‌کند. این افزونه با هدف جایگزینی سامانهٔ پیش‌فرض دانلود Chrome طراحی شده است تا اختیار کامل هر سندی را که دانلود می‌کنید در دستان شما قرار دهد. ویژهٔ کاربرانی که با حجم بالا و جریان‌های فعال دانلود سر و کار دارند\n\n🚀 چرا Download Manager را برگزینید؟\nاین افزونه چیزی فراتر از یک مدیر دانلود رایگان معمولی است. ابزاری هوشمند برای سامان‌دهی و رصد دانلودهاست که فهرست‌های پراکندهٔ انتقال را به یک سامانهٔ منظم و قابل جست‌وجو با امکانات پیشرفتهٔ کنترل تبدیل می‌کند.\nبرخلاف تاریخچهٔ متعارف دانلود در Chrome، این افزونه شفافیت، سرعت و دسترسی کامل به فایل‌هایتان را در یک نقطهٔ واحد ارمغان می‌آورد.\n\n🔑 ویژگی‌های کلیدی:\n1️⃣ جست‌وجوی آنی در کل تاریخچهٔ انتقال‌ها\n2️⃣ صافی بر پایهٔ نوع (ویدئو، سند، تصویر، آرشیو)\n3️⃣ مرتب‌سازی بر اساس اندازه، نام یا تاریخ دانلود\n4️⃣ دسته‌بندی در بخش‌های گوناگون (امروز، دیروز، این هفته، پیش‌تر)\n5️⃣ گشودن محل ذخیره‌سازی مستقیماً در کاوشگر فایل سیستم\n6️⃣ حذف آنی\n\n📂 سامان‌دهندهٔ هوشمند دانلود\n➤ نمای زمانی روشن از تمامی دانلودها\n➤ دسترسی سریع به هر سندی تنها در چند ثانیه\n➤ ساختاری منظم به جای فهرست پیش‌فرض دانلود در Chrome\n\n🧠 مدیر هوشمند انتقال‌ها\n➤ دسته‌بندی خودکار دانلودها بر پایهٔ زمان\n➤ رابطی پاکیزه با دسته‌های منظم برای پرونده‌ها\n➤ شلوغی ناشی از دانلودهای پیش‌فرض Chrome را می‌کاهد\n\n🗂️ تسلط کامل بر پرونده‌ها\nپرونده‌ها را در چشم بر هم زدنی از رایانه‌تان حذف کنید\nمحل ذخیره را تنها با یک کلیک بگشایید\nانتقال‌ها را بی‌آنکه از مرورگر خارج شوید مدیریت کنید\n\n⚡ افزایش بهره‌وری\n➤ تجربهٔ سبک و روان از داشبورد دانلود\n➤ گردش کاری بهینه برای کار روزمره با پرونده‌ها\n➤ سامانه‌ای پاکیزه و کارآمد برای سامان‌دهی انتقال‌ها\n➤ گزینه‌ای برتر در برابر دانلودهای ابتدایی Chrome\n\n💡 ایده‌آل برای کاربرانی که به این موارد نیاز دارند:\nابزاری مطمئن برای مدیریت دانلودها\nکنترلی پیشرفته بر مدیر تاریخچهٔ دانلود\nکارایی کامل یک مدیر پروندهٔ دانلود\nسامانه‌ای هوشمند برای سامان‌دهی انتقال‌ها\n\n🎯 Download Manager دانلودهای متعارف Chrome را به یک مدیر منظم پرونده و تاریخچهٔ دانلود بدل می‌سازد. این افزونه جست‌وجوی سریع، تسلطی همه‌جانبه و گردش کاری منظم را در دل یک افزونهٔ واحد به ارمغان می‌آورد.\n\n🌙 حالت تاریک (Dark Mode) در افزونه گنجانده شده تا تجربهٔ مرور دلپذیرتری در اختیار شما قرار دهد. می‌توانید تنظیم کنید تا رابط به‌طور خودکار از زمینهٔ سیستم پیروی کند و میان حالت روشن و تاریک بر اساس تنظیمات دستگاه جابه‌جا شود، یا هر زمان که خواستید زمینهٔ تاریک را به‌صورت دستی فعال سازید. بدین ترتیب نمای ظاهری به‌تمامی در اختیار شماست و خستگی چشم به‌ویژه در ساعات طولانی کار با رایانه کاهش می‌یابد.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

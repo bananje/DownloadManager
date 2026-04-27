@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Gestor de baixades",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Utilitzeu el Gestor de baixades per organitzar les transferències, cercar fitxers ràpidament, filtrar els resultats i mantenir l’historial de baixades net i fàcil de gestionar.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Posa en pausa la baixada",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Reprèn la baixada",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Torna a baixar",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Mostra a l’Explorador",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "No hi ha adreça per tornar a baixar.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Des de la llista només es poden reiniciar enllaços HTTP(S). Utilitza la pàgina o les Baixades per reintentar aquest element.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Baixant…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Baixada interrompuda",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Baixada no completada",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Avui",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Ahir",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Abans aquesta setmana",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Anteriors",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Ara mateix no hi ha cap fitxer",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Historial de baixades",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Baixades",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Cerca pel nom del fitxer",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Cerca pel nom del fitxer…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nom",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Mida",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Data",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Data: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Filtre per data",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Avui",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Setmana",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Mes",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Mes anterior",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Mes següent",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Restableix",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "D’acord",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tipus",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Filtre per tipus",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Selecciona-ho tot",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Imatges",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Vídeo",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arxius comprimits (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programes (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Documents",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arxius",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programes",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Tanca",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Elimina el filtre",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nom A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Mida asc.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "asc.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "desc.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtres",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Barra de baixades",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Llista de baixades",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Les notificacions estan activades",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Les notificacions estan desactivades",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Baixada completada",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Desat: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Fitxer baixat",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "La baixada ha fallat",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "No s’ha pogut baixar: $FILE$. Motiu: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "No s’ha pogut baixar: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: del sistema",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: clar",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: fosc",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Canvia el tema. Actual: del sistema",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Canvia el tema. Actual: clar",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Canvia el tema. Actual: fosc",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Accions del fitxer",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Obre el fitxer: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Baixada no completada: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Baixada interrompuda: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Mida desconeguda",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Sense títol",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Obre la carpeta del fitxer. Per obrir fitxers directament, permet l’accés a l’extensió.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "L’extensió necessita el permís «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "No s’ha pogut obrir el fitxer; s’ha obert la carpeta al gestor.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Suprimeix de la llista",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Suprimeix el fitxer",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Hora desconeguda",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "ara mateix",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "No s’ha pogut mostrar el fitxer al gestor de fitxers.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Baixada interrompuda; el fitxer no es pot obrir.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Error del fitxer",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Accés denegat",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Espai al disc insuficient",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Nom de fitxer massa llarg",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Fitxer massa gran",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus detectat",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Error temporal del fitxer",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Fitxer blocat",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Comprovació de seguretat fallida",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Fitxer massa curt",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "La suma de verificació no coincideix",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Fitxer idèntic a l’origen",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Error de xarxa",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Temps de xarxa esgotat",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Xarxa desconnectada",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "No es pot accedir al servidor",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Sol·licitud de xarxa no vàlida",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "El navegador s’ha penjat",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Cancel·lat",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Navegador tancat",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Error del servidor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "El servidor no admet la represa",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Contingut no vàlid",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "No autoritzat",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Error de certificat",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Accés prohibit",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "No es pot accedir al servidor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "La mida del fitxer no coincideix",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Redirecció entre orígens",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Error desconegut",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Memòria insuficient",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Baixat",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Error",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Tanca la notificació",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Us presentem el Download Manager: una extensió potent que actua com a gestor de transferències i d'historial. Ha estat dissenyada per substituir el sistema de baixades predeterminat del Chrome i oferir-vos el control absolut de cada document que descarregueu. Pensada per a usuaris amb fluxos de baixada amplis i molt actius\n\n🚀 Per què triar el Download Manager?\nÉs molt més que un simple gestor de baixades gratuït. És una eina intel·ligent d'organització i seguiment que transforma les llistes de transferències desendreçades en un sistema estructurat i fàcil de cercar, amb funcions de control avançades.\nA diferència de l'historial de baixades estàndard del Chrome, aquesta extensió us aporta claredat, rapidesa i accés complet als vostres fitxers en un únic indret.\n\n🔑 Funcionalitats principals:\n1️⃣ Cerca instantània a tot l'historial de transferències\n2️⃣ Filtratge per tipus (vídeo, document, imatge, arxiu comprimit)\n3️⃣ Ordenació per mida, nom o data de baixada\n4️⃣ Agrupació en seccions (Avui, Ahir, Aquesta setmana, Abans)\n5️⃣ Obertura directa de la ubicació a l'explorador del sistema\n6️⃣ Eliminació immediata\n\n📂 Organitzador de baixades intel·ligent\n➤ Visualització cronològica clara de totes les baixades\n➤ Accés ràpid a qualsevol document en pocs segons\n➤ Estructura ordenada en lloc de la llista de baixades predeterminada del Chrome\n\n🧠 Gestor de transferències intel·ligent\n➤ Agrupació automàtica de les baixades per franja temporal\n➤ Interfície neta amb categories de fitxers ben estructurades\n➤ Redueix el desordre que generen les baixades predeterminades del Chrome\n\n🗂️ Control absolut dels fitxers\nElimineu fitxers del vostre ordinador a l'instant\nObriu la ubicació amb un sol clic\nGestioneu les transferències sense sortir del navegador\n\n⚡ Increment de la productivitat\n➤ Una experiència lleugera de tauler de baixades\n➤ Un flux de treball millorat per a la gestió diària dels fitxers\n➤ Un sistema d'organització de transferències net i eficient\n➤ Una alternativa superior a les baixades bàsiques del Chrome\n\n💡 Ideal per a usuaris que necessiten:\nUna eina fiable de gestió de baixades\nUn control avançat sobre el gestor de l'historial de baixades\nLa funcionalitat completa d'un gestor de fitxers descarregats\nUn sistema intel·ligent d'organització de transferències\n\n🎯 El Download Manager transforma les baixades habituals del Chrome en un autèntic gestor estructurat de fitxers i historial. Us ofereix cerca ràpida, control absolut i un flux de treball ordenat en una sola extensió.\n\n🌙 El mode fosc (Dark Mode) està disponible a l'extensió per oferir-vos una experiència de navegació més agradable. Podeu optar per seguir automàticament el tema del sistema, de manera que la interfície alterni entre el mode clar i el fosc segons la configuració del dispositiu, o bé activar el tema fosc manualment en qualsevol moment. D'aquesta manera disposeu d'un control total sobre l'aspecte i reduïu la fatiga visual, especialment durant llargues estones de feina davant l'ordinador.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

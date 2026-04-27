@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Менеджер загрузок",
+    "description": "Название расширения в Chrome Web Store и интерфейсе браузера"
+  },
+  "extension_description": {
+    "message": "Используйте Менеджер загрузок, чтобы упорядочивать передачи, быстро искать файлы, фильтровать результаты и поддерживать историю загрузок в чистоте и под контролем.",
+    "description": "Краткое описание расширения в Chrome Web Store и интерфейсе браузера"
+  },
+  "btn_pause_download": {
+    "message": "Приостановить загрузку",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Продолжить загрузку",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Повторить загрузку",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Показать в проводнике",
+    "description": "Пункт контекстного меню: показать скачанный файл в системном файловом менеджере"
+  },
+  "retry_no_url": {
+    "message": "Нет адреса для повторной загрузки.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Из списка можно перезапустить только HTTP(S) ссылки. Для этого файла откройте страницу или стандартные «Загрузки».",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Загрузка…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Загрузка прервана",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Загрузка не завершена",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Сегодня",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Вчера",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Ранее на этой неделе",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Ранее",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Сейчас нет ни одного файла",
+    "description": "Текст пустого состояния, когда в списке нечего показать"
+  },
+  "action_default_title": {
+    "message": "История загрузок",
+    "description": "Подсказка на иконке расширения на панели (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Загрузки",
+    "description": "Заголовок страницы popup"
+  },
+  "search_label": {
+    "message": "Поиск по названию файла",
+    "description": "Доступная подпись поля поиска"
+  },
+  "search_placeholder": {
+    "message": "Поиск по названию файла...",
+    "description": "Текст-подсказка в поле поиска"
+  },
+  "filter_sort_title": {
+    "message": "Название",
+    "description": "Префикс подписи кнопки сортировки по имени файла"
+  },
+  "filter_sort_size": {
+    "message": "Размер",
+    "description": "Префикс подписи кнопки сортировки по размеру файла"
+  },
+  "date_filter_label": {
+    "message": "Дата",
+    "description": "Подпись пункта фильтра по дате"
+  },
+  "date_filter_label_with_range": {
+    "message": "Дата: $START$ - $END$",
+    "description": "Подпись фильтра по дате с выбранным диапазоном",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Фильтр по дате",
+    "description": "Aria-label диалога фильтра по дате"
+  },
+  "date_filter_preset_today": {
+    "message": "Сегодня",
+    "description": "Быстрая кнопка: сегодня"
+  },
+  "date_filter_preset_week": {
+    "message": "Неделя",
+    "description": "Быстрая кнопка: интервал за неделю"
+  },
+  "date_filter_preset_month": {
+    "message": "Месяц",
+    "description": "Быстрая кнопка: интервал за месяц"
+  },
+  "date_filter_prev_month": {
+    "message": "Предыдущий месяц",
+    "description": "Aria-label кнопки навигации календаря назад"
+  },
+  "date_filter_next_month": {
+    "message": "Следующий месяц",
+    "description": "Aria-label кнопки навигации календаря вперед"
+  },
+  "date_filter_reset": {
+    "message": "Сброс",
+    "description": "Кнопка сброса фильтра даты"
+  },
+  "date_filter_apply": {
+    "message": "Ок",
+    "description": "Кнопка применения фильтра даты"
+  },
+  "type_filter_label": {
+    "message": "Тип",
+    "description": "Подпись пункта фильтра по типу"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Фильтр по типу",
+    "description": "Aria-label диалога фильтра по типу"
+  },
+  "type_filter_select_all": {
+    "message": "Выбрать все",
+    "description": "Фильтр по типу: метка чекбокса выбрать все"
+  },
+  "type_filter_images": {
+    "message": "Изображения",
+    "description": "Категория фильтра: изображения"
+  },
+  "type_filter_video": {
+    "message": "Видео",
+    "description": "Категория фильтра: видео"
+  },
+  "type_filter_archives": {
+    "message": "Архивы (ZIP, RAR, 7z)",
+    "description": "Категория фильтра: архивы"
+  },
+  "type_filter_programs": {
+    "message": "Программы (EXE, MSI)",
+    "description": "Категория фильтра: программы"
+  },
+  "type_filter_documents": {
+    "message": "Документы",
+    "description": "Категория фильтра: документы"
+  },
+  "type_filter_archives_short": {
+    "message": "Архивы",
+    "description": "Короткая подпись типа для компактного UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Программы",
+    "description": "Короткая подпись типа для компактного UI"
+  },
+  "type_filter_close": {
+    "message": "Закрыть",
+    "description": "Кнопка закрытия панели фильтра по типу"
+  },
+  "chip_close_filter": {
+    "message": "Сбросить фильтр",
+    "description": "Aria-label кнопки закрытия плашки активного фильтра"
+  },
+  "name_sort_default_label": {
+    "message": "Название A-Z",
+    "description": "Начальный текст пункта сортировки по названию до обновления из JS"
+  },
+  "name_sort_direction_asc": {
+    "message": "А–Я",
+    "description": "Сортировка по названию: подпись направления по возрастанию"
+  },
+  "name_sort_direction_desc": {
+    "message": "Я–А",
+    "description": "Сортировка по названию: подпись направления по убыванию"
+  },
+  "size_sort_default_label": {
+    "message": "Размер ASC",
+    "description": "Начальный текст пункта сортировки по размеру до обновления из JS"
+  },
+  "size_sort_direction_asc": {
+    "message": "по возр.",
+    "description": "Сортировка по размеру: по возрастанию (компактно)"
+  },
+  "size_sort_direction_desc": {
+    "message": "по убыв.",
+    "description": "Сортировка по размеру: по убыванию (компактно)"
+  },
+  "filters_toggle": {
+    "message": "Фильтры",
+    "description": "Тултип и aria-label кнопки открытия меню фильтров"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Панель загрузок",
+    "description": "Aria-label верхней панели popup-окна"
+  },
+  "downloads_list_aria": {
+    "message": "Список загрузок",
+    "description": "Aria-label контейнера списка загрузок"
+  },
+  "notifications_enabled": {
+    "message": "Уведомления включены",
+    "description": "Тултип и aria-label, когда уведомления о загрузках включены"
+  },
+  "notifications_disabled": {
+    "message": "Уведомления выключены",
+    "description": "Тултип и aria-label, когда уведомления о загрузках выключены"
+  },
+  "download_notification_title": {
+    "message": "Загрузка завершена",
+    "description": "Заголовок системного уведомления после успешной загрузки"
+  },
+  "download_notification_message": {
+    "message": "Сохранён файл: $FILE$",
+    "description": "Текст системного уведомления с именем скачанного файла",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Скачанный файл",
+    "description": "Имя по умолчанию, если браузер не вернул имя файла"
+  },
+  "download_failed_notification_title": {
+    "message": "Ошибка загрузки",
+    "description": "Заголовок системного уведомления при ошибке загрузки"
+  },
+  "download_failed_notification_message": {
+    "message": "Не удалось скачать: $FILE$. Причина: $ERROR$",
+    "description": "Текст системного уведомления при ошибке загрузки с именем файла и причиной",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Не удалось скачать: $FILE$",
+    "description": "Текст системного уведомления при ошибке загрузки без указания причины",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Тема: как в системе",
+    "description": "Тултип переключателя темы для системной темы"
+  },
+  "theme_toggle_title_light": {
+    "message": "Тема: светлая",
+    "description": "Тултип переключателя темы для светлой темы"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Тема: тёмная",
+    "description": "Тултип переключателя темы для тёмной темы"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Переключить тему. Сейчас: как в системе",
+    "description": "Aria-label переключателя темы для системной темы"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Переключить тему. Сейчас: светлая",
+    "description": "Aria-label переключателя темы для светлой темы"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Переключить тему. Сейчас: тёмная",
+    "description": "Aria-label переключателя темы для тёмной темы"
+  },
+  "download_item_actions": {
+    "message": "Действия с файлом",
+    "description": "Aria-label кнопки меню действий с файлом"
+  },
+  "download_item_open_file": {
+    "message": "Открыть файл: $FILE$",
+    "description": "Aria-label открытия завершённой загрузки",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Загрузка не завершена: $FILE$",
+    "description": "Aria-label открытия строки незавершённой загрузки",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Загрузка прервана: $FILE$",
+    "description": "Aria-label открытия строки прерванной загрузки",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Неизвестный размер",
+    "description": "Показывается, когда размер файла определить нельзя"
+  },
+  "untitled_file": {
+    "message": "Без названия",
+    "description": "Имя файла по умолчанию, если имя не удалось определить"
+  },
+  "open_hint_permission_needed": {
+    "message": "Откройте папку с файлом. Для открытия по клику разрешите доступ расширению.",
+    "description": "Подсказка при отсутствии разрешения на прямое открытие файла"
+  },
+  "open_permission_downloads_required": {
+    "message": "Нужно разрешение «Открытие загрузок» у расширения.",
+    "description": "Подсказка об обязательном разрешении downloads.open"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Не удалось открыть файл — открыта папка в проводнике.",
+    "description": "Сообщение, когда файл открыть не удалось, но папка была открыта"
+  },
+  "menu_remove_from_list": {
+    "message": "Удалить из списка",
+    "description": "Пункт меню удаления загрузки из списка"
+  },
+  "menu_delete_file": {
+    "message": "Удалить файл",
+    "description": "Пункт меню удаления файла с диска"
+  },
+  "time_unknown": {
+    "message": "Время неизвестно",
+    "description": "Текст по умолчанию, когда время недоступно"
+  },
+  "time_just_now": {
+    "message": "только что",
+    "description": "Относительное время для очень недавних событий"
+  },
+  "show_in_folder_failed": {
+    "message": "Не удалось показать файл в проводнике.",
+    "description": "Показывается, когда открыть файл в системном проводнике не удалось"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Загрузка прервана — файл открыть нельзя.",
+    "description": "Показывается при попытке открыть прерванную загрузку"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Ошибка файла",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Нет доступа к файлу",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Нет места на диске",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Слишком длинное имя файла",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Файл слишком большой",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Обнаружен вирус",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Временная ошибка",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Файл заблокирован",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Проверка безопасности не пройдена",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Файл слишком короткий",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Контрольная сумма не совпадает",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Файл совпадает с источником",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Сбой сети",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Таймаут сети",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Сеть отключена",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Сервер недоступен",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Неверный сетевой запрос",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Сбой браузера",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Отменено",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Браузер закрыт",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Ошибка сервера",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Сервер не поддерживает докачку",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Неверное содержимое",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Нет авторизации",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Проблема с сертификатом",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Доступ запрещён",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Сервер недоступен",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Несовпадение размера",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Перенаправление между доменами",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Неизвестная ошибка",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Недостаточно памяти",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Скачано",
+    "description": "Короткий статус на тосте загрузки на странице (успех)"
+  },
+  "page_toast_status_error": {
+    "message": "Ошибка",
+    "description": "Короткий статус на тосте загрузки на странице (ошибка)"
+  },
+  "page_toast_close_aria": {
+    "message": "Закрыть уведомление",
+    "description": "Доступная подпись кнопки закрытия тоста загрузки на странице"
+  },
+  "storeDesc": {
+    "message": "📥 Знакомьтесь — Менеджер загрузок: мощное расширение, работающее как менеджер передач и истории. Оно создано, чтобы заменить стандартную систему загрузок Chrome и дать вам полный контроль над каждым скачанным документом. Рассчитано на пользователей с объёмными и активными рабочими процессами загрузок\n\n🚀 Почему стоит выбрать Менеджер загрузок?\nЭто больше, чем просто бесплатный менеджер загрузок. Это умный органайзер и трекер загрузок, который превращает хаотичные списки передач в структурированную систему с удобным поиском и расширенными средствами контроля.\nВ отличие от стандартной истории загрузок Chrome, это расширение даёт ясность, скорость и полный доступ к вашим файлам в одном месте.\n\n🔑 Ключевые возможности:\n1️⃣ Мгновенный поиск по всей истории передач\n2️⃣ Фильтрация по типу (видео, документ, изображение, архив)\n3️⃣ Сортировка по размеру, названию или дате загрузки\n4️⃣ Группировка по разделам (Сегодня, Вчера, На этой неделе, Ранее)\n5️⃣ Открытие папки напрямую в системном проводнике\n6️⃣ Мгновенное удаление\n\n📂 Умный органайзер загрузок\n➤ Аккуратная хронологическая лента всех загрузок\n➤ Быстрый доступ к любому документу за секунды\n➤ Упорядоченная структура вместо стандартного списка загрузок Chrome\n\n🧠 Интеллектуальный менеджер передач\n➤ Автоматическая группировка загрузок по времени\n➤ Чистый интерфейс со структурированными категориями файлов\n➤ Избавляет от беспорядка стандартных загрузок Chrome\n\n🗂️ Полный контроль над файлами\nМгновенное удаление файлов с компьютера\nОткрытие папки файла одним кликом\nУправление передачами, не покидая браузер\n\n⚡ Повышение продуктивности\n➤ Лёгкая и удобная панель управления загрузками\n➤ Улучшенный рабочий процесс для ежедневной работы с файлами\n➤ Чистая и эффективная система организации передач\n➤ Достойная альтернатива базовым загрузкам Chrome\n\n💡 Идеально подходит для пользователей, которым нужен:\nНадёжный инструмент управления загрузками\nПродвинутый менеджер истории загрузок\nПолноценный файловый менеджер загрузок\nУмная система организации передач\n\n🎯 Менеджер загрузок превращает стандартные загрузки Chrome в структурированный менеджер файлов и истории. Он обеспечивает быстрый поиск, полный контроль и организованный рабочий процесс в одном расширении.\n\n🌙 В расширении доступен Тёмный режим для более комфортной работы. Вы можете выбрать автоматическое следование системной теме, чтобы интерфейс переключался между светлым и тёмным режимом в зависимости от настроек устройства, либо включить тёмную тему вручную в любой момент. Это даёт полный контроль над внешним видом и помогает снизить нагрузку на глаза, особенно при длительной работе за компьютером.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

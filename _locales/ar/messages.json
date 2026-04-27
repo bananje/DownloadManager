@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "مدير التنزيلات",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "استخدم «مدير التنزيلات» لتنظيم عمليات النقل، والبحث في الملفات بسرعة، وتصفية النتائج، والحفاظ على سجل تنزيلاتك مرتبًا وسهل الإدارة.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "إيقاف التنزيل مؤقتًا",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "استئناف التنزيل",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "إعادة التنزيل",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "إظهار في مستكشف الملفات",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "لا يوجد عنوان لإعادة التنزيل.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "لا يمكن إعادة تشغيل إلا روابط HTTP(S) من القائمة. استخدم الصفحة أو «التنزيلات» لإعادة المحاولة.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "جارٍ التنزيل…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "تم إيقاف التنزيل",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "لم يكتمل التنزيل",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "اليوم",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "أمس",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "في وقت سابق هذا الأسبوع",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "قبل ذلك",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "لا توجد ملفات حاليًا",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "سجل التنزيلات",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "التنزيلات",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "البحث باسم الملف",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "البحث باسم الملف…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "الاسم",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "الحجم",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "التاريخ",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "التاريخ: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "مرشح التاريخ",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "اليوم",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "أسبوع",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "شهر",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "الشهر السابق",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "الشهر التالي",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "إعادة الضبط",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "موافق",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "النوع",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "مرشح النوع",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "تحديد الكل",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "صور",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "فيديو",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "أرشيف (ZIP، RAR، 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "برامج (EXE، MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "مستندات",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "أرشيف",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "برامج",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "إغلاق",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "إزالة المرشح",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "الاسم أ–ي",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "أ–ي",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "ي–أ",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "الحجم تصاعديًا",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "تصاعديًا",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "تنازليًا",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "المرشحات",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "شريط التنزيلات",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "قائمة التنزيلات",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "الإشعارات مفعَّلة",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "الإشعارات معطَّلة",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "اكتمل التنزيل",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "تم الحفظ: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "الملف الذي تم تنزيله",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "فشل التنزيل",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "تعذَّر التنزيل: $FILE$. السبب: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "تعذَّر التنزيل: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "المظهر: النظام",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "المظهر: فاتح",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "المظهر: داكن",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "تبديل المظهر. الحالي: النظام",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "تبديل المظهر. الحالي: فاتح",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "تبديل المظهر. الحالي: داكن",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "إجراءات الملف",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "فتح الملف: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "لم يكتمل التنزيل: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "تم إيقاف التنزيل: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "الحجم غير معروف",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "بدون عنوان",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "افتح مجلد الملف. لفتح الملفات مباشرة، اسمح بالوصول للإضافة.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "تحتاج الإضافة إلى إذن «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "تعذَّر فتح الملف؛ تم فتح المجلد في مدير الملفات.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "إزالة من القائمة",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "حذف الملف",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "الوقت غير معروف",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "الآن",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "تعذَّر إظهار الملف في مدير الملفات.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "تم إيقاف التنزيل، لا يمكن فتح الملف.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "خطأ في الملف",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "تم رفض الوصول",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "مساحة القرص غير كافية",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "اسم الملف طويل جدًا",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "الملف كبير جدًا",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "تم اكتشاف فيروس",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "خطأ مؤقت في الملف",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "الملف محظور",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "فشل فحص الأمان",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "الملف قصير جدًا",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "المجموع الاختباري غير متطابق",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "الملف مطابق للمصدر",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "خطأ في الشبكة",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "انتهت مهلة الشبكة",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "تم قطع الاتصال بالشبكة",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "تعذَّر الوصول إلى الخادم",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "طلب شبكة غير صالح",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "تعطَّل المتصفح",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "تم الإلغاء",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "تم إغلاق المتصفح",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "خطأ في الخادم",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "الخادم لا يدعم الاستئناف",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "محتوى غير صالح",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "غير مصرَّح",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "خطأ في الشهادة",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "الوصول ممنوع",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "تعذَّر الوصول إلى الخادم",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "حجم الملف غير متطابق",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "إعادة توجيه عبر المصادر",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "خطأ غير معروف",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "الذاكرة غير كافية",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "تم التنزيل",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "خطأ",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "إغلاق الإشعار",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 تعرّف على Download Manager — إضافة قوية تعمل كمدير للتنزيلات وسجلّها. صُمّمت لتحلّ محلّ نظام التنزيل الافتراضي في Chrome، ولتمنحك تحكّمًا تامًّا في كل مستند تنزّله. مبنية خصيصًا للمستخدمين الذين يتعاملون مع أحجام كبيرة من التنزيلات النشطة\n\n🚀 لماذا تختار Download Manager؟\nهذه الإضافة أكثر بكثير من مجرّد مدير تنزيلات مجاني؛ إنها أداة ذكية لتنظيم التنزيلات وتتبّعها، تحوّل القوائم المتراكمة والمشتّتة إلى نظام منظّم وقابل للبحث، مزوّد بخيارات تحكّم متقدّمة.\nخلافًا لسجلّ التنزيلات الاعتيادي في Chrome، تمنحك هذه الإضافة الوضوح والسرعة والوصول الكامل إلى ملفّاتك في مكان واحد.\n\n🔑 الميزات الأساسية:\n1️⃣ بحث فوري في كامل سجلّ التنزيلات\n2️⃣ تصفية حسب النوع (فيديو، مستند، صورة، أرشيف)\n3️⃣ فرز حسب الحجم أو الاسم أو تاريخ التنزيل\n4️⃣ تجميع في أقسام (اليوم، أمس، هذا الأسبوع، قبل ذلك)\n5️⃣ فتح موقع الملف مباشرةً في مستعرض النظام\n6️⃣ حذف فوري\n\n📂 منظّم ذكي للتنزيلات\n➤ عرض زمني واضح لجميع التنزيلات\n➤ وصول سريع إلى أي مستند خلال ثوانٍ\n➤ بنية مرتّبة بدلًا من قائمة التنزيلات الافتراضية في Chrome\n\n🧠 مدير ذكي للتنزيلات\n➤ تجميع تلقائي للتنزيلات بحسب الوقت\n➤ واجهة أنيقة بفئات ملفّات منظّمة بوضوح\n➤ يقلّل الفوضى الناتجة عن التنزيلات الافتراضية في Chrome\n\n🗂️ تحكّم كامل في الملفّات\nاحذف الملفّات من جهازك في لحظة\nافتح موقع الملف بنقرة واحدة\nأَدِر تنزيلاتك دون مغادرة المتصفّح\n\n⚡ زيادة في الإنتاجية\n➤ تجربة لوحة تحكّم خفيفة للتنزيلات\n➤ سير عمل محسّن للتعامل اليومي مع الملفّات\n➤ نظام نظيف وفعّال لتنظيم التنزيلات\n➤ بديل أفضل من التنزيلات الأساسية في Chrome\n\n💡 مثالية للمستخدمين الذين يحتاجون إلى:\nأداة موثوقة للتعامل مع التنزيلات\nتحكّم متقدّم في مدير سجلّ التنزيلات\nوظائف كاملة لمدير ملفّات التنزيل\nنظام ذكي لتنظيم التنزيلات\n\n🎯 يحوّل Download Manager تنزيلات Chrome الاعتيادية إلى مدير منظّم للملفّات وسجلّ التنزيلات، فيمنحك بحثًا سريعًا، وتحكّمًا كاملاً، وسير عمل منظّمًا، كل ذلك ضمن إضافة واحدة.\n\n🌙 يتوفّر الوضع الداكن (Dark Mode) في الإضافة لتجربة تصفّح أكثر راحة. يمكنك اختيار اتّباع مظهر النظام تلقائيًا، فتنتقل الواجهة بين الوضع الفاتح والداكن وفقًا لإعدادات جهازك، أو تفعيل المظهر الداكن يدويًا في أي وقت. بهذا تحظى بتحكّم كامل في المظهر وتُخفّف إجهاد العينين، لا سيّما عند العمل ساعات طويلة أمام الحاسوب.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

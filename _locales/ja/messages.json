@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ダウンロードマネージャー",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "ダウンロードマネージャーで転送を整理し、ファイルをすばやく検索・絞り込み、ダウンロード履歴をすっきりと管理しやすく保ちます。",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ダウンロードを一時停止",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ダウンロードを再開",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "ダウンロードをやり直す",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "エクスプローラーで表示",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "再ダウンロードのアドレスがありません。",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "一覧から再開できるのは HTTP(S) のリンクのみです。このアイテムを再試行するには、ページまたは［ダウンロード］をご利用ください。",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "ダウンロード中…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ダウンロードが中断されました",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ダウンロードは未完了です",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "今日",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "昨日",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "今週のこれまで",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "それ以前",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "現在ファイルはありません",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ダウンロード履歴",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ダウンロード",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ファイル名で検索",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ファイル名で検索…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "名前",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "サイズ",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "日付",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "日付: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "日付フィルタ",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "今日",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "週",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "月",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "前の月",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "次の月",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "リセット",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "種類",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "種類フィルタ",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "すべて選択",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "画像",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "動画",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "アーカイブ (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "プログラム (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "ドキュメント",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "アーカイブ",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "プログラム",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "閉じる",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "フィルタを解除",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "名前 A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "サイズ昇順",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "昇順",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "降順",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "フィルタ",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "ダウンロード ツールバー",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "ダウンロード一覧",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "通知はオンです",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "通知はオフです",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ダウンロードが完了しました",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "保存しました: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ダウンロードしたファイル",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ダウンロードに失敗しました",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ダウンロードできませんでした: $FILE$。原因: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ダウンロードできませんでした: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "テーマ: システム",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "テーマ: ライト",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "テーマ: ダーク",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "テーマを切り替える。現在: システム",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "テーマを切り替える。現在: ライト",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "テーマを切り替える。現在: ダーク",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "ファイルの操作",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ファイルを開く: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ダウンロードは未完了です: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ダウンロードが中断されました: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "サイズ不明",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "無題",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "ファイルのフォルダを開きます。ファイルを直接開くには、拡張機能にアクセスを許可してください。",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "この拡張機能には「downloads.open」権限が必要です。",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ファイルを開けませんでした。ファイル マネージャーでフォルダを開きました。",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "一覧から削除",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ファイルを削除",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "時刻不明",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "たった今",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ファイル マネージャーでファイルを表示できませんでした。",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ダウンロードが中断されたため、ファイルを開けません。",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ファイル エラー",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "アクセスが拒否されました",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "ディスクの空き容量が不足",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ファイル名が長すぎます",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ファイルが大きすぎます",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ウイルスを検出しました",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "一時的なファイル エラー",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ファイルはブロックされています",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "セキュリティ チェックに失敗しました",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ファイルが短すぎます",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "チェックサムが一致しません",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ファイルは元と同じです",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "ネットワーク エラー",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "ネットワーク タイムアウト",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "ネットワーク切断",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "サーバーに接続できません",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "ネットワーク要求が無効です",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "ブラウザがクラッシュしました",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "キャンセルしました",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "ブラウザが閉じられました",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "サーバー エラー",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "サーバーは再開をサポートしていません",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "無効なコンテンツ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "認証されていません",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "証明書エラー",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "アクセスが禁止されています",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "サーバーに接続できません",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ファイル サイズが一致しません",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "クロスオリジン リダイレクト",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "不明なエラー",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "メモリ不足",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ダウンロード済み",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "エラー",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "通知を閉じる",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager をご紹介します。これは、転送と履歴の管理機能を備えた強力な拡張機能です。Chrome 標準のダウンロードシステムに取って代わるべく設計されており、ダウンロードするあらゆる文書をあなたの完全な管理下に置きます。大量かつ活発なダウンロード作業に取り組むユーザーのために生み出された拡張機能です\n\n🚀 なぜ Download Manager を選ぶのか\nこれは単なる無料のダウンロードマネージャーをはるかに超える存在です。雑然とした転送リストを、整理され検索可能な体系へと変え、高度な操作機能を備えた、賢いダウンロード整理・追跡ツールです。\nChrome 標準のダウンロード履歴とは異なり、明瞭さ・速さ、そしてご自身のファイルへの完全なアクセスを一つの場所で提供します。\n\n🔑 主な機能:\n1️⃣ 転送履歴全体を対象とした即時検索\n2️⃣ 種類別フィルタリング（動画、文書、画像、アーカイブ）\n3️⃣ サイズ、名称、ダウンロード日による並べ替え\n4️⃣ セクション単位でのグルーピング（今日、昨日、今週、それ以前）\n5️⃣ システムのエクスプローラーで保存場所を直接表示\n6️⃣ 即時削除\n\n📂 賢いダウンロード整理機能\n➤ すべてのダウンロードを時系列で見やすく一覧表示\n➤ どの文書にも数秒でアクセス\n➤ Chrome 標準のダウンロード一覧に代わる、整然とした構成\n\n🧠 インテリジェントな転送マネージャー\n➤ ダウンロードを期間ごとに自動でグループ化\n➤ ファイルカテゴリーが整理された、すっきりとしたインターフェース\n➤ Chrome 標準のダウンロードに伴う煩雑さを軽減\n\n🗂️ ファイルを完全にコントロール\nお使いのパソコンから瞬時にファイルを削除\nワンクリックで保存場所を開く\nブラウザから離れることなく転送を管理\n\n⚡ 生産性の向上\n➤ 軽快に動作するダウンロードダッシュボード\n➤ 日常的なファイル操作のための洗練されたワークフロー\n➤ 整理された効率的な転送管理システム\n➤ シンプルな Chrome ダウンロードに代わる、より優れた選択肢\n\n💡 次のような方に最適です:\n信頼できるダウンロード操作ツールを求める方\nダウンロード履歴マネージャーをより高度に制御したい方\nダウンロードファイルマネージャーの全機能を必要とされる方\n賢い転送管理システムをお探しの方\n\n🎯 Download Manager は、Chrome の標準的なダウンロードを、整理されたダウンロードファイル・履歴マネージャーへと一新します。一つの拡張機能の中で、迅速な検索・完全なコントロール・整理されたワークフローをご利用いただけます。\n\n🌙 より快適な閲覧体験のため、ダークモード（Dark Mode）も拡張機能に搭載されています。システムのテーマを自動的に追従するように設定すれば、デバイス設定に応じてインターフェースが明るいモードと暗いモードを切り替えますし、必要な時にダークテーマを手動でオンにすることも可能です。これにより外観を完全にお手元で制御でき、特にパソコンを長時間使用される際の目の疲れを和らげる助けとなります。",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

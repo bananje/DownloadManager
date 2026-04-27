@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Trình quản lý tải xuống",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Sử dụng Trình quản lý tải xuống để sắp xếp các lượt truyền, tìm kiếm tệp nhanh chóng, lọc kết quả và giữ cho lịch sử tải xuống của bạn gọn gàng, dễ quản lý.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Tạm dừng tải xuống",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Tiếp tục tải xuống",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Thử tải xuống lại",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Hiển thị trong File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Không có địa chỉ để tải lại.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Từ danh sách chỉ có thể khởi động lại liên kết HTTP(S). Dùng trang hoặc “Tải xuống” để thử lại mục này.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Đang tải xuống…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Đã ngắt quá trình tải xuống",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Tải xuống chưa hoàn tất",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Hôm nay",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Hôm qua",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Đầu tuần này",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Trước đó",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Hiện không có tệp nào",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Nhật ký tải xuống",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Tải xuống",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Tìm theo tên tệp",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Tìm theo tên tệp…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Tên",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Kích thước",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Ngày",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Ngày: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Bộ lọc ngày",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Hôm nay",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Tuần",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Tháng",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Tháng trước",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Tháng sau",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Đặt lại",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Loại",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Bộ lọc loại",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Chọn tất cả",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Hình ảnh",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Tệp nén (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Chương trình (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Tài liệu",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Tệp nén",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Chương trình",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Đóng",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Xóa bộ lọc",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Tên A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Kích thước tăng",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "tăng",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "giảm",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Bộ lọc",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Thanh công cụ tải xuống",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Danh sách tải xuống",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Thông báo đang bật",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Thông báo đang tắt",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Tải xuống hoàn tất",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Đã lưu: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Tệp đã tải xuống",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Tải xuống thất bại",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Không thể tải xuống: $FILE$. Lý do: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Không thể tải xuống: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Giao diện: theo hệ thống",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Giao diện: sáng",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Giao diện: tối",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Đổi giao diện. Hiện tại: theo hệ thống",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Đổi giao diện. Hiện tại: sáng",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Đổi giao diện. Hiện tại: tối",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Thao tác tệp",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Mở tệp: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Tải xuống chưa hoàn tất: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Đã ngắt tải xuống: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Không rõ kích thước",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Không có tiêu đề",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Mở thư mục chứa tệp. Để mở tệp trực tiếp, hãy cho phép tiện ích truy cập.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Tiện ích cần quyền “downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Không mở được tệp; đã mở thư mục trong trình quản lý tệp.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Xóa khỏi danh sách",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Xóa tệp",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Không rõ thời gian",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "vừa xong",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Không thể hiển thị tệp trong trình quản lý tệp.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Đã ngắt tải xuống, không thể mở tệp.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Lỗi tệp",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Từ chối truy cập",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Không đủ dung lượng ổ đĩa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Tên tệp quá dài",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Tệp quá lớn",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Phát hiện vi-rút",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Lỗi tệp tạm thời",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Tệp đã bị chặn",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Kiểm tra bảo mật thất bại",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Tệp quá ngắn",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Mã kiểm tra không khớp",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Tệp giống với nguồn",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Lỗi mạng",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Mạng đã hết thời gian chờ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Mạng đã ngắt kết nối",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Không thể kết nối máy chủ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Yêu cầu mạng không hợp lệ",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Trình duyệt gặp sự cố",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Đã hủy",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Trình duyệt đã đóng",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Lỗi máy chủ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Máy chủ không hỗ trợ tiếp tục",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Nội dung không hợp lệ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Chưa được ủy quyền",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Lỗi chứng chỉ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Truy cập bị cấm",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Không thể kết nối máy chủ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Kích thước tệp không khớp",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Chuyển hướng giữa nguồn gốc",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Lỗi không xác định",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Hết bộ nhớ",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Đã tải xuống",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Lỗi",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Đóng thông báo",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Hân hạnh giới thiệu Download Manager — một tiện ích mở rộng mạnh mẽ, đảm nhận vai trò trình quản lý tải xuống và lịch sử. Tiện ích được thiết kế để thay thế hệ thống tải xuống mặc định của Chrome và trao cho bạn quyền kiểm soát trọn vẹn đối với từng tài liệu mà bạn tải về. Được dựng nên dành cho những người dùng có khối lượng và nhịp độ tải xuống lớn, sôi động\n\n🚀 Vì sao nên chọn Download Manager?\nĐây không chỉ đơn thuần là một trình quản lý tải xuống miễn phí. Đây là một công cụ thông minh để sắp xếp và theo dõi các tải xuống, biến những danh sách truyền tải lộn xộn thành một hệ thống có cấu trúc, dễ tra cứu, kèm theo các tính năng kiểm soát nâng cao.\nKhác với lịch sử tải xuống thông thường của Chrome, tiện ích này mang đến cho bạn sự rành mạch, tốc độ và quyền truy cập đầy đủ vào tệp của mình ở cùng một chỗ.\n\n🔑 Các tính năng cốt lõi:\n1️⃣ Tìm kiếm tức thời trên toàn bộ lịch sử truyền tải\n2️⃣ Lọc theo loại tệp (video, tài liệu, hình ảnh, kho lưu trữ)\n3️⃣ Sắp xếp theo kích thước, tên hoặc ngày tải xuống\n4️⃣ Nhóm thành các mục (Hôm nay, Hôm qua, Tuần này, Trước đó)\n5️⃣ Mở vị trí lưu trực tiếp trong trình duyệt tệp của hệ thống\n6️⃣ Xoá tức thời\n\n📂 Bộ sắp xếp tải xuống thông minh\n➤ Hiển thị mạch lạc theo trục thời gian cho mọi lượt tải xuống\n➤ Truy cập nhanh đến bất kỳ tài liệu nào chỉ trong vài giây\n➤ Cấu trúc gọn gàng thay cho danh sách tải xuống mặc định của Chrome\n\n🧠 Trình quản lý truyền tải thông minh\n➤ Tự động nhóm các lượt tải xuống theo khoảng thời gian\n➤ Giao diện thanh thoát với các nhóm tệp được phân loại rõ ràng\n➤ Giảm thiểu sự bừa bộn của các bản tải mặc định trong Chrome\n\n🗂️ Toàn quyền kiểm soát tệp\nXoá tệp khỏi máy tính trong nháy mắt\nMở vị trí lưu chỉ bằng một cú nhấp\nQuản lý truyền tải mà không cần rời khỏi trình duyệt\n\n⚡ Nâng cao năng suất\n➤ Trải nghiệm bảng điều khiển tải xuống nhẹ nhàng\n➤ Quy trình làm việc được tối ưu cho việc xử lý tệp hằng ngày\n➤ Hệ thống sắp xếp truyền tải gọn gàng, hiệu quả\n➤ Lựa chọn thay thế ưu việt hơn so với tải xuống cơ bản của Chrome\n\n💡 Hoàn hảo cho những người dùng cần:\nMột công cụ xử lý tải xuống đáng tin cậy\nQuyền kiểm soát nâng cao đối với trình quản lý lịch sử tải xuống\nĐầy đủ chức năng của một trình quản lý tệp tải xuống\nMột hệ thống thông minh để tổ chức các lượt truyền tải\n\n🎯 Download Manager biến những lượt tải xuống thông thường trên Chrome thành một trình quản lý tệp và lịch sử có cấu trúc rõ ràng. Tiện ích mang đến cho bạn khả năng tìm kiếm nhanh, quyền kiểm soát trọn vẹn và một quy trình làm việc gọn gàng — tất cả gói gọn trong một tiện ích.\n\n🌙 Chế độ Tối (Dark Mode) đã được tích hợp sẵn trong tiện ích để mang lại trải nghiệm duyệt web dễ chịu hơn. Bạn có thể đặt giao diện tự động bám theo giao diện hệ thống — chuyển đổi giữa chế độ Sáng và chế độ Tối tùy theo cài đặt thiết bị — hoặc bật giao diện tối thủ công bất cứ lúc nào. Nhờ đó, bạn hoàn toàn làm chủ vẻ ngoài và giảm bớt mỏi mắt, đặc biệt trong những giờ làm việc dài trước máy tính.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

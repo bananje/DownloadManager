@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ഡൗൺലോഡ് മാനേജർ",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "കൈമാറ്റങ്ങൾ ചിട്ടപ്പെടുത്താനും ഫയലുകൾ വേഗത്തിൽ തിരയാനും ഫലങ്ങൾ അരിച്ചെടുക്കാനും നിങ്ങളുടെ ഡൗൺലോഡ് ചരിത്രം വൃത്തിയായും എളുപ്പത്തിൽ കൈകാര്യം ചെയ്യാവുന്നതായും സൂക്ഷിക്കാനും ഡൗൺലോഡ് മാനേജർ ഉപയോഗിക്കുക.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ഡൗൺലോഡ് താൽക്കാലികമായി നിർത്തുക",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ഡൗൺലോഡ് തുടരുക",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "വീണ്ടും ഡൗൺലോഡ് ചെയ്യുക",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "File Explorer-ൽ കാണിക്കുക",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "വീണ്ടും ഡൗൺലോഡ് ചെയ്യാൻ ഒരു വിലാസവുമില്ല.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "ലിസ്റ്റിൽ നിന്ന് HTTP(S) ലിങ്കുകൾ മാത്രമേ വീണ്ടും ആരംഭിക്കാനാവൂ. ഈ ഇനം വീണ്ടും ശ്രമിക്കാൻ പേജോ “ഡൗൺലോഡുകൾ” എന്ന ഭാഗമോ ഉപയോഗിക്കുക.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "ഡൗൺലോഡ് ചെയ്യുന്നു…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ഡൗൺലോഡ് തടസ്സപ്പെട്ടു",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ഡൗൺലോഡ് പൂർത്തിയായില്ല",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "ഇന്ന്",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "ഇന്നലെ",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "ഈ ആഴ്‌ചയിൽ നേരത്തെ",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "നേരത്തെ",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "ഇപ്പോൾ ഫയലുകളൊന്നുമില്ല",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ഡൗൺലോഡ് ചരിത്രം",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ഡൗൺലോഡുകൾ",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ഫയൽ നാമപ്രകാരം തിരയുക",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ഫയൽ നാമപ്രകാരം തിരയുക…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "പേര്",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "വലുപ്പം",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "തീയതി",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "തീയതി: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "തീയതി ഫിൽട്ടർ",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "ഇന്ന്",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "ആഴ്‌ച",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "മാസം",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "മുൻ മാസം",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "അടുത്ത മാസം",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "പുനഃസജ്ജമാക്കുക",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ശരി",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "തരം",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "തരം ഫിൽട്ടർ",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "എല്ലാം തിരഞ്ഞെടുക്കുക",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "ചിത്രങ്ങൾ",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "വീഡിയോ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "ആർക്കൈവുകൾ (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "പ്രോഗ്രാമുകൾ (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "രേഖകൾ",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "ആർക്കൈവ്",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "പ്രോഗ്രാം",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "അടയ്ക്കുക",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ഫിൽട്ടർ നീക്കം ചെയ്യുക",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "പേര് A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "വലുപ്പം കയറ്റം",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "കയറ്റം",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "ഇറക്കം",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "ഫിൽട്ടറുകൾ",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "ഡൗൺലോഡ് ടൂൾബാർ",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "ഡൗൺലോഡ് പട്ടിക",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "അറിയിപ്പുകൾ ഓണാണ്",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "അറിയിപ്പുകൾ ഓഫാണ്",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ഡൗൺലോഡ് പൂർത്തിയായി",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "സംരക്ഷിച്ചു: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ഡൗൺലോഡ് ചെയ്ത ഫയൽ",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ഡൗൺലോഡ് പരാജയപ്പെട്ടു",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ഡൗൺലോഡ് ചെയ്യാനായില്ല: $FILE$. കാരണം: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ഡൗൺലോഡ് ചെയ്യാനായില്ല: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "തീം: സിസ്റ്റം",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "തീം: ഇളം",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "തീം: ഇരുണ്ട",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "തീം മാറ്റുക. ഇപ്പോൾ: സിസ്റ്റം",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "തീം മാറ്റുക. ഇപ്പോൾ: ഇളം",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "തീം മാറ്റുക. ഇപ്പോൾ: ഇരുണ്ട",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "ഫയൽ പ്രവർത്തനങ്ങൾ",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ഫയൽ തുറക്കുക: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ഡൗൺലോഡ് പൂർത്തിയായില്ല: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ഡൗൺലോഡ് തടസ്സപ്പെട്ടു: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "വലുപ്പം അറിയില്ല",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "ശീർഷകമില്ലാത്തത്",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "ഫയലിന്റെ ഫോൾഡർ തുറക്കുക. ഫയലുകൾ നേരിട്ട് തുറക്കാൻ എക്സ്റ്റൻഷന് അനുമതി നൽകുക.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "എക്സ്റ്റൻഷന് “downloads.open” അനുമതി ആവശ്യമാണ്.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ഫയൽ തുറക്കാനായില്ല; ഫയൽ മാനേജറിൽ ഫോൾഡർ തുറന്നു.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "ലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ഫയൽ ഇല്ലാതാക്കുക",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "സമയം അറിയില്ല",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "ഇപ്പോൾ തന്നെ",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ഫയൽ മാനേജറിൽ ഫയൽ കാണിക്കാനായില്ല.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ഡൗൺലോഡ് തടസ്സപ്പെട്ടതിനാൽ ഫയൽ തുറക്കാനാവില്ല.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ഫയൽ പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "പ്രവേശനം നിരസിച്ചു",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "ഡിസ്ക് സ്ഥലം തികയുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ഫയൽ പേര് വളരെ നീളമുള്ളതാണ്",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ഫയൽ വളരെ വലുതാണ്",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "വൈറസ് കണ്ടെത്തി",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "താൽക്കാലിക ഫയൽ പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ഫയൽ തടഞ്ഞു",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "സുരക്ഷാ പരിശോധന പരാജയപ്പെട്ടു",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ഫയൽ വളരെ ചെറുതാണ്",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "ചെക്ക്‌സം പൊരുത്തപ്പെടുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ഫയൽ ഉറവിടത്തിന് തുല്യം",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "നെറ്റ്‌വർക്ക് പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "നെറ്റ്‌വർക്ക് സമയം കഴിഞ്ഞു",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "നെറ്റ്‌വർക്ക് വിച്ഛേദിച്ചു",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "സെർവറിലേക്ക് എത്താനാവുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "അസാധുവായ നെറ്റ്‌വർക്ക് അഭ്യർത്ഥന",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "ബ്രൗസർ ക്രാഷായി",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "റദ്ദാക്കി",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "ബ്രൗസർ അടച്ചു",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "സെർവർ പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "സെർവർ തുടർച്ചയെ പിന്തുണയ്ക്കുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "അസാധുവായ ഉള്ളടക്കം",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "അനുമതിയില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "സർട്ടിഫിക്കറ്റ് പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "പ്രവേശനം നിരോധിച്ചു",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "സെർവറിലേക്ക് എത്താനാവുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ഫയൽ വലുപ്പം പൊരുത്തപ്പെടുന്നില്ല",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "ക്രോസ്-ഉറവിട റീഡയറക്റ്റ്",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "അജ്ഞാത പിശക്",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "മെമ്മറി തീർന്നു",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ഡൗൺലോഡ് ചെയ്തു",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "പിശക്",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "അറിയിപ്പ് അടയ്ക്കുക",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager-നെ പരിചയപ്പെടുക — കൈമാറ്റങ്ങളും ചരിത്രവും ഒരുപോലെ കൈകാര്യം ചെയ്യുന്ന ഒരു കരുത്തുറ്റ വിപുലനം. Chrome-ന്‍റെ പ്രാഥമിക ഡൗണ്‍ലോഡ് സംവിധാനത്തിന് പകരംവെച്ചും, നിങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്യുന്ന ഓരോ രേഖയിന്‍മേലും പൂര്‍ണ നിയന്ത്രണം നല്‍കുന്നതിനായും ഇത് രൂപകല്‍പന ചെയ്യപ്പെട്ടിരിക്കുന്നു. വലുതും സജീവവുമായ ഡൗണ്‍ലോഡ് ഒഴുക്കുകള്‍ കൈകാര്യം ചെയ്യുന്ന ഉപയോക്താക്കള്‍ക്കായി പ്രത്യേകം നിര്‍മിച്ചത്\n\n🚀 എന്തുകൊണ്ട് Download Manager തിരഞ്ഞെടുക്കണം?\nഇത് വെറുമൊരു സൗജന്യ ഡൗണ്‍ലോഡ് മാനേജര്‍ എന്നതിലുപരി ഏറെയധികമാണ്. അലങ്കോലപ്പെട്ട കൈമാറ്റപ്പട്ടികകളെ ക്രമീകൃതവും തിരയല്‍ സാധ്യവുമായ ഒരു സംവിധാനമാക്കി മാറ്റുന്ന ബുദ്ധിമത്തായ ഡൗണ്‍ലോഡ് ക്രമീകരണ-നിരീക്ഷണോപകരണമാണ് ഇത്; ഉന്നതനിലവാരത്തിലുള്ള നിയന്ത്രണ സവിശേഷതകളോടു കൂടിയത്.\nChrome-ന്‍റെ സാധാരണ ഡൗണ്‍ലോഡ് ചരിത്രത്തില്‍ നിന്ന് വ്യത്യസ്തമായി ഈ വിപുലനം നിങ്ങള്‍ക്ക് വ്യക്തത, വേഗം, എല്ലാ ഫയലുകള്‍ക്കും പൂര്‍ണ പ്രവേശനം എന്നിവ ഒരേ ഇടത്തില്‍ നല്‍കുന്നു.\n\n🔑 പ്രധാന സവിശേഷതകള്‍:\n1️⃣ കൈമാറ്റ ചരിത്രം മുഴുവന്‍ തല്‍ക്ഷണ തിരയല്‍\n2️⃣ തരം അനുസരിച്ച് അരിച്ചെടുക്കല്‍ (വീഡിയോ, രേഖ, ചിത്രം, ആര്‍ക്കൈവ്)\n3️⃣ വലിപ്പം, പേര്, ഡൗണ്‍ലോഡ് തീയതി എന്നിവ പ്രകാരം ക്രമീകരണം\n4️⃣ വിഭാഗങ്ങളായി തരംതിരിക്കല്‍ (ഇന്ന്, ഇന്നലെ, ഈ ആഴ്ച, അതിനു മുമ്പ്)\n5️⃣ കമ്പ്യൂട്ടറിന്‍റെ ഫയല്‍ എക്സ്പ്ലോററില്‍ സ്ഥാനം നേരിട്ട് തുറക്കല്‍\n6️⃣ തല്‍ക്ഷണ നീക്കംചെയ്യല്‍\n\n📂 ബുദ്ധിമത്തായ ഡൗണ്‍ലോഡ് ക്രമീകരണം\n➤ എല്ലാ ഡൗണ്‍ലോഡുകളുടെയും വൃത്തിയുള്ള കാലാനുക്രമ കാഴ്ച\n➤ ഏതൊരു രേഖയിലേക്കും നിമിഷങ്ങള്‍ക്കകം വേഗപ്രവേശനം\n➤ Chrome-ന്‍റെ പതിവ് ഡൗണ്‍ലോഡ് പട്ടികയ്ക്കു പകരം ക്രമീകൃതമായ ഘടന\n\n🧠 ബുദ്ധിസാമര്‍ത്ഥ്യമുള്ള കൈമാറ്റ മാനേജര്‍\n➤ സമയത്തിന്‍റെ അടിസ്ഥാനത്തില്‍ ഡൗണ്‍ലോഡുകള്‍ സ്വയം തരംതിരിക്കല്‍\n➤ ഫയല്‍ വിഭാഗങ്ങള്‍ വ്യക്തമായി തരംതിരിച്ച ശുദ്ധമായ ഇന്റര്‍ഫെയ്സ്\n➤ Chrome-ന്‍റെ പതിവ് ഡൗണ്‍ലോഡ് മൂലമുണ്ടാകുന്ന അലങ്കോലം കുറയ്ക്കുന്നു\n\n🗂️ ഫയലുകള്‍ക്കു മേല്‍ പൂര്‍ണ നിയന്ത്രണം\nനിങ്ങളുടെ കമ്പ്യൂട്ടറില്‍ നിന്ന് ഫയലുകള്‍ ക്ഷണനേരംകൊണ്ട് നീക്കംചെയ്യുക\nഒറ്റ ക്ലിക്കിലൂടെ ഫയലിന്‍റെ സ്ഥാനം തുറക്കുക\nബ്രൗസര്‍ വിടാതെ കൈമാറ്റങ്ങള്‍ കൈകാര്യം ചെയ്യുക\n\n⚡ ഉല്‍പാദനക്ഷമത വര്‍ദ്ധനവ്‌\n➤ ലഘുവായ, സുഗമമായ ഡൗണ്‍ലോഡ് ഡാഷ്ബോര്‍ഡ് അനുഭവം\n➤ ദൈനംദിന ഫയല്‍ കൈകാര്യത്തിനായി മെച്ചപ്പെട്ട പ്രവര്‍ത്തനക്രമം\n➤ കൈമാറ്റ ക്രമീകരണത്തിന്‍റെ ശുദ്ധവും കാര്യക്ഷമവുമായ സംവിധാനം\n➤ Chrome-ന്‍റെ പ്രാഥമിക ഡൗണ്‍ലോഡുകള്‍ക്ക് മികച്ച പകരം\n\n💡 ഇക്കാര്യങ്ങള്‍ ആവശ്യമുള്ള ഉപയോക്താക്കള്‍ക്ക് അനുയോജ്യം:\nവിശ്വസനീയമായ ഡൗണ്‍ലോഡ് കൈകാര്യ ഉപകരണം\nഡൗണ്‍ലോഡ് ചരിത്ര മാനേജറിന് മേല്‍ ഉന്നതനില നിയന്ത്രണം\nഡൗണ്‍ലോഡ് ചെയ്ത ഫയല്‍ മാനേജറിന്‍റെ പൂര്‍ണ പ്രവര്‍ത്തനക്ഷമത\nകൈമാറ്റങ്ങള്‍ ക്രമീകരിക്കുന്ന ബുദ്ധിമത്തായ സംവിധാനം\n\n🎯 Download Manager Chrome-ന്‍റെ പതിവ് ഡൗണ്‍ലോഡുകളെ ഒരു ക്രമീകൃത ഡൗണ്‍ലോഡ് ഫയല്‍-ചരിത്ര മാനേജറാക്കി മാറ്റുന്നു. ഒറ്റ വിപുലനത്തില്‍ വേഗതയുള്ള തിരയല്‍, പൂര്‍ണ നിയന്ത്രണം, ക്രമീകൃതമായ പ്രവര്‍ത്തനക്രമം എന്നിവ നല്‍കുന്നു.\n\n🌙 കൂടുതല്‍ സുഖകരമായ ബ്രൗസിംഗ് അനുഭവത്തിനായി വിപുലനത്തില്‍ ഡാര്‍ക്ക് മോഡ് (Dark Mode) ലഭ്യമാണ്. ഇന്റര്‍ഫെയ്സ് സിസ്റ്റം തീമിനെ സ്വയം പിന്തുടരാന്‍ തിരഞ്ഞെടുക്കാം — അങ്ങനെ നിങ്ങളുടെ ഉപകരണ ക്രമീകരണത്തിനനുസരിച്ച് അത് വെളിച്ച-ഇരുട്ട് മോഡുകള്‍ക്കിടയില്‍ സ്വയം മാറും — അല്ലെങ്കില്‍ എപ്പോള്‍ വേണമെങ്കിലും കൈകൊണ്ട് ഡാര്‍ക്ക് തീം ഓണ്‍ ചെയ്യാം. അങ്ങനെ കാഴ്ചയ്ക്കു മേലുള്ള പൂര്‍ണ നിയന്ത്രണം നിങ്ങളുടെ കയ്യിലാകുകയും, വിശേഷിച്ച് കമ്പ്യൂട്ടറില്‍ ദീര്‍ഘനേരം ജോലി ചെയ്യുമ്പോള്‍ കണ്ണുകളുടെ ക്ഷീണം കുറയ്ക്കാന്‍ സഹായകമാകുകയും ചെയ്യും.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

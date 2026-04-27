@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Gestor de Transferências",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Utilize o Gestor de Transferências para organizar as transferências, pesquisar ficheiros rapidamente, filtrar resultados e manter o histórico limpo e fácil de gerir.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Colocar transferência em pausa",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Retomar transferência",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Tentar transferir novamente",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Mostrar no Explorador",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Sem endereço para transferir novamente.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "A partir da lista só é possível reiniciar ligações HTTP(S). Utilize a página ou as Transferências para voltar a tentar este item.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "A transferir…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Transferência interrompida",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Transferência não concluída",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Hoje",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Ontem",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Mais cedo esta semana",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Mais antigos",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "De momento não existem ficheiros",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Histórico de transferências",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Transferências",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Pesquisar pelo nome do ficheiro",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Pesquisar pelo nome do ficheiro…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nome",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Tamanho",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Data",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Data: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Filtro por data",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Hoje",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Semana",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Mês",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Mês anterior",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Mês seguinte",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Repor",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tipo",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Filtro por tipo",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Selecionar tudo",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Imagens",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Vídeo",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arquivos (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programas (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Documentos",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arquivos",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programas",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Fechar",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Remover filtro",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nome A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Tamanho asc.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "asc.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "desc.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtros",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Barra de transferências",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Lista de transferências",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "As notificações estão ativadas",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "As notificações estão desativadas",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Transferência concluída",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Guardado: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Ficheiro transferido",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Falha na transferência",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Não foi possível transferir: $FILE$. Motivo: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Não foi possível transferir: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: do sistema",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: claro",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: escuro",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Alternar tema. Atual: do sistema",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Alternar tema. Atual: claro",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Alternar tema. Atual: escuro",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Ações do ficheiro",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Abrir ficheiro: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Transferência não concluída: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Transferência interrompida: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Tamanho desconhecido",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Sem título",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Abrir a pasta do ficheiro. Para abrir ficheiros diretamente, conceda acesso à extensão.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "A extensão necessita da permissão “downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Não foi possível abrir o ficheiro; a pasta foi aberta no gestor de ficheiros.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Remover da lista",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Eliminar ficheiro",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Hora desconhecida",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "agora mesmo",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Não foi possível mostrar o ficheiro no gestor de ficheiros.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Transferência interrompida — o ficheiro não pode ser aberto.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Erro do ficheiro",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Acesso recusado",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Espaço em disco insuficiente",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Nome de ficheiro demasiado longo",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Ficheiro demasiado grande",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Vírus detetado",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Erro temporário do ficheiro",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Ficheiro bloqueado",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "A verificação de segurança falhou",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Ficheiro demasiado curto",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "A soma de verificação não corresponde",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Ficheiro igual ao original",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Erro de rede",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Tempo de rede esgotado",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Rede desligada",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Servidor indisponível",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Pedido de rede inválido",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "O navegador falhou",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Cancelado",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Navegador fechado",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Erro do servidor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "O servidor não suporta retoma",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Conteúdo inválido",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Não autorizado",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Erro de certificado",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Acesso proibido",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Servidor indisponível",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Tamanho do ficheiro não corresponde",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Redirecionamento entre origens",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Erro desconhecido",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Memória insuficiente",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Transferido",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Erro",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Fechar notificação",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Apresentamos o Download Manager — uma poderosa extensão que funciona como gestor de transferências e de histórico. Foi concebida para substituir o sistema de transferências predefinido do Chrome e proporcionar-lhe um controlo total sobre cada documento que descarrega. Pensada para utilizadores com fluxos de transferência volumosos e ativos\n\n🚀 Porquê escolher o Download Manager?\nIsto é muito mais do que um simples gestor de transferências gratuito. É uma ferramenta inteligente de organização e acompanhamento que converte listas de transferências desorganizadas num sistema estruturado e facilmente pesquisável, dotado de funcionalidades avançadas de controlo.\nAo contrário do histórico de transferências padrão do Chrome, esta extensão oferece-lhe clareza, rapidez e acesso pleno aos seus ficheiros num único local.\n\n🔑 Funcionalidades essenciais:\n1️⃣ Pesquisa instantânea em todo o histórico de transferências\n2️⃣ Filtragem por tipo (vídeo, documento, imagem, arquivo)\n3️⃣ Ordenação por tamanho, nome ou data da transferência\n4️⃣ Agrupamento em secções (Hoje, Ontem, Esta semana, Anteriores)\n5️⃣ Abertura da localização diretamente no explorador do sistema\n6️⃣ Eliminação instantânea\n\n📂 Organizador inteligente de transferências\n➤ Visualização cronológica clara de todas as transferências\n➤ Acesso rápido a qualquer documento em segundos\n➤ Estrutura organizada em vez da lista de transferências predefinida do Chrome\n\n🧠 Gestor inteligente de transferências\n➤ Agrupamento automático das transferências por período\n➤ Interface depurada com categorias de ficheiros bem estruturadas\n➤ Reduz a desordem das transferências predefinidas do Chrome\n\n🗂️ Controlo total dos ficheiros\nElimine ficheiros do seu computador de forma instantânea\nAbra a localização com um único clique\nGira as suas transferências sem sair do navegador\n\n⚡ Mais produtividade\n➤ Uma experiência leve de painel de transferências\n➤ Um fluxo de trabalho aperfeiçoado para a gestão diária de ficheiros\n➤ Um sistema de organização de transferências claro e eficiente\n➤ Uma alternativa superior às transferências básicas do Chrome\n\n💡 Ideal para utilizadores que necessitam de:\nUma ferramenta fiável de gestão de transferências\nControlo avançado sobre o gestor de histórico de transferências\nA funcionalidade completa de um gestor de ficheiros descarregados\nUm sistema inteligente de organização de transferências\n\n🎯 O Download Manager transforma as transferências comuns do Chrome num verdadeiro gestor estruturado de ficheiros e de histórico. Oferece-lhe uma pesquisa rápida, um controlo absoluto e um fluxo de trabalho organizado numa única extensão.\n\n🌙 O modo escuro (Dark Mode) está disponível na extensão para lhe proporcionar uma experiência de navegação mais agradável. Pode optar por seguir automaticamente o tema do sistema, fazendo com que a interface alterne entre o modo claro e o escuro consoante as definições do seu dispositivo, ou ativar o tema escuro manualmente em qualquer momento. Assim, dispõe de controlo total sobre o aspeto e reduz a fadiga visual, sobretudo durante longas jornadas em frente ao computador.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

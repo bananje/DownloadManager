@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "다운로드 매니저",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "다운로드 매니저로 전송을 정리하고, 파일을 빠르게 검색하며, 결과를 필터링하고, 다운로드 기록을 깔끔하고 관리하기 쉽게 유지하세요.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "다운로드 일시중지",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "다운로드 재개",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "다운로드 다시 시도",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "탐색기에서 표시",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "다시 다운로드할 주소가 없습니다.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "목록에서는 HTTP(S) 링크만 다시 시작할 수 있습니다. 이 항목을 다시 시도하려면 페이지 또는 [다운로드]를 이용하세요.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "다운로드 중…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "다운로드 중단됨",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "다운로드가 완료되지 않음",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "오늘",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "어제",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "이번 주 이전",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "이전",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "현재 파일이 없습니다",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "다운로드 기록",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "다운로드",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "파일 이름으로 검색",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "파일 이름으로 검색…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "이름",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "크기",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "날짜",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "날짜: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "날짜 필터",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "오늘",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "주간",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "월간",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "이전 달",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "다음 달",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "초기화",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "확인",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "유형",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "유형 필터",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "모두 선택",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "이미지",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "동영상",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "압축 파일 (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "프로그램 (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "문서",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "압축 파일",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "프로그램",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "닫기",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "필터 제거",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "이름 A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "크기 오름차순",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "오름",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "내림",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "필터",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "다운로드 도구 모음",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "다운로드 목록",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "알림이 켜져 있습니다",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "알림이 꺼져 있습니다",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "다운로드 완료",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "저장됨: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "다운로드한 파일",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "다운로드 실패",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "다운로드할 수 없습니다: $FILE$. 원인: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "다운로드할 수 없습니다: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "테마: 시스템",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "테마: 라이트",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "테마: 다크",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "테마 전환. 현재: 시스템",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "테마 전환. 현재: 라이트",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "테마 전환. 현재: 다크",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "파일 작업",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "파일 열기: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "다운로드 미완료: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "다운로드 중단됨: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "크기 알 수 없음",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "제목 없음",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "파일이 있는 폴더를 엽니다. 파일을 바로 열려면 확장 프로그램의 접근을 허용하세요.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "이 확장 프로그램에는 ‘downloads.open’ 권한이 필요합니다.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "파일을 열 수 없어 파일 관리자에서 폴더를 열었습니다.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "목록에서 삭제",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "파일 삭제",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "시간을 알 수 없음",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "방금 전",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "파일 관리자에서 파일을 표시할 수 없습니다.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "다운로드가 중단되어 파일을 열 수 없습니다.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "파일 오류",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "액세스가 거부되었습니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "디스크 공간이 부족합니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "파일 이름이 너무 깁니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "파일이 너무 큽니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "바이러스가 감지되었습니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "일시적인 파일 오류",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "파일이 차단됨",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "보안 검사에 실패했습니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "파일이 너무 짧습니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "체크섬이 일치하지 않습니다",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "원본과 동일한 파일입니다",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "네트워크 오류",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "네트워크 시간 초과",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "네트워크 연결 끊김",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "서버에 연결할 수 없습니다",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "잘못된 네트워크 요청",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "브라우저가 다운되었습니다",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "취소됨",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "브라우저가 닫혔습니다",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "서버 오류",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "서버가 이어받기를 지원하지 않습니다",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "잘못된 콘텐츠",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "인증되지 않음",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "인증서 오류",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "접근이 금지되었습니다",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "서버에 연결할 수 없습니다",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "파일 크기가 일치하지 않습니다",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "교차 출처 리디렉션",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "알 수 없는 오류",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "메모리가 부족합니다",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "다운로드됨",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "오류",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "알림 닫기",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager를 만나보십시오 — 전송과 기록을 함께 관리해 주는 강력한 확장 프로그램입니다. Chrome의 기본 다운로드 시스템을 대신하여 다운로드하는 모든 문서를 사용자께서 온전히 통제하실 수 있도록 설계되었습니다. 방대하고 활발한 다운로드 흐름을 다루는 분들을 위해 만들어진 확장 프로그램입니다\n\n🚀 왜 Download Manager를 선택해야 하는가\n단순한 무료 다운로드 관리자 그 이상입니다. 어수선한 전송 목록을 구조화되고 손쉽게 검색할 수 있는 체계로 바꾸어 주며, 한 차원 높은 제어 기능을 갖춘 똑똑한 다운로드 정리·추적 도구입니다.\nChrome의 기본 다운로드 기록과 달리, 이 확장 프로그램은 명료함과 빠른 속도, 그리고 모든 파일에 대한 완전한 접근 권한을 한곳에서 제공합니다.\n\n🔑 주요 기능:\n1️⃣ 전체 전송 기록을 대상으로 한 즉각적인 검색\n2️⃣ 유형별 필터링(동영상, 문서, 이미지, 압축 파일)\n3️⃣ 크기, 이름 또는 다운로드 날짜순 정렬\n4️⃣ 구간별 그룹화(오늘, 어제, 이번 주, 그 이전)\n5️⃣ 시스템 탐색기에서 위치를 곧장 열기\n6️⃣ 즉각 삭제\n\n📂 똑똑한 다운로드 정리 기능\n➤ 모든 다운로드를 시간순으로 정돈된 형태로 한눈에 표시\n➤ 어떤 문서에도 단 몇 초 안에 접근\n➤ Chrome 기본 다운로드 목록 대신 한층 정돈된 구조\n\n🧠 지능형 전송 관리자\n➤ 시간대별로 다운로드를 자동 그룹화\n➤ 파일 분류가 명확하게 정돈된 깔끔한 인터페이스\n➤ Chrome 기본 다운로드의 산만함을 줄여 줍니다\n\n🗂️ 파일에 대한 완전한 제어\n컴퓨터에서 파일을 즉시 삭제\n클릭 한 번으로 저장 위치 열기\n브라우저를 벗어나지 않고도 전송을 관리\n\n⚡ 생산성 향상\n➤ 가볍고 쾌적한 다운로드 대시보드 환경\n➤ 일상적인 파일 처리에 최적화된 작업 흐름\n➤ 깔끔하고 효율적인 전송 정리 체계\n➤ 단순한 Chrome 다운로드보다 한층 나은 대안\n\n💡 다음과 같은 분들께 안성맞춤입니다:\n믿을 만한 다운로드 처리 도구가 필요한 분\n다운로드 기록 관리자를 더욱 정교하게 통제하고자 하시는 분\n다운로드 파일 관리자의 모든 기능을 활용하고자 하시는 분\n똑똑한 전송 정리 체계를 찾으시는 분\n\n🎯 Download Manager는 Chrome의 일상적인 다운로드를 잘 정돈된 파일·기록 관리자로 탈바꿈시킵니다. 단 하나의 확장 프로그램 안에서 빠른 검색과 완전한 제어, 정돈된 작업 흐름을 누리실 수 있습니다.\n\n🌙 한층 편안한 브라우징 환경을 위해 확장 프로그램에 다크 모드(Dark Mode)가 마련되어 있습니다. 시스템 테마를 자동으로 따르도록 설정하시면 기기 설정에 따라 인터페이스가 밝은 모드와 어두운 모드 사이에서 전환되며, 원하시면 언제든지 어두운 테마를 수동으로 켜실 수도 있습니다. 이를 통해 외관을 직접 완전히 제어하실 수 있고, 특히 컴퓨터 앞에서 장시간 작업하실 때의 눈의 피로를 덜어 드립니다.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

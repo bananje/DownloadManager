@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "מנהל ההורדות",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "השתמשו במנהל ההורדות כדי לארגן העברות, לחפש קבצים במהירות, לסנן תוצאות ולשמור על היסטוריית ההורדות שלכם מסודרת ונוחה לניהול.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "השהיית ההורדה",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "חידוש ההורדה",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "ניסיון הורדה חוזר",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "הצגה בסייר הקבצים",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "אין כתובת להורדה חוזרת.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "מתוך הרשימה ניתן להפעיל מחדש רק קישורי HTTP(S). כדי לנסות שוב, פתחו את העמוד או את ההורדות.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "מוריד…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ההורדה הופסקה",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ההורדה לא הושלמה",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "היום",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "אתמול",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "מוקדם יותר השבוע",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "מוקדם יותר",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "אין כרגע קבצים",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "היסטוריית הורדות",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "הורדות",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "חיפוש לפי שם קובץ",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "חיפוש לפי שם קובץ…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "שם",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "גודל",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "תאריך",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "תאריך: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "סינון לפי תאריך",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "היום",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "שבוע",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "חודש",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "החודש הקודם",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "החודש הבא",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "איפוס",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "אישור",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "סוג",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "סינון לפי סוג",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "בחירת הכול",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "תמונות",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "וידאו",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "קובצי ארכיון (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "תוכניות (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "מסמכים",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "ארכיונים",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "תוכניות",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "סגירה",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ניקוי הסינון",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "שם א׳–ת׳",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "א׳–ת׳",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "ת׳–א׳",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "גודל עולה",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "עולה",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "יורד",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "סינונים",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "סרגל ההורדות",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "רשימת ההורדות",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "ההתראות מופעלות",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "ההתראות כבויות",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ההורדה הושלמה",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "נשמר: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "קובץ שהורד",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ההורדה נכשלה",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "לא ניתן להוריד: $FILE$. סיבה: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "לא ניתן להוריד: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "עיצוב: מערכת",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "עיצוב: בהיר",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "עיצוב: כהה",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "החלפת עיצוב. נוכחי: מערכת",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "החלפת עיצוב. נוכחי: בהיר",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "החלפת עיצוב. נוכחי: כהה",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "פעולות על הקובץ",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "פתיחת הקובץ: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ההורדה לא הושלמה: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ההורדה הופסקה: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "גודל לא ידוע",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "ללא שם",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "פתחו את התיקייה של הקובץ. כדי לפתוח קבצים ישירות, הרשו להרחבה גישה.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "ההרחבה זקוקה להרשאה «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "לא ניתן היה לפתוח את הקובץ; התיקייה נפתחה במנהל הקבצים.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "הסרה מהרשימה",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "מחיקת הקובץ",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "זמן לא ידוע",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "זה עתה",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "לא ניתן להציג את הקובץ במנהל הקבצים.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ההורדה הופסקה, לא ניתן לפתוח את הקובץ.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "שגיאת קובץ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "הגישה נדחתה",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "אין מספיק מקום בכונן",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "שם הקובץ ארוך מדי",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "הקובץ גדול מדי",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "התגלה וירוס",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "שגיאת קובץ זמנית",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "הקובץ חסום",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "בדיקת האבטחה נכשלה",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "הקובץ קצר מדי",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "הסכום הבודק אינו תואם",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "הקובץ זהה למקור",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "שגיאת רשת",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "פג הזמן הקצוב של הרשת",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "הרשת מנותקת",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "לא ניתן להגיע לשרת",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "בקשת רשת לא תקינה",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "הדפדפן קרס",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "בוטל",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "הדפדפן נסגר",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "שגיאת שרת",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "השרת אינו תומך בחידוש",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "תוכן לא תקין",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "ללא הרשאה",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "שגיאת תעודה",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "הגישה אסורה",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "לא ניתן להגיע לשרת",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "גודל הקובץ אינו תואם",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "הפניה חוצת מקורות",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "שגיאה לא ידועה",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "אין מספיק זיכרון",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "הורד",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "שגיאה",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "סגירת ההתראה",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 הכירו את Download Manager — תוסף עוצמתי המשמש כמנהל הורדות והיסטוריה. הוא נבנה במטרה להחליף את מערכת ההורדות המובנית של Chrome ולהעניק לכם שליטה מלאה בכל מסמך שאתם מורידים. נועד למשתמשים בעלי תהליכי הורדה רבים ופעילים\n\n🚀 מדוע לבחור ב‑Download Manager?\nמדובר בהרבה יותר ממנהל הורדות חינמי גרידא. זהו כלי חכם לארגון ולמעקב אחר ההורדות, המסוגל להפוך רשימות העברה מבולגנות למערכת מסודרת וניתנת לחיפוש בעלת אפשרויות בקרה מתקדמות.\nבשונה מהיסטוריית ההורדות הרגילה של Chrome, התוסף מעניק לכם בהירות, מהירות וגישה מלאה לקבצים שלכם במקום אחד.\n\n🔑 יכולות מרכזיות:\n1️⃣ חיפוש מיידי בכל היסטוריית ההעברות\n2️⃣ סינון לפי סוג (וידאו, מסמך, תמונה, ארכיון)\n3️⃣ מיון לפי גודל, שם או תאריך הורדה\n4️⃣ קיבוץ למקטעים (היום, אתמול, השבוע, קודם לכן)\n5️⃣ פתיחת המיקום ישירות בסייר הקבצים של המערכת\n6️⃣ מחיקה מיידית\n\n📂 מארגן הורדות חכם\n➤ תצוגת ציר זמן ברורה של כל ההורדות\n➤ גישה מהירה לכל מסמך תוך שניות\n➤ מבנה מסודר במקום רשימת ההורדות הסטנדרטית של Chrome\n\n🧠 מנהל העברות חכם\n➤ קיבוץ אוטומטי של ההורדות לפי תקופות זמן\n➤ ממשק נקי עם קטגוריות קבצים מסודרות בבירור\n➤ מצמצם את העומס שמייצרות ההורדות הרגילות של Chrome\n\n🗂️ שליטה מלאה בקבצים\nהסירו קבצים מהמחשב שלכם בִּן רגע\nפתחו את המיקום בלחיצה אחת\nנהלו את ההעברות מבלי לצאת מהדפדפן\n\n⚡ שיפור הפרודוקטיביות\n➤ חוויית לוח הורדות קלה ונעימה\n➤ זרימת עבודה מיטבית לטיפול היומיומי בקבצים\n➤ מערכת מסודרת ויעילה לארגון ההעברות\n➤ חלופה משובחת להורדות הבסיסיות של Chrome\n\n💡 מתאים במיוחד למשתמשים הזקוקים ל‑:\nכלי אמין לטיפול בהורדות\nשליטה מתקדמת על מנהל היסטוריית ההורדות\nמנהל קבצים מלא ופונקציונלי לקבצים שהורדו\nמערכת חכמה לארגון ההעברות\n\n🎯 Download Manager הופך את ההורדות הרגילות של Chrome למנהל מובנה של קבצים והיסטוריית הורדות. הוא מעניק לכם חיפוש מהיר, שליטה מלאה וזרימת עבודה מסודרת — הכול בתוסף אחד.\n\n🌙 מצב כהה (Dark Mode) זמין בתוסף לחוויית גלישה נוחה יותר. תוכלו לבחור לעקוב אוטומטית אחר ערכת הנושא של המערכת, כך שהממשק יתחלף בין מצב בהיר למצב כהה בהתאם להגדרות המכשיר, או להפעיל את המצב הכהה ידנית בכל עת. כך תיהנו משליטה מלאה במראה ותפחיתו את העומס על העיניים, במיוחד במהלך שעות עבודה ממושכות מול המחשב.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Downloadbeheer",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Gebruik Downloadbeheer om overdrachten te ordenen, bestanden snel te doorzoeken, resultaten te filteren en je downloadgeschiedenis overzichtelijk en eenvoudig te beheren.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Download pauzeren",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Download hervatten",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Download opnieuw proberen",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Weergeven in Verkenner",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Geen adres om opnieuw te downloaden.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Alleen HTTP(S)-koppelingen kunnen vanuit de lijst opnieuw worden gestart. Gebruik de pagina of Downloads om dit item opnieuw te proberen.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Bezig met downloaden…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Download onderbroken",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Download niet voltooid",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Vandaag",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Gisteren",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Eerder deze week",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Eerder",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Er zijn momenteel geen bestanden",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Downloadgeschiedenis",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Downloads",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Zoeken op bestandsnaam",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Zoeken op bestandsnaam…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Naam",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Grootte",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Datum",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Datum: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Datumfilter",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Vandaag",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Week",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Maand",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Vorige maand",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Volgende maand",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Resetten",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Type",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Typefilter",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Alles selecteren",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Afbeeldingen",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Archieven (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programma’s (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Documenten",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Archieven",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programma’s",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Sluiten",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Filter wissen",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Naam A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Grootte opl.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "opl.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "afl.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filters",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Downloadwerkbalk",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Downloadlijst",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Meldingen staan aan",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Meldingen staan uit",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Download voltooid",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Opgeslagen: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Gedownload bestand",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Download mislukt",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Kan niet downloaden: $FILE$. Reden: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Kan niet downloaden: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Thema: systeem",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Thema: licht",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Thema: donker",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Thema wisselen. Huidig: systeem",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Thema wisselen. Huidig: licht",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Thema wisselen. Huidig: donker",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Bestandsacties",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Bestand openen: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Download niet voltooid: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Download onderbroken: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Onbekende grootte",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Naamloos",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Open de map met het bestand. Sta toegang toe om bestanden direct te openen.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "De extensie heeft de rechten ‘downloads.open’ nodig.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Bestand kon niet worden geopend; de map is geopend in de bestandsbeheerder.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Uit de lijst verwijderen",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Bestand verwijderen",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Tijd onbekend",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "zojuist",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Bestand kan niet in de bestandsbeheerder worden weergegeven.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Download onderbroken, bestand kan niet worden geopend.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Bestandsfout",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Toegang geweigerd",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Onvoldoende schijfruimte",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Bestandsnaam te lang",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Bestand te groot",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus gedetecteerd",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Tijdelijke bestandsfout",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Bestand geblokkeerd",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Beveiligingscontrole mislukt",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Bestand te kort",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Controlesom komt niet overeen",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Bestand gelijk aan bron",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Netwerkfout",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Netwerktime-out",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Netwerk verbroken",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Server niet bereikbaar",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Ongeldige netwerkaanvraag",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Browser is vastgelopen",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Geannuleerd",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Browser afgesloten",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Serverfout",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Server ondersteunt hervatten niet",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Ongeldige inhoud",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Niet geautoriseerd",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Certificaatfout",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Toegang verboden",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Server niet bereikbaar",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Bestandsgrootte komt niet overeen",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Cross-origin-omleiding",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Onbekende fout",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Onvoldoende geheugen",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Gedownload",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Fout",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Melding sluiten",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Maak kennis met Download Manager — een krachtige extensie die fungeert als beheerder van uw overdrachten en downloadgeschiedenis. Ze is ontworpen om het standaard downloadsysteem van Chrome te vervangen en u volledige controle te geven over elk document dat u downloadt. Gemaakt voor gebruikers met omvangrijke en actieve downloadstromen\n\n🚀 Waarom kiezen voor Download Manager?\nDit is veel meer dan zomaar een gratis downloadmanager. Het is een slim hulpmiddel voor het organiseren en bijhouden van downloads dat rommelige overdrachtslijsten omtovert tot een gestructureerd, doorzoekbaar systeem met geavanceerde bedieningsmogelijkheden.\nIn tegenstelling tot de standaard downloadgeschiedenis van Chrome biedt deze extensie u helderheid, snelheid en volledige toegang tot uw bestanden op één centrale plek.\n\n🔑 Belangrijkste functies:\n1️⃣ Direct zoeken in de volledige overdrachtsgeschiedenis\n2️⃣ Filteren op type (video, document, afbeelding, archief)\n3️⃣ Sorteren op grootte, naam of downloaddatum\n4️⃣ Groeperen in secties (Vandaag, Gisteren, Deze week, Eerder)\n5️⃣ De locatie rechtstreeks openen in de systeemverkenner\n6️⃣ Onmiddellijke verwijdering\n\n📂 Slimme downloadorganizer\n➤ Een overzichtelijke chronologische weergave van al uw downloads\n➤ Snelle toegang tot elk document binnen enkele seconden\n➤ Een geordende structuur in plaats van de standaard downloadlijst van Chrome\n\n🧠 Intelligente overdrachtbeheerder\n➤ Automatische groepering van downloads op tijdstip\n➤ Een opgeruimde interface met overzichtelijk geordende bestandscategorieën\n➤ Vermindert de rommel van de standaard downloads van Chrome\n\n🗂️ Volledige controle over uw bestanden\nVerwijder bestanden direct van uw computer\nOpen de locatie met één muisklik\nBeheer uw overdrachten zonder de browser te verlaten\n\n⚡ Meer productiviteit\n➤ Een licht en soepel downloaddashboard\n➤ Een verbeterde werkstroom voor het dagelijks beheren van bestanden\n➤ Een helder en efficiënt systeem voor het ordenen van overdrachten\n➤ Een beter alternatief voor de eenvoudige Chrome-downloads\n\n💡 Ideaal voor gebruikers die behoefte hebben aan:\nEen betrouwbaar hulpmiddel voor downloadbeheer\nGeavanceerde controle over de downloadgeschiedenis\nVolledige functionaliteit van een downloadbestandenbeheerder\nEen slim systeem voor het organiseren van overdrachten\n\n🎯 Download Manager vormt de gewone Chrome-downloads om tot een gestructureerde beheerder van downloadbestanden en geschiedenis. Hij biedt u snelle zoekmogelijkheden, volledige controle en een georganiseerde werkstroom in één enkele extensie.\n\n🌙 De donkere modus (Dark Mode) is beschikbaar in de extensie voor een aangenamere surfbeleving. U kunt ervoor kiezen om automatisch het thema van uw systeem te volgen, zodat de interface afhankelijk van uw apparaatinstellingen wisselt tussen lichte en donkere modus, of het donkere thema op elk gewenst moment handmatig inschakelen. Zo behoudt u volledige controle over het uiterlijk en vermindert u de vermoeidheid van uw ogen, met name tijdens lange werksessies achter de computer.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

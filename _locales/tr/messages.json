@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "İndirme Yöneticisi",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Aktarımları düzenlemek, dosyaları hızla aramak, sonuçları filtrelemek ve indirme geçmişinizi temiz ve yönetimi kolay tutmak için İndirme Yöneticisi’ni kullanın.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "İndirmeyi duraklat",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "İndirmeyi sürdür",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "İndirmeyi yeniden dene",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Dosya Gezgini’nde göster",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Yeniden indirmek için adres yok.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Listeden yalnızca HTTP(S) bağlantıları yeniden başlatılabilir. Bu öğeyi yeniden denemek için sayfayı veya İndirilenleri kullanın.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "İndiriliyor…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "İndirme kesildi",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "İndirme tamamlanmadı",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Bugün",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Dün",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Bu hafta daha önce",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Daha önce",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Şu anda hiçbir dosya yok",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "İndirme Geçmişi",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "İndirilenler",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Dosya adına göre ara",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Dosya adına göre ara…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Ad",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Boyut",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Tarih",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Tarih: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Tarih filtresi",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Bugün",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Hafta",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Ay",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Önceki ay",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Sonraki ay",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Sıfırla",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "Tamam",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Tür",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Tür filtresi",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Tümünü seç",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Görseller",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arşivler (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programlar (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Belgeler",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arşivler",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programlar",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Kapat",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Filtreyi kaldır",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Ad A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Boyut artan",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "artan",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "azalan",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtreler",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "İndirme çubuğu",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "İndirme listesi",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Bildirimler açık",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Bildirimler kapalı",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "İndirme tamamlandı",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Kaydedildi: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "İndirilen dosya",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "İndirme başarısız",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "İndirilemedi: $FILE$. Neden: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "İndirilemedi: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: sistem",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: açık",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: koyu",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Temayı değiştir. Şu anki: sistem",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Temayı değiştir. Şu anki: açık",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Temayı değiştir. Şu anki: koyu",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Dosya işlemleri",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Dosyayı aç: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "İndirme tamamlanmadı: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "İndirme kesildi: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Boyut bilinmiyor",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Başlıksız",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Dosyanın klasörünü açın. Dosyaları doğrudan açmak için uzantıya erişim verin.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Uzantı, “downloads.open” iznine ihtiyaç duyuyor.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Dosya açılamadı; klasör dosya yöneticisinde açıldı.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Listeden kaldır",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Dosyayı sil",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Zaman bilinmiyor",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "az önce",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Dosya, dosya yöneticisinde gösterilemedi.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "İndirme kesildi, dosya açılamıyor.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Dosya hatası",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Erişim reddedildi",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Yetersiz disk alanı",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Dosya adı çok uzun",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Dosya çok büyük",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virüs algılandı",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Geçici dosya hatası",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Dosya engellendi",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Güvenlik denetimi başarısız",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Dosya çok kısa",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Sağlama toplamı uyuşmuyor",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Dosya kaynakla aynı",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Ağ hatası",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Ağ zaman aşımı",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Ağ bağlantısı kesildi",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Sunucuya ulaşılamıyor",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Geçersiz ağ isteği",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Tarayıcı çöktü",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "İptal edildi",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Tarayıcı kapatıldı",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Sunucu hatası",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Sunucu devam etmeyi desteklemiyor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Geçersiz içerik",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Yetkisiz",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifika hatası",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Erişim yasak",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Sunucuya ulaşılamıyor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Dosya boyutu uyuşmuyor",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Kaynaklar arası yönlendirme",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Bilinmeyen hata",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Bellek yetersiz",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "İndirildi",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Hata",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Bildirimi kapat",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager ile tanışın — aktarım ve geçmiş yöneticisi olarak çalışan güçlü bir uzantı. Chrome'un varsayılan indirme sistemini değiştirmek ve indirdiğiniz her belge üzerinde size tam denetim sunmak için tasarlandı. Yoğun ve aktif indirme akışlarına sahip kullanıcılar düşünülerek geliştirildi\n\n🚀 Neden Download Manager?\nBu, sıradan ve ücretsiz bir indirme yöneticisinden çok daha fazlasıdır. Karmaşık aktarım listelerini gelişmiş denetim özellikleriyle donatılmış, yapısal ve aranabilir bir sisteme dönüştüren akıllı bir indirme düzenleyici ve takip aracıdır.\nChrome'un standart indirme geçmişinin aksine bu uzantı; size tek bir yerde netlik, hız ve dosyalarınıza tam erişim imkânı sunar.\n\n🔑 Temel özellikler:\n1️⃣ Tüm aktarım geçmişinde anlık arama\n2️⃣ Türe göre filtreleme (video, belge, görüntü, arşiv)\n3️⃣ Boyut, ad veya indirme tarihine göre sıralama\n4️⃣ Bölümler hâlinde gruplama (Bugün, Dün, Bu hafta, Daha önce)\n5️⃣ Konumu doğrudan sistem dosya gezgininde açma\n6️⃣ Anında silme\n\n📂 Akıllı indirme düzenleyici\n➤ Tüm indirmelerin sade ve kronolojik görünümü\n➤ Herhangi bir belgeye saniyeler içinde hızlı erişim\n➤ Chrome'un varsayılan indirme listesi yerine düzenli bir yapı\n\n🧠 Akıllı aktarım yöneticisi\n➤ İndirmelerin zamana göre otomatik gruplanması\n➤ Net biçimde sınıflandırılmış dosya kategorileriyle sade bir arayüz\n➤ Chrome'un varsayılan indirmelerinden kaynaklanan dağınıklığı azaltır\n\n🗂️ Tam dosya kontrolü\nDosyaları bilgisayarınızdan anında silin\nKonumu tek tıklamayla açın\nTarayıcıdan ayrılmadan aktarımları yönetin\n\n⚡ Verimlilikte artış\n➤ Hafif ve akıcı bir indirme paneli deneyimi\n➤ Günlük dosya yönetimi için iyileştirilmiş bir iş akışı\n➤ Temiz ve verimli bir aktarım düzenleme sistemi\n➤ Chrome'un sade indirmelerine kıyasla daha iyi bir alternatif\n\n💡 Şu ihtiyaçları olan kullanıcılar için ideal:\nGüvenilir bir indirme yönetim aracı\nİndirme geçmişi yöneticisi üzerinde gelişmiş denetim\nİndirilen dosyalar için eksiksiz dosya yöneticisi işlevselliği\nAkıllı bir aktarım düzenleme sistemi\n\n🎯 Download Manager, Chrome'un olağan indirmelerini yapısal bir dosya ve indirme geçmişi yöneticisine dönüştürür. Tek bir uzantı içinde size hızlı arama, tam denetim ve düzenli bir iş akışı sunar.\n\n🌙 Daha rahat bir tarama deneyimi için uzantıda koyu mod (Dark Mode) bulunmaktadır. Arayüzün cihaz ayarlarınıza göre aydınlık ve karanlık mod arasında otomatik geçiş yapması için sistem temasını otomatik takip etmeyi seçebilir ya da koyu temayı dilediğiniz zaman elle etkinleştirebilirsiniz. Böylece görünümün tüm denetimi sizde kalır ve özellikle bilgisayar başında uzun saatler geçirilen çalışmalarda göz yorgunluğunu azaltırsınız.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

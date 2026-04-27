@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Nedlastingsbehandler",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Bruk Nedlastingsbehandleren til å organisere overføringer, søke raskt i filer, filtrere resultater og holde nedlastingshistorikken ryddig og enkel å administrere.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Sett nedlastingen på pause",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Gjenoppta nedlastingen",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Prøv å laste ned igjen",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Vis i Filutforsker",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Ingen adresse å laste ned igjen.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Bare HTTP(S)-lenker kan startes på nytt fra listen. Bruk siden eller Nedlastinger for å prøve på nytt.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Laster ned …",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Nedlasting avbrutt",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Nedlasting ikke fullført",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "I dag",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "I går",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Tidligere denne uken",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Tidligere",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Det er ingen filer akkurat nå",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Nedlastingshistorikk",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Nedlastinger",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Søk etter filnavn",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Søk etter filnavn …",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Navn",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Størrelse",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Dato",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Dato: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Datofilter",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "I dag",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Uke",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Måned",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Forrige måned",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Neste måned",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Tilbakestill",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Type",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Typefilter",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Velg alle",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Bilder",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arkiver (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Programmer (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumenter",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arkiver",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Programmer",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Lukk",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Fjern filter",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Navn A–Å",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Å",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Å–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Størrelse stig.",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "stig.",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "synk.",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Filtre",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Nedlastingslinje",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Nedlastingsliste",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Varsler er på",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Varsler er av",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Nedlasting fullført",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Lagret: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Nedlastet fil",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Nedlasting mislyktes",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Kunne ikke laste ned: $FILE$. Årsak: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Kunne ikke laste ned: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: system",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: lyst",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: mørkt",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Bytt tema. Gjeldende: system",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Bytt tema. Gjeldende: lyst",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Bytt tema. Gjeldende: mørkt",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Filhandlinger",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Åpne fil: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Nedlasting ikke fullført: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Nedlasting avbrutt: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Ukjent størrelse",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Uten navn",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Åpne mappen til filen. For å åpne filer direkte, gi utvidelsen tilgang.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Utvidelsen trenger tillatelsen «downloads.open».",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Kunne ikke åpne filen; mappen ble åpnet i filbehandleren.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Fjern fra listen",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Slett filen",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Ukjent tid",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "akkurat nå",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Kunne ikke vise filen i filbehandleren.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Nedlasting avbrutt — filen kan ikke åpnes.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Filfeil",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Tilgang nektet",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Ikke nok diskplass",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Filnavnet er for langt",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Filen er for stor",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus oppdaget",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Midlertidig filfeil",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Fil blokkert",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Sikkerhetskontroll mislyktes",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Filen er for kort",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Sjekksum stemmer ikke",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Filen er lik kilden",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Nettverksfeil",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Tidsavbrudd for nettverket",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Nettverket er frakoblet",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Serveren er ikke tilgjengelig",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Ugyldig nettverksforespørsel",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Nettleseren krasjet",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Avbrutt",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Nettleseren er lukket",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Serverfeil",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Serveren støtter ikke gjenopptaking",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Ugyldig innhold",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Ikke autorisert",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Sertifikatfeil",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Tilgang forbudt",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Serveren er ikke tilgjengelig",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Filstørrelsen stemmer ikke",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Omadressering mellom opprinnelser",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Ukjent feil",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Ikke nok minne",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Nedlastet",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Feil",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Lukk varsel",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Møt Download Manager — en kraftfull utvidelse som fungerer som administrator for overføringer og historikk. Den er utformet for å erstatte Chromes standard nedlastingssystem og gi deg full kontroll over hvert dokument du laster ned. Skapt for brukere med omfattende og aktive nedlastingsstrømmer\n\n🚀 Hvorfor velge Download Manager?\nDette er langt mer enn bare en gratis nedlastingsbehandler. Det er et smart verktøy for å organisere og følge med på nedlastinger, som forvandler rotete overføringslister til et oversiktlig og søkbart system med avanserte kontrollfunksjoner.\nI motsetning til Chromes standard nedlastingshistorikk gir denne utvidelsen deg klarhet, hurtighet og full tilgang til filene dine på ett og samme sted.\n\n🔑 Hovedfunksjoner:\n1️⃣ Umiddelbart søk i hele overføringshistorikken\n2️⃣ Filtrering etter type (video, dokument, bilde, arkiv)\n3️⃣ Sortering etter størrelse, navn eller nedlastingsdato\n4️⃣ Gruppering i seksjoner (I dag, I går, Denne uken, Tidligere)\n5️⃣ Åpne plasseringen direkte i systemets utforsker\n6️⃣ Umiddelbar sletting\n\n📂 Smart nedlastingsorganiserer\n➤ En oversiktlig kronologisk visning av alle nedlastinger\n➤ Rask tilgang til ethvert dokument i løpet av sekunder\n➤ Velordnet struktur i stedet for Chromes standardliste over nedlastinger\n\n🧠 Intelligent overføringsbehandler\n➤ Automatisk gruppering av nedlastinger etter tidsperiode\n➤ Et rent grensesnitt med tydelig inndelte filkategorier\n➤ Reduserer rotet som preger Chromes standardnedlastinger\n\n🗂️ Full kontroll over filene\nFjern filer fra datamaskinen på et øyeblikk\nÅpne plasseringen med ett klikk\nAdministrer overføringer uten å forlate nettleseren\n\n⚡ Økt produktivitet\n➤ En lett og elegant opplevelse med nedlastingspanelet\n➤ Forbedret arbeidsflyt for daglig filhåndtering\n➤ Et oversiktlig og effektivt system for organisering av overføringer\n➤ Et bedre alternativ til Chromes enkle nedlastinger\n\n💡 Perfekt for brukere som trenger:\nEt pålitelig verktøy for å håndtere nedlastinger\nAvansert kontroll over administratoren av nedlastingshistorikk\nFull funksjonalitet for en filbehandler for nedlastinger\nEt smart system for organisering av overføringer\n\n🎯 Download Manager forvandler Chromes vanlige nedlastinger til en strukturert filbehandler og historikkadministrator. Den gir deg raskt søk, full kontroll og en organisert arbeidsflyt i én og samme utvidelse.\n\n🌙 Mørk modus (Dark Mode) er tilgjengelig i utvidelsen for en mer behagelig nettleseropplevelse. Du kan velge å automatisk følge systemets tema slik at grensesnittet veksler mellom lys og mørk modus etter enhetens innstillinger, eller aktivere det mørke temaet manuelt når som helst. Slik har du full kontroll over utseendet og reduserer belastningen på øynene, særlig under lange økter foran datamaskinen.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

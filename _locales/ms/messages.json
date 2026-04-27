@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "Pengurus Muat Turun",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "Gunakan Pengurus Muat Turun untuk menyusun pemindahan, mencari fail dengan pantas, menapis hasil serta mengekalkan sejarah muat turun anda kemas dan mudah diurus.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "Jeda muat turun",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "Sambung muat turun",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "Cuba muat turun semula",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "Tunjukkan dalam File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "Tiada alamat untuk muat turun semula.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "Daripada senarai hanya pautan HTTP(S) boleh dimulakan semula. Gunakan halaman atau Muat Turun untuk mencuba item ini semula.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "Memuat turun…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "Muat turun terhenti",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "Muat turun belum lengkap",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "Hari ini",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "Semalam",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "Lebih awal minggu ini",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "Lebih awal",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "Tiada fail buat masa ini",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "Sejarah muat turun",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "Muat Turun",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "Cari mengikut nama fail",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "Cari mengikut nama fail…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "Nama",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "Saiz",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "Tarikh",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "Tarikh: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "Penapis tarikh",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "Hari ini",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "Minggu",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "Bulan",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "Bulan sebelumnya",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "Bulan seterusnya",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "Set semula",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "OK",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "Jenis",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "Penapis jenis",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "Pilih semua",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "Imej",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "Video",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "Arkib (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "Program (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "Dokumen",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "Arkib",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "Program",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "Tutup",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "Buang penapis",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "Nama A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "Saiz naik",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "naik",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "turun",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "Penapis",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "Bar alat muat turun",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "Senarai muat turun",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "Pemberitahuan dihidupkan",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "Pemberitahuan dimatikan",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "Muat turun selesai",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "Disimpan: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "Fail yang dimuat turun",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "Muat turun gagal",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "Tidak dapat muat turun: $FILE$. Sebab: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "Tidak dapat muat turun: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "Tema: sistem",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "Tema: cerah",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "Tema: gelap",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "Tukar tema. Semasa: sistem",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "Tukar tema. Semasa: cerah",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "Tukar tema. Semasa: gelap",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "Tindakan fail",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "Buka fail: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "Muat turun belum lengkap: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "Muat turun terhenti: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "Saiz tidak diketahui",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "Tanpa tajuk",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "Buka folder fail. Untuk membuka fail secara langsung, benarkan akses sambungan.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "Sambungan memerlukan kebenaran “downloads.open”.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "Fail tidak dapat dibuka; folder dibuka dalam pengurus fail.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "Keluarkan daripada senarai",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "Padamkan fail",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "Masa tidak diketahui",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "sebentar tadi",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "Fail tidak dapat ditunjukkan dalam pengurus fail.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "Muat turun terhenti, fail tidak dapat dibuka.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "Ralat fail",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "Akses ditolak",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "Ruang cakera tidak mencukupi",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "Nama fail terlalu panjang",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "Fail terlalu besar",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "Virus dikesan",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "Ralat fail sementara",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "Fail disekat",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "Pemeriksaan keselamatan gagal",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "Fail terlalu pendek",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "Checksum tidak sepadan",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "Fail sama dengan sumber",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "Ralat rangkaian",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "Masa tamat rangkaian",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "Rangkaian diputuskan",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "Pelayan tidak dapat dihubungi",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "Permintaan rangkaian tidak sah",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "Pelayar ranap",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "Dibatalkan",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "Pelayar ditutup",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "Ralat pelayan",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "Pelayan tidak menyokong sambung semula",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "Kandungan tidak sah",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "Tidak dibenarkan",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "Ralat sijil",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "Akses dilarang",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "Pelayan tidak dapat dihubungi",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "Saiz fail tidak sepadan",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "Ubah hala merentas asal",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "Ralat tidak diketahui",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "Kehabisan ingatan",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "Dimuat turun",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "Ralat",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "Tutup pemberitahuan",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Temui Download Manager — sebuah sambungan yang berkuasa serta berperanan sebagai pengurus pemindahan dan sejarah muat turun. Ia direka untuk menggantikan sistem muat turun lalai Chrome dan memberi anda kawalan penuh ke atas setiap dokumen yang dimuat turun. Dibina khusus untuk pengguna yang mempunyai aliran muat turun yang besar dan aktif\n\n🚀 Mengapa memilih Download Manager?\nIni lebih daripada sekadar pengurus muat turun percuma. Ia merupakan alat pintar untuk menyusun dan menjejaki muat turun, yang mampu mengubah senarai pemindahan yang tidak terurus menjadi satu sistem yang tersusun, mudah dicari serta dilengkapi ciri kawalan termaju.\nBerbeza dengan sejarah muat turun lalai Chrome, sambungan ini menawarkan kejelasan, kepantasan dan akses penuh kepada fail anda di satu tempat.\n\n🔑 Ciri-ciri utama:\n1️⃣ Carian segera dalam keseluruhan sejarah pemindahan\n2️⃣ Penapisan mengikut jenis (video, dokumen, imej, arkib)\n3️⃣ Susunan mengikut saiz, nama atau tarikh muat turun\n4️⃣ Pengelompokan ke dalam bahagian (Hari ini, Semalam, Minggu ini, Sebelumnya)\n5️⃣ Membuka lokasi terus dalam penjelajah fail sistem\n6️⃣ Pemadaman segera\n\n📂 Penyusun muat turun yang pintar\n➤ Paparan kronologi yang kemas untuk semua muat turun\n➤ Akses pantas ke mana-mana dokumen dalam beberapa saat\n➤ Struktur tersusun sebagai pengganti senarai muat turun lalai Chrome\n\n🧠 Pengurus pemindahan yang bijak\n➤ Pengelompokan automatik bagi muat turun mengikut tempoh masa\n➤ Antara muka kemas dengan kategori fail yang tersusun jelas\n➤ Mengurangkan keadaan berselerak akibat muat turun lalai Chrome\n\n🗂️ Kawalan penuh ke atas fail\nPadam fail daripada komputer anda dalam sekelip mata\nBuka lokasi fail dengan satu klik sahaja\nUruskan pemindahan tanpa perlu keluar dari pelayar\n\n⚡ Tingkatkan produktiviti\n➤ Pengalaman papan pemuka muat turun yang ringan\n➤ Aliran kerja yang lebih baik untuk pengurusan fail harian\n➤ Sistem penyusunan pemindahan yang kemas dan cekap\n➤ Alternatif yang lebih baik berbanding muat turun asas Chrome\n\n💡 Sesuai sekali untuk pengguna yang memerlukan:\nAlat pengendalian muat turun yang boleh dipercayai\nKawalan terperinci ke atas pengurus sejarah muat turun\nFungsi penuh sebuah pengurus fail muat turun\nSistem pintar untuk menyusun pemindahan\n\n🎯 Download Manager menjelmakan muat turun biasa Chrome menjadi pengurus fail dan sejarah muat turun yang tersusun. Ia memberi anda carian pantas, kawalan menyeluruh dan aliran kerja yang teratur dalam satu sambungan sahaja.\n\n🌙 Mod Gelap (Dark Mode) disediakan di dalam sambungan untuk pengalaman pelayaran yang lebih selesa. Anda boleh memilih supaya antara muka mengikut tema sistem secara automatik — bertukar antara mod cerah dan mod gelap mengikut tetapan peranti — atau menghidupkan tema gelap secara manual pada bila-bila masa. Dengan ini, penampilan sepenuhnya berada di tangan anda dan dapat mengurangkan keletihan mata, terutamanya semasa bekerja lama di hadapan komputer.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Download Manager</title>
+    <link rel="icon" type="image/png" href="../assets/Frame 11.png" />
+    <link rel="stylesheet" href="welcome.css" />
+  </head>
+  <body>
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <div class="top-tools">
+    <button
+      type="button"
+      class="theme-toggle"
+      id="themeToggleBtn"
+      aria-label="Switch appearance"
+      title="Switch appearance"
+    >
+      <svg class="theme-toggle__icon theme-toggle__icon--system" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v9a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 14.25V5.25zM9 21h6M12 16.5V21"
+        />
+      </svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5.64 5.64 4.22 4.22M19.78 19.78l-1.42-1.42M5.64 18.36l-1.42 1.42M19.78 4.22l-1.42 1.42"
+        />
+        <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+      </svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"
+        />
+      </svg>
+    </button>
+
+    <div class="lang-switch" id="langSwitch">
+      <button
+        type="button"
+        class="lang-switch__btn"
+        id="langSwitchBtn"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-label="Change language"
+      >
+        <svg class="lang-switch__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 0c2.5 3 2.5 15 0 18m0-18c-2.5 3-2.5 15 0 18M3.3 9h17.4M3.3 15h17.4"
+          />
+        </svg>
+        <span class="lang-switch__label" id="langSwitchLabel">English</span>
+        <svg class="lang-switch__chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <path fill="currentColor" d="M7 10l5 5 5-5z" />
+        </svg>
+      </button>
+      <ul class="lang-switch__menu" id="langSwitchMenu" role="listbox" hidden>
+        <li role="option" data-lang="en" tabindex="0"><span class="lang-switch__code">EN</span>English (US)</li>
+        <li role="option" data-lang="ru" tabindex="0"><span class="lang-switch__code">RU</span>Русский</li>
+        <li role="option" data-lang="de" tabindex="0"><span class="lang-switch__code">DE</span>Deutsch</li>
+        <li role="option" data-lang="zh" tabindex="0"><span class="lang-switch__code">ZH</span>中文</li>
+      </ul>
+    </div>
+    </div>
+
+    <main class="wizard" aria-live="polite">
+      <!-- Step 1: Welcome -->
+      <section class="step is-active" data-step="welcome">
+        <div class="step__body step__body--center">
+          <div class="hero-logo" aria-hidden="true">
+            <img src="../assets/Frame 14.png" alt="" />
+          </div>
+          <h1 class="step__title" data-i18n="welcome_title">Welcome to Downloads History</h1>
+          <p class="step__subtitle" data-i18n="welcome_subtitle">
+            A cleaner, faster way to track everything you download — right from your toolbar.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="feature-list__dot"></span>
+              <span data-i18n="welcome_feature_1">Instant preview of your recent downloads</span>
+            </li>
+            <li>
+              <span class="feature-list__dot"></span>
+              <span data-i18n="welcome_feature_2">Timely notifications for every download</span>
+            </li>
+            <li>
+              <span class="feature-list__dot"></span>
+              <span data-i18n="welcome_feature_3">Powerful search, smart filters and a refined dark mode</span>
+            </li>
+            <li>
+              <span class="feature-list__dot"></span>
+              <span data-i18n="welcome_feature_4">Localized into multiple languages, right out of the box</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Step 2: Popup preview + extension theme (same storage key as popup.js) -->
+      <section class="step" data-step="preview">
+        <div class="step__body">
+          <header class="step__head step__head--center">
+            <h1 class="step__title" data-i18n="preview_title">Choose the popup theme</h1>
+            <p class="step__subtitle" data-i18n="preview_subtitle">
+              The preview on the left shows the real extension popup.
+            </p>
+          </header>
+
+          <div class="preview-popup-row">
+            <div class="preview-popup-row__mock">
+              <div class="popup-preview-shell">
+                <iframe
+                  id="popupPreviewFrame"
+                  class="popup-preview-shell__iframe"
+                  src="popup-preview.html?hint=theme"
+                  title="Downloads popup preview"
+                  tabindex="-1"
+                ></iframe>
+              </div>
+            </div>
+            <div class="preview-popup-row__themes" role="radiogroup" aria-label="Extension theme">
+              <p class="preview-popup-row__themes-label" data-i18n="theme_title">Choose your theme</p>
+              <div class="theme-radio-stack">
+                <label class="radio-card">
+                  <input type="radio" name="theme" value="system" checked />
+                  <span class="radio-card__dot" aria-hidden="true"></span>
+                  <span class="radio-card__title" data-i18n="theme_system">System default</span>
+                  <span class="radio-card__sub" data-i18n="theme_hint_system">Follows your device</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="theme" value="light" />
+                  <span class="radio-card__dot" aria-hidden="true"></span>
+                  <span class="radio-card__title" data-i18n="theme_light">Light</span>
+                  <span class="radio-card__sub" data-i18n="theme_hint_light">Bright interface</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="theme" value="dark" />
+                  <span class="radio-card__dot" aria-hidden="true"></span>
+                  <span class="radio-card__title" data-i18n="theme_dark">Dark</span>
+                  <span class="radio-card__sub" data-i18n="theme_hint_dark">Easier in low light</span>
+                </label>
+              </div>
+              <p class="preview-popup-row__themes-sub" data-i18n="theme_subtitle">
+                You can always change it later from the popup settings
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Notifications -->
+      <section class="step" data-step="notifications">
+        <div class="step__body">
+          <header class="step__head step__head--center">
+            <h1 class="step__title" data-i18n="notif_title">Stay in the loop</h1>
+            <p class="step__subtitle" data-i18n="notif_subtitle">
+              Get a gentle heads-up the moment a download finishes. You can always turn it off from the popup.
+            </p>
+          </header>
+
+          <div class="notif-stage is-enabled" id="notifStage" aria-live="polite">
+            <div class="notif-stage__shells" id="notifStageShells" aria-hidden="true">
+              <div class="notif-shell notif-shell--success" data-pos="tl">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19l12-12-1.4-1.4z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">quarterly-summary.pdf</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_success">Downloaded</span>
+                  </div>
+                  <p class="notif-shell__meta"><span>842 KB</span> · <span data-i18n="notif_demo_meta_now">just now</span></p>
+                </div>
+              </div>
+
+              <div class="notif-shell notif-shell--error" data-pos="tr">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2 1 21h22L12 2zm0 6 7.5 13h-15L12 8zm-1 4v4h2v-4h-2zm0 5v2h2v-2h-2z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">vacation-photo.jpg</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_error">Error</span>
+                  </div>
+                  <p class="notif-shell__meta" data-i18n="notif_demo_error_meta">Connection lost</p>
+                </div>
+              </div>
+
+              <div class="notif-shell notif-shell--success" data-pos="ml">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19l12-12-1.4-1.4z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">installer-setup.exe</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_success">Downloaded</span>
+                  </div>
+                  <p class="notif-shell__meta"><span>48.1 MB</span> · <span data-i18n="notif_demo_meta_seconds">2 seconds ago</span></p>
+                </div>
+              </div>
+
+              <div class="notif-shell notif-shell--error" data-pos="mr">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2 1 21h22L12 2zm0 6 7.5 13h-15L12 8zm-1 4v4h2v-4h-2zm0 5v2h2v-2h-2z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">notes-archive.zip</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_error">Error</span>
+                  </div>
+                  <p class="notif-shell__meta" data-i18n="notif_demo_error_meta_2">Network interrupted</p>
+                </div>
+              </div>
+
+              <div class="notif-shell notif-shell--success" data-pos="bl">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19l12-12-1.4-1.4z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">report-march.xlsx</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_success">Downloaded</span>
+                  </div>
+                  <p class="notif-shell__meta"><span>612 KB</span> · <span data-i18n="notif_demo_meta_minute">1 min ago</span></p>
+                </div>
+              </div>
+
+              <div class="notif-shell notif-shell--error" data-pos="br">
+                <div class="notif-shell__icon-wrap">
+                  <svg class="notif-shell__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2 1 21h22L12 2zm0 6 7.5 13h-15L12 8zm-1 4v4h2v-4h-2zm0 5v2h2v-2h-2z"/>
+                  </svg>
+                </div>
+                <div class="notif-shell__content">
+                  <div class="notif-shell__header">
+                    <p class="notif-shell__title">long-film-4k.mkv</p>
+                    <span class="notif-shell__status" data-i18n="notif_demo_status_error">Error</span>
+                  </div>
+                  <p class="notif-shell__meta" data-i18n="notif_demo_error_meta_3">Not enough disk space</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="notif-stage__mock">
+              <div class="popup-preview-shell">
+                <iframe
+                  id="notifPopupPreviewFrame"
+                  class="popup-preview-shell__iframe"
+                  src="popup-preview.html?hint=notifications"
+                  title="Downloads popup preview"
+                  tabindex="-1"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="notif-switch" role="radiogroup" aria-label="Notifications setting">
+            <button
+              type="button"
+              class="notif-switch__btn is-active"
+              id="notifEnableBtn"
+              data-notif="on"
+              role="radio"
+              aria-checked="true"
+            >
+              <svg class="notif-switch__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm6-6V11a6 6 0 0 0-5-5.92V4a1 1 0 1 0-2 0v1.08A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"/>
+              </svg>
+              <span data-i18n="notif_btn_enable">Enable notifications</span>
+            </button>
+            <button
+              type="button"
+              class="notif-switch__btn"
+              id="notifDisableBtn"
+              data-notif="off"
+              role="radio"
+              aria-checked="false"
+            >
+              <svg class="notif-switch__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path fill="currentColor" d="M4.4 3 3 4.4l5.3 5.3A6 6 0 0 0 6 11v5l-2 2v1h14.6l2 2 1.4-1.4L4.4 3zM18 16V11a6 6 0 0 0-9.8-4.62l9.8 9.8L18 16zM12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22z"/>
+              </svg>
+              <span data-i18n="notif_btn_disable">Disable</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 4: Filters -->
+      <section class="step" data-step="filters">
+        <div class="step__body">
+          <header class="step__head step__head--center">
+            <h1 class="step__title" data-i18n="filters_title">Shape your downloads with smart filters</h1>
+            <p class="step__subtitle" data-i18n="filters_subtitle">
+              The extension lets you manage files through a set of advanced filters — sort, narrow down by date and pick just the file types you need.
+            </p>
+          </header>
+
+          <div class="preview-popup-row">
+            <div class="preview-popup-row__mock">
+              <div class="popup-preview-shell">
+                <iframe
+                  id="filtersPopupPreviewFrame"
+                  class="popup-preview-shell__iframe"
+                  src="popup-preview.html?hint=filters"
+                  title="Downloads popup preview"
+                  tabindex="-1"
+                ></iframe>
+              </div>
+            </div>
+            <div class="preview-popup-row__filters">
+              <p class="preview-popup-row__themes-label" data-i18n="filters_list_label">Filters you can combine</p>
+              <ul class="filter-feature-list">
+                <li>
+                  <span class="filter-feature-list__dot"></span>
+                  <div class="filter-feature-list__text">
+                    <span class="filter-feature-list__title" data-i18n="filters_item_name_title">Sort by name</span>
+                    <span class="filter-feature-list__sub" data-i18n="filters_item_name_sub">Arrange files alphabetically, ascending or descending.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="filter-feature-list__dot"></span>
+                  <div class="filter-feature-list__text">
+                    <span class="filter-feature-list__title" data-i18n="filters_item_size_title">Sort by size</span>
+                    <span class="filter-feature-list__sub" data-i18n="filters_item_size_sub">Find the heaviest or the lightest files at a glance.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="filter-feature-list__dot"></span>
+                  <div class="filter-feature-list__text">
+                    <span class="filter-feature-list__title" data-i18n="filters_item_date_title">Date range</span>
+                    <span class="filter-feature-list__sub" data-i18n="filters_item_date_sub">Pick today, this week, this month or a custom interval.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="filter-feature-list__dot"></span>
+                  <div class="filter-feature-list__text">
+                    <span class="filter-feature-list__title" data-i18n="filters_item_type_title">File types</span>
+                    <span class="filter-feature-list__sub" data-i18n="filters_item_type_sub">Show only images, video, archives, programs or documents.</span>
+                  </div>
+                </li>
+              </ul>
+              <p class="preview-popup-row__themes-sub" data-i18n="filters_list_sub">
+                Active filters appear as chips at the top of the popup — remove them at any time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 5: Done -->
+      <section class="step" data-step="done">
+        <div class="step__body step__body--center">
+          <div class="done-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="64" height="64">
+              <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2" opacity=".25"/>
+              <path d="M14 24.5l7 7 14-14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h1 class="step__title" data-i18n="done_title">You’re all set!</h1>
+          <p class="step__subtitle" data-i18n="done_subtitle">
+            Pin Downloads History to your toolbar so it’s always one click away.
+          </p>
+
+          <div class="pin-hint">
+            <div class="pin-hint__step">
+              <span class="pin-hint__num">1</span>
+              <span data-i18n="done_pin_1">Click the puzzle piece in the top-right corner</span>
+            </div>
+            <div class="pin-hint__step">
+              <span class="pin-hint__num">2</span>
+              <span data-i18n="done_pin_2">Find “Download Manager”</span>
+            </div>
+            <div class="pin-hint__step">
+              <span class="pin-hint__num">3</span>
+              <span data-i18n="done_pin_3">Click the pin icon to keep it visible</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn--primary btn--lg" id="finishBtn" data-i18n="done_cta">
+            Open Downloads
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bar" role="navigation" aria-label="Wizard navigation">
+      <div class="bar__progress">
+        <span class="bar__counter"><span id="stepCurrent">1</span> / <span id="stepTotal">5</span></span>
+        <div class="bar__dots" id="barDots"></div>
+      </div>
+      <div class="bar__actions">
+        <button type="button" class="btn btn--ghost" id="backBtn" data-i18n="btn_back" hidden>Back</button>
+        <button type="button" class="btn btn--link" id="skipBtn" data-i18n="btn_skip">Skip</button>
+        <button type="button" class="btn btn--primary" id="nextBtn">
+          <span id="nextLabel" data-i18n="btn_next">Next</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+          </svg>
+        </button>
+      </div>
+    </footer>
+
+    <script src="welcome.js"></script>
+  </body>
+</html>

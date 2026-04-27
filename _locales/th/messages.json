@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ตัวจัดการการดาวน์โหลด",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "ใช้ตัวจัดการการดาวน์โหลดเพื่อจัดระเบียบการถ่ายโอน ค้นหาไฟล์ได้อย่างรวดเร็ว กรองผลลัพธ์ และรักษาประวัติการดาวน์โหลดของคุณให้เป็นระเบียบและจัดการได้ง่าย",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "หยุดการดาวน์โหลดชั่วคราว",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ดาวน์โหลดต่อ",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "ดาวน์โหลดอีกครั้ง",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "แสดงใน File Explorer",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "ไม่มีที่อยู่สำหรับดาวน์โหลดใหม่",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "จากรายการจะเริ่มต้นใหม่ได้เฉพาะลิงก์ HTTP(S) เท่านั้น ใช้เว็บเพจหรือ “การดาวน์โหลด” เพื่อลองอีกครั้ง",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "กำลังดาวน์โหลด…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "การดาวน์โหลดถูกขัดจังหวะ",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "การดาวน์โหลดไม่เสร็จสมบูรณ์",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "วันนี้",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "เมื่อวานนี้",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "ก่อนหน้านี้ในสัปดาห์นี้",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "ก่อนหน้านี้",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "ตอนนี้ยังไม่มีไฟล์",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ประวัติการดาวน์โหลด",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "การดาวน์โหลด",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ค้นหาตามชื่อไฟล์",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ค้นหาตามชื่อไฟล์…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "ชื่อ",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "ขนาด",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "วันที่",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "วันที่: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "ตัวกรองตามวันที่",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "วันนี้",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "สัปดาห์",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "เดือน",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "เดือนก่อนหน้า",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "เดือนถัดไป",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "ตั้งใหม่",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ตกลง",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "ประเภท",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "ตัวกรองตามประเภท",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "เลือกทั้งหมด",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "รูปภาพ",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "วิดีโอ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "ไฟล์บีบอัด (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "โปรแกรม (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "เอกสาร",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "ไฟล์บีบอัด",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "โปรแกรม",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "ปิด",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ล้างตัวกรอง",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "ชื่อ A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "ขนาดน้อย→มาก",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "น้อย→มาก",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "มาก→น้อย",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "ตัวกรอง",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "แถบเครื่องมือการดาวน์โหลด",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "รายการการดาวน์โหลด",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "เปิดการแจ้งเตือนอยู่",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "ปิดการแจ้งเตือนอยู่",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ดาวน์โหลดเสร็จแล้ว",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "บันทึกแล้ว: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ไฟล์ที่ดาวน์โหลด",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ดาวน์โหลดล้มเหลว",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ไม่สามารถดาวน์โหลด: $FILE$ เหตุผล: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ไม่สามารถดาวน์โหลด: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "ธีม: ตามระบบ",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "ธีม: สว่าง",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "ธีม: มืด",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "สลับธีม ปัจจุบัน: ตามระบบ",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "สลับธีม ปัจจุบัน: สว่าง",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "สลับธีม ปัจจุบัน: มืด",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "การทำงานกับไฟล์",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "เปิดไฟล์: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "การดาวน์โหลดไม่เสร็จสมบูรณ์: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "การดาวน์โหลดถูกขัดจังหวะ: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "ไม่ทราบขนาด",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "ไม่มีชื่อ",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "เปิดโฟลเดอร์ของไฟล์ เพื่อเปิดไฟล์โดยตรง ให้อนุญาตสิทธิ์ของส่วนขยาย",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "ส่วนขยายต้องการสิทธิ์ “downloads.open”",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "เปิดไฟล์ไม่ได้ จึงเปิดโฟลเดอร์ในตัวจัดการไฟล์",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "ลบออกจากรายการ",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ลบไฟล์",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "ไม่ทราบเวลา",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "เมื่อสักครู่",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ไม่สามารถแสดงไฟล์ในตัวจัดการไฟล์",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "การดาวน์โหลดถูกขัดจังหวะ จึงเปิดไฟล์ไม่ได้",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ข้อผิดพลาดของไฟล์",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "ถูกปฏิเสธการเข้าถึง",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "พื้นที่ดิสก์ไม่พอ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ชื่อไฟล์ยาวเกินไป",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ไฟล์ใหญ่เกินไป",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "ตรวจพบไวรัส",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "ข้อผิดพลาดของไฟล์ชั่วคราว",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ไฟล์ถูกบล็อก",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "การตรวจสอบความปลอดภัยล้มเหลว",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ไฟล์สั้นเกินไป",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "checksum ไม่ตรงกัน",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ไฟล์เหมือนกับต้นฉบับ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "ข้อผิดพลาดของเครือข่าย",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "เครือข่ายหมดเวลา",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "ตัดการเชื่อมต่อเครือข่าย",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "เข้าถึงเซิร์ฟเวอร์ไม่ได้",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "คำขอเครือข่ายไม่ถูกต้อง",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "เบราว์เซอร์ขัดข้อง",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "ยกเลิกแล้ว",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "เบราว์เซอร์ถูกปิด",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "ข้อผิดพลาดของเซิร์ฟเวอร์",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "เซิร์ฟเวอร์ไม่รองรับการดาวน์โหลดต่อ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "เนื้อหาไม่ถูกต้อง",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "ไม่ได้รับอนุญาต",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "ข้อผิดพลาดของใบรับรอง",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "ห้ามเข้าถึง",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "เข้าถึงเซิร์ฟเวอร์ไม่ได้",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ขนาดไฟล์ไม่ตรงกัน",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "เปลี่ยนเส้นทางข้ามต้นทาง",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "ข้อผิดพลาดที่ไม่รู้จัก",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "หน่วยความจำไม่พอ",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ดาวน์โหลดแล้ว",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "ข้อผิดพลาด",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "ปิดการแจ้งเตือน",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 ขอแนะนำ Download Manager — ส่วนขยายอันทรงพลังที่ทำหน้าที่เป็นเครื่องมือจัดการการถ่ายโอนและประวัติการดาวน์โหลด ส่วนขยายนี้ออกแบบมาเพื่อทดแทนระบบดาวน์โหลดมาตรฐานของ Chrome และมอบอำนาจในการควบคุมเอกสารทุกชิ้นที่คุณดาวน์โหลดอย่างเต็มที่ สร้างขึ้นเพื่อผู้ใช้ที่มีปริมาณและความถี่ในการดาวน์โหลดสูง\n\n🚀 เหตุใดจึงควรเลือก Download Manager\nนี่คือสิ่งที่มากกว่าโปรแกรมจัดการดาวน์โหลดฟรีทั่วไป เพราะเป็นเครื่องมือจัดระเบียบและติดตามการดาวน์โหลดอันชาญฉลาด ที่เปลี่ยนรายการถ่ายโอนอันสับสนวุ่นวายให้กลายเป็นระบบที่เป็นระเบียบ ค้นหาง่าย พร้อมคุณสมบัติควบคุมขั้นสูง\nต่างจากประวัติการดาวน์โหลดทั่วไปของ Chrome ส่วนขยายนี้มอบความชัดเจน ความรวดเร็ว และการเข้าถึงไฟล์อย่างเต็มรูปแบบในที่เดียว\n\n🔑 คุณสมบัติหลัก:\n1️⃣ ค้นหาในประวัติการถ่ายโอนทั้งหมดได้ในทันที\n2️⃣ กรองตามประเภท (วิดีโอ เอกสาร รูปภาพ ไฟล์บีบอัด)\n3️⃣ จัดเรียงตามขนาด ชื่อ หรือวันที่ดาวน์โหลด\n4️⃣ จัดกลุ่มเป็นหมวดหมู่ (วันนี้, เมื่อวาน, สัปดาห์นี้, ก่อนหน้านี้)\n5️⃣ เปิดตำแหน่งที่ตั้งของไฟล์โดยตรงในตัวจัดการไฟล์ของระบบ\n6️⃣ ลบได้ในทันที\n\n📂 ตัวจัดระเบียบการดาวน์โหลดอัจฉริยะ\n➤ มุมมองตามลำดับเวลาที่ชัดเจนสำหรับทุกไฟล์ที่ดาวน์โหลด\n➤ เข้าถึงเอกสารใด ๆ ได้ภายในไม่กี่วินาที\n➤ โครงสร้างเป็นระเบียบแทนรายการดาวน์โหลดมาตรฐานของ Chrome\n\n🧠 ตัวจัดการการถ่ายโอนอัจฉริยะ\n➤ จัดกลุ่มไฟล์ที่ดาวน์โหลดตามช่วงเวลาโดยอัตโนมัติ\n➤ อินเทอร์เฟซโปร่งโล่ง พร้อมหมวดหมู่ไฟล์ที่จัดเรียงอย่างเป็นระบบ\n➤ ลดความรกของรายการดาวน์โหลดมาตรฐานใน Chrome\n\n🗂️ ควบคุมไฟล์ได้อย่างเต็มที่\nลบไฟล์ออกจากคอมพิวเตอร์ของคุณได้ในพริบตา\nเปิดตำแหน่งที่ตั้งของไฟล์ด้วยคลิกเดียว\nจัดการการถ่ายโอนโดยไม่ต้องออกจากเบราว์เซอร์\n\n⚡ เพิ่มพูนประสิทธิภาพการทำงาน\n➤ ประสบการณ์แดชบอร์ดดาวน์โหลดที่เบาและคล่องตัว\n➤ ขั้นตอนการทำงานที่ดียิ่งขึ้นสำหรับการจัดการไฟล์ในชีวิตประจำวัน\n➤ ระบบจัดระเบียบการถ่ายโอนที่สะอาดตาและมีประสิทธิภาพ\n➤ ทางเลือกที่ดีกว่าการดาวน์โหลดแบบพื้นฐานของ Chrome\n\n💡 เหมาะอย่างยิ่งสำหรับผู้ใช้ที่ต้องการ:\nเครื่องมือจัดการดาวน์โหลดที่เชื่อถือได้\nการควบคุมตัวจัดการประวัติการดาวน์โหลดในระดับสูง\nความสามารถเต็มรูปแบบของตัวจัดการไฟล์ดาวน์โหลด\nระบบจัดระเบียบการถ่ายโอนที่ชาญฉลาด\n\n🎯 Download Manager เปลี่ยนการดาวน์โหลดทั่วไปของ Chrome ให้กลายเป็นตัวจัดการไฟล์และประวัติการดาวน์โหลดที่มีโครงสร้าง พร้อมมอบการค้นหาที่รวดเร็ว การควบคุมที่เบ็ดเสร็จ และขั้นตอนการทำงานอันเป็นระเบียบ ภายในส่วนขยายเดียว\n\n🌙 ในส่วนขยายมีโหมดมืด (Dark Mode) ให้ใช้งานเพื่อประสบการณ์การท่องเว็บที่สบายตายิ่งขึ้น คุณสามารถเลือกให้อินเทอร์เฟซติดตามธีมของระบบโดยอัตโนมัติ เพื่อให้สลับระหว่างโหมดสว่างและโหมดมืดตามการตั้งค่าของอุปกรณ์ หรือเปิดใช้งานธีมมืดเองเมื่อต้องการก็ได้ ทำให้คุณควบคุมรูปลักษณ์ได้อย่างเต็มที่และช่วยลดความล้าของดวงตา โดยเฉพาะเมื่อต้องทำงานกับคอมพิวเตอร์เป็นเวลานาน",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

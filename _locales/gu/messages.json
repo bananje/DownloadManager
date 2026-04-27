@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "ડાઉનલોડ મેનેજર",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "ટ્રાન્સફર ગોઠવવા, ફાઇલો ઝડપથી શોધવા, પરિણામો ફિલ્ટર કરવા અને તમારા ડાઉનલોડ ઇતિહાસને સ્વચ્છ તેમજ સરળતાથી વ્યવસ્થાપિત રાખવા માટે ડાઉનલોડ મેનેજરનો ઉપયોગ કરો.",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "ડાઉનલોડ થોભાવો",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "ડાઉનલોડ ચાલુ રાખો",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "ફરીથી ડાઉનલોડ કરો",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "File Explorer માં બતાવો",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "ફરીથી ડાઉનલોડ કરવા માટે કોઈ સરનામું નથી.",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "યાદીમાંથી ફક્ત HTTP(S) લિંક્સ ફરીથી શરૂ કરી શકાય છે. આ આઇટમ ફરીથી અજમાવવા માટે પેજ અથવા “ડાઉનલોડ્સ”નો ઉપયોગ કરો.",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "ડાઉનલોડ થઈ રહ્યું છે…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "ડાઉનલોડ અટક્યું",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "ડાઉનલોડ પૂર્ણ થયું નથી",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "આજે",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "ગઈ કાલે",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "આ અઠવાડિયામાં પહેલાં",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "પહેલાં",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "હમણાં કોઈ ફાઇલ નથી",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "ડાઉનલોડ ઇતિહાસ",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "ડાઉનલોડ્સ",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "ફાઇલના નામથી શોધો",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "ફાઇલના નામથી શોધો…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "નામ",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "કદ",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "તારીખ",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "તારીખ: $START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "તારીખ ફિલ્ટર",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "આજે",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "અઠવાડિયું",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "મહિનો",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "પાછલો મહિનો",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "આગલો મહિનો",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "રીસેટ",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "ઠીક",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "પ્રકાર",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "પ્રકાર ફિલ્ટર",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "બધા પસંદ કરો",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "છબીઓ",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "વિડિઓ",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "આર્કાઇવ (ZIP, RAR, 7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "પ્રોગ્રામ (EXE, MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "દસ્તાવેજ",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "આર્કાઇવ",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "પ્રોગ્રામ",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "બંધ કરો",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "ફિલ્ટર દૂર કરો",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "નામ A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "કદ ચડતું",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "ચડતું",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "ઉતરતું",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "ફિલ્ટર",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "ડાઉનલોડ ટૂલબાર",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "ડાઉનલોડ યાદી",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "સૂચનાઓ ચાલુ છે",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "સૂચનાઓ બંધ છે",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "ડાઉનલોડ પૂર્ણ",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "સાચવ્યું: $FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "ડાઉનલોડ કરેલી ફાઇલ",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "ડાઉનલોડ નિષ્ફળ",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "ડાઉનલોડ થઈ શક્યું નહીં: $FILE$. કારણ: $ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "ડાઉનલોડ થઈ શક્યું નહીં: $FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "થીમ: સિસ્ટમ",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "થીમ: આછી",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "થીમ: ઘેરી",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "થીમ બદલો. વર્તમાન: સિસ્ટમ",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "થીમ બદલો. વર્તમાન: આછી",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "થીમ બદલો. વર્તમાન: ઘેરી",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "ફાઇલ ક્રિયાઓ",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "ફાઇલ ખોલો: $FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "ડાઉનલોડ પૂર્ણ નથી: $FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "ડાઉનલોડ અટક્યું: $FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "કદ અજાણ",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "શીર્ષક વિનાની",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "ફાઇલનું ફોલ્ડર ખોલો. ફાઇલ સીધી ખોલવા માટે એક્સ્ટેન્શનને પ્રવેશની પરવાનગી આપો.",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "એક્સ્ટેન્શનને “downloads.open” પરવાનગી જોઈએ છે.",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "ફાઇલ ખોલી શકાઈ નહીં; ફાઇલ મેનેજરમાં ફોલ્ડર ખોલવામાં આવ્યું.",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "યાદીમાંથી દૂર કરો",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "ફાઇલ કાઢી નાખો",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "સમય અજાણ",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "હમણાં જ",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "ફાઇલ મેનેજરમાં ફાઇલ બતાવી શકાઈ નહીં.",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "ડાઉનલોડ અટક્યું, ફાઇલ ખોલી શકાતી નથી.",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "ફાઇલ ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "પ્રવેશ નકારાયો",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "ડિસ્કમાં પૂરતી જગ્યા નથી",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "ફાઇલનું નામ ખૂબ લાંબું",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "ફાઇલ ખૂબ મોટી",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "વાયરસ મળ્યો",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "કામચલાઉ ફાઇલ ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "ફાઇલ બ્લોક કરેલી",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "સુરક્ષા તપાસ નિષ્ફળ",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "ફાઇલ ખૂબ ટૂંકી",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "ચેકસમ મેળ ખાતી નથી",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "ફાઇલ સ્રોત જેવી જ છે",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "નેટવર્ક ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "નેટવર્ક સમય પૂરો",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "નેટવર્ક ખંડિત",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "સર્વર સુધી પહોંચી શકાતું નથી",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "અમાન્ય નેટવર્ક વિનંતી",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "બ્રાઉઝર ક્રેશ થયું",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "રદ કરાયું",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "બ્રાઉઝર બંધ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "સર્વર ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "સર્વર ફરી શરૂ કરવાને સપોર્ટ કરતું નથી",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "અમાન્ય સામગ્રી",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "અનધિકૃત",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "પ્રમાણપત્ર ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "પ્રવેશ પ્રતિબંધિત",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "સર્વર સુધી પહોંચી શકાતું નથી",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "ફાઇલનું કદ મેળ ખાતું નથી",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "ક્રોસ-ઓરિજિન રીડાયરેક્ટ",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "અજાણ ભૂલ",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "મેમરી ખતમ",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "ડાઉનલોડ થયું",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "ભૂલ",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "સૂચના બંધ કરો",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 Download Manager સાથે પરિચય મેળવો — એક શક્તિશાળી એક્સટેન્શન જે સ્થાનાંતરણ અને ઇતિહાસ-વ્યવસ્થાપક તરીકે કાર્ય કરે છે. તે Chrome ની મૂળભૂત ડાઉનલોડ પ્રણાલીને બદલવા તથા તમે ડાઉનલોડ કરો છો તેવા દરેક દસ્તાવેજ પર સંપૂર્ણ નિયંત્રણ આપવા માટે ઘડવામાં આવ્યું છે. વિશાળ અને સક્રિય ડાઉનલોડ-પ્રવાહ ધરાવતા વપરાશકર્તાઓ માટે ખાસ સર્જિત\n\n🚀 શા માટે Download Manager પસંદ કરવું?\nઆ માત્ર નિ:શુલ્ક ડાઉનલોડ વ્યવસ્થાપક કરતાં ઘણું વધુ છે. તે એક બુદ્ધિશાળી ડાઉનલોડ-ગોઠવણી અને દેખરેખનું સાધન છે, જે અવ્યવસ્થિત સ્થાનાંતરણ યાદીઓને એક સુવ્યવસ્થિત, શોધી શકાય તેવી પ્રણાલીમાં ફેરવી નાખે છે અને તેમાં ઉન્નત નિયંત્રણ સુવિધાઓનો સમાવેશ કરે છે.\nChrome ના સામાન્ય ડાઉનલોડ ઇતિહાસ કરતાં અલગ રીતે, આ એક્સટેન્શન તમને એક જ ઠેકાણે સ્પષ્ટતા, ઝડપ અને તમારી ફાઇલો સુધીની સંપૂર્ણ પહોંચ આપે છે.\n\n🔑 મુખ્ય વિશેષતાઓ:\n1️⃣ સંપૂર્ણ સ્થાનાંતરણ ઇતિહાસમાં તત્ક્ષણ શોધ\n2️⃣ પ્રકાર પ્રમાણે ગાળણ (વિડિયો, દસ્તાવેજ, ચિત્ર, સંગ્રહ)\n3️⃣ કદ, નામ અથવા ડાઉનલોડ તારીખ પ્રમાણે ક્રમબદ્ધ ગોઠવણી\n4️⃣ વિભાગવાર સમૂહીકરણ (આજે, ગઈકાલે, આ અઠવાડિયે, અગાઉ)\n5️⃣ સ્થાનને સીધું જ સિસ્ટમ ફાઇલ-એક્સ્પ્લોરરમાં ખોલવું\n6️⃣ તત્ક્ષણ કાઢી નાખવું\n\n📂 બુદ્ધિશાળી ડાઉનલોડ-ગોઠવણીકાર\n➤ બધા ડાઉનલોડનો સ્પષ્ટ સમય-આધારિત દ્રશ્ય\n➤ થોડી જ ક્ષણોમાં કોઈપણ દસ્તાવેજ સુધીનો ઝડપી પ્રવેશ\n➤ Chrome ની મૂળભૂત ડાઉનલોડ યાદીના સ્થાને સુવ્યવસ્થિત રચના\n\n🧠 બુદ્ધિશાળી સ્થાનાંતરણ વ્યવસ્થાપક\n➤ સમય મુજબ ડાઉનલોડનું સ્વયંસંચાલિત સમૂહીકરણ\n➤ સ્વચ્છ ઇન્ટરફેસ સાથે વ્યવસ્થિત રીતે ગોઠવેલા ફાઇલ-વર્ગો\n➤ Chrome ના મૂળભૂત ડાઉનલોડથી ઊભી થતી અવ્યવસ્થાને ઘટાડે છે\n\n🗂️ ફાઇલો પર સંપૂર્ણ નિયંત્રણ\nતમારા સંગણક પરથી ફાઇલો ક્ષણાર્ધમાં દૂર કરો\nએક જ ક્લિકથી ફાઇલનું સ્થાન ખોલો\nબ્રાઉઝર છોડ્યા વિના સ્થાનાંતરણોનું વ્યવસ્થાપન કરો\n\n⚡ ઉત્પાદકતામાં વૃદ્ધિ\n➤ હળવી અને સહજ ડાઉનલોડ ડેશબોર્ડ અનુભૂતિ\n➤ રોજિંદા ફાઇલ-કાર્ય માટે પરિષ્કૃત કાર્યપ્રવાહ\n➤ સ્થાનાંતરણ-ગોઠવણીની સ્વચ્છ અને કાર્યક્ષમ પ્રણાલી\n➤ Chrome ના સામાન્ય ડાઉનલોડ કરતાં વધુ ઉત્તમ વિકલ્પ\n\n💡 એવા વપરાશકર્તાઓ માટે યોગ્ય, જેમને જરૂરી છે:\nડાઉનલોડ સંભાળવા માટેનું વિશ્વસનીય સાધન\nડાઉનલોડ ઇતિહાસ વ્યવસ્થાપક પર ઉન્નત નિયંત્રણ\nડાઉનલોડ કરેલી ફાઇલ વ્યવસ્થાપકની સંપૂર્ણ કાર્યક્ષમતા\nસ્થાનાંતરણ ગોઠવવા માટેની બુદ્ધિશાળી પ્રણાલી\n\n🎯 Download Manager Chrome ના સામાન્ય ડાઉનલોડને એક સુવ્યવસ્થિત ડાઉનલોડ ફાઇલ અને ઇતિહાસ વ્યવસ્થાપકમાં પલટાવે છે. એક જ એક્સટેન્શનમાં તે તમને ઝડપી શોધ, સંપૂર્ણ નિયંત્રણ અને સુશિસ્ત કાર્યપ્રવાહ આપે છે.\n\n🌙 વધુ આરામદાયક બ્રાઉઝિંગ અનુભવ માટે એક્સટેન્શનમાં ડાર્ક મોડ (Dark Mode) ઉપલબ્ધ છે. તમે ઇચ્છો તો ઇન્ટરફેસ સ્વત: જ સિસ્ટમ થીમને અનુસરે, જેથી ઉપકરણની સેટિંગ્સ મુજબ તે પ્રકાશ અને અંધકાર મોડ વચ્ચે જાતે જ બદલાય; અથવા તમે ગમે તે સમયે જાતે ડાર્ક થીમ સક્રિય કરી શકો છો. આ રીતે દેખાવ સંપૂર્ણપણે તમારા હાથમાં રહે છે અને ખાસ કરીને કમ્પ્યુટર પર લાંબા સમય સુધી કામ કરતી વખતે આંખનો થાક ઓછો થાય છે.",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}

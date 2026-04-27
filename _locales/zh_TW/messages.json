@@ -1,0 +1,511 @@
+{
+  "extension_name": {
+    "message": "下載管理員",
+    "description": "Extension name shown in the Chrome Web Store and browser UI"
+  },
+  "extension_description": {
+    "message": "使用「下載管理員」整理傳輸、快速搜尋檔案、篩選結果，讓下載紀錄保持清爽且易於管理。",
+    "description": "Short extension description shown in the Chrome Web Store and browser UI"
+  },
+  "btn_pause_download": {
+    "message": "暫停下載",
+    "description": "Pause active download button"
+  },
+  "btn_resume_download": {
+    "message": "繼續下載",
+    "description": "Resume paused download button"
+  },
+  "menu_retry_download": {
+    "message": "重新下載",
+    "description": "Context menu item for failed downloads"
+  },
+  "menu_show_in_folder": {
+    "message": "在檔案總管中顯示",
+    "description": "Context menu item: reveal downloaded file in system file manager"
+  },
+  "retry_no_url": {
+    "message": "沒有可重新下載的位址。",
+    "description": "Shown when retry is impossible"
+  },
+  "retry_unsupported_url": {
+    "message": "列表中只能重新啟動 HTTP(S) 連結。請透過頁面或「下載」重新嘗試此項目。",
+    "description": "Retry blocked: URL is not http(s)"
+  },
+  "downloadStatusInProgress": {
+    "message": "正在下載…",
+    "description": "Tooltip: download still in progress"
+  },
+  "downloadStatusInterrupted": {
+    "message": "下載已中斷",
+    "description": "Tooltip: interrupted with no specific reason code"
+  },
+  "downloadStatusIncomplete": {
+    "message": "下載未完成",
+    "description": "Tooltip: generic incomplete state"
+  },
+  "group_today": {
+    "message": "今天",
+    "description": "Date group label: today"
+  },
+  "group_yesterday": {
+    "message": "昨天",
+    "description": "Date group label: yesterday"
+  },
+  "group_earlier_this_week": {
+    "message": "本週稍早",
+    "description": "Date group label: earlier this week"
+  },
+  "group_older": {
+    "message": "更早",
+    "description": "Date group label: older downloads"
+  },
+  "empty_state_no_files": {
+    "message": "目前沒有任何檔案",
+    "description": "Empty state text when download list has no visible files"
+  },
+  "action_default_title": {
+    "message": "下載紀錄",
+    "description": "Tooltip on the extension toolbar icon (manifest action.default_title)"
+  },
+  "popup_title": {
+    "message": "下載",
+    "description": "Popup page title"
+  },
+  "search_label": {
+    "message": "依檔案名稱搜尋",
+    "description": "Accessible label for search field"
+  },
+  "search_placeholder": {
+    "message": "依檔案名稱搜尋…",
+    "description": "Search input placeholder text"
+  },
+  "filter_sort_title": {
+    "message": "名稱",
+    "description": "Label prefix for sort by file name"
+  },
+  "filter_sort_size": {
+    "message": "大小",
+    "description": "Label prefix for sort by file size"
+  },
+  "date_filter_label": {
+    "message": "日期",
+    "description": "Date filter menu item label"
+  },
+  "date_filter_label_with_range": {
+    "message": "日期：$START$ – $END$",
+    "description": "Date filter label with selected range",
+    "placeholders": {
+      "start": {
+        "content": "$1"
+      },
+      "end": {
+        "content": "$2"
+      }
+    }
+  },
+  "date_filter_dialog_aria": {
+    "message": "日期篩選",
+    "description": "Aria label for date filter dialog"
+  },
+  "date_filter_preset_today": {
+    "message": "今天",
+    "description": "Quick preset button: today"
+  },
+  "date_filter_preset_week": {
+    "message": "一週",
+    "description": "Quick preset button: current week interval"
+  },
+  "date_filter_preset_month": {
+    "message": "一個月",
+    "description": "Quick preset button: current month interval"
+  },
+  "date_filter_prev_month": {
+    "message": "上個月",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_next_month": {
+    "message": "下個月",
+    "description": "Calendar navigation button aria-label"
+  },
+  "date_filter_reset": {
+    "message": "重設",
+    "description": "Reset date filter button"
+  },
+  "date_filter_apply": {
+    "message": "確定",
+    "description": "Apply date filter button"
+  },
+  "type_filter_label": {
+    "message": "類型",
+    "description": "Type filter menu item label"
+  },
+  "type_filter_dialog_aria": {
+    "message": "類型篩選",
+    "description": "Aria label for type filter dialog"
+  },
+  "type_filter_select_all": {
+    "message": "全選",
+    "description": "Type filter: select all checkbox label"
+  },
+  "type_filter_images": {
+    "message": "圖片",
+    "description": "Type filter category: images"
+  },
+  "type_filter_video": {
+    "message": "影片",
+    "description": "Type filter category: video"
+  },
+  "type_filter_archives": {
+    "message": "壓縮檔 (ZIP、RAR、7z)",
+    "description": "Type filter category: archives"
+  },
+  "type_filter_programs": {
+    "message": "程式 (EXE、MSI)",
+    "description": "Type filter category: programs"
+  },
+  "type_filter_documents": {
+    "message": "文件",
+    "description": "Type filter category: documents"
+  },
+  "type_filter_archives_short": {
+    "message": "壓縮檔",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_programs_short": {
+    "message": "程式",
+    "description": "Short type label for compact UI"
+  },
+  "type_filter_close": {
+    "message": "關閉",
+    "description": "Close button in type filter panel"
+  },
+  "chip_close_filter": {
+    "message": "清除篩選",
+    "description": "Aria label for active filter chip close button"
+  },
+  "name_sort_default_label": {
+    "message": "名稱 A–Z",
+    "description": "Initial text for name sort menu item before JS updates"
+  },
+  "name_sort_direction_asc": {
+    "message": "A–Z",
+    "description": "Name sort: ascending direction label in filters menu"
+  },
+  "name_sort_direction_desc": {
+    "message": "Z–A",
+    "description": "Name sort: descending direction label in filters menu"
+  },
+  "size_sort_default_label": {
+    "message": "大小遞增",
+    "description": "Initial text for size sort menu item before JS updates"
+  },
+  "size_sort_direction_asc": {
+    "message": "遞增",
+    "description": "Size sort: ascending direction label in filters menu"
+  },
+  "size_sort_direction_desc": {
+    "message": "遞減",
+    "description": "Size sort: descending direction label in filters menu"
+  },
+  "filters_toggle": {
+    "message": "篩選",
+    "description": "Tooltip and aria-label for filters menu toggle button"
+  },
+  "downloads_toolbar_aria": {
+    "message": "下載工具列",
+    "description": "Aria-label for the popup top toolbar"
+  },
+  "downloads_list_aria": {
+    "message": "下載清單",
+    "description": "Aria-label for downloads list container"
+  },
+  "notifications_enabled": {
+    "message": "通知已開啟",
+    "description": "Tooltip and aria-label when download notifications are enabled"
+  },
+  "notifications_disabled": {
+    "message": "通知已關閉",
+    "description": "Tooltip and aria-label when download notifications are disabled"
+  },
+  "download_notification_title": {
+    "message": "下載完成",
+    "description": "Browser notification title after successful download"
+  },
+  "download_notification_message": {
+    "message": "已儲存：$FILE$",
+    "description": "Browser notification text with completed file name",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_notification_default_file_name": {
+    "message": "已下載的檔案",
+    "description": "Fallback file name when browser download has no file name"
+  },
+  "download_failed_notification_title": {
+    "message": "下載失敗",
+    "description": "Browser notification title after a failed download"
+  },
+  "download_failed_notification_message": {
+    "message": "無法下載：$FILE$。原因：$ERROR$",
+    "description": "Browser notification text for a failed download with file name and reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "download_failed_notification_message_no_error": {
+    "message": "無法下載：$FILE$",
+    "description": "Browser notification text for a failed download without a reason",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "theme_toggle_title_system": {
+    "message": "佈景：跟隨系統",
+    "description": "Theme toggle tooltip for system theme"
+  },
+  "theme_toggle_title_light": {
+    "message": "佈景：淺色",
+    "description": "Theme toggle tooltip for light theme"
+  },
+  "theme_toggle_title_dark": {
+    "message": "佈景：深色",
+    "description": "Theme toggle tooltip for dark theme"
+  },
+  "theme_toggle_aria_system": {
+    "message": "切換佈景。目前：跟隨系統",
+    "description": "Theme toggle aria-label for system theme"
+  },
+  "theme_toggle_aria_light": {
+    "message": "切換佈景。目前：淺色",
+    "description": "Theme toggle aria-label for light theme"
+  },
+  "theme_toggle_aria_dark": {
+    "message": "切換佈景。目前：深色",
+    "description": "Theme toggle aria-label for dark theme"
+  },
+  "download_item_actions": {
+    "message": "檔案操作",
+    "description": "Aria-label for per-item actions menu button"
+  },
+  "download_item_open_file": {
+    "message": "開啟檔案：$FILE$",
+    "description": "Aria-label for opening a completed download",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_in_progress": {
+    "message": "下載未完成：$FILE$",
+    "description": "Aria-label for opening an in-progress download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "download_item_open_interrupted": {
+    "message": "下載已中斷：$FILE$",
+    "description": "Aria-label for opening an interrupted download row",
+    "placeholders": {
+      "file": {
+        "content": "$1"
+      }
+    }
+  },
+  "unknown_file_size": {
+    "message": "大小未知",
+    "description": "Shown when file size cannot be determined"
+  },
+  "untitled_file": {
+    "message": "未命名",
+    "description": "Fallback file name when no name can be resolved"
+  },
+  "open_hint_permission_needed": {
+    "message": "開啟檔案所在資料夾。若要直接開啟檔案，請允許擴充功能存取。",
+    "description": "Hint shown when direct file opening permission is missing"
+  },
+  "open_permission_downloads_required": {
+    "message": "此擴充功能需要「downloads.open」權限。",
+    "description": "Error hint when downloads.open permission is required"
+  },
+  "open_file_fallback_folder_opened": {
+    "message": "無法開啟檔案，已在檔案管理員中開啟該資料夾。",
+    "description": "Hint shown when opening file fails but folder opens successfully"
+  },
+  "menu_remove_from_list": {
+    "message": "從清單中移除",
+    "description": "Context menu item for removing download from history list"
+  },
+  "menu_delete_file": {
+    "message": "刪除檔案",
+    "description": "Context menu item for deleting file from disk"
+  },
+  "time_unknown": {
+    "message": "時間未知",
+    "description": "Fallback text when date/time is unavailable"
+  },
+  "time_just_now": {
+    "message": "剛剛",
+    "description": "Relative time text for very recent events"
+  },
+  "show_in_folder_failed": {
+    "message": "無法在檔案管理員中顯示此檔案。",
+    "description": "Shown when revealing a file in system file manager fails"
+  },
+  "open_interrupted_unavailable": {
+    "message": "下載已中斷，無法開啟檔案。",
+    "description": "Shown when trying to open interrupted download"
+  },
+  "dlerr_FILE_FAILED": {
+    "message": "檔案錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_ACCESS_DENIED": {
+    "message": "存取遭拒",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NO_SPACE": {
+    "message": "磁碟空間不足",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_NAME_TOO_LONG": {
+    "message": "檔案名稱過長",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_LARGE": {
+    "message": "檔案過大",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_VIRUS_INFECTED": {
+    "message": "偵測到病毒",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TRANSIENT_ERROR": {
+    "message": "暫時性檔案錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_BLOCKED": {
+    "message": "檔案已被封鎖",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SECURITY_CHECK_FAILED": {
+    "message": "安全性檢查失敗",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_TOO_SHORT": {
+    "message": "檔案過短",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_HASH_MISMATCH": {
+    "message": "檢查碼不符",
+    "description": "Download error code"
+  },
+  "dlerr_FILE_SAME_AS_SOURCE": {
+    "message": "檔案與來源相同",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_FAILED": {
+    "message": "網路錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_TIMEOUT": {
+    "message": "網路逾時",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_DISCONNECTED": {
+    "message": "網路已中斷",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_SERVER_DOWN": {
+    "message": "無法連線至伺服器",
+    "description": "Download error code"
+  },
+  "dlerr_NETWORK_INVALID_REQUEST": {
+    "message": "無效的網路要求",
+    "description": "Download error code"
+  },
+  "dlerr_CRASH": {
+    "message": "瀏覽器當機",
+    "description": "Download error code"
+  },
+  "dlerr_USER_CANCELED": {
+    "message": "已取消",
+    "description": "Download error code"
+  },
+  "dlerr_USER_SHUTDOWN": {
+    "message": "瀏覽器已關閉",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FAILED": {
+    "message": "伺服器錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_NO_RANGE": {
+    "message": "伺服器不支援續傳",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_BAD_CONTENT": {
+    "message": "內容無效",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNAUTHORIZED": {
+    "message": "未獲授權",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CERT_PROBLEM": {
+    "message": "憑證錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_FORBIDDEN": {
+    "message": "禁止存取",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_UNREACHABLE": {
+    "message": "無法連線至伺服器",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CONTENT_LENGTH_MISMATCH": {
+    "message": "檔案大小不符",
+    "description": "Download error code"
+  },
+  "dlerr_SERVER_CROSS_ORIGIN_REDIRECT": {
+    "message": "跨來源重新導向",
+    "description": "Download error code"
+  },
+  "dlerr_NO_INFORMATION": {
+    "message": "未知錯誤",
+    "description": "Download error code"
+  },
+  "dlerr_OUT_OF_MEMORY": {
+    "message": "記憶體不足",
+    "description": "Download error code"
+  },
+  "page_toast_status_success": {
+    "message": "已下載",
+    "description": "Short status badge on in-page download toast (success)"
+  },
+  "page_toast_status_error": {
+    "message": "錯誤",
+    "description": "Short status badge on in-page download toast (failure)"
+  },
+  "page_toast_close_aria": {
+    "message": "關閉通知",
+    "description": "Accessible label for closing the in-page download toast"
+  },
+  "storeDesc": {
+    "message": "📥 與您結識的 Download Manager —— 一款功能強大的擴充功能，兼具傳輸與歷史紀錄管理之能。它旨在取代 Chrome 內建的下載系統，讓您對每一份所下載的文件都擁有徹底的主導權。專為下載量繁重、需求活躍的使用者而生\n\n🚀 為何選擇 Download Manager？\n它遠不止是一款免費的下載管理工具。它是一款聰穎的下載整理與追蹤利器，能將雜亂無章的傳輸清單，化為條理分明、可即刻檢索的體系，並輔以進階的掌控功能。\n與 Chrome 標準的下載歷程不同，本擴充功能將清晰、迅捷以及對檔案的全面存取，匯聚於同一處。\n\n🔑 核心功能：\n1️⃣ 在整段傳輸歷程中即刻檢索\n2️⃣ 依類型篩選（影片、文件、圖片、壓縮檔）\n3️⃣ 依大小、名稱或下載日期排序\n4️⃣ 分組歸類（今天、昨天、本週、更早之前）\n5️⃣ 直接於系統檔案總管中開啟檔案位置\n6️⃣ 即刻刪除\n\n📂 智慧下載整理\n➤ 以清晰的時間軸呈現所有下載項目\n➤ 數秒之內即可存取任何文件\n➤ 取代 Chrome 預設下載清單的井然結構\n\n🧠 智慧傳輸管理\n➤ 按時間對下載內容自動分組\n➤ 檔案分類分明、佈局簡潔的介面\n➤ 減輕 Chrome 預設下載所帶來的雜亂\n\n🗂️ 對檔案的全面掌控\n頃刻之間自電腦中移除檔案\n一鍵開啟檔案所在位置\n不必離開瀏覽器即可管理傳輸\n\n⚡ 生產力大幅躍升\n➤ 輕盈順暢的下載控制台體驗\n➤ 改善日常檔案處理的工作流程\n➤ 清晰而高效的傳輸整理體系\n➤ 較 Chrome 基本下載更為優越之選\n\n💡 非常適合下列使用者：\n需要一款值得信賴的下載處理工具\n希望對下載歷程管理器擁有更高階的掌控\n需要完整功能的下載檔案管理器\n尋求一套智慧傳輸整理系統\n\n🎯 Download Manager 將 Chrome 標準的下載化為結構分明的下載檔案與歷程管理器。於一款擴充功能之內，便有迅捷的檢索、徹底的掌控與井然有序的工作流程。\n\n🌙 擴充功能中提供深色模式（Dark Mode），為您帶來更舒適的瀏覽體驗。您可選擇讓介面自動跟隨系統佈景主題，依據裝置設定於淺色與深色模式之間切換；也可在任何時刻手動啟用深色主題。如此一來，外觀盡在您的掌握之中，並有助於減輕長時間操作電腦時的視覺疲勞。",
+    "description": "Long store description shown on the Chrome Web Store listing"
+  }
+}
