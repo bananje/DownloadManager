@@ -6,6 +6,21 @@ const THEME_STORAGE_KEY = "themePreference";
 const NOTIFICATIONS_ENABLED_STORAGE_KEY = "notificationsEnabled";
 const ALLOWED_THEMES = ["system", "light", "dark"];
 
+/**
+ * Where the uninstall feedback page (`uninstall/uninstall.html`) is hosted.
+ *
+ * Chrome's `chrome.runtime.setUninstallURL()` only accepts http(s):// URLs
+ * — once the extension is uninstalled, `chrome-extension://` URLs no longer
+ * exist, so the page MUST be hosted externally (GitHub Pages, Netlify,
+ * Vercel, Cloudflare Pages, etc.).
+ *
+ * Replace this value with the public URL of `uninstall/uninstall.html` once
+ * you have deployed it. The current theme is appended automatically as a
+ * `?theme=` query parameter so the feedback page renders in the same theme
+ * the user was just using inside the popup.
+ */
+const UNINSTALL_FEEDBACK_BASE_URL = "https://example.com/uninstall.html";
+
 const SILENCED_REJECTION_MESSAGES = [
   "No SW",
   "Could not establish connection",
@@ -396,10 +411,69 @@ function openWelcomePageIfNeeded(details) {
   }
 }
 
+/**
+ * Read the feedback endpoint + token from the manifest.
+ *
+ * The values live under the custom `feedback_config` key in `manifest.json`.
+ * `manifest.json` itself is git-ignored — `manifest_example.json` is the
+ * checked-in stub that contributors copy locally and fill with their own
+ * Apps Script deployment URL and shared token.
+ */
+function getFeedbackConfigFromManifest() {
+  try {
+    const manifest = chrome.runtime?.getManifest?.() || {};
+    const cfg = manifest.feedback_config || {};
+    return {
+      endpoint: typeof cfg.endpoint === "string" ? cfg.endpoint : "",
+      token: typeof cfg.token === "string" ? cfg.token : ""
+    };
+  } catch {
+    return { endpoint: "", token: "" };
+  }
+}
+
+function buildUninstallUrl(theme) {
+  const normalizedTheme = ALLOWED_THEMES.includes(theme) ? theme : "system";
+  const { endpoint, token } = getFeedbackConfigFromManifest();
+  try {
+    const url = new URL(UNINSTALL_FEEDBACK_BASE_URL);
+    url.searchParams.set("theme", normalizedTheme);
+    if (endpoint) url.searchParams.set("endpoint", endpoint);
+    if (token) url.searchParams.set("token", token);
+    return url.toString();
+  } catch {
+    const sep = UNINSTALL_FEEDBACK_BASE_URL.includes("?") ? "&" : "?";
+    const params = new URLSearchParams();
+    params.set("theme", normalizedTheme);
+    if (endpoint) params.set("endpoint", endpoint);
+    if (token) params.set("token", token);
+    return `${UNINSTALL_FEEDBACK_BASE_URL}${sep}${params.toString()}`;
+  }
+}
+
+async function refreshUninstallUrl() {
+  if (!chrome.runtime?.setUninstallURL) return;
+  try {
+    const theme = await getCurrentThemePreference();
+    const url = buildUninstallUrl(theme);
+    const ret = chrome.runtime.setUninstallURL(url, () => {
+      void chrome.runtime.lastError;
+    });
+    if (ret && typeof ret.then === "function") {
+      ret.catch(() => {
+        /* ignore — Chrome may reject malformed URLs */
+      });
+    }
+  } catch {
+    /* best-effort: don't let uninstall-URL setup break the SW */
+  }
+}
+
 chrome.runtime.onInstalled.addListener((details) => {
   disableBrowserDownloadsUi();
   ensureSyncAlarm();
   void syncDownloadsState({ notifyTransitions: false });
+  void refreshUninstallUrl();
   openWelcomePageIfNeeded(details);
 });
 
@@ -407,7 +481,17 @@ chrome.runtime.onStartup.addListener(() => {
   disableBrowserDownloadsUi();
   ensureSyncAlarm();
   void syncDownloadsState({ notifyTransitions: false });
+  void refreshUninstallUrl();
 });
+
+if (chrome.storage?.onChanged) {
+  chrome.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName !== "local") return;
+    if (changes && Object.prototype.hasOwnProperty.call(changes, THEME_STORAGE_KEY)) {
+      void refreshUninstallUrl();
+    }
+  });
+}
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm?.name !== DOWNLOADS_SYNC_ALARM) return;
@@ -463,3 +547,4 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
 ensureSyncAlarm();
 disableBrowserDownloadsUi();
+void refreshUninstallUrl();

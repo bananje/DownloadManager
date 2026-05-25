@@ -46,7 +46,7 @@ html[data-theme="system"] {
   --toast-error: #dc2626;
   --toast-success-bg: rgba(37, 99, 235, 0.1);
   --toast-error-bg: rgba(220, 38, 38, 0.1);
-  /* Заливка прогресса: на белой карточке белый полупрозрачный слой почти не виден */
+  /* Progress fill: a white semi-transparent layer is barely visible on a white card */
   --dl-progress-layer: rgba(59, 130, 246, 0.28);
 }
 
@@ -547,7 +547,7 @@ body {
 
 .download-item {
   display: grid;
-  /* minmax(0,1fr): иначе длинное имя не даёт сжать колонку — при двух кнопках справа (пауза+меню) блок уезжает под overflow-x списка */
+  /* minmax(0,1fr): otherwise a long name prevents the column from shrinking — with two buttons on the right (pause + menu) the block gets pushed under the list's overflow-x */
   grid-template-columns: 16px minmax(0, 1fr) auto;
   gap: 8px 10px;
   align-items: center;
@@ -627,9 +627,9 @@ body {
 }
 
 /*
- * Плавное появление всего списка при первом открытии popup.
- * Используется вместо каскадной анимации по каждой строке, чтобы при
- * первичной загрузке UI не «дёргался» по мере прихода иконок/данных.
+ * Smooth fade-in of the entire list on the first popup open.
+ * Used instead of the per-row cascading animation so that during the
+ * initial load the UI does not "jerk" as icons/data arrive.
  */
 .downloads-list--initial-fade {
   animation: downloads-list-initial-fade 0.32s cubic-bezier(0.22, 1, 0.36, 1);
@@ -652,7 +652,7 @@ body {
   }
 }
 
-/* Меню position:fixed остаётся внутри строки: без z-index у строки следующие карточки перекрывают выпадашку */
+/* A position:fixed menu stays inside the row: without z-index on the row, subsequent cards overlap the dropdown */
 .download-item--menu-open {
   position: relative;
   z-index: 50;

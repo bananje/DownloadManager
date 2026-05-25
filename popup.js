@@ -1,4 +1,4 @@
-/** После resume: если загрузка сорвётся без нового запроса, автоматически делаем retry (окно, мс). */
+/** After resume: if a download fails without a new request, we automatically retry (window, ms). */
 const RESUME_FAIL_WATCH_MS = 25000;
 const FALLBACK_ICON = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23D1D5DB'/><path d='M22 16h14l10 10v22a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z' fill='%239CA3AF'/><path d='M36 16v10h10' fill='none' stroke='%23E5E7EB' stroke-width='3'/></svg>";
 
@@ -74,7 +74,7 @@ function getCalendarWeekdayLabels() {
   return labels;
 }
 
-/** Текст для тултипа у значка ошибки — язык как у интерфейса Chrome (chrome.i18n). */
+/** Tooltip text for the error icon — language matches the Chrome UI (chrome.i18n). */
 function getLocalizedDownloadErrorTooltip(item) {
   const code = item?.error;
   if (code) {
@@ -424,10 +424,10 @@ const LIST_LAYOUT_ANIMATION_MS = 300;
 const LIST_LAYOUT_ANIMATION_EASING = "cubic-bezier(0.22, 1, 0.36, 1)";
 const LOCAL_LIST_REBUILD_SUPPRESSION_MS = 900;
 /**
- * true — список уже один раз отрисован за время жизни popup; используется,
- * чтобы на самом первом рендере не играть покаскадную анимацию появления
- * каждой строки (это визуально «дёргает» UI на открытии popup), а вместо неё
- * показать один плавный fade/slide всего списка разом.
+ * true — the list has already been rendered at least once during the popup's
+ * lifetime; used to avoid playing the per-row cascading appearance animation
+ * on the very first render (which visually "jerks" the UI when the popup
+ * opens), and instead show a single smooth fade/slide for the whole list.
  */
 let hasRenderedOnce = false;
 const TYPE_FILTER_KEYS = ["images", "video", "archives", "programs", "documents"];
@@ -1578,7 +1578,7 @@ function toggleSizeSortMode() {
   void rerenderPreservingScrollPosition();
 }
 
-/** Записи без файла на диске (удалён) не показываем. */
+/** Records without a file on disk (deleted) are not shown. */
 function getVisibleDownloads() {
   return allDownloads.filter((item) => item.exists !== false);
 }
@@ -1623,9 +1623,9 @@ function captureRenderedDownloadRowPositions() {
 function animateRenderedDownloadLayout(previousPositions) {
   if (!downloadsListEl || prefersReducedMotion()) return;
   /*
-   * На самом первом рендере popup ни одна строка не имеет предыдущей позиции,
-   * и каскад отдельных download-item--appearing визуально «дёргается».
-   * Вместо этого играем один плавный fade-in всему списку через CSS-класс.
+   * On the very first render of the popup, no row has a previous position,
+   * and the cascade of individual download-item--appearing visually "jerks".
+   * Instead, we play a single smooth fade-in for the whole list via a CSS class.
    */
   const isInitialRender = previousPositions.size === 0 && !hasRenderedOnce;
   if (isInitialRender) {
@@ -1666,7 +1666,7 @@ function animateRenderedDownloadLayout(previousPositions) {
 }
 
 /**
- * Chrome 123+: downloads.open/show возвращают Promise; ошибки идут в rejection, не в lastError.
+ * Chrome 123+: downloads.open/show return a Promise; errors come via rejection, not lastError.
  */
 function downloadsOpenCompat(id) {
   const ret = chrome.downloads.open(id);
@@ -2132,7 +2132,7 @@ function scheduleListRebuild() {
   }, 80);
 }
 
-/** Собирает актуальную запись из onChanged: search в том же тике часто отстаёт от bytesReceived. */
+/** Builds an up-to-date record from onChanged: search in the same tick often lags behind bytesReceived. */
 function mergeDownloadItemWithDelta(item, delta) {
   const out = { ...item };
   const keys = [
@@ -2265,7 +2265,7 @@ function getPreferredDownloadFilename(item) {
   return base || undefined;
 }
 
-/** Символы и последовательности, недопустимые для chrome.downloads.download filename (Windows/Chrome). */
+/** Characters and sequences that are not allowed in chrome.downloads.download filename (Windows/Chrome). */
 function sanitizeDownloadFilenameForApi(name) {
   if (name == null) return "";
   let s = String(name).replace(/\\/g, "/").split("/").pop() || "";
@@ -2287,8 +2287,8 @@ function sanitizeDownloadFilenameForApi(name) {
 }
 
 /**
- * URL, пригодный для повторной загрузки через downloads.download (абсолютный, не javascript: и т.д.).
- * Берём первый подходящий из finalUrl и url: у прерванных загрузок finalUrl иногда blob:/data:, тогда остаётся исходный url.
+ * URL suitable for re-downloading via downloads.download (absolute, not javascript:, etc.).
+ * We take the first suitable one from finalUrl and url: for interrupted downloads, finalUrl is sometimes blob:/data:, in which case the original url is used.
  */
 function getRetryDownloadUrl(item) {
   const candidates = [];
@@ -2315,7 +2315,7 @@ function getRetryDownloadUrl(item) {
 }
 
 /**
- * Referrer для DownloadOptions: только валидный абсолютный http(s), иначе свойство не передаём.
+ * Referrer for DownloadOptions: only a valid absolute http(s) URL, otherwise the property is omitted.
  */
 function getOptionalDownloadReferrer(item) {
   const ref = item?.referrer;
@@ -2333,8 +2333,8 @@ function getOptionalDownloadReferrer(item) {
 }
 
 /**
- * Собирает безопасные опции для chrome.downloads.download (retry).
- * Невалидные поля опускаются, чтобы не провоцировать Error in invocation.
+ * Builds safe options for chrome.downloads.download (retry).
+ * Invalid fields are omitted to avoid provoking "Error in invocation".
  */
 function buildRetryDownloadOptions(item) {
   const urlCheck = getRetryDownloadUrl(item);
@@ -2420,7 +2420,7 @@ function syncEmptyStateWithRenderedList() {
   hideEmptyState();
 }
 
-/** Плавное скрытие строки, корректировка scroll, тихое обновление данных без сброса прокрутки в начало. */
+/** Smooth row hiding, scroll adjustment, silent data update without resetting scroll position to the top. */
 async function removeDownloadRowAnimated(downloadId) {
   const n = Number(downloadId);
   if (!Number.isFinite(n)) return;
@@ -2523,7 +2523,7 @@ async function showDownloadedFileInFolder(id) {
   }
 }
 
-/** Запрашивает optional permission downloads.open (нужен для chrome.downloads.open в MV3). */
+/** Requests the optional permission downloads.open (required for chrome.downloads.open in MV3). */
 function ensureDownloadsOpenPermission() {
   return new Promise((resolve) => {
     if (!chrome.permissions?.contains) {
@@ -2550,7 +2550,7 @@ function ensureDownloadsOpenPermission() {
   });
 }
 
-/** Открывает файл в приложении по умолчанию; при отказе в праве — папка в проводнике (downloads.show). */
+/** Opens the file in the default application; if the permission is denied — opens the folder in the file manager (downloads.show). */
 async function openDownloadFile(item) {
   const id = Number(item?.id);
   if (!Number.isFinite(id)) return;
@@ -2951,7 +2951,7 @@ async function refreshListAfterSameIdResume(oldId, li) {
 }
 
 /**
- * Перезапуск загрузки новым запросом (downloads.download), старая запись стирается — как в Retry.
+ * Restarts the download with a new request (downloads.download); the old record is erased — same as Retry.
  */
 async function restartDownloadWithNewRequest(item, li, oldId) {
   const built = buildRetryDownloadOptions(item);
@@ -3063,7 +3063,7 @@ async function restartDownloadWithNewRequest(item, li, oldId) {
 }
 
 /**
- * Retry в меню и кнопка Resume: при canResume — продолжить ту же загрузку; иначе новый запрос (downloads.download).
+ * Retry in the menu and the Resume button: when canResume is true — continue the same download; otherwise issue a new request (downloads.download).
  */
 async function retryFailedDownload(item, li) {
   const oldId = Number(item?.id);
@@ -3118,11 +3118,12 @@ async function buildDownloadListItemElement(item) {
 async function renderGroupedDownloads() {
   const groups = groupDownloadsByDate(downloads);
   /*
-   * Строим дерево списка целиком офскрин в DocumentFragment и вставляем в DOM
-   * одним присваиванием — иначе каждый appendChild внутри цикла дергает reflow,
-   * и список на открытии popup «прыгает» по мере подгрузки.
-   * Иконки файлов получаем параллельно через Promise.all, чтобы не ждать
-   * каждую запись по очереди: раньше самая долгая задержка накапливалась.
+   * We build the entire list tree off-screen in a DocumentFragment and insert
+   * it into the DOM in a single assignment — otherwise every appendChild
+   * inside the loop triggers a reflow, and the list "jumps" while the popup
+   * is loading.
+   * File icons are fetched in parallel via Promise.all so we don't have to
+   * wait for each record one by one: previously the longest delay accumulated.
    */
   const groupBuilds = groups.map(async (group) => {
     const groupLabel = getGroupLabel(group);

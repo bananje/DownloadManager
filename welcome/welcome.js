@@ -27,6 +27,9 @@ const I18N = {
     welcome_feature_3: "Powerful search, intelligent filters and a refined dark mode",
     welcome_feature_4: "Localized into multiple languages, right out of the box",
 
+    welcome_oss_title: "Open-source project on GitHub",
+    welcome_oss_sub: "View the source code, file issues or contribute",
+
     preview_title: "Choose the popup theme",
     preview_subtitle: "The preview on the left shows the real extension popup.",
 
@@ -108,6 +111,9 @@ const I18N = {
     welcome_feature_2: "Своевременные уведомления о каждой загрузке",
     welcome_feature_3: "Мощный поиск, продуманные фильтры и аккуратная тёмная тема",
     welcome_feature_4: "Поддержка нескольких языков прямо «из коробки»",
+
+    welcome_oss_title: "Проект с открытым исходным кодом на GitHub",
+    welcome_oss_sub: "Посмотреть исходники, сообщить об ошибке или внести вклад",
 
     preview_title: "Тема всплывающего окна",
     preview_subtitle: "Слева — как будет выглядеть настоящее окно расширения.",
@@ -191,6 +197,9 @@ const I18N = {
     welcome_feature_3: "Leistungsstarke Suche, intelligente Filter und ein gepflegter Dunkelmodus",
     welcome_feature_4: "Mehrsprachige Unterstützung – bereits ab Installation enthalten",
 
+    welcome_oss_title: "Open-Source-Projekt auf GitHub",
+    welcome_oss_sub: "Quellcode einsehen, Fehler melden oder mitwirken",
+
     preview_title: "Erscheinungsbild des Popups",
     preview_subtitle: "Links sehen Sie eine Vorschau des echten Erweiterungs-Popups.",
 
@@ -271,6 +280,9 @@ const I18N = {
     welcome_feature_2: "为每一次下载及时送达通知",
     welcome_feature_3: "强大的搜索、智能的筛选，以及雅致的深色模式",
     welcome_feature_4: "开箱即用的多语言支持",
+
+    welcome_oss_title: "GitHub 上的开源项目",
+    welcome_oss_sub: "查看源代码、提交问题或参与贡献",
 
     preview_title: "选择弹出窗口主题",
     preview_subtitle: "左侧预览与工具栏中的真实扩展弹窗一致。",

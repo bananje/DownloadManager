@@ -1,0 +1,4 @@
+# Local manifest with private feedback credentials.
+# Use manifest_example.json as a template — copy it to manifest.json
+# and fill in `feedback_config.endpoint` / `feedback_config.token`.
+manifest.json
