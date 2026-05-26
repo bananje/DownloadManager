@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "డౌన్‌లోడ్‌లను నిర్వహించండి: బదిలీలను క్రమబద్ధీకరించండి, ఫైళ్లను శోధించి ఫిల్టర్ చేయండి, చరిత్రను శుభ్రంగా ఉంచండి.",
+    "message": "Download Manager ఉపయోగించి డౌన్‌లోడ్‌లను సులభంగా క్రమబద్ధీకరించండి, ట్రాక్ చేయండి, ఫిల్టర్ చేయండి మరియు నిర్వహించండి. ఇది డౌన్‌లోడ్ యాక్సిలరేటర్ కాదు.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "ప్రస్తుతం ఫైళ్లు లేవు",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "మీ విలువ ముఖ్యమైనది!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "డౌన్‌లోడ్ చరిత్ర",

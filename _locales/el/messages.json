@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Διαχείριση λήψεων: οργανώστε μεταφορές, αναζητήστε και φιλτράρετε αρχεία, διατηρήστε καθαρό το ιστορικό λήψεων.",
+    "message": "Χρησιμοποιήστε το Download Manager για να οργανώνετε, παρακολουθείτε, φιλτράρετε και διαχειρίζεστε εύκολα τις λήψεις σας. Δεν είναι επιταχυντής λήψεων.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Δεν υπάρχουν αρχεία προς το παρόν",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "Η αξία σας είναι σημαντική!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "Ιστορικό λήψεων",

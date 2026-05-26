@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "İndirmeleri yönetin: aktarımları düzenleyin, dosyaları arayıp filtreleyin, geçmişi temiz ve düzenli tutun.",
+    "message": "İndirmelerinizi kolayca düzenlemek, takip etmek, filtrelemek ve yönetmek için Download Manager’ı kullanın. Bu bir indirme hızlandırıcı değildir.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Şu anda hiçbir dosya yok",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "Değeriniz önemlidir!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "İndirme Geçmişi",

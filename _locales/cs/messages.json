@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Spravujte stahování: organizujte přenosy, vyhledávejte a filtrujte soubory a udržujte přehlednou historii.",
+    "message": "Pomocí Download Manageru snadno uspořádáte, sledujete, filtrujete a spravujete stahování. Není to akcelerátor stahování.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Momentálně zde nejsou žádné soubory",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "Vaše hodnota je důležitá!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "Historie stahování",

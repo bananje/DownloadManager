@@ -1,9 +1,16 @@
 const DOWNLOADS_LIMIT = 200;
 const DOWNLOADS_SYNC_ALARM = "downloads-sync-alarm";
+const PINNED_TILE_RESHOW_ALARM = "pinned-tile-reshow-alarm";
 const DOWNLOADS_SYNC_INTERVAL_MIN = 0.5;
 const DOWNLOAD_TOAST_LIFETIME_MS = 6500;
 const THEME_STORAGE_KEY = "themePreference";
 const NOTIFICATIONS_ENABLED_STORAGE_KEY = "notificationsEnabled";
+const PINNED_TILE_DISMISSED_STORAGE_KEY = "pinnedTileDismissed";
+const PINNED_TILE_DISMISSED_AT_STORAGE_KEY = "pinnedTileDismissedAt";
+const PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY = "pinnedTilePermanentlyHidden";
+const PINNED_TILE_INSTALLED_AT_STORAGE_KEY = "pinnedTileInstalledAt";
+const PINNED_TILE_FIRST_SHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
+const PINNED_TILE_RESHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
 const ALLOWED_THEMES = ["system", "light", "dark"];
 
 /**
@@ -103,6 +110,18 @@ function storageLocalGet(defaults) {
         return;
       }
       resolve(result || defaults);
+    });
+  });
+}
+
+function storageLocalSet(payload) {
+  return new Promise((resolve) => {
+    if (!chrome.storage?.local) {
+      resolve(false);
+      return;
+    }
+    chrome.storage.local.set(payload, () => {
+      resolve(!chrome.runtime.lastError);
     });
   });
 }
@@ -208,6 +227,88 @@ async function areNotificationsEnabled() {
   const defaults = { [NOTIFICATIONS_ENABLED_STORAGE_KEY]: true };
   const result = await storageLocalGet(defaults);
   return result?.[NOTIFICATIONS_ENABLED_STORAGE_KEY] !== false;
+}
+
+async function isPinnedTileDismissed() {
+  const defaults = { [PINNED_TILE_DISMISSED_STORAGE_KEY]: false };
+  const result = await storageLocalGet(defaults);
+  return result?.[PINNED_TILE_DISMISSED_STORAGE_KEY] === true;
+}
+
+async function getPinnedTileDismissedAt() {
+  const defaults = { [PINNED_TILE_DISMISSED_AT_STORAGE_KEY]: 0 };
+  const result = await storageLocalGet(defaults);
+  const value = Number(result?.[PINNED_TILE_DISMISSED_AT_STORAGE_KEY]);
+  return Number.isFinite(value) && value > 0 ? value : 0;
+}
+
+async function isPinnedTilePermanentlyHidden() {
+  const defaults = { [PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY]: false };
+  const result = await storageLocalGet(defaults);
+  return result?.[PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY] === true;
+}
+
+async function ensurePinnedTileInstalledAt() {
+  const defaults = { [PINNED_TILE_INSTALLED_AT_STORAGE_KEY]: 0 };
+  const result = await storageLocalGet(defaults);
+  const value = Number(result?.[PINNED_TILE_INSTALLED_AT_STORAGE_KEY]);
+  if (Number.isFinite(value) && value > 0) return value;
+  const now = Date.now();
+  await storageLocalSet({ [PINNED_TILE_INSTALLED_AT_STORAGE_KEY]: now });
+  return now;
+}
+
+async function isPinnedTileEligibleForDisplay() {
+  const installedAt = await ensurePinnedTileInstalledAt();
+  return Date.now() - installedAt >= PINNED_TILE_FIRST_SHOW_DELAY_MS;
+}
+
+async function showPinnedTileIfPreviouslyDismissed() {
+  if (await isPinnedTilePermanentlyHidden()) return false;
+  if (!(await isPinnedTileEligibleForDisplay())) return false;
+  if (!(await isPinnedTileDismissed())) return false;
+  const dismissedAt = (await getPinnedTileDismissedAt()) || Date.now();
+  if (Date.now() - dismissedAt < PINNED_TILE_RESHOW_DELAY_MS) return false;
+  const ok = await storageLocalSet({
+    [PINNED_TILE_DISMISSED_STORAGE_KEY]: false,
+    [PINNED_TILE_DISMISSED_AT_STORAGE_KEY]: 0
+  });
+  if (!ok) return false;
+  safeRuntimeSendMessage({ type: "pinned-tile-show" });
+  return true;
+}
+
+function stopPinnedTileReshowAlarm() {
+  try {
+    chrome.alarms?.clear?.(PINNED_TILE_RESHOW_ALARM);
+  } catch {
+    /* ignore alarm API failures */
+  }
+}
+
+async function ensurePinnedTileReshowAlarm() {
+  if (await isPinnedTilePermanentlyHidden()) {
+    stopPinnedTileReshowAlarm();
+    return;
+  }
+  if (!(await isPinnedTileDismissed())) {
+    stopPinnedTileReshowAlarm();
+    return;
+  }
+  const dismissedAt = (await getPinnedTileDismissedAt()) || Date.now();
+  const remainingMs = dismissedAt + PINNED_TILE_RESHOW_DELAY_MS - Date.now();
+  if (remainingMs <= 0) {
+    const shown = await showPinnedTileIfPreviouslyDismissed();
+    if (shown) stopPinnedTileReshowAlarm();
+    return;
+  }
+  try {
+    chrome.alarms?.create?.(PINNED_TILE_RESHOW_ALARM, {
+      delayInMinutes: Math.max(1, Math.ceil(remainingMs / 60000))
+    });
+  } catch {
+    /* ignore alarm API failures */
+  }
 }
 
 function queryActiveTab() {
@@ -432,6 +533,30 @@ function getFeedbackConfigFromManifest() {
   }
 }
 
+function getFeedbackUrlFromManifest(fieldName) {
+  try {
+    const manifest = chrome.runtime?.getManifest?.() || {};
+    const cfg = manifest.feedback_config || {};
+    const rawUrl = typeof cfg[fieldName] === "string" ? cfg[fieldName].trim() : "";
+    if (!rawUrl) return "";
+    const parsed = new URL(rawUrl);
+    return parsed.protocol === "https:" || parsed.protocol === "http:" ? parsed.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function openFeedbackUrlFromManifest(fieldName) {
+  const url = getFeedbackUrlFromManifest(fieldName);
+  if (!url || !chrome.tabs?.create) return Promise.resolve({ ok: false });
+  return new Promise((resolve) => {
+    chrome.tabs.create({ url }, () => {
+      const err = chrome.runtime.lastError;
+      resolve(err ? { ok: false, error: err.message } : { ok: true });
+    });
+  });
+}
+
 function buildUninstallUrl(theme) {
   const normalizedTheme = ALLOWED_THEMES.includes(theme) ? theme : "system";
   const { endpoint, token } = getFeedbackConfigFromManifest();
@@ -472,6 +597,11 @@ async function refreshUninstallUrl() {
 chrome.runtime.onInstalled.addListener((details) => {
   disableBrowserDownloadsUi();
   ensureSyncAlarm();
+  if (details?.reason === "install") {
+    void storageLocalSet({ [PINNED_TILE_INSTALLED_AT_STORAGE_KEY]: Date.now() });
+  } else {
+    void ensurePinnedTileInstalledAt();
+  }
   void syncDownloadsState({ notifyTransitions: false });
   void refreshUninstallUrl();
   openWelcomePageIfNeeded(details);
@@ -480,6 +610,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 chrome.runtime.onStartup.addListener(() => {
   disableBrowserDownloadsUi();
   ensureSyncAlarm();
+  void ensurePinnedTileInstalledAt();
   void syncDownloadsState({ notifyTransitions: false });
   void refreshUninstallUrl();
 });
@@ -490,12 +621,31 @@ if (chrome.storage?.onChanged) {
     if (changes && Object.prototype.hasOwnProperty.call(changes, THEME_STORAGE_KEY)) {
       void refreshUninstallUrl();
     }
+    if (
+      changes &&
+      changes[PINNED_TILE_DISMISSED_STORAGE_KEY]?.newValue === true
+    ) {
+      void ensurePinnedTileReshowAlarm();
+    }
+    if (
+      changes &&
+      changes[PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY]?.newValue === true
+    ) {
+      stopPinnedTileReshowAlarm();
+    }
   });
 }
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm?.name !== DOWNLOADS_SYNC_ALARM) return;
-  void syncDownloadsState();
+  if (alarm?.name === DOWNLOADS_SYNC_ALARM) {
+    void syncDownloadsState();
+    return;
+  }
+  if (alarm?.name === PINNED_TILE_RESHOW_ALARM) {
+    void showPinnedTileIfPreviouslyDismissed().then((shown) => {
+      if (!shown) void ensurePinnedTileReshowAlarm();
+    });
+  }
 });
 
 if (chrome.downloads?.onChanged) {
@@ -535,6 +685,13 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     return false;
   }
 
+  if (message.type === "feedback-open-url") {
+    void openFeedbackUrlFromManifest(message.fieldName).then((result) => {
+      sendResponse(result);
+    });
+    return true;
+  }
+
   if (message.type === "page-download-toast-open-file") {
     void openDownloadedFile(message.downloadId).then((result) => {
       sendResponse(result);
@@ -548,3 +705,13 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 ensureSyncAlarm();
 disableBrowserDownloadsUi();
 void refreshUninstallUrl();
+void ensurePinnedTileInstalledAt();
+void Promise.all([
+  isPinnedTileDismissed(),
+  isPinnedTilePermanentlyHidden(),
+  isPinnedTileEligibleForDisplay()
+]).then(
+  ([dismissed, permanentlyHidden, eligibleForDisplay]) => {
+    if (dismissed && !permanentlyHidden && eligibleForDisplay) void ensurePinnedTileReshowAlarm();
+  }
+);

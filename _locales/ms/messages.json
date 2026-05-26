@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Urus muat turun: susun pemindahan, cari dan tapis fail, kekalkan sejarah muat turun yang kemas dan teratur.",
+    "message": "Gunakan Download Manager untuk mengurus, menjejak, menapis dan mengendalikan muat turun dengan mudah. Ia bukan pemecut muat turun.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Tiada fail buat masa ini",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "Nilai anda penting!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "Sejarah muat turun",

@@ -44,6 +44,8 @@
   ],
   "feedback_config": {
     "endpoint": "",
-    "token": ""
+    "token": "",
+    "form": "",
+    "review": ""
   }
 }

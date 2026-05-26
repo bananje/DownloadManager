@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "استخدم «مدير التنزيلات» لتنظيم عمليات النقل، والبحث في الملفات بسرعة، وتصفية النتائج، والحفاظ على سجل تنزيلاتك مرتبًا وسهل الإدارة.",
+    "message": "استخدم «مدير التنزيلات» (Download Manager) لتنظيم التنزيلات وتتبعها وتصفيتها وإدارتها بسهولة. إنه ليس مسرّع تنزيلات.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "لا توجد ملفات حاليًا",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "قيمتك مهمة!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "سجل التنزيلات",

@@ -4,7 +4,7 @@
     "description": "Название расширения в Chrome Web Store и интерфейсе браузера"
   },
   "extension_description": {
-    "message": "Управляйте загрузками: упорядочивайте передачи, ищите и фильтруйте файлы, держите историю в порядке.",
+    "message": "Используйте Download Manager, чтобы легко упорядочивать, отслеживать, фильтровать загрузки и управлять ими. Это не ускоритель загрузок.",
     "description": "Краткое описание расширения в Chrome Web Store и интерфейсе браузера"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Сейчас нет ни одного файла",
     "description": "Текст пустого состояния, когда в списке нечего показать"
+  },
+  "pinned_tile_title": {
+    "message": "Ваша ценность важна!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "История загрузок",

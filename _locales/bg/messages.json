@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Управление на изтегляния: организирайте трансфери, търсете и филтрирайте файлове, поддържайте чиста история.",
+    "message": "Използвайте Download Manager, за да организирате, проследявате, филтрирате и управлявате изтеглянията си с лекота. Това не е ускорител на изтегляния.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "В момента няма файлове",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "Вашата стойност е важна!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "История на изтеглянията",

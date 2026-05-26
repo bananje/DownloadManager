@@ -299,7 +299,102 @@
 
       <section id="state-message" class="state-message hidden" aria-live="polite"></section>
 
-      <ul id="downloads-list" class="downloads-list" aria-label="__MSG_downloads_list_aria__"></ul>
+      <ul id="downloads-list" class="downloads-list" aria-label="__MSG_downloads_list_aria__">
+        <li
+          class="download-item download-item--pinned download-item--complete"
+          id="pinned-static-item"
+          data-pinned="true"
+          role="group"
+          aria-label="__MSG_pinned_tile_title__"
+          hidden
+        >
+          <img
+            class="download-item__icon download-item__icon--pinned"
+            src="images/pinned-heart.png"
+            alt=""
+            draggable="false"
+          />
+          <div class="download-item__content">
+            <p class="download-item__title" id="pinned-static-item-title">__MSG_pinned_tile_title__</p>
+            <div class="download-item__meta pinned-rating">
+              <svg
+                class="pinned-rating__star pinned-rating__star--action"
+                data-rating="1"
+                role="button"
+                tabindex="0"
+                aria-label="1 star"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M259.3 17.8 194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+              <svg
+                class="pinned-rating__star pinned-rating__star--action"
+                data-rating="2"
+                role="button"
+                tabindex="0"
+                aria-label="2 stars"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M259.3 17.8 194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+              <svg
+                class="pinned-rating__star pinned-rating__star--action"
+                data-rating="3"
+                role="button"
+                tabindex="0"
+                aria-label="3 stars"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M259.3 17.8 194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+              <svg
+                class="pinned-rating__star pinned-rating__star--action"
+                data-rating="4"
+                role="button"
+                tabindex="0"
+                aria-label="4 stars"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M259.3 17.8 194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+              <svg
+                class="pinned-rating__star pinned-rating__star--action"
+                data-rating="5"
+                role="button"
+                tabindex="0"
+                aria-label="5 stars"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M259.3 17.8 194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="pinned-dismiss-btn"
+            id="pinned-static-item-dismiss"
+            aria-label="__MSG_type_filter_close__"
+            title="__MSG_type_filter_close__"
+          >
+            <svg class="pinned-dismiss-btn__svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M18.3 5.71 12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.71 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
       <section id="empty-state" class="empty-state hidden" aria-live="polite">
         <svg class="empty-state__image" viewBox="0 0 220 160" aria-hidden="true">
           <rect x="35" y="22" width="150" height="116" rx="14" fill="currentColor" opacity="0.08"></rect>

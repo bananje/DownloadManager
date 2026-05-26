@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Gestioneu les baixades: organitzeu transferències, cerqueu i filtreu fitxers i mantingueu l’historial net.",
+    "message": "Utilitzeu Download Manager per organitzar, fer un seguiment, filtrar i gestionar les baixades amb facilitat. No és un accelerador de baixades.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "Ara mateix no hi ha cap fitxer",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "El teu valor és important!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "Historial de baixades",

@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "다운로드 매니저로 전송을 정리하고, 파일을 빠르게 검색하며, 결과를 필터링하고, 다운로드 기록을 깔끔하고 관리하기 쉽게 유지하세요.",
+    "message": "Download Manager로 다운로드를 손쉽게 정리, 추적, 필터링하고 관리하세요. 다운로드 가속기가 아닙니다.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "현재 파일이 없습니다",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "당신의 가치는 중요합니다!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "다운로드 기록",

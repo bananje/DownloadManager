@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "ડાઉનલોડ્સનું સંચાલન કરો: ટ્રાન્સફર ગોઠવો, ફાઇલો શોધો અને ફિલ્ટર કરો, ઇતિહાસ સ્વચ્છ રાખો.",
+    "message": "Download Manager નો ઉપયોગ કરો અને ડાઉનલોડ્સને સહેલાઈથી ગોઠવો, ટ્રેક કરો, ફિલ્ટર કરો અને સંચાલિત કરો. તે ડાઉનલોડ એક્સેલેરેટર નથી.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "હમણાં કોઈ ફાઇલ નથી",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "તમારું મૂલ્ય મહત્વપૂર્ણ છે!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "ડાઉનલોડ ઇતિહાસ",

@@ -727,6 +727,105 @@ body {
   -webkit-user-drag: none;
 }
 
+/*
+ * Static "pinned" tile: a fixed entry that is injected as the first row
+ * of the first visible date group. Its sizing is scoped to this modifier
+ * so real download rows keep their existing geometry.
+ */
+.download-item--pinned {
+  position: relative;
+  padding-top: 12px;
+  padding-right: 40px;
+  padding-bottom: 12px;
+  max-height: 140px;
+  cursor: default;
+  user-select: none;
+}
+
+.download-item__icon--pinned {
+  border-radius: 0;
+}
+
+.download-item__meta.pinned-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  color: var(--meta-color);
+  pointer-events: auto;
+  transition: color 0.15s ease, filter 0.15s ease;
+}
+
+.pinned-rating__star {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--meta-color);
+  fill: currentColor;
+  filter: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: fill 0.15s ease, filter 0.15s ease, transform 0.15s ease;
+}
+
+.pinned-rating__star--action {
+  cursor: pointer;
+}
+
+.pinned-rating__star:focus,
+.pinned-rating__star:focus-visible,
+.pinned-rating__star:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.pinned-rating:has(.pinned-rating__star:nth-child(1):hover) .pinned-rating__star:nth-child(-n + 1),
+.pinned-rating:has(.pinned-rating__star:nth-child(2):hover) .pinned-rating__star:nth-child(-n + 2),
+.pinned-rating:has(.pinned-rating__star:nth-child(3):hover) .pinned-rating__star:nth-child(-n + 3),
+.pinned-rating:has(.pinned-rating__star:nth-child(4):hover) .pinned-rating__star:nth-child(-n + 4),
+.pinned-rating:has(.pinned-rating__star:nth-child(5):hover) .pinned-rating__star:nth-child(-n + 5) {
+  color: #ffc711;
+  filter: drop-shadow(0 1px 3px rgba(255, 199, 17, 0.38));
+  transform: translateY(-1px);
+}
+
+.pinned-dismiss-btn {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--item-action-color);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pinned-dismiss-btn:hover {
+  background: var(--item-action-hover-bg);
+  color: var(--icon-btn-hover-color);
+}
+
+.pinned-dismiss-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.pinned-dismiss-btn__svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
 .download-item__content {
   min-width: 0;
   pointer-events: none;

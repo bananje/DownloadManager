@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "השתמשו במנהל ההורדות כדי לארגן העברות, לחפש קבצים במהירות, לסנן תוצאות ולשמור על היסטוריית ההורדות שלכם מסודרת ונוחה לניהול.",
+    "message": "השתמשו ב-Download Manager כדי לארגן, לעקוב, לסנן ולנהל הורדות בקלות. זהו אינו מאיץ הורדות.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "אין כרגע קבצים",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "הערך שלך חשוב!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "היסטוריית הורדות",

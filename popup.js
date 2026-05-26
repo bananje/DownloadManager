@@ -27,6 +27,51 @@ function i18nMessage(key, substitutions) {
   return "";
 }
 
+function getFeedbackConfigUrl(fieldName) {
+  try {
+    if (typeof chrome === "undefined" || !chrome.runtime?.getManifest) return "";
+    const cfg = chrome.runtime.getManifest()?.feedback_config || {};
+    const rawUrl = typeof cfg[fieldName] === "string" ? cfg[fieldName].trim() : "";
+    if (!rawUrl) return "";
+    const parsed = new URL(rawUrl);
+    return parsed.protocol === "https:" || parsed.protocol === "http:" ? parsed.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function openExternalUrl(url) {
+  if (!url) return Promise.resolve(false);
+  try {
+    if (typeof chrome !== "undefined" && chrome.tabs?.create) {
+      return new Promise((resolve) => {
+        chrome.tabs.create({ url }, () => {
+          resolve(!chrome.runtime?.lastError);
+        });
+      });
+    }
+  } catch {
+    /* Fall through to window.open for non-extension previews. */
+  }
+  try {
+    return Promise.resolve(Boolean(window.open(url, "_blank", "noopener")));
+  } catch {
+    return Promise.resolve(false);
+  }
+}
+
+function openFeedbackConfigUrl(fieldName) {
+  return openExternalUrl(getFeedbackConfigUrl(fieldName));
+}
+
+async function activatePinnedRatingStar(starEl) {
+  const rating = Number(starEl?.dataset?.rating);
+  if (!Number.isFinite(rating) || rating < 1 || rating > 5) return;
+  starEl.blur?.();
+  const opened = await openFeedbackConfigUrl(rating <= 3 ? "form" : "review");
+  if (opened) permanentlyHidePinnedTile();
+}
+
 function getUiLocale() {
   try {
     if (typeof chrome !== "undefined" && chrome.i18n?.getUILanguage) {
@@ -184,6 +229,11 @@ function openDownloadMenu(menu, btn) {
 const THEME_STORAGE_KEY = "themePreference";
 const FILTERS_STORAGE_KEY = "filtersState";
 const NOTIFICATIONS_ENABLED_STORAGE_KEY = "notificationsEnabled";
+const PINNED_TILE_DISMISSED_STORAGE_KEY = "pinnedTileDismissed";
+const PINNED_TILE_DISMISSED_AT_STORAGE_KEY = "pinnedTileDismissedAt";
+const PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY = "pinnedTilePermanentlyHidden";
+const PINNED_TILE_INSTALLED_AT_STORAGE_KEY = "pinnedTileInstalledAt";
+const PINNED_TILE_FIRST_SHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
 const THEME_ORDER = ["system", "light", "dark"];
 const NAME_SORT_MODES = ["none", "name-asc", "name-desc"];
 const SIZE_SORT_MODES = ["none", "size-asc", "size-desc"];
@@ -322,10 +372,123 @@ function storageSetNotificationsEnabled(enabled) {
   }
 }
 
+function storageGetPinnedTileDismissed(callback) {
+  const defaults = { [PINNED_TILE_DISMISSED_STORAGE_KEY]: false };
+  const local = getExtensionStorageLocal();
+  if (local) {
+    local.get(defaults, (r) => {
+      if (chrome.runtime?.lastError) {
+        callback(false);
+        return;
+      }
+      callback(r[PINNED_TILE_DISMISSED_STORAGE_KEY] === true);
+    });
+    return;
+  }
+  try {
+    callback(localStorage.getItem(PINNED_TILE_DISMISSED_STORAGE_KEY) === "true");
+  } catch {
+    callback(false);
+  }
+}
+
+function storageSetPinnedTileDismissed(dismissed) {
+  const normalized = dismissed === true;
+  const payload = {
+    [PINNED_TILE_DISMISSED_STORAGE_KEY]: normalized,
+    [PINNED_TILE_DISMISSED_AT_STORAGE_KEY]: normalized ? Date.now() : 0
+  };
+  const local = getExtensionStorageLocal();
+  if (local) {
+    local.set(payload);
+    return;
+  }
+  try {
+    localStorage.setItem(PINNED_TILE_DISMISSED_STORAGE_KEY, String(normalized));
+    localStorage.setItem(PINNED_TILE_DISMISSED_AT_STORAGE_KEY, String(payload[PINNED_TILE_DISMISSED_AT_STORAGE_KEY]));
+  } catch {
+    /* ignore */
+  }
+}
+
+function storageGetPinnedTilePermanentlyHidden(callback) {
+  const defaults = { [PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY]: false };
+  const local = getExtensionStorageLocal();
+  if (local) {
+    local.get(defaults, (r) => {
+      if (chrome.runtime?.lastError) {
+        callback(false);
+        return;
+      }
+      callback(r[PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY] === true);
+    });
+    return;
+  }
+  try {
+    callback(localStorage.getItem(PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY) === "true");
+  } catch {
+    callback(false);
+  }
+}
+
+function storageSetPinnedTilePermanentlyHidden(hidden) {
+  const normalized = hidden === true;
+  const payload = { [PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY]: normalized };
+  const local = getExtensionStorageLocal();
+  if (local) {
+    local.set(payload);
+    return;
+  }
+  try {
+    localStorage.setItem(PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY, String(normalized));
+  } catch {
+    /* ignore */
+  }
+}
+
+function storageGetPinnedTileEligibleForDisplay(callback) {
+  const defaults = { [PINNED_TILE_INSTALLED_AT_STORAGE_KEY]: 0 };
+  const local = getExtensionStorageLocal();
+  const resolveEligibility = (rawValue, persistMissingValue) => {
+    const installedAt = Number(rawValue);
+    if (!Number.isFinite(installedAt) || installedAt <= 0) {
+      const now = Date.now();
+      persistMissingValue(now);
+      callback(false);
+      return;
+    }
+    callback(Date.now() - installedAt >= PINNED_TILE_FIRST_SHOW_DELAY_MS);
+  };
+
+  if (local) {
+    local.get(defaults, (r) => {
+      if (chrome.runtime?.lastError) {
+        callback(false);
+        return;
+      }
+      resolveEligibility(r?.[PINNED_TILE_INSTALLED_AT_STORAGE_KEY], (now) => {
+        local.set({ [PINNED_TILE_INSTALLED_AT_STORAGE_KEY]: now });
+      });
+    });
+    return;
+  }
+
+  try {
+    resolveEligibility(localStorage.getItem(PINNED_TILE_INSTALLED_AT_STORAGE_KEY), (now) => {
+      localStorage.setItem(PINNED_TILE_INSTALLED_AT_STORAGE_KEY, String(now));
+    });
+  } catch {
+    callback(false);
+  }
+}
+
 const stateMessageEl = document.getElementById("state-message");
 const downloadsListEl = document.getElementById("downloads-list");
 const emptyStateEl = document.getElementById("empty-state");
 const emptyStateTitleEl = document.getElementById("empty-state-title");
+const pinnedStaticItemEl = document.getElementById("pinned-static-item");
+const pinnedItemDismissBtnEl = document.getElementById("pinned-static-item-dismiss");
+const pinnedRatingEl = document.querySelector(".pinned-rating");
 const searchInputEl = document.getElementById("search-input");
 const searchLabelEl = document.querySelector(".search-field .visually-hidden");
 const notificationsToggleEl = document.getElementById("notifications-toggle");
@@ -430,6 +593,9 @@ const LOCAL_LIST_REBUILD_SUPPRESSION_MS = 900;
  * opens), and instead show a single smooth fade/slide for the whole list.
  */
 let hasRenderedOnce = false;
+let pinnedTileDismissed = false;
+let pinnedTilePermanentlyHidden = false;
+let pinnedTileEligibleForDisplay = false;
 const TYPE_FILTER_KEYS = ["images", "video", "archives", "programs", "documents"];
 let activeTypeFilters = new Set(TYPE_FILTER_KEYS);
 const fileNameSorter = new Intl.Collator(undefined, { sensitivity: "base", numeric: true });
@@ -593,6 +759,20 @@ function localizeStaticText() {
   }
   if (emptyStateTitleEl) {
     emptyStateTitleEl.textContent = i18nMessage("empty_state_no_files") || "There are no files right now";
+  }
+  const pinnedTitleEl = document.getElementById("pinned-static-item-title");
+  const pinnedTitleText = i18nMessage("pinned_tile_title") || "Your value is important!";
+  if (pinnedTitleEl) {
+    pinnedTitleEl.textContent = pinnedTitleText;
+    pinnedTitleEl.setAttribute("title", pinnedTitleText);
+  }
+  if (pinnedStaticItemEl) {
+    pinnedStaticItemEl.setAttribute("aria-label", pinnedTitleText);
+  }
+  if (pinnedItemDismissBtnEl) {
+    const closeText = i18nMessage("type_filter_close") || "Close";
+    pinnedItemDismissBtnEl.setAttribute("aria-label", closeText);
+    pinnedItemDismissBtnEl.setAttribute("title", closeText);
   }
   if (dateFilterPopoverEl) {
     dateFilterPopoverEl.setAttribute(
@@ -2025,9 +2205,10 @@ function applyRenderedSearchVisibility() {
     let groupVisibleRows = 0;
     const rows = detailsEl.querySelectorAll("li.download-item");
     rows.forEach((li) => {
+      const isPinnedRow = li.dataset.pinned === "true";
       const rowName = li.dataset.searchName || "";
       const wasHidden = li.classList.contains("download-item--filtered-out");
-      const rowVisible = !q || rowName.includes(q);
+      const rowVisible = isPinnedRow || !q || rowName.includes(q);
       li.classList.toggle("download-item--filtered-out", !rowVisible);
       li.setAttribute("aria-hidden", rowVisible ? "false" : "true");
       if (rowVisible && wasHidden) {
@@ -3115,7 +3296,7 @@ async function buildDownloadListItemElement(item) {
   return li;
 }
 
-async function renderGroupedDownloads() {
+async function renderGroupedDownloads(pinnedItemEl = null) {
   const groups = groupDownloadsByDate(downloads);
   /*
    * We build the entire list tree off-screen in a DocumentFragment and insert
@@ -3125,7 +3306,7 @@ async function renderGroupedDownloads() {
    * File icons are fetched in parallel via Promise.all so we don't have to
    * wait for each record one by one: previously the longest delay accumulated.
    */
-  const groupBuilds = groups.map(async (group) => {
+  const groupBuilds = groups.map(async (group, groupIndex) => {
     const groupLabel = getGroupLabel(group);
     const groupLi = document.createElement("li");
     groupLi.className = "downloads-group";
@@ -3143,6 +3324,17 @@ async function renderGroupedDownloads() {
     const groupItemsList = document.createElement("ul");
     groupItemsList.className = "downloads-group__items";
     groupItemsList.setAttribute("aria-label", groupLabel);
+
+    if (
+      groupIndex === 0 &&
+      pinnedItemEl &&
+      pinnedTileEligibleForDisplay &&
+      !pinnedTileDismissed &&
+      !pinnedTilePermanentlyHidden
+    ) {
+      pinnedItemEl.hidden = false;
+      groupItemsList.appendChild(pinnedItemEl);
+    }
 
     const itemEls = await Promise.all(group.items.map((it) => buildDownloadListItemElement(it)));
     for (const itemEl of itemEls) {
@@ -3167,9 +3359,19 @@ async function resetAndRender() {
   captureGroupOpenStateFromDom();
   const previousRowPositions = captureRenderedDownloadRowPositions();
   applySearchFilter();
+  const pinnedItemEl = downloadsListEl.querySelector("#pinned-static-item") || pinnedStaticItemEl;
   downloadsListEl.innerHTML = "";
 
   if (downloads.length === 0) {
+    if (
+      pinnedItemEl &&
+      pinnedTileEligibleForDisplay &&
+      !pinnedTileDismissed &&
+      !pinnedTilePermanentlyHidden
+    ) {
+      pinnedItemEl.hidden = true;
+      downloadsListEl.appendChild(pinnedItemEl);
+    }
     hideMessage();
     showEmptyState();
     return;
@@ -3177,10 +3379,38 @@ async function resetAndRender() {
 
   hideMessage();
   hideEmptyState();
-  await renderGroupedDownloads();
+  await renderGroupedDownloads(pinnedItemEl);
   animateRenderedDownloadLayout(previousRowPositions);
   scheduleRenderedSearchVisibility();
   hasRenderedOnce = true;
+}
+
+function dismissPinnedTile() {
+  pinnedTileDismissed = true;
+  storageSetPinnedTileDismissed(true);
+  if (pinnedStaticItemEl) {
+    pinnedStaticItemEl.remove();
+  }
+  scheduleRenderedSearchVisibility();
+}
+
+function permanentlyHidePinnedTile() {
+  pinnedTilePermanentlyHidden = true;
+  pinnedTileDismissed = false;
+  storageSetPinnedTilePermanentlyHidden(true);
+  storageSetPinnedTileDismissed(false);
+  if (pinnedStaticItemEl) {
+    pinnedStaticItemEl.remove();
+  }
+  scheduleRenderedSearchVisibility();
+}
+
+async function showPinnedTileFromBackground() {
+  if (!pinnedTileEligibleForDisplay) return;
+  if (pinnedTilePermanentlyHidden) return;
+  if (!pinnedTileDismissed) return;
+  pinnedTileDismissed = false;
+  await resetAndRender();
 }
 
 function onListScroll() {
@@ -3218,7 +3448,16 @@ function initPopup() {
     updateDateFilterToggleUi();
     updateTypeFilterToggleUi();
     renderActiveFilterChips();
-    loadDownloads();
+    storageGetPinnedTileEligibleForDisplay((eligibleForDisplay) => {
+      pinnedTileEligibleForDisplay = eligibleForDisplay;
+      storageGetPinnedTilePermanentlyHidden((permanentlyHidden) => {
+        pinnedTilePermanentlyHidden = permanentlyHidden;
+        storageGetPinnedTileDismissed((dismissed) => {
+          pinnedTileDismissed = permanentlyHidden || !eligibleForDisplay ? false : dismissed;
+          loadDownloads();
+        });
+      });
+    });
   });
 
   if (chrome.downloads?.onChanged) {
@@ -3236,6 +3475,8 @@ function initPopup() {
       if (message.type === "downloads-updated") {
         if (getListRebuildSuppressionDelay() > 0) return;
         scheduleListRebuild();
+      } else if (message.type === "pinned-tile-show") {
+        void showPinnedTileFromBackground();
       }
     });
   }
@@ -3246,6 +3487,30 @@ function initPopup() {
     searchInputEl.addEventListener("input", () => {
       applySearchFilter();
       scheduleRenderedSearchVisibility();
+    });
+  }
+  if (pinnedItemDismissBtnEl) {
+    pinnedItemDismissBtnEl.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dismissPinnedTile();
+    });
+  }
+  if (pinnedRatingEl) {
+    pinnedRatingEl.addEventListener("click", (e) => {
+      const starEl = e.target?.closest?.(".pinned-rating__star");
+      if (!starEl) return;
+      e.preventDefault();
+      e.stopPropagation();
+      activatePinnedRatingStar(starEl);
+    });
+    pinnedRatingEl.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const starEl = e.target?.closest?.(".pinned-rating__star");
+      if (!starEl) return;
+      e.preventDefault();
+      e.stopPropagation();
+      activatePinnedRatingStar(starEl);
     });
   }
 

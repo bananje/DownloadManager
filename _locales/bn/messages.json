@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "ডাউনলোড পরিচালনা করুন: স্থানান্তর সাজান, ফাইল খুঁজুন ও ফিল্টার করুন, ইতিহাস পরিচ্ছন্ন ও সহজ রাখুন।",
+    "message": "Download Manager ব্যবহার করে ডাউনলোডগুলিকে সহজেই সাজান, ট্র্যাক করুন, ফিল্টার করুন এবং পরিচালনা করুন। এটি কোনো ডাউনলোড অ্যাকসেলারেটর নয়।",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -62,6 +62,10 @@
   "empty_state_no_files": {
     "message": "এখন কোনো ফাইল নেই",
     "description": "Empty state text when download list has no visible files"
+  },
+  "pinned_tile_title": {
+    "message": "আপনার মূল্য গুরুত্বপূর্ণ!",
+    "description": "Title of the static pinned tile that is always shown as the first row of the first visible downloads group"
   },
   "action_default_title": {
     "message": "ডাউনলোড ইতিহাস",
