@@ -3,16 +3,9 @@
 /**
  * Uninstall feedback page.
  *
- * This page is intentionally self-contained: it is opened by
- * `chrome.runtime.setUninstallURL()` _after_ the extension has already been
- * uninstalled, which means none of the `chrome.*` APIs (including
- * `chrome.storage.local`) are available here.
- *
- * The extension forwards the user's current theme preference through the URL
- * query string (e.g. `?theme=dark`) so the look & feel matches the popup the
- * user saw a moment ago. The local theme toggle still lets the user override
- * the appearance on this page — that override is persisted to localStorage
- * for the duration of the tab.
+ * The page can run inside the extension context during local development, and
+ * it also keeps support for externally hosted feedback pages by accepting the
+ * same values through URL query parameters.
  */
 
 const THEME_ORDER = ["system", "light", "dark"];
@@ -40,11 +33,9 @@ function readQueryParam(name) {
  * forwards it as a plain-text email via the script owner's Gmail.
  *
  * The endpoint URL and the shared `token` live under the custom
- * `feedback_config` key in the extension's `manifest.json`. The background
- * service worker reads them from the manifest and appends them to the
- * uninstall URL as `?endpoint=…&token=…` query params, because by the time
- * this page runs the extension has already been removed and `chrome.*`
- * APIs are no longer available.
+ * `feedback_config` key in the extension's `manifest.json`. When the page is
+ * opened outside the extension context, the background service worker appends
+ * them to the uninstall URL as `?endpoint=…&token=…` query params.
  *
  * Deployment notes:
  *   - The endpoint must be deployed as a Web App with "Execute as: Me"
@@ -56,8 +47,21 @@ function readQueryParam(name) {
  *     in client-side JS / URL) — it just lets the Apps Script reject
  *     random drive-by POSTs that don't know the agreed value.
  */
-const FEEDBACK_ENDPOINT = readQueryParam("endpoint") || "";
-const FEEDBACK_TOKEN = readQueryParam("token") || "";
+function readFeedbackConfigFromManifest() {
+  try {
+    const cfg = chrome.runtime?.getManifest?.()?.feedback_config || {};
+    return {
+      endpoint: typeof cfg.endpoint === "string" ? cfg.endpoint : "",
+      token: typeof cfg.token === "string" ? cfg.token : ""
+    };
+  } catch {
+    return { endpoint: "", token: "" };
+  }
+}
+
+const FEEDBACK_CONFIG = readFeedbackConfigFromManifest();
+const FEEDBACK_ENDPOINT = FEEDBACK_CONFIG.endpoint || readQueryParam("endpoint") || "";
+const FEEDBACK_TOKEN = FEEDBACK_CONFIG.token || readQueryParam("token") || "";
 
 function readLocalStorage(key) {
   try {

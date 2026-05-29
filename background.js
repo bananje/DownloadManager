@@ -14,19 +14,11 @@ const PINNED_TILE_RESHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
 const ALLOWED_THEMES = ["system", "light", "dark"];
 
 /**
- * Where the uninstall feedback page (`uninstall/uninstall.html`) is hosted.
- *
- * Chrome's `chrome.runtime.setUninstallURL()` only accepts http(s):// URLs
- * — once the extension is uninstalled, `chrome-extension://` URLs no longer
- * exist, so the page MUST be hosted externally (GitHub Pages, Netlify,
- * Vercel, Cloudflare Pages, etc.).
- *
- * Replace this value with the public URL of `uninstall/uninstall.html` once
- * you have deployed it. The current theme is appended automatically as a
- * `?theme=` query parameter so the feedback page renders in the same theme
- * the user was just using inside the popup.
+ * `chrome.runtime.setUninstallURL()` only accepts http(s) URLs. Extension
+ * pages can be opened on install, but not after Chrome has removed the
+ * extension during uninstall.
  */
-const UNINSTALL_FEEDBACK_BASE_URL = "https://example.com/uninstall.html";
+const UNINSTALL_FEEDBACK_FALLBACK_URL = "https://example.com/uninstall.html";
 
 const SILENCED_REJECTION_MESSAGES = [
   "No SW",
@@ -560,19 +552,20 @@ function openFeedbackUrlFromManifest(fieldName) {
 function buildUninstallUrl(theme) {
   const normalizedTheme = ALLOWED_THEMES.includes(theme) ? theme : "system";
   const { endpoint, token } = getFeedbackConfigFromManifest();
+  const baseUrl = getFeedbackUrlFromManifest("uninstall") || UNINSTALL_FEEDBACK_FALLBACK_URL;
   try {
-    const url = new URL(UNINSTALL_FEEDBACK_BASE_URL);
+    const url = new URL(baseUrl);
     url.searchParams.set("theme", normalizedTheme);
     if (endpoint) url.searchParams.set("endpoint", endpoint);
     if (token) url.searchParams.set("token", token);
     return url.toString();
   } catch {
-    const sep = UNINSTALL_FEEDBACK_BASE_URL.includes("?") ? "&" : "?";
+    const sep = baseUrl.includes("?") ? "&" : "?";
     const params = new URLSearchParams();
     params.set("theme", normalizedTheme);
     if (endpoint) params.set("endpoint", endpoint);
     if (token) params.set("token", token);
-    return `${UNINSTALL_FEEDBACK_BASE_URL}${sep}${params.toString()}`;
+    return `${baseUrl}${sep}${params.toString()}`;
   }
 }
 

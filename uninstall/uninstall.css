@@ -63,6 +63,13 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+/* Disable the blinking text caret across the whole page */
+*,
+input,
+textarea {
+  caret-color: transparent;
+}
+
 html,
 body {
   margin: 0;
