@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Meet Download Manager — a powerful extension that works as a transfer and history manager. It is designed to replace the default Chrome download system and give you full control over every document you download. Built for users with large and active download workflows\n\n🚀 Why choose Download Manager?\nThis is more than just a free download manager. It is a smart download organizer and tracker tool that turns messy transfer lists into a structured, searchable system with advanced control features.\nUnlike standard Chrome download history, this extension gives you clarity, speed, and full access to your files in one place.\n\n🔑 Core features:\n1️⃣ Instant search across full transfer history\n2️⃣ Filter by type (video, document, image, archive)\n3️⃣ Sort by size, name, or download date\n4️⃣ Group into sections (Today, Yesterday, This week, Earlier)\n5️⃣ Open location directly in system explorer\n6️⃣ Instant deletion\n\n📂 Smart download organizer\n➤ Clean timeline view of all downloads\n➤ Quick access to any document in seconds\n➤ Organized structure instead of default Chrome download list\n\n🧠 Intelligent transfer manager\n➤ Automatic grouping of downloads by time\n➤ Clean interface with structured file categories\n➤ Reduces clutter from Chrome default downloads\n\n🗂️ Full file control\n➤ Remove files from your computer instantly\n➤ Open location with one click\n➤ Manage transfers without leaving the browser\n\n⚡ Productivity boost\n➤ Lightweight download dashboard experience\n➤ Improved workflow for daily file handling\n➤ Clean and efficient transfer organizer system\n➤ Better alternative to basic Chrome downloads\n\n💡 Perfect for users who need:\n➤ Reliable download handling tool\n➤ Advanced download history manager control\n➤ Full download file manager functionality\n➤ Smart transfer organizer system\n\n🎯 Download Manager transforms standard Chrome downloads into a structured download file and history manager. It gives you fast search, full control, and an organized workflow in one extension.\n\n🌙 Dark Mode is available in the extension for a more comfortable browsing experience. You can choose to automatically follow your system theme, so the interface switches between light and dark mode based on your device settings, or enable dark theme manually at any time. This gives you full control over the appearance and helps reduce eye strain, especially when working on computer for long periods.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Clear all",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Confirm",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Clear all downloads from this list?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

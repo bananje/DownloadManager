@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Z Download Managerjem preprosto organizirajte, sledite, filtrirajte in upravljajte prenose. To ni pospeševalnik prenosov.",
+    "message": "Download Manager organizira, sledi, filtrira in upravlja prenose. Ni pospeševalnik.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Spoznajte Download Manager — zmogljivo razširitev, ki deluje kot upravitelj prenosov in zgodovine. Zasnovana je tako, da nadomesti privzeti sistem prenosov v Chromu in vam zagotovi popoln nadzor nad vsakim prenesenim dokumentom. Namenjena uporabnikom z obsežnimi in dejavnimi tokovi prenosov\n\n🚀 Zakaj izbrati Download Manager?\nGre za veliko več kot zgolj brezplačnega upravitelja prenosov. Je pameten pripomoček za organizacijo in sledenje prenosom, ki neurejene sezname prenosov spremeni v urejen in pregleden sistem z naprednimi možnostmi upravljanja.\nZa razliko od običajne zgodovine prenosov v Chromu vam ta razširitev ponuja preglednost, hitrost in popoln dostop do vaših datotek na enem mestu.\n\n🔑 Glavne zmožnosti:\n1️⃣ Takojšnje iskanje po celotni zgodovini prenosov\n2️⃣ Filtriranje po vrsti (video, dokument, slika, arhiv)\n3️⃣ Razvrščanje po velikosti, imenu ali datumu prenosa\n4️⃣ Združevanje v razdelke (Danes, Včeraj, Ta teden, Prej)\n5️⃣ Odpiranje lokacije neposredno v sistemskem raziskovalcu\n6️⃣ Takojšnje brisanje\n\n📂 Pameten organizator prenosov\n➤ Pregleden kronološki pogled vseh prenosov\n➤ Hiter dostop do katerega koli dokumenta v nekaj sekundah\n➤ Urejena zgradba namesto privzetega seznama prenosov v Chromu\n\n🧠 Inteligenten upravitelj prenosov\n➤ Samodejno združevanje prenosov po obdobjih\n➤ Pregleden vmesnik z jasno razvrščenimi kategorijami datotek\n➤ Zmanjša zmedo, značilno za privzete prenose v Chromu\n\n🗂️ Popoln nadzor nad datotekami\n➤ Datoteke iz računalnika odstranite v hipu\n➤ Lokacijo odprite z enim klikom\n➤ Upravljajte prenose, ne da bi zapustili brskalnik\n\n⚡ Večja produktivnost\n➤ Lahka in pregledna nadzorna plošča prenosov\n➤ Izboljšan potek dela pri vsakdanjem urejanju datotek\n➤ Pregleden in učinkovit sistem za organizacijo prenosov\n➤ Boljša izbira od osnovnih prenosov v Chromu\n\n💡 Idealen za uporabnike, ki potrebujejo:\n➤ Zanesljivo orodje za upravljanje prenosov\n➤ Napreden nadzor nad upraviteljem zgodovine prenosov\n➤ Popolno funkcionalnost upravitelja prenesenih datotek\n➤ Pameten sistem za organizacijo prenosov\n\n🎯 Download Manager spreminja običajne prenose v Chromu v strukturiranega upravitelja datotek in zgodovine prenosov. Omogoča vam hitro iskanje, popoln nadzor in urejen potek dela v eni sami razširitvi.\n\n🌙 Temni način (Dark Mode) je v razširitvi na voljo za udobnejše brskanje. Izberete lahko samodejno sledenje sistemski temi, pri čemer se vmesnik preklaplja med svetlim in temnim načinom glede na nastavitve naprave, ali pa temno temo kadar koli vključite ročno. Tako imate popoln nadzor nad videzom in zmanjšate napor za oči, zlasti pri dolgih urah dela za računalnikom.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Počisti vse",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Potrdi",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Počistiti vse prenose s tega seznama?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

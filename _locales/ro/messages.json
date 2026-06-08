@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Folosește Download Manager pentru a organiza, urmări, filtra și gestiona descărcările cu ușurință. Nu este un accelerator de descărcări.",
+    "message": "Download Manager organizează, urmărește, filtrează și gestionează descărcări. Nu este accelerator.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Faceți cunoștință cu Download Manager — o extensie puternică ce îndeplinește rolul de manager de transferuri și de istoric. A fost concepută pentru a înlocui sistemul implicit de descărcări din Chrome și pentru a vă oferi un control deplin asupra fiecărui document descărcat. Gândită pentru utilizatorii cu fluxuri ample și foarte active de descărcări\n\n🚀 De ce să alegeți Download Manager?\nEste mult mai mult decât un simplu manager de descărcări gratuit. Este un instrument inteligent de organizare și urmărire, care transformă listele dezordonate de transferuri într-un sistem structurat și ușor de căutat, cu funcții avansate de control.\nSpre deosebire de istoricul obișnuit de descărcări al Chrome, această extensie vă oferă claritate, rapiditate și acces complet la fișierele dumneavoastră, într-un singur loc.\n\n🔑 Funcționalități esențiale:\n1️⃣ Căutare instantanee în întreg istoricul de transferuri\n2️⃣ Filtrare după tip (video, document, imagine, arhivă)\n3️⃣ Sortare după dimensiune, nume sau dată a descărcării\n4️⃣ Grupare pe secțiuni (Astăzi, Ieri, Săptămâna aceasta, Mai vechi)\n5️⃣ Deschiderea locației direct în exploratorul sistemului\n6️⃣ Ștergere instantanee\n\n📂 Organizator inteligent de descărcări\n➤ Vizualizare cronologică limpede a tuturor descărcărilor\n➤ Acces rapid la orice document, în câteva secunde\n➤ Structură ordonată în locul listei implicite de descărcări din Chrome\n\n🧠 Manager inteligent de transferuri\n➤ Gruparea automată a descărcărilor în funcție de perioadă\n➤ Interfață aerisită, cu categorii de fișiere bine structurate\n➤ Reduce dezordinea descărcărilor implicite din Chrome\n\n🗂️ Control deplin asupra fișierelor\n➤ Ștergeți fișierele de pe computer într-o clipă\n➤ Deschideți locația cu un singur clic\n➤ Gestionați transferurile fără a părăsi browserul\n\n⚡ Productivitate sporită\n➤ O experiență ușoară de tablou de bord pentru descărcări\n➤ Un flux de lucru îmbunătățit pentru gestionarea zilnică a fișierelor\n➤ Un sistem clar și eficient de organizare a transferurilor\n➤ O alternativă superioară descărcărilor de bază din Chrome\n\n💡 Perfect pentru utilizatorii care au nevoie de:\n➤ Un instrument de încredere pentru gestionarea descărcărilor\n➤ Un control avansat asupra managerului istoricului de descărcări\n➤ Funcționalitatea completă a unui manager de fișiere descărcate\n➤ Un sistem inteligent de organizare a transferurilor\n\n🎯 Download Manager transformă descărcările obișnuite din Chrome într-un veritabil manager structurat de fișiere și istoric. Vă oferă o căutare rapidă, control deplin și un flux de lucru organizat, totul într-o singură extensie.\n\n🌙 Modul întunecat (Dark Mode) este disponibil în extensie pentru a vă oferi o experiență de navigare mai confortabilă. Puteți alege să urmăriți automat tema sistemului, astfel încât interfața să comute între modul luminos și cel întunecat în funcție de setările dispozitivului, sau puteți activa manual tema întunecată în orice moment. Astfel aveți un control deplin asupra aspectului și reduceți oboseala oculară, mai ales în timpul orelor lungi petrecute la calculator.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Șterge tot",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Confirmă",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Ștergi toate descărcările din această listă?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

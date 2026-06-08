@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Tumia Download Manager kupanga, kufuatilia, kuchuja na kudhibiti vipakuliwa kwa urahisi. Si kiongezakasi cha upakuaji.",
+    "message": "Download Manager hupanga, hufuatilia, huchuja na kudhibiti vipakuliwa. Si kiongezakasi.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Karibu kwa Download Manager — kiendelezi chenye nguvu kinachofanya kazi kama msimamizi wa upakuaji na historia. Kimebuniwa ili kuchukua nafasi ya mfumo wa kawaida wa upakuaji wa Chrome na kukupa udhibiti kamili juu ya kila hati unayopakua. Kimeundwa mahususi kwa watumiaji wenye mitiririko mikubwa na inayoendelea ya upakuaji\n\n🚀 Kwa nini uchague Download Manager?\nHiki ni zaidi ya kiendesha pakuaji bila malipo tu. Ni chombo cha akili cha kupanga na kufuatilia upakuaji, kinachoyageuza marundo ya orodha za uhamishaji yasiyo na mpangilio kuwa mfumo ulioratibiwa, unaorahisisha utafutaji na wenye vipengele vya kisasa vya udhibiti.\nTofauti na historia ya kawaida ya upakuaji ya Chrome, kiendelezi hiki kinakupa uwazi, kasi na ufikiaji kamili wa faili zako mahali pamoja.\n\n🔑 Vipengele vikuu:\n1️⃣ Utafutaji wa papo hapo katika historia yote ya uhamishaji\n2️⃣ Kuchuja kwa aina (video, hati, picha, kumbukumbu)\n3️⃣ Kupanga kwa ukubwa, jina au tarehe ya upakuaji\n4️⃣ Kupanga katika sehemu (Leo, Jana, Wiki hii, Awali)\n5️⃣ Kufungua mahali pa faili moja kwa moja katika kichunguzi cha mfumo\n6️⃣ Kufuta papo hapo\n\n📂 Mratibu wa upakuaji wenye akili\n➤ Mwonekano safi wa mpangilio wa wakati wa upakuaji wote\n➤ Ufikiaji wa haraka wa hati yoyote ndani ya sekunde chache\n➤ Muundo uliopangwa badala ya orodha ya kawaida ya upakuaji ya Chrome\n\n🧠 Msimamizi wa uhamishaji wenye akili\n➤ Kupanga upakuaji moja kwa moja kulingana na muda\n➤ Kiolesura nadhifu chenye makundi ya faili yaliyopangwa kwa uwazi\n➤ Hupunguza fujo zinazoletwa na upakuaji wa kawaida wa Chrome\n\n🗂️ Udhibiti kamili juu ya faili\n➤ Futa faili kutoka kwenye kompyuta yako papo hapo\n➤ Fungua mahali pa faili kwa mbofyo mmoja\n➤ Dhibiti uhamishaji bila kuondoka kwenye kivinjari\n\n⚡ Ongezeko la tija\n➤ Uzoefu mwepesi na wa hali ya juu wa dashibodi ya upakuaji\n➤ Mtiririko bora wa kazi kwa ushughulikiaji wa kila siku wa faili\n➤ Mfumo nadhifu na wenye ufanisi wa kupanga uhamishaji\n➤ Mbadala bora kuliko upakuaji wa msingi wa Chrome\n\n💡 Inafaa sana kwa watumiaji wanaohitaji:\n➤ Chombo cha kuaminika cha kushughulikia upakuaji\n➤ Udhibiti wa hali ya juu juu ya msimamizi wa historia ya upakuaji\n➤ Utendaji kamili wa msimamizi wa faili za upakuaji\n➤ Mfumo wenye akili wa kupanga uhamishaji\n\n🎯 Download Manager hubadilisha upakuaji wa kawaida wa Chrome kuwa msimamizi wa faili na historia ya upakuaji ulioratibiwa vyema. Inakupa utafutaji wa haraka, udhibiti kamili na mtiririko wa kazi uliopangwa katika kiendelezi kimoja.\n\n🌙 Hali ya Giza (Dark Mode) inapatikana ndani ya kiendelezi kwa ajili ya tajriba nzuri zaidi ya kuvinjari. Unaweza kuchagua kiolesura kifuate kiotomatiki mandhari ya mfumo ili kibadilike kati ya hali ya mwanga na ya giza kulingana na mipangilio ya kifaa chako, au washa mandhari ya giza kwa mkono wakati wowote. Kwa njia hii unabaki na udhibiti kamili wa muonekano na unapunguza uchovu wa macho, hasa unapofanya kazi kwenye kompyuta kwa muda mrefu.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Futa yote",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Thibitisha",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Ufute vipakuliwa vyote kwenye orodha hii?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Koristite Download Manager za jednostavno organiziranje, praćenje, filtriranje i upravljanje preuzimanjima. To nije ubrzivač preuzimanja.",
+    "message": "Download Manager organizira, prati, filtrira i upravlja preuzimanjima. Nije ubrzivač.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Upoznajte Download Manager — moćno proširenje koje funkcionira kao upravitelj prijenosa i povijesti. Osmišljen je kako bi zamijenio zadani sustav preuzimanja u Chromeu i pružio vam potpunu kontrolu nad svakim dokumentom koji preuzmete. Namijenjen je korisnicima s velikim i aktivnim tokovima preuzimanja\n\n🚀 Zašto odabrati Download Manager?\nOvo je puno više od običnog besplatnog upravitelja preuzimanjima. Riječ je o pametnom alatu za organiziranje i praćenje preuzimanja, koji neuredne popise prijenosa pretvara u pregledan i lako pretraživ sustav s naprednim mogućnostima upravljanja.\nZa razliku od standardne povijesti preuzimanja u Chromeu, ovo proširenje pruža vam preglednost, brzinu i potpun pristup svim datotekama na jednom mjestu.\n\n🔑 Ključne značajke:\n1️⃣ Trenutno pretraživanje cijele povijesti prijenosa\n2️⃣ Filtriranje prema vrsti (videozapis, dokument, slika, arhiva)\n3️⃣ Sortiranje prema veličini, nazivu ili datumu preuzimanja\n4️⃣ Grupiranje u odjeljke (Danas, Jučer, Ovaj tjedan, Ranije)\n5️⃣ Otvaranje lokacije izravno u sistemskom pregledniku datoteka\n6️⃣ Trenutno brisanje\n\n📂 Pametan organizator preuzimanja\n➤ Pregledan kronološki prikaz svih preuzimanja\n➤ Brz pristup bilo kojem dokumentu u nekoliko sekundi\n➤ Uredna struktura umjesto zadanog popisa preuzimanja u Chromeu\n\n🧠 Inteligentan upravitelj prijenosa\n➤ Automatsko grupiranje preuzimanja prema razdoblju\n➤ Čisto sučelje s jasno razvrstanim kategorijama datoteka\n➤ Smanjuje nered tipičan za zadana preuzimanja u Chromeu\n\n🗂️ Potpuna kontrola nad datotekama\n➤ Uklonite datoteke s računala u trenu\n➤ Otvorite lokaciju jednim klikom\n➤ Upravljajte prijenosima bez napuštanja preglednika\n\n⚡ Povećana produktivnost\n➤ Lagano i ugodno sučelje nadzorne ploče preuzimanja\n➤ Poboljšan tijek rada za svakodnevno rukovanje datotekama\n➤ Pregledan i učinkovit sustav za organizaciju prijenosa\n➤ Bolja alternativa osnovnim preuzimanjima u Chromeu\n\n💡 Savršen za korisnike kojima je potrebno:\n➤ Pouzdan alat za upravljanje preuzimanjima\n➤ Napredna kontrola nad upraviteljem povijesti preuzimanja\n➤ Potpuna funkcionalnost upravitelja preuzetih datoteka\n➤ Pametan sustav za organizaciju prijenosa\n\n🎯 Download Manager pretvara uobičajena preuzimanja u Chromeu u strukturiranog upravitelja datotekama i poviješću preuzimanja. Pruža vam brzo pretraživanje, potpunu kontrolu i uredan tijek rada u jednom proširenju.\n\n🌙 Tamni način rada (Dark Mode) dostupan je u proširenju radi ugodnijeg pregledavanja. Možete odabrati automatsko praćenje teme sustava, pri čemu se sučelje prebacuje između svijetlog i tamnog načina sukladno postavkama uređaja, ili tamnu temu uključiti ručno u bilo kojem trenutku. Time imate potpunu kontrolu nad izgledom i smanjujete naprezanje očiju, osobito tijekom dugotrajnog rada za računalom.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Očisti sve",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Potvrdi",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Očistiti sva preuzimanja s ovog popisa?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

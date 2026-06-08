@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Sử dụng Download Manager để dễ dàng sắp xếp, theo dõi, lọc và quản lý các tệp tải xuống. Đây không phải là trình tăng tốc tải xuống.",
+    "message": "Download Manager sắp xếp, theo dõi, lọc, quản lý tải xuống. Không phải trình tăng tốc.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Hân hạnh giới thiệu Download Manager — một tiện ích mở rộng mạnh mẽ, đảm nhận vai trò trình quản lý tải xuống và lịch sử. Tiện ích được thiết kế để thay thế hệ thống tải xuống mặc định của Chrome và trao cho bạn quyền kiểm soát trọn vẹn đối với từng tài liệu mà bạn tải về. Được dựng nên dành cho những người dùng có khối lượng và nhịp độ tải xuống lớn, sôi động\n\n🚀 Vì sao nên chọn Download Manager?\nĐây không chỉ đơn thuần là một trình quản lý tải xuống miễn phí. Đây là một công cụ thông minh để sắp xếp và theo dõi các tải xuống, biến những danh sách truyền tải lộn xộn thành một hệ thống có cấu trúc, dễ tra cứu, kèm theo các tính năng kiểm soát nâng cao.\nKhác với lịch sử tải xuống thông thường của Chrome, tiện ích này mang đến cho bạn sự rành mạch, tốc độ và quyền truy cập đầy đủ vào tệp của mình ở cùng một chỗ.\n\n🔑 Các tính năng cốt lõi:\n1️⃣ Tìm kiếm tức thời trên toàn bộ lịch sử truyền tải\n2️⃣ Lọc theo loại tệp (video, tài liệu, hình ảnh, kho lưu trữ)\n3️⃣ Sắp xếp theo kích thước, tên hoặc ngày tải xuống\n4️⃣ Nhóm thành các mục (Hôm nay, Hôm qua, Tuần này, Trước đó)\n5️⃣ Mở vị trí lưu trực tiếp trong trình duyệt tệp của hệ thống\n6️⃣ Xoá tức thời\n\n📂 Bộ sắp xếp tải xuống thông minh\n➤ Hiển thị mạch lạc theo trục thời gian cho mọi lượt tải xuống\n➤ Truy cập nhanh đến bất kỳ tài liệu nào chỉ trong vài giây\n➤ Cấu trúc gọn gàng thay cho danh sách tải xuống mặc định của Chrome\n\n🧠 Trình quản lý truyền tải thông minh\n➤ Tự động nhóm các lượt tải xuống theo khoảng thời gian\n➤ Giao diện thanh thoát với các nhóm tệp được phân loại rõ ràng\n➤ Giảm thiểu sự bừa bộn của các bản tải mặc định trong Chrome\n\n🗂️ Toàn quyền kiểm soát tệp\n➤ Xoá tệp khỏi máy tính trong nháy mắt\n➤ Mở vị trí lưu chỉ bằng một cú nhấp\n➤ Quản lý truyền tải mà không cần rời khỏi trình duyệt\n\n⚡ Nâng cao năng suất\n➤ Trải nghiệm bảng điều khiển tải xuống nhẹ nhàng\n➤ Quy trình làm việc được tối ưu cho việc xử lý tệp hằng ngày\n➤ Hệ thống sắp xếp truyền tải gọn gàng, hiệu quả\n➤ Lựa chọn thay thế ưu việt hơn so với tải xuống cơ bản của Chrome\n\n💡 Hoàn hảo cho những người dùng cần:\n➤ Một công cụ xử lý tải xuống đáng tin cậy\n➤ Quyền kiểm soát nâng cao đối với trình quản lý lịch sử tải xuống\n➤ Đầy đủ chức năng của một trình quản lý tệp tải xuống\n➤ Một hệ thống thông minh để tổ chức các lượt truyền tải\n\n🎯 Download Manager biến những lượt tải xuống thông thường trên Chrome thành một trình quản lý tệp và lịch sử có cấu trúc rõ ràng. Tiện ích mang đến cho bạn khả năng tìm kiếm nhanh, quyền kiểm soát trọn vẹn và một quy trình làm việc gọn gàng — tất cả gói gọn trong một tiện ích.\n\n🌙 Chế độ Tối (Dark Mode) đã được tích hợp sẵn trong tiện ích để mang lại trải nghiệm duyệt web dễ chịu hơn. Bạn có thể đặt giao diện tự động bám theo giao diện hệ thống — chuyển đổi giữa chế độ Sáng và chế độ Tối tùy theo cài đặt thiết bị — hoặc bật giao diện tối thủ công bất cứ lúc nào. Nhờ đó, bạn hoàn toàn làm chủ vẻ ngoài và giảm bớt mỏi mắt, đặc biệt trong những giờ làm việc dài trước máy tính.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Xóa tất cả",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Xác nhận",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Xóa tất cả nội dung tải xuống khỏi danh sách này?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

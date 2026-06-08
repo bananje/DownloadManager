@@ -200,6 +200,7 @@ function openDownloadMenu(menu, btn) {
   closeFiltersMenu();
   closeDateFilterPopover();
   closeTypeFilterPopover();
+  closeClearAllPopover();
   if (openDownloadMenuCtx?.btn === btn) {
     closeDownloadMenu();
     return;
@@ -492,6 +493,8 @@ const pinnedRatingEl = document.querySelector(".pinned-rating");
 const searchInputEl = document.getElementById("search-input");
 const searchLabelEl = document.querySelector(".search-field .visually-hidden");
 const notificationsToggleEl = document.getElementById("notifications-toggle");
+const clearAllPopoverEl = document.getElementById("clear-all-popover");
+const clearAllConfirmEl = document.getElementById("clear-all-confirm");
 const themeToggleEl = document.getElementById("theme-toggle");
 const filtersToggleEl = document.getElementById("filters-toggle");
 const filtersMenuEl = document.getElementById("filters-menu");
@@ -579,6 +582,7 @@ let nameSortMode = "none";
 let sizeSortMode = "none";
 let openDateFilterCtx = null;
 let openTypeFilterCtx = null;
+let openClearAllCtx = null;
 let activeDateRange = { start: null, end: null };
 let draftDateRange = { start: null, end: null };
 let dateSelectionAnchor = null;
@@ -730,6 +734,52 @@ function hideEmptyState() {
   }
 }
 
+function getClearAllToggleEl() {
+  return document.getElementById("clear-all-toggle");
+}
+
+function getClearAllLabelText() {
+  return i18nMessage("clear_all") || "Clear all";
+}
+
+function createClearAllToggleButton() {
+  const btn = document.createElement("button");
+  const label = getClearAllLabelText();
+  btn.type = "button";
+  btn.className = "clear-all-toggle";
+  btn.id = "clear-all-toggle";
+  btn.setAttribute("aria-label", label);
+  btn.setAttribute("aria-haspopup", "dialog");
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("title", label);
+  btn.innerHTML = `
+    <svg class="clear-all-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M3.4 5.4c0-.77.63-1.4 1.4-1.4h12.4c.77 0 1.4.63 1.4 1.4v1.05c0 .37-.15.73-.41.99l-4.94 4.94a1.4 1.4 0 0 0-.41.99v3.55c0 .5-.27.96-.71 1.21l-2.38 1.36c-.93.53-2.09-.14-2.09-1.21v-4.91c0-.37-.15-.73-.41-.99L3.81 7.44a1.4 1.4 0 0 1-.41-.99V5.4z"
+        fill="currentColor"
+        opacity="0.62"
+      />
+      <path
+        d="M5 4h12c.55 0 1 .45 1 1v1H4V5c0-.55.45-1 1-1z"
+        fill="currentColor"
+        opacity="0.22"
+      />
+      <path
+        d="m15 15 4 4m0-4-4 4"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.9"
+        stroke-linecap="round"
+      />
+    </svg>`;
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    openClearAllPopover();
+  });
+  return btn;
+}
+
 function localizeStaticText() {
   if (searchInputEl) {
     searchInputEl.setAttribute(
@@ -753,6 +803,18 @@ function localizeStaticText() {
       i18nMessage("notifications_enabled") || "Notifications are enabled";
     notificationsToggleEl.setAttribute("title", notificationsText);
     notificationsToggleEl.setAttribute("aria-label", notificationsText);
+  }
+  const clearAllToggleEl = getClearAllToggleEl();
+  if (clearAllToggleEl) {
+    const clearAllText = getClearAllLabelText();
+    clearAllToggleEl.setAttribute("title", clearAllText);
+    clearAllToggleEl.setAttribute("aria-label", clearAllText);
+  }
+  if (clearAllPopoverEl) {
+    clearAllPopoverEl.setAttribute("aria-label", i18nMessage("clear_all_confirm") || "Confirm");
+  }
+  if (clearAllConfirmEl) {
+    clearAllConfirmEl.textContent = i18nMessage("clear_all_confirm") || "Confirm";
   }
   if (themeToggleEl) {
     applyTheme(document.documentElement.dataset.theme || "system");
@@ -1079,6 +1141,17 @@ function closeTypeFilterPopover() {
   openTypeFilterCtx = null;
 }
 
+function closeClearAllPopover() {
+  const clearAllToggleEl = getClearAllToggleEl();
+  if (!openClearAllCtx || !clearAllPopoverEl) return;
+  const { onDocClick, onDocKey } = openClearAllCtx;
+  clearAllPopoverEl.hidden = true;
+  clearAllToggleEl?.setAttribute("aria-expanded", "false");
+  document.removeEventListener("click", onDocClick, true);
+  document.removeEventListener("keydown", onDocKey, true);
+  openClearAllCtx = null;
+}
+
 function positionDateFilterPopover() {
   if (!dateFilterPopoverEl || !dateFilterToggleEl) return;
   const hasVisibleFiltersMenu = Boolean(filtersMenuEl && !filtersMenuEl.hidden);
@@ -1115,6 +1188,54 @@ function positionTypeFilterPopover() {
   typeFilterPopoverEl.style.left = `${left}px`;
   typeFilterPopoverEl.style.top = `${top}px`;
   typeFilterPopoverEl.style.visibility = "";
+}
+
+function positionClearAllPopover() {
+  const clearAllToggleEl = getClearAllToggleEl();
+  if (!clearAllPopoverEl || !clearAllToggleEl) return;
+  const br = clearAllToggleEl.getBoundingClientRect();
+  clearAllPopoverEl.hidden = false;
+  clearAllPopoverEl.style.visibility = "hidden";
+  const pw = clearAllPopoverEl.offsetWidth;
+  const ph = clearAllPopoverEl.offsetHeight;
+  let left = br.right - pw;
+  left = Math.max(6, Math.min(left, window.innerWidth - pw - 6));
+  let top = br.bottom + 4;
+  if (top + ph > window.innerHeight - 8) {
+    top = Math.max(8, br.top - ph - 4);
+  }
+  clearAllPopoverEl.style.left = `${left}px`;
+  clearAllPopoverEl.style.top = `${top}px`;
+  clearAllPopoverEl.style.visibility = "";
+}
+
+function openClearAllPopover() {
+  const clearAllToggleEl = getClearAllToggleEl();
+  if (!clearAllPopoverEl || !clearAllToggleEl) return;
+  if (openClearAllCtx) {
+    closeClearAllPopover();
+    return;
+  }
+  hideErrorFloatTip();
+  closeDownloadMenu();
+  closeFiltersMenu();
+  closeDateFilterPopover();
+  closeTypeFilterPopover();
+
+  const onDocClick = (e) => {
+    if (!clearAllPopoverEl || !clearAllToggleEl) return;
+    if (clearAllPopoverEl.contains(e.target) || clearAllToggleEl.contains(e.target)) return;
+    closeClearAllPopover();
+  };
+  const onDocKey = (e) => {
+    if (e.key === "Escape") closeClearAllPopover();
+  };
+
+  openClearAllCtx = { onDocClick, onDocKey };
+  clearAllToggleEl.setAttribute("aria-expanded", "true");
+  positionClearAllPopover();
+  document.addEventListener("click", onDocClick, true);
+  document.addEventListener("keydown", onDocKey, true);
 }
 
 function shiftMonth(monthDate, delta) {
@@ -1193,6 +1314,7 @@ function openDateFilterPopover() {
     return;
   }
   closeTypeFilterPopover();
+  closeClearAllPopover();
   closeDownloadMenu();
   hideErrorFloatTip();
 
@@ -1230,6 +1352,7 @@ function openTypeFilterPopover() {
     return;
   }
   closeDateFilterPopover();
+  closeClearAllPopover();
   closeDownloadMenu();
   hideErrorFloatTip();
   syncTypeFilterPopoverCheckboxes();
@@ -1655,6 +1778,7 @@ function openFiltersMenu(menu, btn) {
   closeDownloadMenu();
   closeDateFilterPopover();
   closeTypeFilterPopover();
+  closeClearAllPopover();
   if (openFiltersMenuCtx?.btn === btn) {
     closeFiltersMenu();
     return;
@@ -2684,6 +2808,46 @@ async function deleteDownloadedFile(id) {
   }
 }
 
+function resetFiltersAfterClearAll() {
+  if (searchInputEl) {
+    searchInputEl.value = "";
+  }
+  nameSortMode = "none";
+  sizeSortMode = "none";
+  activeDateRange = { start: null, end: null };
+  draftDateRange = { start: null, end: null };
+  dateSelectionAnchor = null;
+  activeTypeFilters = new Set(TYPE_FILTER_KEYS);
+  dateGroupOpenState.clear();
+  updateNameSortToggleUi();
+  updateSizeSortToggleUi();
+  updateDateFilterToggleUi();
+  syncTypeFilterPopoverCheckboxes();
+  updateTypeFilterToggleUi();
+  renderActiveFilterChips();
+  persistFiltersState();
+}
+
+async function clearAllDownloads() {
+  if (clearAllConfirmEl?.dataset.busy === "true") return;
+  if (clearAllConfirmEl) clearAllConfirmEl.dataset.busy = "true";
+  try {
+    suppressListRebuilds(2500);
+    await downloadsEraseCompat({});
+    closeClearAllPopover();
+    closeDownloadMenu();
+    resetFiltersAfterClearAll();
+    allDownloads = [];
+    downloads = [];
+    if (downloadsListEl) downloadsListEl.scrollTop = 0;
+    await resetAndRender();
+  } catch {
+    closeClearAllPopover();
+  } finally {
+    if (clearAllConfirmEl) delete clearAllConfirmEl.dataset.busy;
+  }
+}
+
 async function showDownloadedFileInFolder(id) {
   const n = Number(id);
   if (!Number.isFinite(n)) return;
@@ -3320,6 +3484,9 @@ async function renderGroupedDownloads(pinnedItemEl = null) {
     const summary = document.createElement("summary");
     summary.className = "downloads-group__summary";
     summary.innerHTML = `<span class="downloads-group__label">${escapeHtmlText(groupLabel)}</span>`;
+    if (group.key === "older") {
+      summary.appendChild(createClearAllToggleButton());
+    }
 
     const groupItemsList = document.createElement("ul");
     groupItemsList.className = "downloads-group__items";
@@ -3421,6 +3588,7 @@ function onListScroll() {
     closeFiltersMenu();
     closeDateFilterPopover();
     closeTypeFilterPopover();
+    closeClearAllPopover();
     hideErrorFloatTip();
   });
 }
@@ -3636,6 +3804,9 @@ function initPopup() {
     if (openTypeFilterCtx) {
       positionTypeFilterPopover();
     }
+    if (openClearAllCtx) {
+      positionClearAllPopover();
+    }
   });
 
   if (themeToggleEl) {
@@ -3651,6 +3822,13 @@ function initPopup() {
       const nextEnabled = !currentlyEnabled;
       applyNotificationsToggleState(nextEnabled, !nextEnabled);
       storageSetNotificationsEnabled(nextEnabled);
+    });
+  }
+  if (clearAllConfirmEl) {
+    clearAllConfirmEl.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      void clearAllDownloads();
     });
   }
 

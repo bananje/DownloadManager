@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Brug Download Manager til nemt at organisere, spore, filtrere og administrere downloads. Det er ikke en download-accelerator.",
+    "message": "Download Manager organiserer, sporer, filtrerer og administrerer downloads. Ikke en accelerator.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Mød Download Manager — en kraftfuld udvidelse, der fungerer som administrator af overførsler og historik. Den er udviklet til at erstatte Chromes standardsystem til downloads og give dig fuld kontrol over hvert eneste dokument, du henter. Skabt til brugere med store og aktive download-arbejdsgange\n\n🚀 Hvorfor vælge Download Manager?\nDet er langt mere end blot en gratis download-håndtering. Det er et intelligent værktøj til at organisere og følge dine downloads, som omdanner kaotiske overførselslister til et velstruktureret og let søgbart system med avancerede kontrolfunktioner.\nI modsætning til Chromes almindelige download-historik giver denne udvidelse dig overblik, hastighed og fuld adgang til dine filer på ét og samme sted.\n\n🔑 Centrale funktioner:\n1️⃣ Øjeblikkelig søgning i hele overførselshistorikken\n2️⃣ Filtrering efter type (video, dokument, billede, arkiv)\n3️⃣ Sortering efter størrelse, navn eller downloaddato\n4️⃣ Gruppering i afsnit (I dag, I går, Denne uge, Tidligere)\n5️⃣ Åbn placeringen direkte i systemets stifinder\n6️⃣ Øjeblikkelig sletning\n\n📂 Intelligent download-organisator\n➤ Et overskueligt kronologisk overblik over alle downloads\n➤ Hurtig adgang til ethvert dokument på få sekunder\n➤ En velordnet struktur i stedet for Chromes standardliste over downloads\n\n🧠 Intelligent overførselsadministrator\n➤ Automatisk gruppering af downloads efter tidspunkt\n➤ En renlinjet brugerflade med klart inddelte filkategorier\n➤ Reducerer det rod, der præger Chromes standarddownloads\n\n🗂️ Fuld kontrol over filerne\n➤ Fjern filer fra din computer på et øjeblik\n➤ Åbn placeringen med et enkelt klik\n➤ Administrer overførsler uden at forlade browseren\n\n⚡ Større produktivitet\n➤ En let og smidig download-betjeningsoplevelse\n➤ En forbedret arbejdsgang til daglig filhåndtering\n➤ Et klart og effektivt system til organisering af overførsler\n➤ Et bedre alternativ til Chromes basale downloads\n\n💡 Perfekt til brugere, der har brug for:\n➤ Et pålideligt værktøj til at håndtere downloads\n➤ Avanceret kontrol over administratoren af download-historikken\n➤ Fuld funktionalitet i en filhåndtering for downloads\n➤ Et intelligent system til organisering af overførsler\n\n🎯 Download Manager forvandler Chromes almindelige downloads til en velstruktureret administrator af filer og download-historik. Du får hurtig søgning, fuld kontrol og en organiseret arbejdsgang i én og samme udvidelse.\n\n🌙 Mørk tilstand (Dark Mode) er tilgængelig i udvidelsen og giver en mere behagelig browseroplevelse. Du kan vælge automatisk at følge systemets tema, så brugerfladen skifter mellem lys og mørk tilstand efter enhedens indstillinger, eller aktivere det mørke tema manuelt når som helst. På den måde har du fuld kontrol over udseendet og kan mindske belastningen af øjnene, især under lange arbejdsdage ved computeren.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Ryd alt",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Bekræft",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Ryd alle downloads fra denne liste?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

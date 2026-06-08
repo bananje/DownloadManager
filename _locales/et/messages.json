@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Kasutage Download Managerit allalaadimiste hõlpsaks korraldamiseks, jälgimiseks, filtreerimiseks ja haldamiseks. See ei ole allalaadimiste kiirendi.",
+    "message": "Download Manager korraldab, jälgib, filtreerib ja haldab allalaadimisi. See pole kiirendi.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Tutvuge laiendusega Download Manager — võimsa laiendusega, mis täidab edastuste ja ajaloo halduri rolli. See on loodud asendama Chrome'i tavalist allalaadimissüsteemi ning andma teile täieliku kontrolli iga allalaaditud dokumendi üle. Mõeldud kasutajatele, kel on mahukad ja aktiivsed allalaadimisvood\n\n🚀 Miks valida Download Manager?\nSee on palju enam kui pelgalt tasuta allalaadimishaldur. See on nutikas allalaadimiste korraldaja ja jälgija, mis muudab segased edastusloendid struktureeritud ja hõlpsasti otsitavaks süsteemiks koos täiustatud juhtimisvõimalustega.\nErinevalt Chrome'i tavalisest allalaadimisajaloost pakub see laiendus teile selgust, kiirust ja täielikku ligipääsu failidele ühes kohas.\n\n🔑 Põhifunktsioonid:\n1️⃣ Kohene otsing kogu edastusajaloos\n2️⃣ Filtreerimine tüübi järgi (video, dokument, pilt, arhiiv)\n3️⃣ Sortimine suuruse, nime või allalaadimise kuupäeva järgi\n4️⃣ Rühmitamine osadeks (Täna, Eile, Sel nädalal, Varem)\n5️⃣ Asukoha avamine otse süsteemi failihalduris\n6️⃣ Kohene kustutamine\n\n📂 Nutikas allalaadimiste korraldaja\n➤ Ülevaatlik kronoloogiline vaade kõikidele allalaadimistele\n➤ Kiire juurdepääs ükskõik millisele dokumendile sekunditega\n➤ Korrastatud struktuur Chrome'i tavalise allalaadimisloendi asemel\n\n🧠 Intelligentne edastushaldur\n➤ Allalaadimiste automaatne rühmitamine ajavahemike kaupa\n➤ Selge liides, kus failid on jagatud loogilistesse kategooriatesse\n➤ Vähendab Chrome'i vaikimisi allalaadimiste tekitatud segadust\n\n🗂️ Täielik kontroll failide üle\n➤ Kustutage failid arvutist hetkega\n➤ Avage asukoht ühe klõpsuga\n➤ Haldake edastusi brauserist lahkumata\n\n⚡ Suurem tootlikkus\n➤ Kerge ja sujuv allalaadimiste juhtpaneel\n➤ Parem töövoog igapäevaseks failide haldamiseks\n➤ Selge ja tõhus edastuste korraldamise süsteem\n➤ Parem alternatiiv Chrome'i tavalistele allalaadimistele\n\n💡 Sobib suurepäraselt kasutajatele, kes vajavad:\n➤ Usaldusväärset tööriista allalaadimiste käsitlemiseks\n➤ Täpsemat juhtimist allalaadimiste ajaloo halduri üle\n➤ Allalaaditud failide täisfunktsionaalset failihaldurit\n➤ Nutikat edastuste korraldamise süsteemi\n\n🎯 Download Manager muudab Chrome'i tavalised allalaadimised struktureeritud failide ja ajaloo halduriks. See pakub teile kiiret otsingut, täielikku kontrolli ja organiseeritud töövoogu ühes laienduses.\n\n🌙 Tume režiim (Dark Mode) on laienduses saadaval mugavamaks veebikasutuseks. Saate valida süsteemi teema automaatse järgimise, et liides lülituks heleda ja tumeda režiimi vahel vastavalt seadme seadetele, või aktiveerida tumeda teema käsitsi mis tahes ajal. Nii on välimus täielikult teie kontrolli all ja vähendate silmade väsimust, eelkõige pikkade arvuti taga veedetud tundide jooksul.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Tühjenda kõik",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Kinnita",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Kas tühjendada kõik allalaadimised sellest loendist?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

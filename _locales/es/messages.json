@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Utiliza Download Manager para organizar, seguir, filtrar y gestionar tus descargas con facilidad. No es un acelerador de descargas.",
+    "message": "Download Manager organiza, sigue, filtra y gestiona descargas. No es un acelerador.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Le presentamos Download Manager: una potente extensión que funciona como gestor de transferencias e historial. Está diseñada para sustituir el sistema de descargas predeterminado de Chrome y ofrecerle un control absoluto sobre cada documento que descarga. Pensada para usuarios con flujos de descarga amplios y muy activos\n\n🚀 ¿Por qué elegir Download Manager?\nEsto es mucho más que un simple gestor de descargas gratuito. Se trata de una herramienta inteligente de organización y seguimiento que convierte listas de transferencias caóticas en un sistema estructurado y fácil de consultar, con funciones de control avanzadas.\nA diferencia del historial de descargas estándar de Chrome, esta extensión le aporta claridad, rapidez y acceso completo a sus archivos en un único lugar.\n\n🔑 Funciones principales:\n1️⃣ Búsqueda instantánea en todo el historial de transferencias\n2️⃣ Filtrado por tipo (vídeo, documento, imagen, archivo comprimido)\n3️⃣ Ordenación por tamaño, nombre o fecha de descarga\n4️⃣ Agrupación en secciones (Hoy, Ayer, Esta semana, Anteriores)\n5️⃣ Apertura directa de la ubicación en el explorador del sistema\n6️⃣ Eliminación instantánea\n\n📂 Organizador de descargas inteligente\n➤ Vista cronológica clara de todas las descargas\n➤ Acceso rápido a cualquier documento en cuestión de segundos\n➤ Estructura ordenada en lugar de la lista de descargas predeterminada de Chrome\n\n🧠 Gestor de transferencias inteligente\n➤ Agrupación automática de las descargas por momento temporal\n➤ Interfaz limpia con categorías de archivos bien estructuradas\n➤ Reduce el desorden de las descargas predeterminadas de Chrome\n\n🗂️ Control total sobre los archivos\n➤ Elimine archivos de su ordenador al instante\n➤ Abra la ubicación con un solo clic\n➤ Administre sus transferencias sin salir del navegador\n\n⚡ Impulso a la productividad\n➤ Una experiencia ligera de panel de descargas\n➤ Un flujo de trabajo mejorado para la gestión diaria de archivos\n➤ Un sistema de organización de transferencias claro y eficiente\n➤ Una alternativa superior a las descargas básicas de Chrome\n\n💡 Ideal para los usuarios que necesitan:\n➤ Una herramienta fiable de gestión de descargas\n➤ Un control avanzado sobre el gestor de historial de descargas\n➤ Una funcionalidad completa de gestor de archivos descargados\n➤ Un sistema inteligente de organización de transferencias\n\n🎯 Download Manager transforma las descargas habituales de Chrome en un auténtico gestor estructurado de archivos e historial de descargas. Le ofrece una búsqueda rápida, un control absoluto y un flujo de trabajo organizado en una sola extensión.\n\n🌙 El modo oscuro (Dark Mode) está disponible en la extensión para brindarle una experiencia de navegación más agradable. Puede optar por seguir automáticamente el tema de su sistema, de modo que la interfaz alterne entre el modo claro y el oscuro según la configuración de su dispositivo, o activar el tema oscuro manualmente en cualquier momento. Así dispone de un control total sobre la apariencia y reduce la fatiga visual, especialmente durante jornadas prolongadas frente al ordenador.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Borrar todo",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Confirmar",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "¿Borrar todas las descargas de esta lista?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

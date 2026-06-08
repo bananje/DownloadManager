@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Use o Download Manager para organizar, acompanhar, filtrar e gerenciar seus downloads com facilidade. Não é um acelerador de downloads.",
+    "message": "Download Manager organiza, acompanha, filtra e gerencia downloads. Não é acelerador.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Conheça o Download Manager — uma poderosa extensão que funciona como gerenciador de transferências e de histórico. Foi desenvolvida para substituir o sistema de downloads padrão do Chrome e oferecer a você controle total sobre cada documento baixado. Pensada para usuários com fluxos de download volumosos e ativos\n\n🚀 Por que escolher o Download Manager?\nIsto é muito mais do que um simples gerenciador de downloads gratuito. É uma ferramenta inteligente de organização e acompanhamento que converte listas de transferências desorganizadas em um sistema estruturado e fácil de pesquisar, com recursos avançados de controle.\nDiferentemente do histórico de downloads padrão do Chrome, esta extensão oferece clareza, rapidez e acesso completo aos seus arquivos em um único lugar.\n\n🔑 Recursos principais:\n1️⃣ Pesquisa instantânea em todo o histórico de transferências\n2️⃣ Filtragem por tipo (vídeo, documento, imagem, arquivo compactado)\n3️⃣ Ordenação por tamanho, nome ou data de download\n4️⃣ Agrupamento em seções (Hoje, Ontem, Esta semana, Anteriores)\n5️⃣ Abertura do local diretamente no explorador do sistema\n6️⃣ Exclusão instantânea\n\n📂 Organizador de downloads inteligente\n➤ Visualização cronológica clara de todos os downloads\n➤ Acesso rápido a qualquer documento em segundos\n➤ Estrutura organizada no lugar da lista de downloads padrão do Chrome\n\n🧠 Gerenciador inteligente de transferências\n➤ Agrupamento automático dos downloads por período\n➤ Interface limpa com categorias de arquivos bem estruturadas\n➤ Reduz a desordem dos downloads padrão do Chrome\n\n🗂️ Controle total dos arquivos\n➤ Remova arquivos do seu computador instantaneamente\n➤ Abra o local com um único clique\n➤ Gerencie suas transferências sem sair do navegador\n\n⚡ Mais produtividade\n➤ Uma experiência leve de painel de downloads\n➤ Um fluxo de trabalho aprimorado para a gestão diária de arquivos\n➤ Um sistema de organização de transferências claro e eficiente\n➤ Uma alternativa superior aos downloads básicos do Chrome\n\n💡 Ideal para usuários que precisam de:\n➤ Uma ferramenta confiável de gerenciamento de downloads\n➤ Controle avançado sobre o gerenciador de histórico de downloads\n➤ Funcionalidade completa de gerenciador de arquivos baixados\n➤ Um sistema inteligente de organização de transferências\n\n🎯 O Download Manager transforma os downloads comuns do Chrome em um verdadeiro gerenciador estruturado de arquivos e histórico. Ele oferece pesquisa rápida, controle total e um fluxo de trabalho organizado em uma única extensão.\n\n🌙 O modo escuro (Dark Mode) está disponível na extensão para proporcionar uma experiência de navegação mais confortável. Você pode optar por acompanhar automaticamente o tema do sistema, fazendo com que a interface alterne entre o modo claro e o escuro de acordo com as configurações do seu dispositivo, ou ativar o tema escuro manualmente a qualquer momento. Assim, você tem controle total sobre a aparência e reduz o cansaço visual, especialmente durante longas jornadas diante do computador.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Limpar tudo",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Confirmar",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Limpar todos os downloads desta lista?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

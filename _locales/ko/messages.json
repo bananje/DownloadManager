@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Download Manager로 다운로드를 손쉽게 정리, 추적, 필터링하고 관리하세요. 다운로드 가속기가 아닙니다.",
+    "message": "Download Manager로 다운로드를 정리, 추적, 필터링하고 관리하세요. 가속기가 아닙니다.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Download Manager를 만나보십시오 — 전송과 기록을 함께 관리해 주는 강력한 확장 프로그램입니다. Chrome의 기본 다운로드 시스템을 대신하여 다운로드하는 모든 문서를 사용자께서 온전히 통제하실 수 있도록 설계되었습니다. 방대하고 활발한 다운로드 흐름을 다루는 분들을 위해 만들어진 확장 프로그램입니다\n\n🚀 왜 Download Manager를 선택해야 하는가\n단순한 무료 다운로드 관리자 그 이상입니다. 어수선한 전송 목록을 구조화되고 손쉽게 검색할 수 있는 체계로 바꾸어 주며, 한 차원 높은 제어 기능을 갖춘 똑똑한 다운로드 정리·추적 도구입니다.\nChrome의 기본 다운로드 기록과 달리, 이 확장 프로그램은 명료함과 빠른 속도, 그리고 모든 파일에 대한 완전한 접근 권한을 한곳에서 제공합니다.\n\n🔑 주요 기능:\n1️⃣ 전체 전송 기록을 대상으로 한 즉각적인 검색\n2️⃣ 유형별 필터링(동영상, 문서, 이미지, 압축 파일)\n3️⃣ 크기, 이름 또는 다운로드 날짜순 정렬\n4️⃣ 구간별 그룹화(오늘, 어제, 이번 주, 그 이전)\n5️⃣ 시스템 탐색기에서 위치를 곧장 열기\n6️⃣ 즉각 삭제\n\n📂 똑똑한 다운로드 정리 기능\n➤ 모든 다운로드를 시간순으로 정돈된 형태로 한눈에 표시\n➤ 어떤 문서에도 단 몇 초 안에 접근\n➤ Chrome 기본 다운로드 목록 대신 한층 정돈된 구조\n\n🧠 지능형 전송 관리자\n➤ 시간대별로 다운로드를 자동 그룹화\n➤ 파일 분류가 명확하게 정돈된 깔끔한 인터페이스\n➤ Chrome 기본 다운로드의 산만함을 줄여 줍니다\n\n🗂️ 파일에 대한 완전한 제어\n➤ 컴퓨터에서 파일을 즉시 삭제\n➤ 클릭 한 번으로 저장 위치 열기\n➤ 브라우저를 벗어나지 않고도 전송을 관리\n\n⚡ 생산성 향상\n➤ 가볍고 쾌적한 다운로드 대시보드 환경\n➤ 일상적인 파일 처리에 최적화된 작업 흐름\n➤ 깔끔하고 효율적인 전송 정리 체계\n➤ 단순한 Chrome 다운로드보다 한층 나은 대안\n\n💡 다음과 같은 분들께 안성맞춤입니다:\n➤ 믿을 만한 다운로드 처리 도구가 필요한 분\n➤ 다운로드 기록 관리자를 더욱 정교하게 통제하고자 하시는 분\n➤ 다운로드 파일 관리자의 모든 기능을 활용하고자 하시는 분\n➤ 똑똑한 전송 정리 체계를 찾으시는 분\n\n🎯 Download Manager는 Chrome의 일상적인 다운로드를 잘 정돈된 파일·기록 관리자로 탈바꿈시킵니다. 단 하나의 확장 프로그램 안에서 빠른 검색과 완전한 제어, 정돈된 작업 흐름을 누리실 수 있습니다.\n\n🌙 한층 편안한 브라우징 환경을 위해 확장 프로그램에 다크 모드(Dark Mode)가 마련되어 있습니다. 시스템 테마를 자동으로 따르도록 설정하시면 기기 설정에 따라 인터페이스가 밝은 모드와 어두운 모드 사이에서 전환되며, 원하시면 언제든지 어두운 테마를 수동으로 켜실 수도 있습니다. 이를 통해 외관을 직접 완전히 제어하실 수 있고, 특히 컴퓨터 앞에서 장시간 작업하실 때의 눈의 피로를 덜어 드립니다.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "모두 지우기",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "확인",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "이 목록의 모든 다운로드를 지우시겠습니까?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

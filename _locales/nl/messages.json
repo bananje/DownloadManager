@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Gebruik Download Manager om downloads eenvoudig te ordenen, te volgen, te filteren en te beheren. Het is geen downloadversneller.",
+    "message": "Download Manager ordent, volgt, filtert en beheert downloads. Geen downloadversneller.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Maak kennis met Download Manager — een krachtige extensie die fungeert als beheerder van uw overdrachten en downloadgeschiedenis. Ze is ontworpen om het standaard downloadsysteem van Chrome te vervangen en u volledige controle te geven over elk document dat u downloadt. Gemaakt voor gebruikers met omvangrijke en actieve downloadstromen\n\n🚀 Waarom kiezen voor Download Manager?\nDit is veel meer dan zomaar een gratis downloadmanager. Het is een slim hulpmiddel voor het organiseren en bijhouden van downloads dat rommelige overdrachtslijsten omtovert tot een gestructureerd, doorzoekbaar systeem met geavanceerde bedieningsmogelijkheden.\nIn tegenstelling tot de standaard downloadgeschiedenis van Chrome biedt deze extensie u helderheid, snelheid en volledige toegang tot uw bestanden op één centrale plek.\n\n🔑 Belangrijkste functies:\n1️⃣ Direct zoeken in de volledige overdrachtsgeschiedenis\n2️⃣ Filteren op type (video, document, afbeelding, archief)\n3️⃣ Sorteren op grootte, naam of downloaddatum\n4️⃣ Groeperen in secties (Vandaag, Gisteren, Deze week, Eerder)\n5️⃣ De locatie rechtstreeks openen in de systeemverkenner\n6️⃣ Onmiddellijke verwijdering\n\n📂 Slimme downloadorganizer\n➤ Een overzichtelijke chronologische weergave van al uw downloads\n➤ Snelle toegang tot elk document binnen enkele seconden\n➤ Een geordende structuur in plaats van de standaard downloadlijst van Chrome\n\n🧠 Intelligente overdrachtbeheerder\n➤ Automatische groepering van downloads op tijdstip\n➤ Een opgeruimde interface met overzichtelijk geordende bestandscategorieën\n➤ Vermindert de rommel van de standaard downloads van Chrome\n\n🗂️ Volledige controle over uw bestanden\n➤ Verwijder bestanden direct van uw computer\n➤ Open de locatie met één muisklik\n➤ Beheer uw overdrachten zonder de browser te verlaten\n\n⚡ Meer productiviteit\n➤ Een licht en soepel downloaddashboard\n➤ Een verbeterde werkstroom voor het dagelijks beheren van bestanden\n➤ Een helder en efficiënt systeem voor het ordenen van overdrachten\n➤ Een beter alternatief voor de eenvoudige Chrome-downloads\n\n💡 Ideaal voor gebruikers die behoefte hebben aan:\n➤ Een betrouwbaar hulpmiddel voor downloadbeheer\n➤ Geavanceerde controle over de downloadgeschiedenis\n➤ Volledige functionaliteit van een downloadbestandenbeheerder\n➤ Een slim systeem voor het organiseren van overdrachten\n\n🎯 Download Manager vormt de gewone Chrome-downloads om tot een gestructureerde beheerder van downloadbestanden en geschiedenis. Hij biedt u snelle zoekmogelijkheden, volledige controle en een georganiseerde werkstroom in één enkele extensie.\n\n🌙 De donkere modus (Dark Mode) is beschikbaar in de extensie voor een aangenamere surfbeleving. U kunt ervoor kiezen om automatisch het thema van uw systeem te volgen, zodat de interface afhankelijk van uw apparaatinstellingen wisselt tussen lichte en donkere modus, of het donkere thema op elk gewenst moment handmatig inschakelen. Zo behoudt u volledige controle over het uiterlijk en vermindert u de vermoeidheid van uw ogen, met name tijdens lange werksessies achter de computer.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Alles wissen",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Bevestigen",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Alle downloads uit deze lijst wissen?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }

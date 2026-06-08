@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "A Download Managerrel könnyedén rendszerezheti, követheti, szűrheti és kezelheti letöltéseit. Nem letöltésgyorsító.",
+    "message": "A Download Manager rendszerezi, követi, szűri és kezeli a letöltéseket. Nem letöltésgyorsító.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -511,5 +511,17 @@
   "storeDesc": {
     "message": "📥 Ismerje meg a Download Managert — egy nagy teljesítményű bővítményt, amely átviteli és előzménykezelőként működik. Arra hivatott, hogy a Chrome alapértelmezett letöltési rendszerének helyébe lépjen, és teljes körű felügyeletet biztosítson minden letöltött dokumentum felett. Olyan felhasználóknak készült, akiknek nagy mennyiségű és intenzív letöltési munkafolyamataik vannak\n\n🚀 Miért érdemes a Download Managert választani?\nEz jóval több, mint egy egyszerű, ingyenes letöltéskezelő. Egy intelligens rendszerező és követő eszköz, amely a kusza átviteli listákat áttekinthető, kereshető rendszerré alakítja, fejlett vezérlési lehetőségekkel.\nA Chrome szokványos letöltési előzményeivel ellentétben ez a bővítmény átláthatóságot, gyorsaságot és teljes hozzáférést biztosít a fájljaihoz egyetlen helyen.\n\n🔑 Főbb funkciók:\n1️⃣ Azonnali keresés a teljes átviteli előzményben\n2️⃣ Szűrés típus szerint (videó, dokumentum, kép, archívum)\n3️⃣ Rendezés méret, név vagy a letöltés dátuma szerint\n4️⃣ Csoportosítás szakaszokba (Ma, Tegnap, Ezen a héten, Korábban)\n5️⃣ A hely megnyitása közvetlenül a rendszer fájlkezelőjében\n6️⃣ Azonnali törlés\n\n📂 Intelligens letöltésrendezés\n➤ Áttekinthető, időrendi nézet az összes letöltésről\n➤ Gyors hozzáférés bármely dokumentumhoz pillanatok alatt\n➤ Rendezett szerkezet a Chrome alapértelmezett letöltési listája helyett\n\n🧠 Intelligens átvitelkezelő\n➤ A letöltések automatikus csoportosítása időszak szerint\n➤ Letisztult felület világosan rendszerezett fájlkategóriákkal\n➤ Csökkenti a Chrome alap letöltéseinek zsúfoltságát\n\n🗂️ Teljes körű fájlkezelés\n➤ Távolítsa el a fájlokat a számítógépéről egyetlen pillanat alatt\n➤ Nyissa meg a helyet egyetlen kattintással\n➤ Kezelje az átviteleket anélkül, hogy elhagyná a böngészőt\n\n⚡ Növelje a hatékonyságát\n➤ Könnyű, gördülékeny letöltési műszerfal-élmény\n➤ Javított munkafolyamat a mindennapi fájlkezeléshez\n➤ Áttekinthető és hatékony átviteli rendszerezőrendszer\n➤ Jobb alternatíva a Chrome egyszerű letöltéseivel szemben\n\n💡 Tökéletes választás azoknak, akiknek szükségük van:\n➤ Megbízható letöltéskezelő eszközre\n➤ Fejlett vezérlésre a letöltési előzménykezelő felett\n➤ Teljes funkcionalitású letöltésifájl-kezelőre\n➤ Intelligens átviteli rendszerezőrendszerre\n\n🎯 A Download Manager a Chrome szokványos letöltéseit valódi, jól strukturált fájl- és letöltési előzménykezelővé alakítja. Gyors keresést, teljes körű felügyeletet és rendezett munkafolyamatot kínál egyetlen bővítményben.\n\n🌙 A bővítményben elérhető a sötét mód (Dark Mode), amely kényelmesebb böngészési élményt nyújt. Választhat, hogy a felület automatikusan kövesse a rendszer témáját — így a készülék beállításai alapján vált a világos és a sötét mód között —, vagy bármikor manuálisan bekapcsolhatja a sötét témát. Ezzel teljes mértékben Ön irányítja a megjelenést, és csökkentheti a szemfáradtságot, különösen hosszú számítógép előtt töltött munka során.",
     "description": "Long store description shown on the Chrome Web Store listing"
+  },
+  "clear_all": {
+    "message": "Összes törlése",
+    "description": "Tooltip and aria-label for the clear all downloads button"
+  },
+  "clear_all_confirm": {
+    "message": "Megerősítés",
+    "description": "Confirm button label for clearing all downloads"
+  },
+  "clear_all_confirm_text": {
+    "message": "Törlöd az összes letöltést ebből a listából?",
+    "description": "Confirmation text before clearing all downloads from the list"
   }
 }
