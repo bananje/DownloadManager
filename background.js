@@ -10,7 +10,7 @@ const PINNED_TILE_DISMISSED_AT_STORAGE_KEY = "pinnedTileDismissedAt";
 const PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY = "pinnedTilePermanentlyHidden";
 const PINNED_TILE_INSTALLED_AT_STORAGE_KEY = "pinnedTileInstalledAt";
 const PINNED_TILE_FIRST_SHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
-const PINNED_TILE_RESHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
+const PINNED_TILE_RESHOW_DELAY_MS = 10 * 24 * 60 * 60 * 1000;
 const ALLOWED_THEMES = ["system", "light", "dark"];
 
 /**

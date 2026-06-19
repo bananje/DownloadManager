@@ -68,8 +68,8 @@ async function activatePinnedRatingStar(starEl) {
   const rating = Number(starEl?.dataset?.rating);
   if (!Number.isFinite(rating) || rating < 1 || rating > 5) return;
   starEl.blur?.();
-  const opened = await openFeedbackConfigUrl(rating <= 3 ? "form" : "review");
-  if (opened) permanentlyHidePinnedTile();
+  permanentlyHidePinnedTile();
+  await openFeedbackConfigUrl(rating <= 3 ? "form" : "review");
 }
 
 function getUiLocale() {

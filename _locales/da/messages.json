@@ -1,10 +1,10 @@
 {
   "extension_name": {
-    "message": "Downloadadministrator",
+    "message": "Downloadmanager",
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Downloadadministrator organiserer, sporer, filtrerer og administrerer downloads. Ikke en accelerator.",
+    "message": "Downloadmanager organiserer, sporer, filtrerer og administrerer downloads. Ikke en accelerator.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
