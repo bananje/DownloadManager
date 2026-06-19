@@ -4,7 +4,7 @@
     "description": "Название расширения в Chrome Web Store и интерфейсе браузера"
   },
   "extension_description": {
-    "message": "Download Manager упорядочивает, отслеживает, фильтрует и управляет загрузками. Не ускоритель.",
+    "message": "Менеджер загрузок упорядочивает, отслеживает, фильтрует и управляет загрузками. Не ускоритель.",
     "description": "Краткое описание расширения в Chrome Web Store и интерфейсе браузера"
   },
   "btn_pause_download": {
@@ -363,6 +363,31 @@
   "time_just_now": {
     "message": "только что",
     "description": "Относительное время для очень недавних событий"
+  },
+  "download_eta": {
+    "message": "$TIME$",
+    "description": "Примерное оставшееся время для загружаемого файла",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "eta_unit_sec": {
+    "message": "сек",
+    "description": "Короткая единица секунд в оценке времени загрузки"
+  },
+  "eta_unit_min": {
+    "message": "мин",
+    "description": "Короткая единица минут в оценке времени загрузки"
+  },
+  "eta_unit_hour": {
+    "message": "ч",
+    "description": "Короткая единица часов в оценке времени загрузки"
+  },
+  "download_status_paused": {
+    "message": "Приостановлено",
+    "description": "Статус приостановленной загрузки"
   },
   "show_in_folder_failed": {
     "message": "Не удалось показать файл в проводнике.",

@@ -107,7 +107,7 @@
 
             <fieldset class="feedback-section">
               <legend class="feedback-section__legend">
-                Additional comments <span class="feedback-section__hint">Optional</span>
+                Additional comments <span class="feedback-section__hint">Required · min 5 symbols</span>
               </legend>
               <div class="comment-wrap">
                 <textarea
@@ -116,10 +116,16 @@
                   class="comment-area"
                   rows="5"
                   maxlength="1000"
+                  required
+                  aria-required="true"
+                  aria-describedby="commentError"
                   placeholder="Tell us what we could have done better, what feature you were missing, or anything else you'd like to share…"
                 ></textarea>
                 <span class="comment-counter" id="commentCounter">0 / 1000</span>
               </div>
+              <p class="field-error" id="commentError" role="alert" hidden>
+                Please add a comment (at least 5 characters) before sending your feedback.
+              </p>
             </fieldset>
 
             <div class="feedback-actions">

@@ -364,6 +364,31 @@
     "message": "just now",
     "description": "Relative time text for very recent events"
   },
+  "download_eta": {
+    "message": "$TIME$",
+    "description": "Estimated remaining time shown for an in-progress download",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "eta_unit_sec": {
+    "message": "sec",
+    "description": "Short unit for seconds in download time estimate"
+  },
+  "eta_unit_min": {
+    "message": "min",
+    "description": "Short unit for minutes in download time estimate"
+  },
+  "eta_unit_hour": {
+    "message": "hr",
+    "description": "Short unit for hours in download time estimate"
+  },
+  "download_status_paused": {
+    "message": "Paused",
+    "description": "Status text shown for a paused in-progress download"
+  },
   "show_in_folder_failed": {
     "message": "Could not show file in file manager.",
     "description": "Shown when revealing a file in system file manager fails"

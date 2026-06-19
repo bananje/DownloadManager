@@ -4,7 +4,7 @@
     "description": "Extension name shown in the Chrome Web Store and browser UI"
   },
   "extension_description": {
-    "message": "Download Manager организира, проследява, филтрира и управлява изтегляния. Не е ускорител.",
+    "message": "Мениджър за изтегляния организира, проследява, филтрира и управлява изтегляния. Не е ускорител.",
     "description": "Short extension description shown in the Chrome Web Store and browser UI"
   },
   "btn_pause_download": {
@@ -363,6 +363,31 @@
   "time_just_now": {
     "message": "току-що",
     "description": "Relative time text for very recent events"
+  },
+  "download_eta": {
+    "message": "$TIME$",
+    "description": "Estimated remaining time shown for an in-progress download",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "eta_unit_sec": {
+    "message": "sec",
+    "description": "Short unit for seconds in download time estimate"
+  },
+  "eta_unit_min": {
+    "message": "min",
+    "description": "Short unit for minutes in download time estimate"
+  },
+  "eta_unit_hour": {
+    "message": "hr",
+    "description": "Short unit for hours in download time estimate"
+  },
+  "download_status_paused": {
+    "message": "Paused",
+    "description": "Status text shown for a paused in-progress download"
   },
   "show_in_folder_failed": {
     "message": "Файлът не може да бъде показан във файловия мениджър.",

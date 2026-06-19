@@ -160,6 +160,30 @@ function setSubmitButtonDisabled(disabled) {
   if (btn) btn.disabled = !!disabled;
 }
 
+function setCommentError(show) {
+  const area = document.getElementById("feedbackComment");
+  const error = document.getElementById("commentError");
+  if (area) area.setAttribute("aria-invalid", show ? "true" : "false");
+  if (area) area.classList.toggle("is-invalid", !!show);
+  if (error) error.hidden = !show;
+}
+
+const MIN_COMMENT_LENGTH = 5;
+
+function isFormValid() {
+  const comment = (document.getElementById("feedbackComment")?.value || "").trim();
+  // A comment (min length) is always required: it covers both selecting a
+  // reason and submitting feedback without picking any reason. An empty form
+  // is not submittable.
+  return comment.length >= MIN_COMMENT_LENGTH;
+}
+
+/** Keep the submit button in sync with the form validity. */
+function refreshSubmitState() {
+  if (state.submitting) return;
+  setSubmitButtonDisabled(!isFormValid());
+}
+
 /**
  * Send the payload to the Apps Script Web App.
  *
@@ -198,11 +222,23 @@ function sendFeedback(payload) {
 function handleSubmit(event) {
   if (event) event.preventDefault();
   if (state.submitting) return;
-  state.submitting = true;
-  setSubmitButtonDisabled(true);
 
   const reasons = getSelectedReasons();
   const comment = (document.getElementById("feedbackComment")?.value || "").trim();
+
+  if (!isFormValid()) {
+    if (comment.length < MIN_COMMENT_LENGTH) {
+      setCommentError(true);
+      const area = document.getElementById("feedbackComment");
+      if (area) area.focus();
+    }
+    refreshSubmitState();
+    return;
+  }
+  setCommentError(false);
+
+  state.submitting = true;
+  setSubmitButtonDisabled(true);
 
   const payload = {
     token: FEEDBACK_TOKEN,
@@ -232,11 +268,22 @@ function bindForm() {
   const skip = document.getElementById("skipBtn");
   if (skip) skip.addEventListener("click", showThanks);
 
+  const reasonInputs = document.querySelectorAll("input[name='reason']");
+  reasonInputs.forEach((input) => {
+    input.addEventListener("change", refreshSubmitState);
+  });
+
   const area = document.getElementById("feedbackComment");
   if (area) {
-    area.addEventListener("input", updateCommentCounter);
+    area.addEventListener("input", () => {
+      updateCommentCounter();
+      if (area.value.trim().length >= MIN_COMMENT_LENGTH) setCommentError(false);
+      refreshSubmitState();
+    });
     updateCommentCounter();
   }
+
+  refreshSubmitState();
 }
 
 function init() {

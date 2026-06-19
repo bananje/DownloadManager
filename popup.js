@@ -966,6 +966,77 @@ function formatBytes(bytes) {
   return `${rounded} ${units[unitIndex]}`;
 }
 
+function formatDownloadSpeed(bytesPerSec) {
+  if (!Number.isFinite(bytesPerSec) || bytesPerSec < 0) return "";
+  return `${formatBytes(bytesPerSec)}/s`;
+}
+
+function formatDownloadEta(totalSeconds) {
+  if (!Number.isFinite(totalSeconds) || totalSeconds < 0) return "";
+  const secU = i18nMessage("eta_unit_sec") || "sec";
+  const minU = i18nMessage("eta_unit_min") || "min";
+  const hrU = i18nMessage("eta_unit_hour") || "hr";
+  const s = Math.round(totalSeconds);
+
+  let timeStr;
+  if (s < 60) {
+    timeStr = `${s} ${secU}`;
+  } else if (s < 3600) {
+    const m = Math.floor(s / 60);
+    const rem = s % 60;
+    timeStr = rem > 0 ? `${m} ${minU} ${rem} ${secU}` : `${m} ${minU}`;
+  } else {
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    timeStr = m > 0 ? `${h} ${hrU} ${m} ${minU}` : `${h} ${hrU}`;
+  }
+
+  return i18nMessage("download_eta", [timeStr]) || timeStr;
+}
+
+/**
+ * Builds the meta line for an in-progress download: "size • speed • eta".
+ * `sampledSpeed` (bytes/sec) is the smoothed speed measured across poll ticks;
+ * when unavailable we fall back to deriving speed from `estimatedEndTime`.
+ */
+function deriveProgressMetaText(item, sampledSpeed) {
+  const recv = Number(item.bytesReceived) || 0;
+  const total =
+    (Number(item.totalBytes) > 0 ? Number(item.totalBytes) : 0) ||
+    (Number(item.fileSize) > 0 ? Number(item.fileSize) : 0);
+  const size = formatBytes(total > 0 ? total : recv);
+
+  if (item.paused) {
+    return `${size} • ${i18nMessage("download_status_paused") || "Paused"}`;
+  }
+
+  const remaining = total > 0 ? Math.max(0, total - recv) : NaN;
+
+  let endMs = NaN;
+  if (item.estimatedEndTime) {
+    const parsed = new Date(item.estimatedEndTime).getTime();
+    if (Number.isFinite(parsed)) endMs = parsed;
+  }
+
+  let speed = Number.isFinite(sampledSpeed) && sampledSpeed > 0 ? sampledSpeed : NaN;
+  if (!Number.isFinite(speed) && Number.isFinite(endMs) && Number.isFinite(remaining)) {
+    const secs = (endMs - Date.now()) / 1000;
+    if (secs > 0.5) speed = remaining / secs;
+  }
+
+  let etaSec = NaN;
+  if (Number.isFinite(speed) && speed > 0 && Number.isFinite(remaining)) {
+    etaSec = remaining / speed;
+  } else if (Number.isFinite(endMs)) {
+    etaSec = Math.max(0, (endMs - Date.now()) / 1000);
+  }
+
+  const parts = [size];
+  if (Number.isFinite(speed) && speed > 0) parts.push(formatDownloadSpeed(speed));
+  if (Number.isFinite(etaSec)) parts.push(formatDownloadEta(etaSec));
+  return parts.join(" • ");
+}
+
 function startOfDay(d) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
@@ -2186,6 +2257,7 @@ let progressPollIntervalId = null;
 let progressPollBusy = false;
 let progressAnimationFrameId = null;
 let progressAnimationLastTimestamp = 0;
+const DOWNLOAD_META_UPDATE_INTERVAL_MS = 1000;
 let listRebuildTimerId = null;
 let searchFilterRaf = null;
 let suppressListRebuildUntil = 0;
@@ -2284,6 +2356,61 @@ function ensureDownloadProgressPoll() {
   progressPollIntervalId = window.setInterval(tickDownloadProgressPoll, 90);
 }
 
+function clearDownloadSpeedSamples(li) {
+  delete li.dataset.speedLastBytes;
+  delete li.dataset.speedLastTs;
+  delete li.dataset.speedEma;
+  delete li.dataset.progressMetaLastTs;
+  delete li.dataset.progressMetaPaused;
+}
+
+/** Refreshes the "size • speed • eta" meta line of an in-progress row in place. */
+function updateDownloadProgressMeta(li, item) {
+  const metaEl = li.querySelector(".download-item__meta");
+  if (!metaEl) return;
+
+  const now = performance.now();
+  const pausedKey = item.paused ? "1" : "0";
+  const forceUpdate = li.dataset.progressMetaPaused !== pausedKey;
+  const lastMetaTs = Number(li.dataset.progressMetaLastTs);
+  if (
+    !forceUpdate &&
+    Number.isFinite(lastMetaTs) &&
+    now - lastMetaTs < DOWNLOAD_META_UPDATE_INTERVAL_MS
+  ) {
+    return;
+  }
+
+  let speed = NaN;
+  if (item.paused) {
+    clearDownloadSpeedSamples(li);
+  } else {
+    const recv = Number(item.bytesReceived) || 0;
+    const lastBytes = Number(li.dataset.speedLastBytes);
+    const lastTs = Number(li.dataset.speedLastTs);
+    let ema = Number(li.dataset.speedEma);
+
+    if (Number.isFinite(lastBytes) && Number.isFinite(lastTs)) {
+      const dtSec = (now - lastTs) / 1000;
+      if (dtSec >= 0.2) {
+        const inst = Math.max(0, (recv - lastBytes) / dtSec);
+        ema = Number.isFinite(ema) ? ema * 0.7 + inst * 0.3 : inst;
+        li.dataset.speedLastBytes = String(recv);
+        li.dataset.speedLastTs = String(now);
+        li.dataset.speedEma = String(ema);
+      }
+    } else {
+      li.dataset.speedLastBytes = String(recv);
+      li.dataset.speedLastTs = String(now);
+    }
+    speed = Number(li.dataset.speedEma);
+  }
+
+  metaEl.textContent = deriveProgressMetaText(item, speed);
+  li.dataset.progressMetaLastTs = String(now);
+  li.dataset.progressMetaPaused = pausedKey;
+}
+
 function applyDownloadProgressVisual(li, item) {
   if (!li || !item) return;
   const rowId = Number(li.dataset.downloadId);
@@ -2301,11 +2428,13 @@ function applyDownloadProgressVisual(li, item) {
       li.classList.remove("download-item--download-paused");
     }
     updatePauseResumeButton(li, item);
+    updateDownloadProgressMeta(li, item);
     ensureDownloadProgressAnimation();
     ensureDownloadProgressPoll();
   } else {
     delete li.dataset.progressTargetPct;
     delete li.dataset.progressRenderedPct;
+    clearDownloadSpeedSamples(li);
     li.style.removeProperty("--dl-scale");
     li.classList.remove("download-item--progress-overlay", "download-item--download-paused");
     tickDownloadProgressPoll();
@@ -2995,6 +3124,10 @@ async function buildDownloadListItemPayload(item, li = null) {
   const size = formatBytes(item.fileSize > 0 ? item.fileSize : item.totalBytes);
   const createdAt = formatRelativeTime(item.endTime || item.startTime);
   const isComplete = item.state === "complete";
+  const metaText =
+    item.state === "in_progress"
+      ? deriveProgressMetaText(item, NaN)
+      : `${size} • ${createdAt}`;
   const fileNameForAria = fileName.replace(/"/g, "'");
   const openHint =
     isComplete
@@ -3078,7 +3211,7 @@ async function buildDownloadListItemPayload(item, li = null) {
       <div class="download-item__body" role="button" tabindex="0" aria-label="${escapeAttr(openHint)}">
         <div class="download-item__content">
           <p class="download-item__title" title="${fileNameAttr}">${fileNameHtml}</p>
-          <div class="download-item__meta">${size} • ${createdAt}</div>
+          <div class="download-item__meta">${escapeHtmlText(metaText)}</div>
         </div>
       </div>
       ${actionsHtml}`;
@@ -3484,7 +3617,7 @@ async function renderGroupedDownloads(pinnedItemEl = null) {
     const summary = document.createElement("summary");
     summary.className = "downloads-group__summary";
     summary.innerHTML = `<span class="downloads-group__label">${escapeHtmlText(groupLabel)}</span>`;
-    if (group.key === "older") {
+    if (groupIndex === 0) {
       summary.appendChild(createClearAllToggleButton());
     }
 
