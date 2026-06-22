@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Bu listeden tüm indirmeler temizlensin mi?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Durum",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Hatalar",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "Devam ediyor",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Duraklatıldı",
+    "description": "Status filter mode: paused downloads first"
   }
 }

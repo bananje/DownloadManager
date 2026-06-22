@@ -234,10 +234,12 @@ const PINNED_TILE_DISMISSED_STORAGE_KEY = "pinnedTileDismissed";
 const PINNED_TILE_DISMISSED_AT_STORAGE_KEY = "pinnedTileDismissedAt";
 const PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY = "pinnedTilePermanentlyHidden";
 const PINNED_TILE_INSTALLED_AT_STORAGE_KEY = "pinnedTileInstalledAt";
+const POPUP_LIFETIME_PORT_NAME = "popup-lifetime";
 const PINNED_TILE_FIRST_SHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
 const THEME_ORDER = ["system", "light", "dark"];
 const NAME_SORT_MODES = ["none", "name-asc", "name-desc"];
 const SIZE_SORT_MODES = ["none", "size-asc", "size-desc"];
+const STATUS_SORT_MODES = ["none", "error", "in-progress", "paused"];
 
 function getExtensionStorageLocal() {
   try {
@@ -500,6 +502,7 @@ const filtersToggleEl = document.getElementById("filters-toggle");
 const filtersMenuEl = document.getElementById("filters-menu");
 const nameSortToggleEl = document.getElementById("name-sort-toggle");
 const sizeSortToggleEl = document.getElementById("size-sort-toggle");
+const statusSortToggleEl = document.getElementById("status-sort-toggle");
 const dateFilterToggleEl = document.getElementById("date-filter-toggle");
 const dateFilterPopoverEl = document.getElementById("date-filter-popover");
 const activeFiltersBarEl = document.getElementById("active-filters-bar");
@@ -580,6 +583,7 @@ let downloads = [];
 let scrollRaf = null;
 let nameSortMode = "none";
 let sizeSortMode = "none";
+let statusSortMode = "none";
 let openDateFilterCtx = null;
 let openTypeFilterCtx = null;
 let openClearAllCtx = null;
@@ -600,6 +604,7 @@ let hasRenderedOnce = false;
 let pinnedTileDismissed = false;
 let pinnedTilePermanentlyHidden = false;
 let pinnedTileEligibleForDisplay = false;
+let popupLifetimePort = null;
 const TYPE_FILTER_KEYS = ["images", "video", "archives", "programs", "documents"];
 let activeTypeFilters = new Set(TYPE_FILTER_KEYS);
 const fileNameSorter = new Intl.Collator(undefined, { sensitivity: "base", numeric: true });
@@ -1122,6 +1127,7 @@ function serializeFiltersState() {
   return {
     nameSortMode,
     sizeSortMode,
+    statusSortMode,
     dateRange: {
       start: hasDateRange(activeDateRange) ? activeDateRange.start.toISOString() : null,
       end: hasDateRange(activeDateRange) ? activeDateRange.end.toISOString() : null
@@ -1138,6 +1144,7 @@ function restoreFiltersState(rawState) {
   const state = rawState && typeof rawState === "object" ? rawState : {};
   const nextNameSort = NAME_SORT_MODES.includes(state.nameSortMode) ? state.nameSortMode : "none";
   const nextSizeSort = SIZE_SORT_MODES.includes(state.sizeSortMode) ? state.sizeSortMode : "none";
+  statusSortMode = STATUS_SORT_MODES.includes(state.statusSortMode) ? state.statusSortMode : "none";
   if (nextNameSort !== "none" && nextSizeSort !== "none") {
     nameSortMode = nextNameSort;
     sizeSortMode = "none";
@@ -1690,6 +1697,23 @@ function getSizeSortTitleText() {
   return i18nMessage("filter_sort_size") || "Size";
 }
 
+function getStatusSortTitleText() {
+  return i18nMessage("status_filter_label") || "Status";
+}
+
+function getStatusSortButtonLabel() {
+  if (statusSortMode === "error") {
+    return i18nMessage("status_filter_errors") || "Errors";
+  }
+  if (statusSortMode === "in-progress") {
+    return i18nMessage("status_filter_in_progress") || "In progress";
+  }
+  if (statusSortMode === "paused") {
+    return i18nMessage("status_filter_paused") || "Paused";
+  }
+  return "";
+}
+
 function getTypeLabelsForChip() {
   const keyMap = {
     images: "type_filter_images",
@@ -1710,11 +1734,15 @@ function clearSortFilter(kind) {
   } else if (kind === "size") {
     if (sizeSortMode === "none") return;
     sizeSortMode = "none";
+  } else if (kind === "status") {
+    if (statusSortMode === "none") return;
+    statusSortMode = "none";
   } else {
     return;
   }
   updateNameSortToggleUi();
   updateSizeSortToggleUi();
+  updateStatusSortToggleUi();
   renderActiveFilterChips();
   persistFiltersState();
   void rerenderPreservingScrollPosition();
@@ -1743,6 +1771,13 @@ function buildActiveFilters() {
       key: "size",
       text: `${getSizeSortTitleText()}: ${getSizeSortButtonLabel()}`,
       onClear: () => clearSortFilter("size")
+    });
+  }
+  if (statusSortMode !== "none") {
+    list.push({
+      key: "status",
+      text: `${getStatusSortTitleText()}: ${getStatusSortButtonLabel()}`,
+      onClear: () => clearSortFilter("status")
     });
   }
   if (hasDateRange(activeDateRange)) {
@@ -1813,6 +1848,19 @@ function updateSizeSortToggleUi() {
   }
   sizeSortToggleEl.classList.toggle("toolbar-filter-menu__item--active", active);
   sizeSortToggleEl.setAttribute("aria-checked", active ? "true" : "false");
+}
+
+function updateStatusSortToggleUi() {
+  if (!statusSortToggleEl) return;
+  const active = statusSortMode !== "none";
+  const labelEl = statusSortToggleEl.querySelector(".toolbar-filter-menu__label");
+  if (labelEl) {
+    const title = getStatusSortTitleText();
+    const value = getStatusSortButtonLabel();
+    labelEl.textContent = value ? `${title} ${value}` : title;
+  }
+  statusSortToggleEl.classList.toggle("toolbar-filter-menu__item--active", active);
+  statusSortToggleEl.setAttribute("aria-checked", active ? "true" : "false");
 }
 
 function closeFiltersMenu() {
@@ -1891,9 +1939,40 @@ function getDownloadSortSize(item) {
   return 0;
 }
 
+function getDownloadStartTimestamp(item) {
+  const ts = item?.startTime ? new Date(item.startTime).getTime() : NaN;
+  return Number.isFinite(ts) ? ts : 0;
+}
+
+function getStatusSortPriority(item) {
+  if (statusSortMode === "error") return item?.state === "interrupted" ? 0 : 1;
+  if (statusSortMode === "in-progress") {
+    if (item?.state === "in_progress" && item?.paused !== true) return 0;
+    if (item?.state === "in_progress" && item?.paused === true) return 1;
+    return 2;
+  }
+  if (statusSortMode === "paused") return item?.state === "in_progress" && item?.paused === true ? 0 : 1;
+  return 0;
+}
+
+function compareByActiveStatusSort(a, b) {
+  if (statusSortMode === "none") return 0;
+  const aPriority = getStatusSortPriority(a);
+  const bPriority = getStatusSortPriority(b);
+  if (aPriority !== bPriority) return aPriority - bPriority;
+  if (aPriority > 0 && statusSortMode !== "in-progress") return 0;
+  if (aPriority > 1) return 0;
+  if (statusSortMode === "error") {
+    return getDownloadStartTimestamp(b) - getDownloadStartTimestamp(a);
+  }
+  return getDownloadProgressPercent(b) - getDownloadProgressPercent(a);
+}
+
 function applyCombinedSort(items) {
-  if (nameSortMode === "none" && sizeSortMode === "none") return items;
+  if (nameSortMode === "none" && sizeSortMode === "none" && statusSortMode === "none") return items;
   return [...items].sort((a, b) => {
+    const statusDiff = compareByActiveStatusSort(a, b);
+    if (statusDiff !== 0) return statusDiff;
     if (sizeSortMode !== "none") {
       const sizeDiff = getDownloadSortSize(a) - getDownloadSortSize(b);
       if (sizeDiff !== 0) {
@@ -1931,6 +2010,7 @@ function toggleNameSortMode() {
   }
   updateNameSortToggleUi();
   updateSizeSortToggleUi();
+  updateStatusSortToggleUi();
   renderActiveFilterChips();
   persistFiltersState();
   void rerenderPreservingScrollPosition();
@@ -1948,6 +2028,17 @@ function toggleSizeSortMode() {
   }
   updateNameSortToggleUi();
   updateSizeSortToggleUi();
+  updateStatusSortToggleUi();
+  renderActiveFilterChips();
+  persistFiltersState();
+  void rerenderPreservingScrollPosition();
+}
+
+function toggleStatusSortMode() {
+  const i = STATUS_SORT_MODES.indexOf(statusSortMode);
+  const idx = i === -1 ? 0 : i;
+  statusSortMode = STATUS_SORT_MODES[(idx + 1) % STATUS_SORT_MODES.length];
+  updateStatusSortToggleUi();
   renderActiveFilterChips();
   persistFiltersState();
   void rerenderPreservingScrollPosition();
@@ -2077,6 +2168,31 @@ function downloadsEraseCompat(query) {
       const err = chrome.runtime?.lastError;
       if (err) reject(new Error(err.message));
       else resolve(ids || []);
+    });
+  });
+}
+
+function sendDownloadEraseIntent(downloadId, clear = false) {
+  const id = Number(downloadId);
+  if (!Number.isFinite(id) || !chrome.runtime?.sendMessage) return Promise.resolve(false);
+  return new Promise((resolve) => {
+    chrome.runtime.sendMessage(
+      { type: clear ? "download-erase-intent-clear" : "download-erase-intent", downloadId: id },
+      (response) => {
+        resolve(!chrome.runtime?.lastError && response?.ok === true);
+      }
+    );
+  });
+}
+
+function sendDownloadEraseIntents(downloadIds) {
+  const ids = (Array.isArray(downloadIds) ? downloadIds : [])
+    .map((id) => Number(id))
+    .filter((id) => Number.isFinite(id));
+  if (ids.length === 0 || !chrome.runtime?.sendMessage) return Promise.resolve(false);
+  return new Promise((resolve) => {
+    chrome.runtime.sendMessage({ type: "download-erase-intents", downloadIds: ids }, (response) => {
+      resolve(!chrome.runtime?.lastError && response?.ok === true);
     });
   });
 }
@@ -2903,11 +3019,13 @@ async function eraseDownloadEntry(id) {
   try {
     suppressListRebuilds();
     rememberLocallyHandledErase(n);
+    await sendDownloadEraseIntent(n);
     await downloadsEraseCompat({ id: n });
     closeDownloadMenu();
     await removeDownloadRowAnimated(n);
   } catch (err) {
     forgetLocallyHandledErase(n);
+    await sendDownloadEraseIntent(n, true);
     const msg = err && typeof err === "object" && "message" in err ? String(err.message) : String(err);
     const row = downloadsListEl?.querySelector(`li[data-download-id="${n}"]`);
     if (row) {
@@ -2943,6 +3061,7 @@ function resetFiltersAfterClearAll() {
   }
   nameSortMode = "none";
   sizeSortMode = "none";
+  statusSortMode = "none";
   activeDateRange = { start: null, end: null };
   draftDateRange = { start: null, end: null };
   dateSelectionAnchor = null;
@@ -2950,6 +3069,7 @@ function resetFiltersAfterClearAll() {
   dateGroupOpenState.clear();
   updateNameSortToggleUi();
   updateSizeSortToggleUi();
+  updateStatusSortToggleUi();
   updateDateFilterToggleUi();
   syncTypeFilterPopoverCheckboxes();
   updateTypeFilterToggleUi();
@@ -2962,6 +3082,10 @@ async function clearAllDownloads() {
   if (clearAllConfirmEl) clearAllConfirmEl.dataset.busy = "true";
   try {
     suppressListRebuilds(2500);
+    const activeDownloadIds = allDownloads
+      .filter((item) => item?.state === "in_progress")
+      .map((item) => item.id);
+    await sendDownloadEraseIntents(activeDownloadIds);
     await downloadsEraseCompat({});
     closeClearAllPopover();
     closeDownloadMenu();
@@ -3738,14 +3862,28 @@ function loadDownloads() {
     });
 }
 
+function connectPopupLifetimePort() {
+  if (popupLifetimePort || !chrome.runtime?.connect) return;
+  try {
+    popupLifetimePort = chrome.runtime.connect({ name: POPUP_LIFETIME_PORT_NAME });
+    popupLifetimePort.onDisconnect.addListener(() => {
+      popupLifetimePort = null;
+    });
+  } catch {
+    popupLifetimePort = null;
+  }
+}
+
 function initPopup() {
   if (!downloadsListEl) return;
+  connectPopupLifetimePort();
   ensureDownloadProgressPoll();
   storageGetFilters((storedFilters) => {
     restoreFiltersState(storedFilters);
     localizeStaticText();
     updateNameSortToggleUi();
     updateSizeSortToggleUi();
+    updateStatusSortToggleUi();
     updateDateFilterToggleUi();
     updateTypeFilterToggleUi();
     renderActiveFilterChips();
@@ -3834,6 +3972,13 @@ function initPopup() {
       e.preventDefault();
       e.stopPropagation();
       toggleSizeSortMode();
+    });
+  }
+  if (statusSortToggleEl) {
+    statusSortToggleEl.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleStatusSortMode();
     });
   }
   if (dateFilterToggleEl) {

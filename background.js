@@ -9,9 +9,21 @@ const PINNED_TILE_DISMISSED_STORAGE_KEY = "pinnedTileDismissed";
 const PINNED_TILE_DISMISSED_AT_STORAGE_KEY = "pinnedTileDismissedAt";
 const PINNED_TILE_PERMANENTLY_HIDDEN_STORAGE_KEY = "pinnedTilePermanentlyHidden";
 const PINNED_TILE_INSTALLED_AT_STORAGE_KEY = "pinnedTileInstalledAt";
+const POPUP_LIFETIME_PORT_NAME = "popup-lifetime";
 const PINNED_TILE_FIRST_SHOW_DELAY_MS = 2 * 24 * 60 * 60 * 1000;
 const PINNED_TILE_RESHOW_DELAY_MS = 10 * 24 * 60 * 60 * 1000;
 const ALLOWED_THEMES = ["system", "light", "dark"];
+const ACTION_ICON_PROGRESS_INTERVAL_MS = 500;
+const ACTION_ICON_RENDER_SIZES = [16, 32, 48, 128];
+const ERASED_DOWNLOAD_NOTIFICATION_SUPPRESSION_MS = 15000;
+const ACTION_ICON_DEFAULT_PATHS = {
+  16: "assets/Frame 9.png",
+  32: "assets/Frame 10.png",
+  48: "assets/Frame 11.png",
+  64: "assets/Frame 12.png",
+  96: "assets/Frame 13.png",
+  128: "assets/Frame 14.png"
+};
 
 /**
  * `chrome.runtime.setUninstallURL()` only accepts http(s) URLs. Extension
@@ -44,6 +56,14 @@ try {
 
 let lastFingerprint = "";
 let downloadsSyncChain = Promise.resolve();
+let actionIconLastUpdateAt = 0;
+let actionIconUpdateTimerId = null;
+let actionIconPollingTimerId = null;
+let actionIconPendingItems = [];
+let actionIconLastRenderKey = "default";
+let actionIconBitmapCache = new Map();
+const eraseNotificationSuppressionTimers = new Map();
+const popupLifetimePorts = new Set();
 
 function safeRuntimeSendMessage(message) {
   try {
@@ -64,6 +84,53 @@ function safeRuntimeSendMessage(message) {
   } catch {
     /* ignore sendMessage transport errors (no receiver / no SW races) */
   }
+}
+
+function isPopupOpen() {
+  return popupLifetimePorts.size > 0;
+}
+
+function trackPopupLifetimePort(port) {
+  if (!port || port.name !== POPUP_LIFETIME_PORT_NAME) return;
+  popupLifetimePorts.add(port);
+  port.onDisconnect.addListener(() => {
+    popupLifetimePorts.delete(port);
+  });
+}
+
+function clearEraseNotificationSuppression(downloadId) {
+  const normalizedId = Number(downloadId);
+  if (!Number.isFinite(normalizedId)) return;
+  const timerId = eraseNotificationSuppressionTimers.get(normalizedId);
+  if (timerId) clearTimeout(timerId);
+  eraseNotificationSuppressionTimers.delete(normalizedId);
+}
+
+function suppressNextEraseNotification(downloadId) {
+  const normalizedId = Number(downloadId);
+  if (!Number.isFinite(normalizedId)) return false;
+  clearEraseNotificationSuppression(normalizedId);
+  const timerId = setTimeout(() => {
+    eraseNotificationSuppressionTimers.delete(normalizedId);
+  }, ERASED_DOWNLOAD_NOTIFICATION_SUPPRESSION_MS);
+  eraseNotificationSuppressionTimers.set(normalizedId, timerId);
+  return true;
+}
+
+function suppressNextEraseNotifications(downloadIds) {
+  if (!Array.isArray(downloadIds)) return 0;
+  let suppressedCount = 0;
+  for (const downloadId of downloadIds) {
+    if (suppressNextEraseNotification(downloadId)) suppressedCount += 1;
+  }
+  return suppressedCount;
+}
+
+function consumeEraseNotificationSuppression(downloadId) {
+  const normalizedId = Number(downloadId);
+  if (!Number.isFinite(normalizedId) || !eraseNotificationSuppressionTimers.has(normalizedId)) return false;
+  clearEraseNotificationSuppression(normalizedId);
+  return true;
 }
 
 function searchDownloads() {
@@ -88,6 +155,178 @@ function getDownloadById(downloadId) {
       resolve(Array.isArray(items) && items.length > 0 ? items[0] : null);
     });
   });
+}
+
+function supportsActionIconProgress() {
+  return Boolean(
+    chrome.action?.setIcon &&
+      typeof OffscreenCanvas !== "undefined" &&
+      typeof createImageBitmap === "function"
+  );
+}
+
+function setActionIconCompat(details) {
+  return new Promise((resolve) => {
+    try {
+      chrome.action.setIcon(details, () => {
+        resolve(!chrome.runtime.lastError);
+      });
+    } catch {
+      resolve(false);
+    }
+  });
+}
+
+function getDownloadStartedAtMs(item) {
+  const parsed = Date.parse(item?.startTime || "");
+  if (Number.isFinite(parsed)) return parsed;
+  const fallbackId = Number(item?.id);
+  return Number.isFinite(fallbackId) ? fallbackId : Number.MAX_SAFE_INTEGER;
+}
+
+function getFirstActiveDownload(items) {
+  return (Array.isArray(items) ? items : [])
+    .filter((item) => item?.state === "in_progress")
+    .sort((a, b) => {
+      const startedDiff = getDownloadStartedAtMs(a) - getDownloadStartedAtMs(b);
+      if (startedDiff !== 0) return startedDiff;
+      return Number(a?.id || 0) - Number(b?.id || 0);
+    })[0];
+}
+
+function getDownloadProgressRatio(item) {
+  const totalBytes = Number(item?.totalBytes);
+  const bytesReceived = Number(item?.bytesReceived);
+  if (!Number.isFinite(totalBytes) || totalBytes <= 0) return 0;
+  if (!Number.isFinite(bytesReceived) || bytesReceived <= 0) return 0;
+  return Math.max(0, Math.min(1, bytesReceived / totalBytes));
+}
+
+function getIconProgressRenderKey(item, progress) {
+  const progressPercent = Math.floor(progress * 100);
+  return `${item?.id || "unknown"}:${progressPercent}`;
+}
+
+function getActionIconPathForSize(size) {
+  if (ACTION_ICON_DEFAULT_PATHS[size]) return ACTION_ICON_DEFAULT_PATHS[size];
+  const availableSizes = Object.keys(ACTION_ICON_DEFAULT_PATHS)
+    .map(Number)
+    .sort((a, b) => a - b);
+  return ACTION_ICON_DEFAULT_PATHS[availableSizes.find((candidate) => candidate >= size) || availableSizes.at(-1)];
+}
+
+async function getActionIconBitmap(size) {
+  const path = getActionIconPathForSize(size);
+  if (actionIconBitmapCache.has(path)) return actionIconBitmapCache.get(path);
+
+  const response = await fetch(chrome.runtime.getURL(path));
+  const blob = await response.blob();
+  const bitmap = await createImageBitmap(blob);
+  actionIconBitmapCache.set(path, bitmap);
+  return bitmap;
+}
+
+async function renderActionIconProgress(progress) {
+  const imageData = {};
+
+  for (const size of ACTION_ICON_RENDER_SIZES) {
+    const canvas = new OffscreenCanvas(size, size);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) continue;
+
+    const baseIcon = await getActionIconBitmap(size);
+    ctx.clearRect(0, 0, size, size);
+
+    const strokeWidth = Math.max(2, Math.round(size * 0.12));
+    const center = size / 2;
+    const radius = center - strokeWidth / 2 - 0.5;
+    const startAngle = -Math.PI / 2;
+    const endAngle = startAngle + Math.PI * 2 * Math.max(0.01, progress);
+
+    ctx.lineWidth = strokeWidth;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.68)";
+    ctx.beginPath();
+    ctx.arc(center, center, radius, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.strokeStyle = "#2f80ed";
+    ctx.beginPath();
+    ctx.arc(center, center, radius, startAngle, endAngle);
+    ctx.stroke();
+
+    const logoInset = Math.ceil(strokeWidth * 1.25);
+    const logoSize = Math.max(1, size - logoInset * 2);
+    ctx.drawImage(baseIcon, logoInset, logoInset, logoSize, logoSize);
+
+    imageData[size] = ctx.getImageData(0, 0, size, size);
+  }
+
+  return imageData;
+}
+
+async function applyActionIconProgress(items) {
+  if (!supportsActionIconProgress()) return;
+
+  actionIconLastUpdateAt = Date.now();
+  const activeDownload = getFirstActiveDownload(items);
+  if (!activeDownload) {
+    if (actionIconLastRenderKey !== "default") {
+      await setActionIconCompat({ path: ACTION_ICON_DEFAULT_PATHS });
+      actionIconLastRenderKey = "default";
+    }
+    return;
+  }
+
+  const progress = getDownloadProgressRatio(activeDownload);
+  const renderKey = getIconProgressRenderKey(activeDownload, progress);
+  if (renderKey === actionIconLastRenderKey) return;
+
+  const imageData = await renderActionIconProgress(progress);
+  if (Object.keys(imageData).length === 0) return;
+
+  const didSetIcon = await setActionIconCompat({ imageData });
+  if (didSetIcon) actionIconLastRenderKey = renderKey;
+}
+
+function queueActionIconProgressUpdate(items) {
+  if (!supportsActionIconProgress()) return;
+
+  actionIconPendingItems = Array.isArray(items) ? items : [];
+  const elapsedMs = Date.now() - actionIconLastUpdateAt;
+  if (elapsedMs >= ACTION_ICON_PROGRESS_INTERVAL_MS) {
+    if (actionIconUpdateTimerId !== null) {
+      clearTimeout(actionIconUpdateTimerId);
+      actionIconUpdateTimerId = null;
+    }
+    void applyActionIconProgress(actionIconPendingItems);
+    return;
+  }
+
+  if (actionIconUpdateTimerId !== null) return;
+  actionIconUpdateTimerId = setTimeout(() => {
+    actionIconUpdateTimerId = null;
+    void applyActionIconProgress(actionIconPendingItems);
+  }, ACTION_ICON_PROGRESS_INTERVAL_MS - elapsedMs);
+}
+
+function scheduleActionIconProgressPolling(items) {
+  if (!supportsActionIconProgress()) return;
+
+  const hasActiveDownload = Boolean(getFirstActiveDownload(items));
+  if (!hasActiveDownload) {
+    if (actionIconPollingTimerId !== null) {
+      clearTimeout(actionIconPollingTimerId);
+      actionIconPollingTimerId = null;
+    }
+    return;
+  }
+
+  if (actionIconPollingTimerId !== null) return;
+  actionIconPollingTimerId = setTimeout(() => {
+    actionIconPollingTimerId = null;
+    void syncDownloadsState();
+  }, ACTION_ICON_PROGRESS_INTERVAL_MS);
 }
 
 function storageLocalGet(defaults) {
@@ -443,9 +682,11 @@ async function handleDownloadChanged(delta) {
   const state = delta?.state?.current;
   if (state !== "complete" && state !== "interrupted") return;
 
+  const downloadId = Number(delta?.id);
+  if (state === "interrupted" && consumeEraseNotificationSuppression(downloadId)) return;
+  if (isPopupOpen()) return;
   if (!(await areNotificationsEnabled())) return;
 
-  const downloadId = Number(delta?.id);
   const item = Number.isFinite(downloadId) ? await getDownloadById(downloadId) : null;
   const theme = await getCurrentThemePreference();
   const toast = buildDownloadToast(item, state, theme);
@@ -461,6 +702,8 @@ function buildFingerprint(items) {
 async function performDownloadsSync(options = {}) {
   const items = await searchDownloads();
   const nextFingerprint = buildFingerprint(items);
+  queueActionIconProgressUpdate(items);
+  scheduleActionIconProgressPolling(items);
 
   if (nextFingerprint !== lastFingerprint) {
     lastFingerprint = nextFingerprint;
@@ -658,6 +901,10 @@ if (chrome.downloads?.onErased) {
   });
 }
 
+if (chrome.runtime?.onConnect) {
+  chrome.runtime.onConnect.addListener(trackPopupLifetimePort);
+}
+
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (!message || typeof message !== "object") return undefined;
 
@@ -674,6 +921,22 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
   if (message.type === "downloads-check-updates") {
     void syncDownloadsState();
+    sendResponse({ ok: true });
+    return false;
+  }
+
+  if (message.type === "download-erase-intent") {
+    sendResponse({ ok: suppressNextEraseNotification(message.downloadId) });
+    return false;
+  }
+
+  if (message.type === "download-erase-intents") {
+    sendResponse({ ok: true, count: suppressNextEraseNotifications(message.downloadIds) });
+    return false;
+  }
+
+  if (message.type === "download-erase-intent-clear") {
+    clearEraseNotificationSuppression(message.downloadId);
     sendResponse({ ok: true });
     return false;
   }

@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "આ સૂચિમાંથી બધા ડાઉનલોડ સાફ કરવા?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "સ્થિતિ",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "ભૂલો",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "પ્રગતિમાં",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "વિરામ આપેલું",
+    "description": "Status filter mode: paused downloads first"
   }
 }

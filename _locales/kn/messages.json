@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "ಈ ಪಟ್ಟಿಯಿಂದ ಎಲ್ಲಾ ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಬೇಕೆ?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "ಸ್ಥಿತಿ",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "ದೋಷಗಳು",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "ಪ್ರಗತಿಯಲ್ಲಿದೆ",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ",
+    "description": "Status filter mode: paused downloads first"
   }
 }

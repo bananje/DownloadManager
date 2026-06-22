@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Да се изчистят ли всички изтегляния от този списък?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Състояние",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Грешки",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "В ход",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "На пауза",
+    "description": "Status filter mode: paused downloads first"
   }
 }

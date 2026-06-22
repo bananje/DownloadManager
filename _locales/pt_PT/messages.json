@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Limpar todas as transferências desta lista?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Estado",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Erros",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "Em curso",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Em pausa",
+    "description": "Status filter mode: paused downloads first"
   }
 }

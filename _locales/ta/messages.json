@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "இந்த பட்டியலிலிருந்து எல்லா பதிவிறக்கங்களையும் அழிக்கவா?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "நிலை",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "பிழைகள்",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "நடைபெறுகிறது",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "இடைநிறுத்தப்பட்டது",
+    "description": "Status filter mode: paused downloads first"
   }
 }

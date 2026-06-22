@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "이 목록의 모든 다운로드를 지우시겠습니까?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "상태",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "오류",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "진행 중",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "일시중지",
+    "description": "Status filter mode: paused downloads first"
   }
 }

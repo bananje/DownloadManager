@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "要從此清單中清除所有下載嗎？",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "狀態",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "錯誤",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "進行中",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "已暫停",
+    "description": "Status filter mode: paused downloads first"
   }
 }

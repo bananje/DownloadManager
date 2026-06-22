@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "هل تريد مسح كل التنزيلات من هذه القائمة؟",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "الحالة",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "أخطاء",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "قيد التقدم",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "متوقف مؤقتًا",
+    "description": "Status filter mode: paused downloads first"
   }
 }

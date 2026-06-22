@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "ఈ జాబితా నుండి అన్ని డౌన్‌లోడ్‌లను క్లియర్ చేయాలా?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "స్థితి",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "లోపాలు",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "పురోగతిలో",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "విరామంలో",
+    "description": "Status filter mode: paused downloads first"
   }
 }

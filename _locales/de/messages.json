@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Alle Downloads aus dieser Liste löschen?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Status",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Fehler",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "In Bearbeitung",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Pausiert",
+    "description": "Status filter mode: paused downloads first"
   }
 }

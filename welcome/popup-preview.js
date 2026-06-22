@@ -50,6 +50,7 @@ function runFiltersDemo() {
   var LABELS = {
     itemName: "Name (A \u2192 Z)",
     itemSize: "Size (largest first)",
+    itemStatus: "Status",
     itemDate: "Date range",
     itemType: "File types",
     chipDate: "Date: last 7 days",
@@ -82,6 +83,7 @@ function runFiltersDemo() {
   [
     { key: "name", label: LABELS.itemName },
     { key: "size", label: LABELS.itemSize },
+    { key: "status", label: LABELS.itemStatus },
     { key: "date", label: LABELS.itemDate },
     { key: "type", label: LABELS.itemType }
   ].forEach(function (entry) {

@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Vymazat všechna stahování z tohoto seznamu?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Stav",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Chyby",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "Probíhá",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Pozastaveno",
+    "description": "Status filter mode: paused downloads first"
   }
 }

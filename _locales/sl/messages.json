@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Počistiti vse prenose s tega seznama?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Stanje",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Napake",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "V teku",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Začasno ustavljeno",
+    "description": "Status filter mode: paused downloads first"
   }
 }

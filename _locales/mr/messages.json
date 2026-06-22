@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "या यादीतील सर्व डाउनलोड साफ करायचे?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "स्थिती",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "त्रुटी",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "प्रगतीत",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "विराम दिलेले",
+    "description": "Status filter mode: paused downloads first"
   }
 }

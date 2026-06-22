@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Kas tühjendada kõik allalaadimised sellest loendist?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Olek",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Tõrked",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "Pooleli",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Peatatud",
+    "description": "Status filter mode: paused downloads first"
   }
 }

@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Обрисати сва преузимања са ове листе?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Статус",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Грешке",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "У току",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "Паузирано",
+    "description": "Status filter mode: paused downloads first"
   }
 }

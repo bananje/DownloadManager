@@ -548,5 +548,21 @@
   "clear_all_confirm_text": {
     "message": "Vols esborrar totes les baixades d’aquesta llista?",
     "description": "Confirmation text before clearing all downloads from the list"
+  },
+  "status_filter_label": {
+    "message": "Estat",
+    "description": "Status filter menu item label"
+  },
+  "status_filter_errors": {
+    "message": "Errors",
+    "description": "Status filter mode: interrupted downloads first"
+  },
+  "status_filter_in_progress": {
+    "message": "En curs",
+    "description": "Status filter mode: active downloads first"
+  },
+  "status_filter_paused": {
+    "message": "En pausa",
+    "description": "Status filter mode: paused downloads first"
   }
 }
