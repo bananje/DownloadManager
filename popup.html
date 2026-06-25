@@ -137,9 +137,21 @@
         class="clear-all-popover"
         role="dialog"
         aria-modal="false"
-        aria-label="__MSG_clear_all_confirm__"
+        aria-label="__MSG_clear_all_confirm_text__"
         hidden
       >
+        <header class="clear-all-popover__header">
+          <p class="clear-all-popover__text" id="clear-all-confirm-text">__MSG_clear_all_confirm_text__</p>
+          <button
+            type="button"
+            class="clear-all-popover__close"
+            id="clear-all-close"
+            aria-label="__MSG_type_filter_close__"
+            title="__MSG_type_filter_close__"
+          >
+            ×
+          </button>
+        </header>
         <button type="button" class="clear-all-popover__confirm" id="clear-all-confirm">
           __MSG_clear_all_confirm__
         </button>

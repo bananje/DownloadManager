@@ -546,7 +546,7 @@
     "description": "Confirm button label for clearing all downloads"
   },
   "clear_all_confirm_text": {
-    "message": "Очистити всі завантаження з цього списку?",
+    "message": "Очистити все? ",
     "description": "Confirmation text before clearing all downloads from the list"
   },
   "status_filter_label": {

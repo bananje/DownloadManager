@@ -496,7 +496,9 @@ const searchInputEl = document.getElementById("search-input");
 const searchLabelEl = document.querySelector(".search-field .visually-hidden");
 const notificationsToggleEl = document.getElementById("notifications-toggle");
 const clearAllPopoverEl = document.getElementById("clear-all-popover");
+const clearAllConfirmTextEl = document.getElementById("clear-all-confirm-text");
 const clearAllConfirmEl = document.getElementById("clear-all-confirm");
+const clearAllCloseEl = document.getElementById("clear-all-close");
 const themeToggleEl = document.getElementById("theme-toggle");
 const filtersToggleEl = document.getElementById("filters-toggle");
 const filtersMenuEl = document.getElementById("filters-menu");
@@ -744,7 +746,7 @@ function getClearAllToggleEl() {
 }
 
 function getClearAllLabelText() {
-  return i18nMessage("clear_all") || "Clear all";
+  return "Clear";
 }
 
 function createClearAllToggleButton() {
@@ -757,26 +759,7 @@ function createClearAllToggleButton() {
   btn.setAttribute("aria-haspopup", "dialog");
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("title", label);
-  btn.innerHTML = `
-    <svg class="clear-all-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M3.4 5.4c0-.77.63-1.4 1.4-1.4h12.4c.77 0 1.4.63 1.4 1.4v1.05c0 .37-.15.73-.41.99l-4.94 4.94a1.4 1.4 0 0 0-.41.99v3.55c0 .5-.27.96-.71 1.21l-2.38 1.36c-.93.53-2.09-.14-2.09-1.21v-4.91c0-.37-.15-.73-.41-.99L3.81 7.44a1.4 1.4 0 0 1-.41-.99V5.4z"
-        fill="currentColor"
-        opacity="0.62"
-      />
-      <path
-        d="M5 4h12c.55 0 1 .45 1 1v1H4V5c0-.55.45-1 1-1z"
-        fill="currentColor"
-        opacity="0.22"
-      />
-      <path
-        d="m15 15 4 4m0-4-4 4"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.9"
-        stroke-linecap="round"
-      />
-    </svg>`;
+  btn.textContent = "Clear";
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -816,10 +799,18 @@ function localizeStaticText() {
     clearAllToggleEl.setAttribute("aria-label", clearAllText);
   }
   if (clearAllPopoverEl) {
-    clearAllPopoverEl.setAttribute("aria-label", i18nMessage("clear_all_confirm") || "Confirm");
+    clearAllPopoverEl.setAttribute("aria-label", i18nMessage("clear_all_confirm_text") || "Clear all?");
+  }
+  if (clearAllConfirmTextEl) {
+    clearAllConfirmTextEl.textContent = i18nMessage("clear_all_confirm_text") || "Clear all?";
   }
   if (clearAllConfirmEl) {
     clearAllConfirmEl.textContent = i18nMessage("clear_all_confirm") || "Confirm";
+  }
+  if (clearAllCloseEl) {
+    const closeText = i18nMessage("type_filter_close") || "Close";
+    clearAllCloseEl.setAttribute("aria-label", closeText);
+    clearAllCloseEl.setAttribute("title", closeText);
   }
   if (themeToggleEl) {
     applyTheme(document.documentElement.dataset.theme || "system");
@@ -1291,7 +1282,7 @@ function openClearAllPopover() {
   const clearAllToggleEl = getClearAllToggleEl();
   if (!clearAllPopoverEl || !clearAllToggleEl) return;
   if (openClearAllCtx) {
-    closeClearAllPopover();
+    positionClearAllPopover();
     return;
   }
   hideErrorFloatTip();
@@ -3717,8 +3708,60 @@ async function buildDownloadListItemElement(item) {
   return li;
 }
 
+function getStatusGroupConfig() {
+  if (statusSortMode === "error") {
+    return {
+      key: "status-errors",
+      label: i18nMessage("status_filter_errors") || "Errors",
+      match: (item) => item?.state === "interrupted"
+    };
+  }
+  if (statusSortMode === "in-progress") {
+    return {
+      key: "status-in-progress",
+      label: i18nMessage("status_filter_in_progress") || "In progress",
+      match: (item) => item?.state === "in_progress"
+    };
+  }
+  if (statusSortMode === "paused") {
+    return {
+      key: "status-paused",
+      label: i18nMessage("status_filter_paused") || "Paused",
+      match: (item) => item?.state === "in_progress" && item?.paused === true
+    };
+  }
+  return null;
+}
+
+function buildRenderGroups() {
+  /*
+   * When a Status filter is active (Errors / In progress / Paused), the files
+   * matching that status are pulled out into their own dropdown shown first,
+   * named after the filter; the remaining files keep their normal period
+   * grouping (Today / Yesterday / …) below it.
+   */
+  const statusGroup = getStatusGroupConfig();
+  if (statusGroup) {
+    const matchedItems = downloads.filter((item) => statusGroup.match(item));
+    const restItems = downloads.filter((item) => !statusGroup.match(item));
+    const groups = [];
+    if (matchedItems.length > 0) {
+      groups.push({ key: statusGroup.key, label: statusGroup.label, items: matchedItems });
+    }
+    for (const group of groupDownloadsByDate(restItems)) {
+      groups.push({ key: group.key, label: getGroupLabel(group), items: group.items });
+    }
+    return groups;
+  }
+  return groupDownloadsByDate(downloads).map((group) => ({
+    key: group.key,
+    label: getGroupLabel(group),
+    items: group.items
+  }));
+}
+
 async function renderGroupedDownloads(pinnedItemEl = null) {
-  const groups = groupDownloadsByDate(downloads);
+  const groups = buildRenderGroups();
   /*
    * We build the entire list tree off-screen in a DocumentFragment and insert
    * it into the DOM in a single assignment — otherwise every appendChild
@@ -3728,7 +3771,7 @@ async function renderGroupedDownloads(pinnedItemEl = null) {
    * wait for each record one by one: previously the longest delay accumulated.
    */
   const groupBuilds = groups.map(async (group, groupIndex) => {
-    const groupLabel = getGroupLabel(group);
+    const groupLabel = group.label;
     const groupLi = document.createElement("li");
     groupLi.className = "downloads-group";
 
@@ -4107,6 +4150,13 @@ function initPopup() {
       e.preventDefault();
       e.stopPropagation();
       void clearAllDownloads();
+    });
+  }
+  if (clearAllCloseEl) {
+    clearAllCloseEl.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeClearAllPopover();
     });
   }
 

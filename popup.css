@@ -555,32 +555,34 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  min-height: 24px;
   margin: -3px 0 -3px auto;
-  padding: 0;
+  padding: 2px 7px;
   border: none;
-  border-radius: 999px;
+  border-radius: 6px;
   background: transparent;
-  color: var(--icon-btn-color);
+  color: var(--meta-color);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.clear-all-toggle:hover {
+.clear-all-toggle:hover,
+.clear-all-toggle[aria-expanded="true"] {
   background: var(--icon-btn-hover-bg);
   color: var(--icon-btn-hover-color);
+}
+
+.clear-all-toggle:active {
+  background: var(--icon-btn-active-bg);
 }
 
 .clear-all-toggle:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
-}
-
-.clear-all-toggle__icon {
-  width: 19px;
-  height: 19px;
-  display: block;
 }
 
 .downloads-group__items {
@@ -1188,9 +1190,11 @@ body {
 .clear-all-popover {
   position: fixed;
   z-index: 1200;
-  width: 94px;
+  width: max-content;
+  min-width: 126px;
+  max-width: calc(100vw - 12px);
   box-sizing: border-box;
-  padding: 5px;
+  padding: 7px;
   border: 1px solid var(--menu-border);
   border-radius: 8px;
   background: var(--menu-bg);
@@ -1200,6 +1204,54 @@ body {
 
 .clear-all-popover[hidden] {
   display: none !important;
+}
+
+.clear-all-popover__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.clear-all-popover__text {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--body-color);
+}
+
+.clear-all-popover__close {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--icon-btn-color);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.clear-all-popover__close:hover {
+  background: var(--icon-btn-hover-bg);
+  color: var(--icon-btn-hover-color);
+}
+
+.clear-all-popover__close:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
 }
 
 .clear-all-popover__confirm {
